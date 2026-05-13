@@ -1,0 +1,19 @@
+# 🏗️ Netlify Build Configuration
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  # Yeh plugin Next.js ke liye zaroori hai
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  # 🚀 Optimization Settings
+  NODE_VERSION = "20"
+  
+  # Yeh line 503 error (Blob storage error) ko fix karne ke liye hai
+  NETLIFY_NEXTJS_SKIP_PREPARE_CACHE = "true"
+  
+  # Edge functions ko bypass karne ke liye (taki build stable rahe)
+  NEXT_USE_NETLIFY_EDGE = "false"
