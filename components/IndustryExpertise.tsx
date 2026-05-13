@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { 
   Home, Hammer, ShoppingBag, Building2, Truck, Car, 
-  Stethoscope, Cpu, Plane, Utensils, Briefcase, Store, Sparkles
+  Stethoscope, Cpu, Plane, Utensils, Briefcase, Store
 } from "lucide-react";
 
 const INDUSTRIES = [
@@ -23,88 +23,68 @@ const INDUSTRIES = [
 ];
 
 export default function IndustryExpertise() {
-  // Duplicating for seamless infinite loop
   const duplicatedIndustries = [...INDUSTRIES, ...INDUSTRIES, ...INDUSTRIES];
 
   return (
-    <section className="bg-[#030303] text-white py-24 2xl:py-48 relative overflow-hidden border-t border-white/5">
+    <section className="bg-[#030303] text-white py-12 md:py-20 relative overflow-hidden border-t border-white/5">
       
-      {/* 🌌 Atmospheric Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-
-      <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10 mb-20 2xl:mb-32">
-        <div className="text-center lg:text-left flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-          <div className="max-w-4xl">
-            <motion.div
-               initial={{ opacity: 0, y: 10 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6"
-            >
-              <Sparkles size={14} className="text-blue-400" />
-              <span className="text-[10px] 2xl:text-base font-bold uppercase tracking-[0.2em] text-blue-400">Diverse Sectors</span>
-            </motion.div>
-            
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl 2xl:text-9xl font-black tracking-tighter leading-none"
-            >
-              Industries We <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">Work With</span>
-            </motion.h2>
-          </div>
-          
-          <motion.p 
+      {/* 🌌 Top Border Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
+      
+      <div className="container-main relative z-10">
+        <div className="text-center mb-10 md:mb-16">
+          <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-slate-400 text-lg 2xl:text-3xl max-w-xl 2xl:max-w-3xl lg:text-right opacity-80 leading-relaxed"
+            className="text-3xl md:text-5xl lg:text-6xl 2xl:text-8xl font-black tracking-tighter leading-tight uppercase"
           >
-            We collaborate with businesses of all sizes, delivering customized digital marketing solutions that drive growth and long-term dominance.
-          </motion.p>
+            Industries We <span className="gradient-text">Work With</span>
+          </motion.h2>
         </div>
       </div>
 
-      {/* 🎡 INFINITE SLIDER */}
-      <div className="relative flex overflow-hidden py-10 2xl:py-20 select-none group">
-        
-        {/* Edge Fades (Luxury Gradient) */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 md:w-64 bg-gradient-to-r from-[#030303] via-[#030303]/80 to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 md:w-64 bg-gradient-to-l from-[#030303] via-[#030303]/80 to-transparent z-20 pointer-events-none" />
+      <div className="relative flex overflow-hidden py-4 select-none group">
+        {/* Edge Fades */}
+        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-64 bg-gradient-to-r from-[#030303] to-transparent z-20 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-64 bg-gradient-to-l from-[#030303] to-transparent z-20 pointer-events-none" />
 
         <motion.div 
-          className="flex flex-nowrap gap-8 2xl:gap-16"
+          className="flex flex-nowrap gap-4 md:gap-8"
           animate={{ x: ["0%", "-33.33%"] }}
-          transition={{ 
-            duration: 40, 
-            repeat: Infinity, 
-            ease: "linear" 
-          }}
-          // Slidder slow on hover for better UX
-          whileHover={{ transition: { duration: 80 } }}
+          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
         >
           {duplicatedIndustries.map((item, index) => {
             const Icon = item.icon;
             return (
               <div 
                 key={index}
-                className="flex-shrink-0 w-[300px] h-[220px] 2xl:w-[500px] 2xl:h-[350px] rounded-[3rem] 2xl:rounded-[5rem] bg-white/[0.02] border border-white/5 flex flex-col items-center justify-center gap-6 2xl:gap-12 transition-all duration-700 cursor-pointer group/card hover:bg-blue-600 hover:border-blue-400 hover:-translate-y-4 hover:shadow-[0_30px_60px_rgba(37,99,235,0.3)]"
+                // Card sizing logic: Compact on laptop, Large on 4K
+                className="flex-shrink-0 w-[150px] h-[135px] md:w-[260px] md:h-[200px] 2xl:w-[420px] 2xl:h-[320px] 
+                           rounded-[1.5rem] md:rounded-[2.5rem] 2xl:rounded-[4rem] bg-white/[0.02] border border-white/5 
+                           flex flex-col items-center justify-center gap-3 md:gap-5 
+                           transition-all duration-500 cursor-pointer group/card hover:bg-[#080808] hover:border-blue-500/40 hover:-translate-y-2"
               >
-                {/* Icon Container */}
-                <div className="p-6 2xl:p-12 rounded-[2rem] 2xl:rounded-[3rem] bg-white/[0.03] text-slate-400 transition-all duration-500 group-hover/card:bg-white/20 group-hover/card:text-white group-hover/card:scale-110 shadow-xl">
-                  <Icon className="w-12 h-12 2xl:w-24 2xl:h-24" strokeWidth={1} />
+                {/* 🌀 Icon Container: Bold & Centered */}
+                <div className="p-3 md:p-6 2xl:p-10 rounded-xl md:rounded-3xl bg-white/5 group-hover/card:bg-blue-600/10 transition-all duration-500 shadow-sm">
+                  <Icon className="w-6 h-6 md:w-12 2xl:w-24 text-blue-500 transition-transform duration-700 ease-in-out group-hover/card:rotate-[360deg]" />
                 </div>
 
-                {/* Text */}
-                <h3 className="text-xs md:text-sm 2xl:text-3xl font-black uppercase tracking-[0.25em] text-slate-500 transition-colors duration-500 group-hover/card:text-white px-6 text-center">
+                {/* 🖋️ Text: Using 'p' to bypass Global CSS h3 rules */}
+                <p className="
+                  /* Font Sizes: Mobile 8px | Laptop 10px | 4K 20px */
+                  text-[8px] md:text-[10px] 2xl:text-xl 
+                  font-bold uppercase 
+                  tracking-[0.1em] md:tracking-[0.25em] 
+                  text-zinc-500 transition-colors duration-500 group-hover/card:text-white 
+                  px-4 text-center leading-tight m-0 p-0
+                ">
                   {item.title}
-                </h3>
+                </p>
               </div>
             );
           })}
         </motion.div>
       </div>
-
     </section>
   );
 }

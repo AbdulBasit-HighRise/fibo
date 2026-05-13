@@ -20,56 +20,41 @@ export default function SocialMediaPage() {
         <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
 
             {/* 1. HERO SECTION - Optimized for Performance */}
-            <section className="relative w-full overflow-hidden min-h-[60vh] flex items-center">
-                <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-                    <Image
-                        src="/home-hero.jpg"
-                        alt="Mesh Grid"
-                        fill
-                        priority
-                        sizes="100vw"
-                        className="object-cover object-top filter grayscale contrast-125 brightness-50 opacity-60"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
-                </div>
-        
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
-        
-                <div className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 pt-32 pb-16 md:pt-40 2xl:pt-56">
-                    <div className="max-w-5xl 2xl:max-w-7xl">
-                        <motion.div 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md"
-                        >
-                            <Flame size={12} className="text-blue-400 animate-pulse" />
-                            <span className="text-[10px] 2xl:text-xs font-black tracking-[4px] text-blue-300 uppercase">Production Ready</span>
-                        </motion.div>
-        
-                        <motion.h1 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            className="text-6xl sm:text-8xl md:text-[100px] 2xl:text-[150px] font-black tracking-tighter leading-[0.8] text-white mb-8"
-                        >
-                            Social Media <br />
-                            <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                                Marketing.
-                            </span>
-                        </motion.h1>
-        
-                        <motion.p 
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="text-zinc-400 text-lg md:text-xl lg:text-2xl 2xl:text-4xl max-w-2xl 2xl:max-w-5xl font-medium leading-relaxed opacity-80"
-                        >
-                            Explore our architectural blueprints and technical deployments engineered to convert traffic into revenue.
-                        </motion.p>
-                    </div>
-                </div>
-            </section>
-
+              <section className="relative w-full overflow-hidden">
+                   <div className="container-wide">
+                    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                     <Image
+                       src="/home-hero.jpg"
+                       alt="Mesh Grid"
+                       fill
+                       sizes="100vw"
+                       priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
+                       className="object-cover object-top opacity-35"
+                     />
+                     <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+                   </div>
+           
+                   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+           
+                   <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+                     <div className="max-w-5xl">
+                       <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+                         <Flame size={12} className="text-blue-400 animate-pulse" />
+                       </div>
+           
+                       <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
+                         Social Media Marketing {" "}
+                         <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                         </span>
+                       </h1>
+                       
+                       <p className="text-zinc-400 text-lg md:text-xl lg:text-2xl max-w-2xl font-medium leading-relaxed opacity-80 mx-auto md:mx-0">
+                         We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
+                       </p>
+                     </div>
+                   </div>
+           </div>
+                 </section>
 
             {/* 2. CORE CAPABILITIES (Content Exactly Same) */}
             <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">

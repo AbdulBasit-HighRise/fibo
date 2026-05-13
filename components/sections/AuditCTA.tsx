@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Globe, Mail, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
@@ -14,71 +13,127 @@ export default function AuditCTA() {
   };
 
   return (
-    // Section background as requested: #020617
-    <section className="py-12 2xl:py-20 bg-[#020617] px-6">
-      <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto">
-        
-        {/* 🖤 Black Card Design */}
-        <div className="relative overflow-hidden rounded-[2.5rem] 2xl:rounded-[4rem] bg-black p-8 md:p-12 2xl:p-20 border border-white/5 shadow-2xl">
-          
-          {/* Subtle Blue Glow in the corner for depth */}
-          <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none" />
-          
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-12">
-            
-            {/* Left Side: Content */}
-            <div className="text-white text-center lg:text-left space-y-4">
-              <h2 className="text-3xl md:text-5xl 2xl:text-7xl font-black tracking-tighter leading-none">
-                Get a free  <br />
-                <span className="text-blue-500">website audit.</span>
+    <section className="w-full bg-[#030303] px-6 py-8">
+      <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto">
+
+        {/* SLIM PREMIUM BAR */}
+        <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]">
+
+          {/* Soft Accent Glow */}
+          <div className="absolute inset-y-0 right-0 w-[300px] bg-blue-600/10 blur-3xl" />
+
+          <div className="relative z-10 flex flex-col xl:flex-row items-center justify-between gap-6 px-5 md:px-8 py-5">
+
+            {/* LEFT */}
+            <div className="flex-1 text-center xl:text-left">
+
+              <span className="text-[10px] uppercase tracking-[0.3em] text-blue-400 font-bold">
+                FREE WEBSITE AUDIT
+              </span>
+
+              <h2 className="mt-2 text-2xl md:text-3xl font-black tracking-tight leading-none text-white">
+                Get a Free Website{" "}
+                <span className="text-blue-500">
+                  Audit
+                </span>
               </h2>
-             
             </div>
 
-            {/* Right Side: Sleek Horizontal Form */}
-            <form 
-              onSubmit={handleSubmit} 
-              className="w-full lg:w-auto flex flex-col md:flex-row items-center gap-3 bg-zinc-900/50 backdrop-blur-sm p-2 rounded-[1.5rem] md:rounded-full border border-white/10"
+            {/* RIGHT FORM */}
+            <form
+              onSubmit={handleSubmit}
+              className="w-full xl:w-auto flex flex-col md:flex-row items-center gap-3"
             >
-              {/* Email Input */}
-              <div className="relative w-full md:w-60 2xl:w-96">
-                <Mail className="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-500 w-4 h-4 2xl:w-7 2xl:h-7" />
+
+              {/* EMAIL */}
+              <div className="relative w-full md:w-[220px]">
+
+                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+
                 <input
                   type="email"
-                  placeholder="Business Email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-transparent text-white placeholder:text-zinc-600 py-4 2xl:py-7 pl-12 2xl:pl-16 pr-4 outline-none text-sm 2xl:text-xl"
+                  placeholder="Business Email"
+                  className="
+                    w-full
+                    h-[50px]
+                    rounded-full
+                    bg-black/30
+                    border border-white/10
+                    pl-11
+                    pr-4
+                    text-sm
+                    text-white
+                    placeholder:text-slate-600
+                    outline-none
+                    transition-all
+                    focus:border-blue-500/40
+                    focus:bg-white/[0.04]
+                  "
                 />
               </div>
 
-              {/* Minimalist Divider */}
-              <div className="hidden md:block w-[1px] h-10 bg-white/10" />
+              {/* URL */}
+              <div className="relative w-full md:w-[220px]">
 
-              {/* URL Input */}
-              <div className="relative w-full md:w-60 2xl:w-96">
-                <Globe className="absolute left-5 top-1/2 -translate-y-1/2 text-zinc-500 w-4 h-4 2xl:w-7 2xl:h-7" />
+                <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
+
                 <input
                   type="url"
-                  placeholder="Website URL"
                   required
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
-                  className="w-full bg-transparent text-white placeholder:text-zinc-600 py-4 2xl:py-7 pl-12 2xl:pl-16 pr-4 outline-none text-sm 2xl:text-xl"
+                  placeholder="Website URL"
+                  className="
+                    w-full
+                    h-[50px]
+                    rounded-full
+                    bg-black/30
+                    border border-white/10
+                    pl-11
+                    pr-4
+                    text-sm
+                    text-white
+                    placeholder:text-slate-600
+                    outline-none
+                    transition-all
+                    focus:border-blue-500/40
+                    focus:bg-white/[0.04]
+                  "
                 />
               </div>
 
-              {/* Submit Button: Blue to match theme */}
+              {/* BUTTON */}
               <button
                 type="submit"
-                className="w-full md:w-auto bg-blue-600 text-white font-bold px-10 2xl:px-16 py-4 2xl:py-7 rounded-xl md:rounded-full hover:bg-blue-500 transition-all duration-300 flex items-center justify-center gap-3 shadow-xl shadow-blue-600/20 active:scale-95 text-sm 2xl:text-xl"
+                className="
+                  group
+                  h-[50px]
+                  px-7
+                  rounded-full
+                  bg-blue-600
+                  hover:bg-blue-500
+                  text-white
+                  text-[11px]
+                  uppercase
+                  tracking-[0.25em]
+                  font-bold
+                  transition-all
+                  duration-300
+                  flex
+                  items-center
+                  justify-center
+                  gap-2
+                  shadow-[0_10px_30px_rgba(37,99,235,0.18)]
+                "
               >
-                Get My Audit
-                <ArrowRight className="w-4 h-4 2xl:w-6 2xl:h-6" />
+                Analyze
+
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </button>
             </form>
-
           </div>
         </div>
       </div>

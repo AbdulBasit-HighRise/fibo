@@ -81,11 +81,11 @@ export default function Footer() {
             <h4 className="text-[10px] 2xl:text-lg font-black text-zinc-400 uppercase tracking-[3px]">{"Ecosystem"}</h4>
             <div className="flex flex-col space-y-3 2xl:space-y-6 text-xs 2xl:text-xl font-bold">
               {[
-                { name: "Platform Home", href: "/" },
-                { name: "Our Engineers", href: "/about" },
-                { name: "Growth Services", href: "/services" },
+                { name: " Home", href: "/" },
+                { name: " About", href: "/about" },
+                { name: " Services", href: "/services" },
                 { name: "Case Studies", href: "/portfolio" },
-                { name: "Contact Hub", href: "/contact" }
+                { name: "Contact US", href: "/contact" }
               ].map((link, idx) => (
                 <Link key={idx} href={link.href} className="text-zinc-500 hover:text-white transition-colors w-max flex items-center gap-2 group/nav">
                   <span>{link.name}</span>
@@ -112,10 +112,10 @@ export default function Footer() {
             <h4 className="text-[10px] 2xl:text-lg font-black text-zinc-400 uppercase tracking-[3px]">{"Compliance"}</h4>
             <div className="flex flex-col space-y-3 2xl:space-y-6 text-xs 2xl:text-xl font-bold">
               {[
-                { name: "Privacy Protocol", href: "/privacy" },
-                { name: "Terms of Engine", href: "/terms" },
+                { name: "Privacy Policy", href: "/privacy" },
+                { name: "Terms & Conditions", href: "/terms" },
                 { name: "Global Pricing", href: "/pricing" },
-                { name: "Knowledge FAQ", href: "/faq" }
+                { name: " FAQs", href: "/faq" }
               ].map((link, idx) => (
                 <Link key={idx} href={link.href} className="text-zinc-500 hover:text-white transition-colors w-max">
                   {link.name}
@@ -166,7 +166,7 @@ export default function Footer() {
         {/* 🔒 BOTTOM BAR */}
         <div className="py-10 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-[11px] 2xl:text-lg text-zinc-600 font-semibold tracking-tight">
-            {"© "}{currentYear}{" High Raise Digital LLC. All strategic architecture reserved worldwide."}
+            {"© "}{currentYear}{" High Raise Digital LLC."}
           </p>
           <p className="text-[9px] 2xl:text-sm uppercase tracking-[4px] text-zinc-600 font-bold">
             {"Built for growth • Designed for dominance"}
