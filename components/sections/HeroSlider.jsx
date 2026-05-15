@@ -6,17 +6,18 @@ import { motion } from "framer-motion";
 
 const awardLogos = [
   { src: "/brands/ahref.png", alt: "Ahrefs" },
-  { src: "/brands/googlleads.png", alt: "Google" },
+  { src: "/brands/googleleads.png", alt: "Google" },
+  { src: "/brands/googleads.png", alt: "Google" },
+  { src: "/brands/google-rating.png", alt: "Google" },
+  { src: "/brands/Google-Partner.png", alt: "Google" },
   { src: "/brands/hubspot.png", alt: "LinkedIn" },
   { src: "/brands/linkedin.webp", alt: "Meta Business" },
-  { src: "/brands/semrush.png", alt: "Semrush" },
-  { src: "/brands/shopify.gif", alt: "Shopify" },
-  // { src: "/brands/woo.avif", alt: "WooCommerce" },
-  // { src: "/brands/WP.webp", alt: "WordPress" },
-  // { src: "/brands/WP.webp", alt: "WordPress" },
-  // { src: "/brands/WP.webp", alt: "WordPress" },
-  // { src: "/brands/WP.webp", alt: "WordPress" },
-  // { src: "/brands/WP.webp", alt: "WordPress" },
+  { src: "/brands/linkedinmarketing.webp", alt: "WooCommerce" },
+  { src: "/brands/meta.png", alt: "WordPress" },
+  { src: "/brands/sem.png", alt: "WordPress" },
+  { src: "/brands/shipify.png", alt: "WordPress" },
+  { src: "/brands/woocommerce.png", alt: "WordPress" },
+  { src: "/brands/WP.webp", alt: "WordPress" },
 
 ];
 

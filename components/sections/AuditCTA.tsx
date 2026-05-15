@@ -13,62 +13,69 @@ export default function AuditCTA() {
   };
 
   return (
-    // ⬇️ padding mazeed kam kar ke py-4 aur md:py-5 kar di hai taake section full smart ho jaye
-    <section className="relative w-full overflow-hidden border-t border-b border-white/5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-6 py-4 md:py-5">
+    // 🛠️ Fluid Padding: Mobile se lekar 4K tak balance rakha hai
+    <section className="relative w-full overflow-hidden border-y border-white/5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-6 md:px-12 lg:px-20 2xl:px-32 py-12 md:py-16 2xl:py-24">
       
-      {/* 🌌 Animated Glow Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+      {/* 🌌 Background Glows */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/[0.06] blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[250px] bg-indigo-600/[0.04] blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-4">
+      {/* 📐 Max-width ko 2000px tak allow kiya hai taake badi screen par stretch ho */}
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[1800px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-12">
         
-        {/* 📝 LEFT: HEADING (Mazeed choti aur compact kar di hai) */}
-        <div className="text-center xl:text-left">
-          <h2 className="text-lg md:text-xl 2xl:text-2xl font-black tracking-tighter leading-none text-white ">
-            Get a Free Website Audit
+        {/* 📝 LEFT: HEADING (2xl par size barha diya hai) */}
+        <div className="text-center xl:text-left flex-1">
+          <h2 className="text-3xl md:text-4xl 2xl:text-6xl font-black tracking-tighter leading-tight text-white  ">
+            Get a Free {" "}
+            <span className="text-blue-500">Website Audit</span>
           </h2>
         </div>
 
-        {/* 📥 RIGHT: FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className="w-full xl:w-auto flex flex-col md:flex-row items-center gap-3"
-        >
-          {/* EMAIL INPUT */}
-          <div className="relative w-full md:w-[220px] 2xl:w-[260px]">
-            <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-300" />
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Business Email"
-              // 🟢 bg-white/[0.12] aur border-white/30 se input color kafi light aur clear ho gaya hai
-              className="w-full h-[46px] md:h-[50px] rounded-xl bg-white/[0.12] border border-white/30 pl-11 pr-4 text-sm text-white placeholder:text-zinc-400 outline-none transition-all focus:border-blue-500 focus:bg-white/[0.18] focus:ring-4 focus:ring-blue-500/10 backdrop-blur-md"
-            />
-          </div>
+        {/* 📥 RIGHT: FORM (Inputs aur Button ka size badi screen par scale kiya hai) */}
+     <form
+  onSubmit={handleSubmit}
+  className="w-full xl:w-auto flex flex-col md:flex-row items-center gap-4 2xl:gap-6"
+>
+  {/* EMAIL INPUT - Cleaner & Sleeker */}
+  <div className="relative w-full md:w-[250px] 2xl:w-[380px]">
+    <Mail className="absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 2xl:w-5 2xl:h-5 text-white-500" />
+    <input
+      type="email"
+      required
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      placeholder="Business Email"
+      className="w-full h-[54px] 2xl:h-[62px] rounded-full bg-white/[0.05] border border-white pl-14 pr-6 text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md"
+    />
+  </div>
 
-          {/* URL INPUT */}
-          <div className="relative w-full md:w-[220px] 2xl:w-[260px]">
-            <Globe className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-300" />
-            <input
-              type="url"
-              required
-              value={url}
-              onChange={(e) => setUrl(e.target.value)}
-              placeholder="Website URL"
-              className="w-full h-[46px] md:h-[50px] rounded-xl bg-white/[0.12] border border-white/30 pl-11 pr-4 text-sm text-white placeholder:text-zinc-400 outline-none transition-all focus:border-blue-500 focus:bg-white/[0.18] focus:ring-4 focus:ring-blue-500/10 backdrop-blur-md"
-            />
-          </div>
+  {/* URL INPUT - Cleaner & Sleeker */}
+  <div className="relative w-full md:w-[250px] 2xl:w-[380px]">
+    <Globe className=" p absolute left-6 top-1/2 -translate-y-1/2 w-4 h-4 2xl:w-5 2xl:h-5 text-white" />
+    <input
+      type="url"
+      required
+      value={url}
+      onChange={(e) => setUrl(e.target.value)}
+      placeholder="Website URL"
+      className="w-full h-[54px] 2xl:h-[62px] rounded-full bg-white/[0.05] border border-white pl-14 pr-6 text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md"
+    />
+  </div>
 
-          {/* ⚡ ANALYZE BUTTON */}
-          <button
-            type="submit"
-            className="group h-[46px] md:h-[50px] px-8 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-[10px] uppercase tracking-widest font-black transition-all duration-300 flex items-center justify-center gap-3 shadow-lg shadow-blue-900/20 active:scale-95 whitespace-nowrap"
-          >
-            Check Now 
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
-        </form>
+  {/* ⚡ ANALYZE BUTTON - Matches Global Scheme (White to Gradient Fill) */}
+  <button
+    type="submit"
+    className="group relative h-[54px] 2xl:h-[62px] px-10 2xl:px-14 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap"
+  >
+    {/* 🛠️ GRADIENT FILL LAYER (Blue to Cyan) */}
+    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+    
+    <span className="relative z-10 flex items-center gap-3 text-black font-black text-[11px] 2xl:text-[13px]  tracking-[2px] group-hover:text-white transition-colors duration-500">
+      Check Now 
+      <ArrowRight className="w-4 h-4 2xl:w-5 2xl:h-5 group-hover:translate-x-1.5 transition-transform duration-300" />
+    </span>
+  </button>
+</form>
       </div>
     </section>
   );

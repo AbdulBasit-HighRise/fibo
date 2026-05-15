@@ -92,13 +92,13 @@ export default function Process() {
                           <div className="shrink-0 w-10 h-10 md:w-11 md:h-11 2xl:w-16 2xl:h-16 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
                             {step.icon}
                           </div>
-                          <h4 className="text-lg md:text-xl 2xl:text-4xl font-black text-white tracking-tight ">
+                          <h4 className="text-lg md:text-xl 2xl:text-4xl font-block text-white tracking-tight ">
                             {step.title}
                           </h4>
                         </div>
 
                         {/* ⬇️ Description Below */}
-                        <p className="text-xs 2xl:text-xl text-white/60 group-hover:text-white/90 transition-colors leading-relaxed">
+                        <p className="text-xs 4xl:text-xl text-white group-hover:text-white transition-colors leading-relaxed">
                           {step.desc}
                         </p>
                       </div>

@@ -112,23 +112,29 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* ⚡ ACTION BUTTON */}
-          <div className="flex items-center gap-4 z-50 shrink-0">
-            <button 
-              onClick={() => setIsProposalOpen(true)}
-              className={`hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all active:scale-95 ${
-                isScrolled 
-                ? "px-5 py-2 text-[9px] xl:text-[10px]" 
-                : "px-7 py-3 text-[10px] xl:text-[11px]"
-              }`}
-            >
-              Get Proposal
-            </button>
+      {/* ⚡ ACTION BUTTON */}
+<div className="flex items-center gap-4 z-50 shrink-0">
+  <button 
+    onClick={() => setIsProposalOpen(true)}
+    className={`group relative overflow-hidden hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest transition-all active:scale-95 ${
+      isScrolled 
+      ? "px-5 py-2 text-[9px] xl:text-[10px]" 
+      : "px-7 py-3 text-[10px] xl:text-[11px]"
+    }`}
+  >
+    {/* 🛠️ THE GRADIENT FILL LAYER (Blue to Cyan) */}
+    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+    
+    {/* Button Text - relative z-10 taake gradient ke upar dikhe */}
+    <span className="relative z-10 group-hover:text-white transition-colors duration-500">
+      Get Proposal
+    </span>
+  </button>
 
-            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white p-2">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+  <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white p-2">
+    {isOpen ? <X size={24} /> : <Menu size={24} />}
+  </button>
+</div>
 
           {/* MOBILE MENU */}
           <AnimatePresence>

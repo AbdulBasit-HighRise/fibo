@@ -298,7 +298,7 @@ export default function Services() {
                       </span>
 
                       <div className="relative z-10">
-                        <h3 className={`text-2xl md:text-3xl 2xl:text-6xl font-black tracking-tight leading-none transition-all duration-300 ${isActive ? "text-white translate-x-2" : "text-zinc-500"}`}>
+                        <h3 className={`text-2xl md:text-3xl 2xl:text-6xl font-black tracking-tight leading-none transition-all duration-300 ${isActive ? "text-white translate-x-2" : "text-white-500"}`}>
                           {item.title}
                         </h3>
                         
@@ -311,7 +311,7 @@ export default function Services() {
                           }}
                           className="overflow-hidden"
                         >
-                          <p className="text-zinc-400 text-sm 2xl:text-xl leading-relaxed max-w-md 2xl:max-w-2xl">
+                          <p className="text-white text-sm 2xl:text-xl leading-relaxed max-w-md 2xl:max-w-2xl">
                             {item.desc}
                           </p>
                         </motion.div>
@@ -329,17 +329,21 @@ export default function Services() {
           </div>
         </div>
 
-        {/* ✅ FINAL CTA BUTTON */}
-        <div className="mt-16 2xl:mt-24 flex justify-center">
-          <Link href="/services">
-            <button className="group relative overflow-hidden rounded-full border border-white/10 bg-white/[0.02] px-10 2xl:px-16 py-4 2xl:py-8 text-[10px] 2xl:text-lg font-bold uppercase tracking-[0.3em] text-white transition-all duration-500 hover:bg-white hover:text-black">
-              <span className="relative z-10 flex items-center gap-2">
-                Explore All Services
-                <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1" />
-              </span>
-            </button>
-          </Link>
-        </div>
+       {/* ✅ FINAL CTA BUTTON */}
+<div className="mt-12 2xl:mt-20 flex justify-center">
+  <Link href="/services">
+    <button className="group relative overflow-hidden h-[50px] 2xl:h-[60px] px-10 2xl:px-14 rounded-full bg-white text-black text-[10px] 2xl:text-[13px] font-black uppercase tracking-[0.3em] transition-all duration-500 active:scale-95 shadow-xl">
+      
+      {/* 🛠️ GRADIENT FILL LAYER (Blue to Cyan) */}
+      <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+      
+      <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
+        Explore All Services
+        <ArrowUpRight size={16} className="2xl:w-5 2xl:h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+      </span>
+    </button>
+  </Link>
+</div>
 
       </div>
     </section>

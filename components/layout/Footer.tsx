@@ -25,42 +25,44 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-[#030303] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
+    <footer className="text-white relative bg-[#030303] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
 
       {/* 🌌 High-End Cosmic Glows */}
       <div className="absolute top-0 left-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-blue-600/[0.04] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-cyan-500/[0.03] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
 
       {/* Container: Max width set for 4K balance */}
-      <div className="relative z-10 max-w-[1600px] 2xl:max-w-[2000px] mx-auto px-6 2xl:px-12">
+      <div className=" relative z-10 max-w-[1600px] 2xl:max-w-[2000px] mx-auto px-6 2xl:px-12">
 
         {/* 🛠️ PADDING REDUCED: py-16 ko py-8 (Mobile) aur py-24 ko py-12 (Desktop) kar diya hai */}
-        <div className="py-8 md:py-10 2xl:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-20">
+        <div className="  py-8 md:py-10 2xl:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-20">
 
          {/* Column 1: Brand & Strategic Vision */}
-<div className="lg:col-span-3 flex flex-col justify-start">
-  <div className="flex flex-col items-start"> 
-    <Link href="/" className="inline-block outline-none group">
+{/* Column 1: Brand & Strategic Vision */}
+<div className="lg:col-span-3 flex flex-col justify-start p-0 m-0">
+  <div className="flex flex-col items-start p-0 m-0"> 
+    <Link href="/" className="inline-block outline-none group p-0 m-0">
       <Image 
         src="/Hr Logo White.svg" 
         alt="High Raise Digital Logo"
-        width={600} 
-        height={200}
+        width={800} // Width barha di taake scaling smooth ho
+        height={250}
         priority
-        // 🛠️ LOGO ZOOMED: h-20 (mobile) | lg:h-28 (laptop) | 2xl:h-40 (4K/Big Screens)
-        // Negative margin-left (ml-[-4px]) added to align with text perfectly
-        className="h-20 lg:h-28 2xl:h-40 w-auto object-contain origin-left select-none ml-[-4px]" 
+        // 🛠️ LOGO ULTRA ZOOMED: 
+        // Mobile: h-28 (Pehle 22 tha) | Laptop: lg:h-36 (Pehle 28 tha) | 4K: 2xl:h-52 (Pehle 40 tha)
+        // p-0 m-0 explicitly added to remove any hidden spacing
+        className="h-28 lg:h-36 2xl:h-52 w-auto object-contain origin-left select-none ml-[-6px] p-0 m-0" 
       />
     </Link>
 
-    {/* 🛠️ PADDING REDUCED: mt-1 ya mt-2 rakha hai taake text logo ke foran baad aaye */}
-    <p className="text-zinc-500 text-[11px] md:text-xs 2xl:text-xl font-medium leading-tight max-w-[280px] 2xl:max-w-md mt-1 md:mt-2">
+    {/* 🛠️ ZERO MARGIN: mt-0 lagaya hai taake text logo ke bilkul nichle edge se start ho */}
+    <p className="text-white text-[11px] md:text-xs 2xl:text-xl font-medium leading-tight max-w-[280px] 2xl:max-w-md mt-0">
       Let’s discuss your goals and create a powerful strategy to boost your business growth online.
     </p>
   </div>
 
-  {/* Social Icons: Margin top adjusted for the bigger logo */}
-  <div className="flex items-center gap-3 mt-8 2xl:mt-14">
+  {/* Social Icons: Inka gap thoda maintain rakha hai taake design khichdi na bane */}
+  <div className="flex items-center gap-3 mt-6 2xl:mt-10">
     {socials.map((item, i) => (
       <Link
         key={i}
@@ -76,8 +78,8 @@ export default function Footer() {
 </div>
 
           {/* Column 2: Quick Links */}
-          <div className="lg:col-span-2 space-y-5 2xl:space-y-8">
-            <h4 className="text-[10px] 2xl:text-sm font-black text-white tracking-[3px] uppercase">Quick Links</h4>
+          <div className="pt-10 lg:col-span-2 space-y-5 2xl:space-y-8">
+            <h4 className="text-[10px] 2xl:text-sm font-black text-white tracking-[3px] ">Quick Links</h4>
             <div className="flex flex-col space-y-2.5 2xl:space-y-4 text-[11px] 2xl:text-base font-bold">
               {[
                 { name: "Home", href: "/" },
@@ -94,7 +96,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Our Services */}
-   <div className="lg:col-span-2 space-y-6 2xl:space-y-10">
+   <div className="pt-10 lg:col-span-2 space-y-6 2xl:space-y-10">
   {/* 🎯 Section Title: Shaper & More Distinct */}
   <h4 className="relative w-max text-[11px] 2xl:text-sm font-black text-white tracking-[4px]  ">
     Our Services
@@ -116,7 +118,7 @@ export default function Footer() {
         {/* 🛠️ Modern Hover Indicator */}
         <span className="w-0 h-[1.5px] bg-blue-500 transition-all duration-300 " />
         
-        <span className="text-[11px] 2xl:text-base font-bold tracking-wide uppercase ">
+        <span className="text-[11px] 2xl:text-base font-bold tracking-wide  ">
           {service}
         </span>
       </Link>
@@ -125,7 +127,7 @@ export default function Footer() {
 </div>
 
           {/* Column 4: Compliance */}
-          <div className="lg:col-span-2 space-y-5 2xl:space-y-8">
+          <div className="pt-10 lg:col-span-2 space-y-5 2xl:space-y-8">
             <h4 className="text-[10px] 2xl:text-sm font-black text-white tracking-[3px] ">Compliance</h4>
             <div className="flex flex-col space-y-2.5 2xl:space-y-4 text-[11px] 2xl:text-base font-bold">
               {[
@@ -143,8 +145,8 @@ export default function Footer() {
           </div>
 
           {/* Column 5: Inquiries - Sizing Refined */}
-          <div className="lg:col-span-3 space-y-5 2xl:space-y-8">
-            <h4 className="text-[10px] 2xl:text-sm font-black text-white tracking-[3px] uppercase">Inquiries</h4>
+          <div className="pt-10 lg:col-span-3 space-y-5 2xl:space-y-8">
+            <h4 className="text-[10px] 2xl:text-sm font-black text-white tracking-[3px] ">Inquiries</h4>
             <div className="space-y-3 2xl:space-y-5">
               <a href="mailto:info@highrisedigital.io" className="flex items-center gap-3 p-3.5 rounded-xl bg-white/[0.01] border border-white/5 hover:border-blue-500/20 transition-all duration-300 group">
                 <Mail size={14} className="text-blue-400 shrink-0" />
@@ -165,7 +167,7 @@ export default function Footer() {
         </div>
 
         {/* 🏢 OFFICES GRID: Padding adjusted */}
-        <div className="pb-12 pt-2 grid grid-cols-1 sm:grid-cols-3 gap-5 border-b border-white/5">
+        <div className="pb-7 pt-0 grid grid-cols-1 sm:grid-cols-3 gap-5 border-b border-white/5">
           {offices.map((office, idx) => (
             <div key={idx} className="p-5 rounded-xl bg-white/[0.01] border border-white/5 space-y-3 hover:border-white/10 transition-all duration-300 group relative overflow-hidden">
               <div className="flex items-center gap-2">
@@ -182,10 +184,10 @@ export default function Footer() {
 
         {/* 🔒 BOTTOM BAR: Clean & Compact */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-          <p className="text-[10px] 2xl:text-sm text-zinc-600 font-semibold tracking-tight">
+          <p className="text-[10px] 2xl:text-sm text-white-600 font-semibold tracking-tight">
             © {currentYear} High Raise Digital LLC.
           </p>
-          <p className="text-[8px] 2xl:text-[11px]  tracking-[3px] text-zinc-700 font-bold">
+          <p className="text-[8px] 2xl:text-[11px]  tracking-[3px] text-white-700 font-bold">
             Built for growth • Designed for dominance
           </p>
         </div>

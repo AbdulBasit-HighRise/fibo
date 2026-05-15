@@ -80,21 +80,33 @@ export default function HeroSection() {
               We are a results-driven digital marketing agency providing SEO, PPC, social media, and web solutions for businesses across the USA, UK, Australia, UAE, and worldwide markets.
             </p>
 
-            {/* Buttons Container */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 2xl:gap-6 w-full sm:w-auto pt-6 md:pt-8">
-              <Link href="/contact" className="w-full sm:w-auto">
-                <button 
-                  className="w-full sm:w-auto px-7 2xl:px-10 py-3.5 2xl:py-5 rounded-full border border-white bg-white text-black font-bold text-[11px] 2xl:text-base uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-transparent hover:text-white transition-all duration-300 shadow-xl"
-                >
-                  Start Project
-                  <ArrowUpRight size={14} className="2xl:w-5 2xl:h-5" />
-                </button>
-              </Link>
-              <Link href="/portfolio" className="inline-flex items-center justify-center w-full sm:w-auto px-7 2xl:px-10 py-3.5 2xl:py-5 rounded-full border border-white/10 text-zinc-400 text-[11px] 2xl:text-base font-bold uppercase tracking-widest hover:border-white/30 hover:text-white transition-all duration-300">
-                View Work
-              </Link>
-            </div>
+           {/* Buttons Container */}
+<div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 2xl:gap-5 w-full sm:w-auto pt-6 md:pt-8">
+  
+  {/* START PROJECT BUTTON (Compact & Sleek) */}
+  <Link href="/contact" className="w-full sm:w-auto">
+    <button 
+      className="group relative overflow-hidden w-full sm:min-w-[160px] 2xl:min-w-[200px] h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px]  tracking-[2px] flex items-center justify-center gap-2 transition-all duration-500 shadow-lg active:scale-95"
+    >
+      {/* GRADIENT FILL LAYER */}
+      <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+      
+      {/* Content */}
+      <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
+        Start Project
+        <ArrowUpRight size={14} className="2xl:w-5 2xl:h-5 group-hover:rotate-45 transition-transform duration-300" />
+      </span>
+    </button>
+  </Link>
 
+  {/* VIEW WORK BUTTON (Matching Height) */}
+  <Link 
+    href="/portfolio" 
+    className="inline-flex items-center justify-center w-full sm:min-w-[140px] 2xl:min-w-[180px] h-[48px] 2xl:h-[56px] rounded-full border border-white/20 text-zinc-400 text-[11px] 2xl:text-[13px] font-bold uppercase tracking-[2px] hover:border-white hover:text-white transition-all duration-300"
+  >
+    View Work
+  </Link>
+</div>
             {/* Social Trust */}
             <div className="flex items-center gap-3 pt-6 mt-6 border-t border-white/5 w-full max-w-md 2xl:max-w-2xl mx-auto lg:mx-0">
               <div className="flex items-center gap-1">
