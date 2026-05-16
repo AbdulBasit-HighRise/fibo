@@ -5,23 +5,27 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="relative w-full overflow-hidden border-t border-b border-white/5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-6 md:px-12 lg:px-20 2xl:px-32 py-10 md:py-14 2xl:py-24">
+    <section className="relative w-full overflow-hidden border-t border-b border-white/5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-6 md:px-8 lg:px-20 2xl:px-32 py-10 md:py-14 2xl:py-24">
       
       {/* 🌌 Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] 2xl:w-[1200px] h-[200px] 2xl:h-[300px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 2xl:gap-16">
         
-        {/* 📝 LEFT SIDE: TEXT CONTENT */}
-    <div className="text-left space-y-3 md:space-y-4 flex-1">
-  {/* 🎯 Small laptops ke liye perfectly optimized dynamic scale size */}
-  <h2 className="!text-[1.6rem] sm:!text-3xl md:!text-3xl lg:!text-[2rem] xl:!text-[2.4rem] 2xl:!text-7xl font-bold tracking-tighter leading-[1.2] lg:leading-[1.1] text-white">
-    Ready To Grow Your {" "}
-    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Brand Online?</span>
-  </h2>
+      {/* 📝 LEFT SIDE: TEXT CONTENT */}
+<div className="text-left space-y-4 flex-1">
   
-  {/* ⚪ Paragraph: Munasib size taake heading ke sath bura na lage */}
-  <p className="text-zinc-300 text-xs md:text-sm lg:text-[14px] 2xl:text-2xl font-normal max-w-xl 2xl:max-w-3xl leading-relaxed opacity-90">
+  {/* 🎯 MATCHED DESIGN SYSTEM HEADING: Cloned exact framework fluid sizes, tight tracking, and layout weight */}
+  <h3 className="!text-[1.8rem] font-black sm:!text-4xl md:!text-4xl lg:!text-[2rem] xl:!text-[2rem] 2xl:!text-7xl 3xl:!text-8xl tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+    Ready To Grow Your{" "}
+    {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with exact top-margin spacing and safety right padding to eliminate text-clipping */}
+    <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      Brand Online?
+    </span>
+  </h3>
+  
+  {/* 🎯 GLOBAL TEXT SIZE SYSTEM: Locked 18px on small screens and 20px (xl) on large desktop monitors */}
+  <p className="text-white text-[18px] 2xl:text-xl font-normal max-w-xl 2xl:max-w-3xl leading-relaxed opacity-90">
     Transform your ideas into digital reality with our expert marketing and design strategies.
   </p>
 </div>

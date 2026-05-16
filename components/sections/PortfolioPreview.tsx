@@ -63,9 +63,12 @@ export default function PortfolioBento() {
             transition={{ duration: 0.5 }}
             className="text-left"
           >
-            <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
-              Client’s Case Studies
-            </h2>
+            <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
+              Client’s {""}
+               <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    Case Studies
+                  </span>
+            </h3>
           </motion.div>
 
           {/* RIGHT SIDE: View All Button */}
@@ -130,12 +133,12 @@ export default function PortfolioBento() {
                     <BarChart3 size={22} className="2xl:w-10 2xl:h-10" />
                   </div>
                   <div className="space-y-2">
-                    <h4 className="text-4xl 2xl:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{project.metrics}</h4>
+                    <span className="text-4xl 2xl:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{project.metrics}</span>
                     <p className="text-xs 2xl:text-xl text-zinc-400 font-medium leading-relaxed">System parameters benchmarked via real-time testing.</p>
                   </div>
                   <div className="space-y-1 relative z-10">
                     <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-zinc-500 font-bold block">{project.category}</span>
-                    <h3 className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</h3>
+                    <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
                   </div>
                 </>
               ) : (
@@ -155,7 +158,7 @@ export default function PortfolioBento() {
                   </div>
                   <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
                     <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-cyan-400 font-bold block">{project.category}</span>
-                    <h3 className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</h3>
+                    <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
                     <p className="text-[10px] 2xl:text-lg text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500">{project.metrics}</p>
                   </div>
                 </div>

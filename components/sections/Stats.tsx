@@ -58,12 +58,12 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
         </div>
       </div>
 
-      <h3 className="relative z-10 text-5xl md:text-5xl 2xl:text-7xl font-black tracking-tighter text-white flex items-center leading-none">
+      <span className="relative z-10 text-5xl md:text-5xl 2xl:text-7xl font-black tracking-tighter text-white flex items-center leading-none">
         <motion.span>{isMounted ? display : 0}</motion.span>
         <span className="text-blue-500 font-black text-2xl md:text-3xl 2xl:text-5xl ml-1">
           {suffix}
         </span>
-      </h3>
+      </span>
 
       <p className="relative z-10 mt-3 text-[11px] md:text-[12px] 2xl:text-lg font-black tracking-[3px] text-zinc-500 group-hover:text-white uppercase transition-colors duration-500">
         {label}
@@ -89,9 +89,9 @@ export default function Stats() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[100rem] mx-auto px-6">
 
         <div className="text-center mb-6 md:mb-8 2xl:mb-12">
-          <p className="text-2xl md:text-3xl 2xl:text-5xl font-black text-white tracking-tighter leading-none">
+          <h3 className="text-2xl md:text-3xl 2xl:text-5xl font-black text-white tracking-tighter leading-none">
             Some Facts About Us
-          </p>
+          </h3>
         </div>
 
         <motion.div

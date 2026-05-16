@@ -6,8 +6,9 @@ import { ArrowUpRight, Star } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-fit lg:min-h-[70vh] 2xl:min-h-[65vh] 3xl:min-h-[60vh] bg-[#030303] overflow-hidden pt-24 md:pt-28 lg:pt-32 2xl:pt-36 3xl:pt-40 flex items-center selection:bg-blue-600 pb-6 lg:pb-8 2xl:pb-10">
-      
+<section 
+  className="relative min-h-fit lg:min-h-[70vh] 2xl:min-h-[65vh] 3xl:min-h-[60vh] bg-[#030303] overflow-hidden flex items-center selection:bg-blue-600 pb-12 pt-36 md:pt-40 lg:pt-40 lg:pb-18 2xl:pt-56 2xl:pb-32 3xl:pt-64 3xl:pb-36"
+>      
       {/* 🖼️ BACKGROUND IMAGE LAYER */}
       <div className="absolute inset-0 z-0">
         <Image

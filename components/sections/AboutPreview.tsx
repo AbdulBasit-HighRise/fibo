@@ -1,119 +1,153 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronRight, ArrowRight } from "lucide-react";
 
+// Sirf 6 main logos
+const awardLogos = [
+
+  { src: "/baj2.png", alt: "National Excellence" },
+  { src: "/baj4.png", alt: "Top 10 Agency" },
+
+  { src: "/baj3.png", alt: "Forbes Member" },
+  { src: "/baj1.png", alt: "Clutch Recognition" },
+
+
+  { src: "/baj5.png", alt: "The Manifest" },
+];
+
 export default function AboutPreview() {
   return (
-    <section className="relative py-12 md:py-20 2xl:py-32 bg-[#030303] overflow-hidden border-b border-white/5">
+    <>
+      {/* 🎯 ABOUT SECTION: Changed bottom padding to 0 to remove gap with logos */}
+      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#030303] overflow-hidden">
 
-      {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
+        {/* Background Glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
 
-      <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
-          {/* LEFT: Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative flex items-center justify-center lg:justify-start order-2 lg:order-1"
-          >
-            <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
-            <div className="relative z-10 w-full max-w-[320px] md:max-w-[420px] 2xl:max-w-[650px]">
-              <Image
-                src="/laptop.png"
-                alt="High Rise Digital - Leading Global Agency"
-                width={700}
-                height={700}
-                className="w-full h-auto object-contain drop-shadow-2xl"
-                priority
-              />
-            </div>
-          </motion.div>
-
-          {/* RIGHT: Text Content */}
-          <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
-            
-            {/* 🛠️ HEADING AS P TAG: Adjusted for perfect scaling */}
-            <div className="">
-            {/* 🎯 Paragraphs converted to H2 with forced utility breakpoints */}
-{/* 🎯 FIX: Combined into a single <h2> with inline-block and mt-2 for perfect normal spacing */}
-<h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-6xl font-black tracking-tighter leading-[1.15] text-white">
-  Leading Digital Marketing
-  <br />
-  <span className="inline-block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-    Company Working Globally
-  </span>
-</h2>
-            </div>
-
+            {/* LEFT: Image */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-5"
+              className="relative flex items-center justify-center lg:justify-start order-2 lg:order-1"
             >
-              {/* ⚪ Pure White Text for maximum readability */}
-            {/* 🎯 Paragraph 1 */}
-<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-4xl font-normal opacity-90 mb-6">
-  As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
-</p>
-
-{/* 🎯 Paragraph 2 */}
-<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90 mb-6">
-  Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
-</p>
-
-{/* 🎯 Paragraph 3 */}
-<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90 mb-6 hidden md:block">
-  We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
-</p>
-
-{/* 🎯 Paragraph 4 */}
-<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90">
-  Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
-</p>
+              <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
+              <div className="relative z-10 w-full max-w-[320px] md:max-w-[420px] 2xl:max-w-[650px]">
+                <Image
+                  src="/laptop.png"
+                  alt="High Rise Digital - Leading Global Agency"
+                  width={700}
+                  height={700}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
             </motion.div>
 
-           {/* Buttons Section */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.3 }}
-  viewport={{ once: true }}
-  className="flex flex-wrap items-center gap-6 pt-4"
->
-  {/* GET QUOTE BUTTON (Gradient Fill) */}
-  <Link href="/contact">
-    <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
-      
-      {/* 🛠️ GRADIENT FILL LAYER */}
-      <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-      
-      <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
-        Get Quote <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-      </span>
-    </button>
-  </Link>
+            {/* RIGHT: Text Content */}
+            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
+              <div>
+                <h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-6xl font-black tracking-tighter leading-[1.15] text-white">
+                  Leading Digital Marketing
+                  <br />
+                  <span className="inline-block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                    Company Working Globally
+                  </span>
+                </h2>
+              </div>
 
-  {/* VIEW SERVICES (Sleek Link Style) */}
-  <Link 
-    href="/services" 
-    className="group flex items-center gap-2 text-zinc-400 hover:text-white font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
-  >
-    View Services 
-    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-  </Link>
-</motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-5"
+              >
+                <p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-4xl font-normal opacity-90 mb-6">
+                  As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
+                </p>
+
+                <p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90 mb-6">
+                  Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
+                </p>
+
+                <p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90 mb-6 hidden md:block">
+                  We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
+                </p>
+
+                <p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90">
+                  Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
+                </p>
+              </motion.div>
+
+              {/* Buttons Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap items-center gap-6 pt-4"
+              >
+                <Link href="/contact">
+                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
+                    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+                    <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
+                      Get Quote <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </button>
+                </Link>
+
+                <Link 
+                  href="/services" 
+                  className="group flex items-center gap-2 text-zinc-400 hover:text-white font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
+                >
+                  View Services 
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* 🎯 LOGO SECTION: Set pt-0 (Zero top padding) and removed all border utilities */}
+      <section className="pt-15 pb-12 md:pb-16 2xl:pb-20 bg-[#030303]">
+        <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
+          
+          {/* LOGOS GRID */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-0 2xl:gap-18 items-center justify-center justify-items-center w-full max-w-5xl">
+            {awardLogos.map((logo, index) => (
+              <div
+                key={index}
+                className="group relative w-full max-w-[160px] md:max-w-[200px] 2xl:max-w-[240px] flex items-center justify-center transition-all duration-500"
+              >
+                {/* Logo Wrapper Container */}
+               {/* 🎯 FIXED WRAPPER: Used valid Tailwind standard or arbitrary sizes to prevent compilation errors */}
+<div className="h-20 md:h-36 2xl:h-40 w-full relative flex items-center justify-center">
+  <Image
+    src={logo.src}
+    alt={logo.alt}
+    fill
+    className="object-contain transition-all duration-500   group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105"
+    sizes="(max-width: 768px) 160px, (max-width: 1920px) 220px, 300px"
+  />
+</div>
+
+                {/* Premium Active Hover Glow */}
+                <div className="absolute inset-0 bg-blue-500/5 blur-[40px] 2xl:blur-[60px] opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+    </>
   );
 }

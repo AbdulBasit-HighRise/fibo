@@ -44,28 +44,29 @@ export default function ProvenExcellence() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              {/* 🎯 Adjusted Responsive Heading for Laptop Screen Balance */}
-              <h2 className="!text-xl sm:!text-2xl md:!text-3xl lg:!text-4xl xl:!text-5xl 2xl:!text-7xl font-black text-white leading-[1.25] tracking-tighter mb-6">
-                Thrive Your Business  <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                 with Marketing Solutions
-                </span>
-              </h2>
-              
-              {/* ⚪ Text Color & Line Spacing Adjusted for Perfect Readability */}
-              <div className="space-y-5 text-zinc-300 text-sm md:text-base 2xl:text-lg 4xl:text-2xl font-normal leading-relaxed max-w-xl 2xl:max-w-3xl">
-                <p>
-                  We consistently deliver measurable digital growth through strategic planning, creative execution, and performance-focused campaigns.
-                </p>
-                <p>
-                  Our approach combines data insights with innovative marketing techniques to ensure every project achieves strong visibility and engagement.
-                </p>
-                <div className="border-l-2 border-blue-500 pl-5 mt-6">
-                  <p className="text-zinc-400 italic">
-                    We help brands stay competitive and achieve sustainable success.
-                  </p>
-                </div>
-              </div>
+            {/* 🎯 MATCHED EXACT DESIGN SYSTEM FRAMEWORK */}
+<h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
+  Thrive Your Business 
+  {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}
+  <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+    with Marketing Solutions
+  </span>
+</h3>
+            {/* 🎯 FIXED WRAPPER: Removed broken 4xl breakpoints and set standard response spacing */}
+<div className="space-y-5 text-zinc-300 text-[18px] 2xl:text-xl font-normal leading-relaxed max-w-xl 2xl:max-w-3xl">
+  <p>
+    We consistently deliver measurable digital growth through strategic planning, creative execution, and performance-focused campaigns.
+  </p>
+  <p>
+    Our approach combines data insights with innovative marketing techniques to ensure every project achieves strong visibility and engagement.
+  </p>
+  {/* Left border block adjusted to match contrast */}
+  <div className="border-l-2 border-blue-500 pl-5 mt-6">
+    <p className="text-zinc-400 text-[18px] 2xl:text-xl">
+      We help brands stay competitive and achieve sustainable success.
+    </p>
+  </div>
+</div>
             </motion.div>
           </div>
 

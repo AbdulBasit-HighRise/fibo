@@ -30,23 +30,24 @@ export default function ClientTrust() {
 
           {/* LEFT SIDE: Heading */}
           <div className="shrink-0 text-center lg:text-left">
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="text-2xl md:text-3xl 2xl:text-5xl font-black text-white tracking-tighter leading-none"
-            >
-              Our{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                Clients.
-              </span>
-            </motion.h2>
-          </div>
-
+  <motion.h3
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    /* 🎯 MATCHED DESIGN SYSTEM: Exact consistent fluid sizing scale, tight tracking, and layout line-height */
+    className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case"
+  >
+    Our{" "}
+    {/* 🎯 MATCHED GRADIENT BLOCK: Set to 'block' with top margin spacing and right padding safety bounds */}
+    <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+      Clients
+    </span>
+  </motion.h3>
+</div>
           {/* RIGHT SIDE: Heavy Marquee Track */}
           <div className="w-full lg:flex-1 relative h-20 md:h-24 2xl:h-32 flex items-center overflow-hidden">
             <motion.div
-              className="flex gap-10 md:gap-12 2xl:gap-16 w-max items-center" // 🛠️ Gap reduced for tighter slider
+              className="flex gap-16 md:gap-8 2xl:gap-16 w-max items-center" // 🛠️ Gap reduced for tighter slider
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 duration: 40, // Speed slightly adjusted for smoothness

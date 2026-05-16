@@ -28,20 +28,20 @@ export default function Services() {
       <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
         
         {/* HEADER - Centered & Slim */}
-        <div className="mb-8 md:mb-12  pt-0  text-center">
-        
-         <motion.h2 
-  initial={{ opacity: 0, y: 10 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  className="mt-3 !text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white"
->
-  Our  {" "}
-  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
-    Digital Marketing Services
-  </span>
-</motion.h2>
-        </div>
+      <div className="mb-8 md:mb-12 pt-0 text-center">
+  <motion.h3 
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    /* 🎯 FIXED BREAKPOINTS & ADDED PADDING: Removed broken 3xl, added pr-4 py-1 to stop text clipping */
+    className="mt-3 !text-[2rem] sm:!text-4xl md:!text-5xl lg:!text-[2.8rem] xl:!text-[3.5rem] 2xl:!text-[5.5rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
+  >
+    Our {" "}
+    <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+      Digital Marketing Services
+    </span>
+  </motion.h3>
+</div>
 
         {/* MAIN GRID */}
         <div className="grid lg:grid-cols-12 gap-8 2xl:gap-20 items-start relative">
@@ -112,11 +112,11 @@ export default function Services() {
 
                     <div className="relative z-10">
   {/* 🎯 Heading: Balanced for small laptops, fixed active/inactive colors, and global CSS bypass */}
-  <h3 className={`!text-lg sm:!text-xl md:!text-xl lg:!text-2xl 2xl:!text-4xl font-black tracking-tight leading-snug transition-all duration-300 ${
+  <h4 className={`!text-lg sm:!text-xl md:!text-xl lg:!text-2xl 2xl:!text-4xl font-black tracking-tight leading-snug transition-all duration-300 ${
     isActive ? "text-white translate-x-1.5" : "text-zinc-500 hover:text-zinc-400"
   }`}>
     {item.title}
-  </h3>
+  </h4>
   
   <motion.div
     initial={false}
@@ -128,9 +128,9 @@ export default function Services() {
     className="overflow-hidden"
   >
     {/* ⚪ Description: High readability and clear text on small/laptop screens */}
-    <p className="text-zinc-300 text-xs md:text-sm 2xl:text-base 4xl:text-xl leading-relaxed max-w-md 2xl:max-w-2xl font-normal">
-      {item.desc}
-    </p>
+   <p className="text-white text-sm md:text-base leading-relaxed max-w-md md:max-w-xl lg:max-w-2xl font-normal opacity-90">
+  {item.desc}
+</p>
   </motion.div>
 </div>
                     </div>

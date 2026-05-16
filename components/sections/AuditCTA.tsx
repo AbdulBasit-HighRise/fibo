@@ -24,17 +24,20 @@ export default function AuditCTA() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[1800px] mx-auto flex flex-col xl:flex-row items-center justify-between gap-12">
         
         {/* 📝 LEFT: HEADING (2xl par size barha diya hai) */}
-    <div className="text-center xl:text-left flex-1 w-full whitespace-nowrap">
-  {/* 🎯 Completely 1 line mein lock karne ke liye optimized size framework */}
-  <h2 className="!text-[1.4rem] sm:!text-[1.7rem] md:!text-2xl lg:!text-[1.8rem] xl:!text-3xl 2xl:!text-6xl font-block tracking-tighter leading-tight text-white">
-    Get a Free <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Website Audit</span>
-  </h2>
+ <div className="text-center xl:text-left flex-1 w-full">
+  {/* 🎯 FIXED: Completely 1 line layout, compressed size for subtle & clean look */}
+  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl 2xl:text-4xl font-black tracking-tight text-white whitespace-nowrap">
+    Get a Free {" "}
+    <span className="inline-block py-0.5 pr-2 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      Website Audit
+    </span>
+  </h3>
 </div>
 
         {/* 📥 RIGHT: FORM (Inputs aur Button ka size badi screen par scale kiya hai) */}
      <form
   onSubmit={handleSubmit}
-  className="w-full xl:w-auto flex flex-col md:flex-row items-center gap-4 2xl:gap-6"
+  className="pb-3.4 w-full xl:w-auto flex flex-col md:flex-row items-center gap-4 2xl:gap-6"
 >
   {/* EMAIL INPUT - Cleaner & Sleeker */}
  {/* EMAIL INPUT */}

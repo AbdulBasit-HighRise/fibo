@@ -46,14 +46,17 @@ export default function Process() {
       <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
 
         {/* 📋 HEADER */}
-        <div className="mb-16 md:mb-24 text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl 2xl:text-8xl font-black text-white tracking-tighter leading-tight">
-            Our  {" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-              Working Process
-            </span>
-          </h2>
-        </div>
+ <div className="mb-12 md:mb-16 pt-0 text-center">
+  {/* 🎯 MATCHED DESIGN SYSTEM: Applied identical fluid sizes, tracking, and leading from the reference design layout */}
+  <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+    Our 
+  {" "}
+    {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}
+    <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+      Working Process
+    </span>
+  </h3>
+</div>
 
         {/* 🧠 TIMELINE MATRIX */}
         <div className="relative">
@@ -93,7 +96,7 @@ export default function Process() {
                           <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
                             {step.icon}
                           </div>
-                          <h4 className="text-xl md:text-2xl 2xl:text-4xl font-extrabold text-white tracking-tight">
+                          <h4 className="text-xl md:text-2xl 2xl:text-4xl  text-white tracking-tight">
                             {step.title}
                           </h4>
                         </div>

@@ -5,25 +5,23 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const awardLogos = [
-  { src: "/brands/ahref.png", alt: "Ahrefs" },
+  { src: "/brands/ahrefs.png", alt: "Ahrefs" },
   // { src: "/brands/googleleads.png", alt: "Google" },
-  { src: "/brands/googleads.png", alt: "Google" },
-  { src: "/brands/google-rating.png", alt: "Google" },
-  { src: "/brands/Google-Partner.png", alt: "Google" },
-  { src: "/brands/hubspot.png", alt: "LinkedIn" },
-  { src: "/brands/linkedin.webp", alt: "Meta Business" },
-  { src: "/brands/linkedinmarketing.webp", alt: "WooCommerce" },
-  { src: "/brands/meta.png", alt: "WordPress" },
-  { src: "/brands/sem.png", alt: "WordPress" },
-  { src: "/brands/shipify.png", alt: "WordPress" },
-  { src: "/brands/woocommerce.png", alt: "WordPress" },
-  { src: "/brands/WP.webp", alt: "WordPress" },
+  { src: "/brands/google-analisis.png", alt: "Google Analatics" },
+  { src: "/brands/google-patner.png", alt: "Google patner" },
+  // { src: "/brands/Google-Partner.png", alt: "Google" },
+  { src: "/brands/linkedin.png", alt: "LinkedIn" },
+  { src: "/brands/meta-business.png", alt: "meta" },
+  { src: "/brands/semrush.png", alt: "semrush" }, 
+  { src: "/brands/shopify-patner.png", alt: "shopify" },
+  { src: "/brands/tiktok.png", alt: "tiktok" },
+  { src: "/brands/woocommerce.png", alt: "woocommerce" },
 
 ];
 
 export default function HeroSlider() {
   return (
-    <section className="border-y border-white/5 py-8 md:py-12 bg-[#020617] overflow-hidden relative">
+    <section className="border-y border-white/5 py-8 md:py-12 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-6 md:px-8 lg:px-20 2xl:px-32 py-10 md:py-14 2xl:py-24 hoverflow-hidden relative">
       
       {/* Side Fades: Logos ko smooth edges dene ke liye */}
       <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#020617] to-transparent z-10 pointer-events-none" />
@@ -31,7 +29,7 @@ export default function HeroSlider() {
 
       <div className="flex">
         <motion.div 
-          className="flex flex-nowrap items-center gap-12 md:gap-20 2xl:gap-28 px-6"
+          className="flex flex-nowrap items-center gap-8 md:gap-15 2xl:gap-20 px-6"
           animate={{ x: ["0%", "-50%"] }}
           transition={{ 
             duration: 25, 
@@ -52,7 +50,7 @@ export default function HeroSlider() {
                   alt={logo.alt}
                   fill
                   className="object-contain transition-all duration-500 
-                             grayscale opacity-40 brightness-200
+                             
                              group-hover:grayscale-0 group-hover:opacity-100 
                              group-hover:brightness-100 group-hover:scale-105"
                   sizes="200px"

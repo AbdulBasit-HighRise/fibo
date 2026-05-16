@@ -5,23 +5,23 @@ import Image from "next/image";
 
 // Sirf 6 main logos
 const awardLogos = [
-  { src: "/logo1.png", alt: "Clutch Recognition" },
-  { src: "/logo2.png", alt: "National Excellence" },
-  { src: "/logo3.png", alt: "Forbes Member" },
-  { src: "/logo4.png", alt: "Top 10 Agency" },
-  { src: "/logo5.png", alt: "The Manifest" },
-  { src: "/logo6.png", alt: "Top SEO Provider" },
+  { src: "/baj1.png", alt: "Clutch Recognition" },
+  { src: "/baj2.png", alt: "National Excellence" },
+  { src: "/baj3.png", alt: "Forbes Member" },
+  { src: "/baj4.png", alt: "Top 10 Agency" },
+  { src: "/baj5.png", alt: "The Manifest" },
+  // { src: "/logo6.png", alt: "Top SEO Provider" },
 
 ];
 
 export default function TrustLogos() {
   return (
     /* 🛠️ Padding Yaha Kam Ki Hai: py-10 (standard) aur 2xl:py-12 (4K ke liye) */
-    <section className="border-y border-white/10 py-10 2xl:py-12 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]">
+    <section className="border-y border-white/10 py-10 2xl:py-12 bg-[#030207]">
       <div className="container-main">
         
         {/* 🛠️ 6 LOGOS GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-16 2xl:gap-24 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-16 2xl:gap-15 items-center justify-items-center">
           {awardLogos.map((logo, index) => (
             <div
               key={index}

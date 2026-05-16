@@ -33,13 +33,20 @@ export default function IndustryExpertise() {
       
       <div className="container-main relative z-10">
         <div className="text-center mb-8 md:mb-10">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="text-2xl md:text-4xl lg:text-5xl 2xl:text-7xl font-black tracking-tighter "
-          >
-            Industries We <span className="gradient-text">Work With</span>
-          </motion.h2>
+         <motion.h3 
+  initial={{ opacity: 0, y: 10 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  /* 🎯 MATCHED DESIGN SYSTEM: Identical responsive sizes, line-height, and safety padding cloned from your core heading framework */
+  className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case pr-4 py-1"
+>
+  Industries We 
+ {" "}
+  {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with exact top-margin spacing to perfectly sync with your page aesthetic */}
+  <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+    Work With
+  </span>
+</motion.h3>
         </div>
       </div>
 

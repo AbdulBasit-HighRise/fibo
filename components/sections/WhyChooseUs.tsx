@@ -39,41 +39,43 @@ export default function WhyChooseUs() {
         <div className="grid lg:grid-cols-12 gap-12 xl:gap-16 2xl:gap-24 items-center">
 
           {/* LEFT SIDE: Content (Balanced with Sizing Framework) */}
-          <div className="lg:col-span-6 space-y-6 md:space-y-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              {/* 🎯 Adjusted Responsive Heading for Laptop Screen Balance */}
-<h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl font-black text-white tracking-tighter leading-[1.2] lg:leading-[1.1] mb-6 md:mb-8">
-  Why Choose 
-  <br />
-  {/* 🎯 FIXED OVERFLOW: Changed to 'block' with 'mt-1 py-1 pr-4' to give the heavy gradient font breathing room so it never clips */}
-  <span className="block mt-1 py-1 pr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-    High Rise Digital
-  </span>
-</h2>
+        <div className="lg:col-span-6 space-y-6 md:space-y-8">
+  <motion.div
+    initial={{ opacity: 0, x: -30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8 }}
+  >
+    {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
+    <h2 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+      Why Choose
+      <br />
+      {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
+      <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+        High Rise Digital
+      </span>
+    </h2>
 
-              <div className="space-y-5 text-zinc-300 text-sm md:text-base 2xl:text-lg 4xl:text-2xl font-normal leading-relaxed max-w-xl 2xl:max-w-3xl">
-                <p>
-                  Choosing High Rise Digital means working with a team that is fully committed to your success.
-                </p>
+    {/* 🎯 EXACT TEXT FONT SIZE SYSTEM: Locked 18px on small screens and 20px (xl) on large screens */}
+    <div className="space-y-8 text-zinc-300 text-[18px] 2xl:text-xl font-normal  max-w-xl 2xl:max-w-3xl">
+      <p>
+        Choosing High Rise Digital means working with a team that is fully committed to your success.
+      </p>
 
-                <div className="space-y-5 border-l-2 border-blue-500/50 pl-5 mt-6">
-                  <p>
-                    Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
-                  </p>
+      {/* Border section left panel aligned with font metrics */}
+      <div className="space-y-5 border-l-2 border-blue-500/50 pl-5 mt-6">
+        <p>
+          Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
+        </p>
 
-                  <p className="text-white-400 ">
-                    Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
+        {/* 🎯 FIXED: Corrected invalid color utility and injected explicit responsive size text rules */}
+        <p className="text-zinc-300 text-[18px] 2xl:text-xl">
+          Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
+        </p>
+      </div>
+    </div>
+  </motion.div>
+</div>
           {/* RIGHT SIDE: Cards (Enhanced Contrast & Highly Readable Layout) */}
           <div className="lg:col-span-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">

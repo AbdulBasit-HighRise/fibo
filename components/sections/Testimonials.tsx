@@ -24,20 +24,22 @@ export default function Testimonials() {
       <div className="relative z-10 max-w-6xl 2xl:max-w-[100rem] mx-auto px-4 md:px-6">
         
         {/* 📋 Header: Super Tight Margin Bottom */}
-        <div className="mb-6 md:mb-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl lg:text-6xl 2xl:text-8xl font-black tracking-tighter text-white leading-none ">
-              Verified{" "}
-              <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,242,255,0.15)]">
-                Reviews.
-              </span>
-            </h2>
-          </motion.div>
-        </div>
+       <div className="mb-12 md:mb-16 pt-0 text-center">
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+  >
+    {/* 🎯 MATCHED DESIGN SYSTEM: 100% synchronized layout scale, tight letter-tracking and consistent responsive flow */}
+    <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+      Verified{" "}
+      {/* 🎯 MATCHED GRADIENT BLOCK: Set to 'block' with top margin, exact drop shadow framework, and padding safety bounds */}
+      <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text drop-shadow-[0_0_8px_rgba(0,242,255,0.15)]">
+        Reviews
+      </span>
+    </h3>
+  </motion.div>
+</div>
 
         {/* 🚀 WIDGET CONTAINER: Responsive Fit & Micro Border */}
         <motion.div 
