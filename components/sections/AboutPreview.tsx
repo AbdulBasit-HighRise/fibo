@@ -60,18 +60,25 @@ export default function AboutPreview() {
               className="space-y-5"
             >
               {/* ⚪ Pure White Text for maximum readability */}
-              <p className="text-white text-sm md:text-base 2xl:text-2xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal">
-                As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
-              </p>
-              <p className="text-white text-sm md:text-base 2xl:text-2xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal">
-                Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
-              </p>
-              <p className="text-white text-sm md:text-base 2xl:text-2xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal hidden md:block">
-                We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
-              </p>
-              <p className="text-white text-sm md:text-base 2xl:text-2xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal">
-                Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
-              </p>
+            {/* 🎯 Paragraph 1 */}
+<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-4xl font-normal opacity-90 mb-6">
+  As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
+</p>
+
+{/* 🎯 Paragraph 2 */}
+<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90 mb-6">
+  Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
+</p>
+
+{/* 🎯 Paragraph 3 */}
+<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90 mb-6 hidden md:block">
+  We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
+</p>
+
+{/* 🎯 Paragraph 4 */}
+<p className="text-white text-base md:text-[18px] 2xl:text-xl leading-relaxed max-w-xl 2xl:max-w-5xl font-normal opacity-90">
+  Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
+</p>
             </motion.div>
 
            {/* Buttons Section */}

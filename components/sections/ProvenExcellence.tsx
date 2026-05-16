@@ -99,7 +99,7 @@ export default function ProvenExcellence() {
 </div>
                   
                   {/* Janni, Card Description ko Pure White, Bara (15px) aur Medium weight de diya hai */}
-                  <p className="text-white text-sm md:text-[15px] 2xl:text-lg 4xl:text-2xl leading-relaxed font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-white text-sm md:text-[15px] 2xl:text-lg 2xl:text-2xl leading-relaxed font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                     {feature.desc}
                   </p>
                 </div>
