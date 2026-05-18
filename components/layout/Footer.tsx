@@ -71,8 +71,8 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
 
-            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Quick Links</span>
-            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[13px] md:text-[15px] 2xl:text-xl font-bold">
+            <span className="block text-[16px] md:text-[18px] font-normal text-white tracking-widest uppercase">Quick Links</span>
+            <div className="flex flex-col space-y-0 2xl:space-y-2 text-[16px] md:text-[18px]  font-normal">
               {[
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Column 3: Our Services */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[16px] md:text-[18px]  font-normal text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { title: "Website Development", slug: "web-dev" },
                 { title: "Search Engine Optimization", slug: "seo" },
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* Column 4: Compliance */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[16px] md:text-[18px]  font-normal text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Privacy Policy", href: "/privacy" },
                 { name: "Terms & Conditions", href: "/terms" },
