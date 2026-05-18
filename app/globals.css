@@ -27,27 +27,28 @@
   }
 
   /* --- TYPOGRAPHY UPDATED FOR LAPTOP & 4K BALANCE --- */
+  /* 🛠️ FIXED: Removed !important from line-height and font-style so inline styles can work */
   h1, h2, h3, h4 {
     @apply font-bold tracking-tighter;
-    line-height: 1.05 !important;
-    font-style: normal !important;
+    line-height: 1.05;
+    font-style: normal;
   }
 
-  /* 🎯 ADJUSTED HEADINGS: Mobile par bade rahenge, par bari screens (Laptop/4K) par tight aur balanced rahenge */
+  /* 🛠️ FIXED: Removed !important from font-size to allow inline overrides */
   h1 { 
-    font-size: clamp(2.5rem, 4.5vw, 68px) !important; 
+    font-size: clamp(2.5rem, 4.5vw, 68px); 
     @apply uppercase font-black; 
     margin-bottom: 0.5em; 
   }
 
   h2 { 
-    font-size: clamp(2.0rem, 3.8vw, 52px) !important; 
+    font-size: clamp(2.0rem, 3.8vw, 52px); 
     margin-bottom: 0.4em; 
     @apply font-black;
   }
   
   h3 { 
-    font-size: clamp(1.3rem, 2.0vw, 26px) !important; 
+    font-size: clamp(1.3rem, 2.0vw, 26px); 
   }
 
   /* 🎯 PARAGRAPH READABILITY: Minimum size ko exact 1.05rem par balance kiya taake paragraph clean parha jaye */
