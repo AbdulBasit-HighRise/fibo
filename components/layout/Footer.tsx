@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
+import CTA from "../sections/CTA";
 import {
   FaFacebook,
   FaInstagram,
@@ -26,7 +27,8 @@ export default function Footer() {
 
   return (
     <footer className="text-white relative bg-[#030303] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
-      
+    < CTA />
+
       {/* 🌌 Cosmic Glows */}
       <div className="absolute top-0 left-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-blue-600/[0.04] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-cyan-500/[0.03] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
@@ -39,13 +41,13 @@ export default function Footer() {
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
             <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group">
-              <Image 
-                src="/Hr Logo White.svg" 
+              <Image
+                src="/Hr Logo White.svg"
                 alt="High Raise Digital Logo"
                 width={800}
                 height={250}
                 priority
-                className="h-24 md:h-32 lg:h-40 2xl:h-60 w-auto object-contain origin-left select-none ml-[-12px] mt-[-20px] mb-[-15px] transition-transform duration-500 group-hover:scale-[1.01]" 
+                className="h-24 md:h-32 lg:h-40 2xl:h-60 w-auto object-contain origin-left select-none ml-[-12px] mt-[-20px] mb-[-15px] transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </Link>
 
@@ -69,7 +71,7 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
 
-<span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Quick Links</span>
+            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Quick Links</span>
             <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Home", href: "/" },
@@ -87,17 +89,17 @@ export default function Footer() {
 
           {/* Column 3: Our Services */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-<span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
-                { title: "Full-Stack Development", slug: "web-dev" },
+                { title: "Website Development", slug: "web-dev" },
                 { title: "Search Engine Optimization", slug: "seo" },
                 { title: "Social Media Marketing", slug: "social-media" },
                 { title: "AI Automation", slug: "ai-automation" },
                 { title: "Ecommerce Management", slug: "ecommerce" },
               ].map((service, idx) => (
-                <Link 
-                  key={idx} 
-                  href={`/services/${service.slug}`} 
+                <Link
+                  key={idx}
+                  href={`/services/${service.slug}`}
                   className="text-zinc-500 hover:text-white transition-all duration-300 w-max"
                 >
                   {service.title}
@@ -108,7 +110,7 @@ export default function Footer() {
 
           {/* Column 4: Compliance */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-<span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Privacy Policy", href: "/privacy" },
                 { name: "Terms & Conditions", href: "/terms" },
@@ -125,7 +127,7 @@ export default function Footer() {
 
           {/* Column 5: Inquiries */}
           <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-<span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Inquiries</span>
+            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Inquiries</span>
             <div className="space-y-4 2xl:space-y-8">
               <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
                 <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
@@ -145,22 +147,22 @@ export default function Footer() {
           </div>
         </div>
 
-      {/* 🏢 OFFICES GRID */}
-<div className="py-12 md:py-16 grid grid-cols-1 sm:grid-cols-3 gap-6 2xl:gap-12 border-b border-white/5">
-  {offices.map((office, idx) => (
-    <div key={idx} className="p-6 md:p-8 rounded-2xl bg-white/[0.01] border border-white/5 space-y-4 hover:border-blue-500/20 transition-all duration-300 group">
-      <div className="space-y-2">
-        {/* 🎯 FIXED SIZE: Compressed from 3xl to a clean, elegant desktop scale */}
-        <span className="block text-sm md:text-base 2xl:text-xl font-black text-white tracking-tight uppercase">
-          {office.city}
-        </span>
-        <p className="text-[11px] md:text-xs 2xl:text-[15px] text-zinc-400 font-normal leading-relaxed">
-          {office.address}
-        </p>
-      </div>
-    </div>
-  ))}
-</div>
+        {/* 🏢 OFFICES GRID */}
+        <div className="py-12 md:py-16 grid grid-cols-1 sm:grid-cols-3 gap-6 2xl:gap-12 border-b border-white/5">
+          {offices.map((office, idx) => (
+            <div key={idx} className="p-6 md:p-8 rounded-2xl bg-white/[0.01] border border-white/5 space-y-4 hover:border-blue-500/20 transition-all duration-300 group">
+              <div className="space-y-2">
+                {/* 🎯 FIXED SIZE: Compressed from 3xl to a clean, elegant desktop scale */}
+                <span className="block text-sm md:text-base 2xl:text-xl font-black text-white tracking-tight uppercase">
+                  {office.city}
+                </span>
+                <p className="text-[11px] md:text-xs 2xl:text-[15px] text-zinc-400 font-normal leading-relaxed">
+                  {office.address}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
         {/* 🔒 BOTTOM BAR */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">

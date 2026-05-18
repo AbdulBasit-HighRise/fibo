@@ -31,40 +31,52 @@ export default function BrandingPage() {
     <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
       
       {/* 1. HERO SECTION - Engineered Identity */}
-      <section className="relative w-full overflow-hidden">
-        <div className="container-wide">
-         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <Image
-            src="/home-hero.jpg"
-            alt="Mesh Grid"
-            fill
-            sizes="100vw"
-            priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-            className="object-cover object-top opacity-35"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+   {/* 🎯 SYNCED GOOGLE ADS HERO SECTION: Formatted exactly on top of your verified About Us master framework */}
+<section className="relative w-full overflow-hidden bg-[#030712]">
+  <div className="container-wide">
+    
+    {/* Background Image Container with Exact Matching Premium CSS */}
+    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <Image
+        src="/home-hero.jpg"
+        alt="Mesh Grid"
+        fill
+        sizes="100vw"
+        priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
+        className="object-cover object-top opacity-35"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+    </div>
+
+    {/* Ambient Blur Dot to lock the signature aesthetic */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+
+    {/* Full Sized Padded Content Wrapper - Exact global layout spacing matching About Us */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+      <div className="max-w-5xl">
+        
+        {/* Glassmorphism Badge Container */}
+        <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+          <Flame size={12} className="text-blue-400 animate-pulse" />
+          <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Paid Acquisition</span>
         </div>
 
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+        {/* Main Typography Block with Tight Line Height */}
+        <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+          GOOGLE ADS { " "}
+          <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            Management.
+          </span>
+        </h1>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
-          <div className="max-w-5xl">
-            <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
-              <Flame size={12} className="text-blue-400 animate-pulse" />
-            </div>
-
-            <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
-              Google Ads {" "}
-              <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                US.
-              </span>
-            </h1>
-            
-           
-          </div>
-        </div>
-</div>
-      </section>
+        {/* Description Paragraph - Aligned perfectly with global layout standards */}
+      <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+  Drive high-intent traffic, scale your conversions, and maximize ad spend return with precision-targeted search and display campaigns.
+</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* 2. CORE CAPABILITIES (Identity & Emotion) */}

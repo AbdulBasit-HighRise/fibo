@@ -30,41 +30,52 @@ export default function BrandingPage() {
   return (
     <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
       
-      {/* 1. HERO SECTION - Engineered Identity */}
-       <section className="relative w-full overflow-hidden">
-            <div className="container-wide">
-             <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-              <Image
-                src="/home-hero.jpg"
-                alt="Mesh Grid"
-                fill
-                sizes="100vw"
-                priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-                className="object-cover object-top opacity-35"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
-            </div>
+     {/* 🎯 SYNCED AI AUTOMATION HERO SECTION: Built exactly on top of your verified About Us master framework */}
+<section className="relative w-full overflow-hidden bg-[#030712]">
+  <div className="container-wide">
     
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
-    
-            <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
-              <div className="max-w-5xl">
-                <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
-                  <Flame size={12} className="text-blue-400 animate-pulse" />
-                </div>
-    
-                <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
-                  Ai  {" "}
-                  <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                    Automation.
-                  </span>
-                </h1>
-                
-             
-              </div>
-            </div>
+    {/* Background Image Container with Exact Matching Premium CSS */}
+    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <Image
+        src="/home-hero.jpg"
+        alt="Mesh Grid"
+        fill
+        sizes="100vw"
+        priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
+        className="object-cover object-top opacity-35"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
     </div>
-          </section>
+
+    {/* Ambient Blur Dot to lock the signature aesthetic */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+
+    {/* Full Sized Padded Content Wrapper - Exact global layout spacing matching About Us */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+      <div className="max-w-5xl">
+        
+        {/* Glassmorphism Badge Container */}
+        <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+          <Flame size={12} className="text-blue-400 animate-pulse" />
+          <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">AI Solutions</span>
+        </div>
+
+        {/* Main Typography Block with Tight Line Height */}
+        <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+          AI {" "}
+          <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            Automation.
+          </span>
+        </h1>
+
+        {/* Description Paragraph - Aligned perfectly with global layout standards */}
+      <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+  Scale your workflow with intelligent digital deployments, automated workflows, and smart integrations engineered to supercharge performance.
+</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* 2. CORE CAPABILITIES (Identity & Emotion) */}
@@ -86,9 +97,9 @@ export default function BrandingPage() {
                 Identity <br /> <span className="text-blue-600">& Emotion.</span>
               </h2>
             </div>
-            <p className="text-zinc-500 font-bold text-lg md:text-xl 2xl:text-3xl italic max-w-xs 2xl:max-w-md leading-snug border-r-2 border-blue-600 pr-6 text-right md:text-left">
-              "We build visual legacies that command market authority."
-            </p>
+          <p className="text-zinc-500 font-bold text-lg md:text-xl lg:text-[22px] 2xl:text-2xl 3xl:text-3xl italic leading-snug max-w-xs md:max-w-md 2xl:max-w-lg border-r-2 md:border-r-0 md:border-l-2 border-blue-600 pr-6 md:pr-0 md:pl-6 text-right md:text-left antialiased">
+  "We build visual legacies that command market authority."
+</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
@@ -113,9 +124,9 @@ export default function BrandingPage() {
                   <h3 className="text-2xl 2xl:text-4xl font-black uppercase italic mb-3 leading-tight group-hover:text-blue-400 transition-colors tracking-tight">
                     {s.title}
                   </h3>
-                  <p className="text-zinc-500 group-hover:text-zinc-300 text-sm 2xl:text-xl font-medium leading-relaxed transition-colors">
-                    {s.desc}
-                  </p>
+               <p className="text-zinc-500 group-hover:text-zinc-300 text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 transition-colors duration-300 antialiased">
+  {s.desc}
+</p>
                   <div className="mt-8 flex items-center gap-2 text-[8px] 2xl:text-xs font-black uppercase tracking-widest text-zinc-700 group-hover:text-blue-400/60 transition-colors">
                     <div className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse" />
                     Design Verified
@@ -145,9 +156,9 @@ export default function BrandingPage() {
             <h2 className="text-5xl md:text-8xl 2xl:text-[130px] font-black leading-[0.85] tracking-tighter text-white mb-6 uppercase italic">
               The Identity <br /> <span className="text-blue-600">Loop.</span>
             </h2>
-            <p className="text-zinc-500 font-bold text-lg md:text-xl 2xl:text-4xl italic max-w-2xl mx-auto leading-tight">
-              "Designing psychological triggers that transform a business into a cult-followed brand."
-            </p>
+         <p className="text-zinc-500 font-bold text-lg md:text-xl lg:text-[22px] 2xl:text-3xl 3xl:text-4xl italic leading-tight max-w-2xl 2xl:max-w-4xl mx-auto antialiased tracking-wide">
+  "Designing psychological triggers that transform a business into a cult-followed brand."
+</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
@@ -171,22 +182,19 @@ export default function BrandingPage() {
                   </div>
                 </div>
 
-                <div className="space-y-4 flex-grow">
-                  <h3 className="text-2xl 2xl:text-4xl font-black uppercase italic text-white group-hover:text-blue-500 transition-colors tracking-tight">
-                    {p.title}
-                  </h3>
-                  
-                  <div className="bg-blue-600/[0.03] border border-blue-600/10 rounded-xl p-3 2xl:p-5 group-hover:bg-blue-600/10 transition-colors">
-                    <p className="text-[9px] 2xl:text-xs font-black text-blue-500 uppercase tracking-widest mb-1 italic">Tactical DNA:</p>
-                    <p className="text-[11px] 2xl:text-lg text-zinc-400 font-bold leading-relaxed">
-                      {p.keywords}
-                    </p>
-                  </div>
-
-                  <p className="text-zinc-500 2xl:text-xl text-sm font-medium leading-relaxed">
-                    {p.desc}
-                  </p>
-                </div>
+               <div className="bg-blue-600/[0.03] border border-blue-600/10 rounded-xl p-3 lg:p-4 2xl:p-5 group-hover:bg-blue-600/10 transition-colors duration-300">
+  
+  {/* Tactical DNA Label */}
+  <p className="text-[9px] md:text-[10px] lg:text-[11px] 2xl:text-xs font-black text-blue-500 uppercase tracking-widest mb-1 italic antialiased leading-none">
+    Tactical DNA:
+  </p>
+  
+  {/* Project Keywords Dynamic Text */}
+  <p className="text-[11px] sm:text-xs md:text-sm lg:text-[15px] 2xl:text-base 3xl:text-lg text-zinc-400 font-bold leading-relaxed antialiased">
+    {p.keywords}
+  </p>
+  
+</div>
 
                 <div className="mt-8 h-1 w-full bg-white/5 rounded-full overflow-hidden">
                   <motion.div 

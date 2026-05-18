@@ -53,51 +53,54 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600">
       
-    {/* 1. HERO SECTION (FAQ) */}
-<section className="relative w-full overflow-hidden">
-  {/* Background Image Container with Exact Matching Premium CSS */}
-  <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-    <Image
-      src="/home-hero.jpg"
-      alt="Mesh Grid"
-      fill
-      priority 
-      sizes="100vw"
-      className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
-    />
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
-  </div>
+   {/* 🎯 SYNCED FAQ HERO SECTION: Perfectly matched responsive grid alignment, fluid spacing, and unified backdrop structure */}
+<section className="relative w-full overflow-hidden bg-[#030712]">
+  <div className="container-wide">
+    
+    {/* Background Image Container with Exact Matching Premium CSS */}
+    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <Image
+        src="/home-hero.jpg"
+        alt="Mesh Grid"
+        fill
+        priority 
+        sizes="100vw"
+        className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+    </div>
 
-  {/* Ambient Blur Dot to lock the signature aesthetic */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+    {/* Ambient Blur Dot to lock the signature aesthetic */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-  {/* Full Sized Padded Content Wrapper - Identical to Insights Page */}
-  <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40">
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="max-w-5xl"
-    >
-      {/* Badge Container */}
-      <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
-        <HelpCircle size={12} className="text-blue-400 animate-pulse" />
-        <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Support Center</span>
-      </div>
+    {/* Full Sized Padded Content Wrapper - Exact global layout spacing */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="max-w-5xl"
+      >
+        {/* Badge Container (Centered on mobile, left on desktop) */}
+        <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+          <HelpCircle size={12} className="text-blue-400 animate-pulse" />
+          <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Support Center</span>
+        </div>
 
-      {/* Main Large Typography Block */}
-      <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-        FREQUENTLY <br />
-        <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-          Asked Questions.
-        </span>
-      </h1>
+        {/* Main Large Typography Block with Tight Line Height */}
+        <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+          FREQUENTLY <br />
+          <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            Asked Questions.
+          </span>
+        </h1>
 
-      {/* Paragraph aligned with the same typography standards */}
-      <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed font-normal opacity-80">
-        Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
-      </p>
-    </motion.div>
+        {/* Paragraph aligned with the same typography standards (Centered on mobile) */}
+     <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+  Everything you need to know about our digital marketing processes, timelines, and how we help your brand reach new heights.
+</p>
+      </motion.div>
+    </div>
   </div>
 </section>
       {/* --- FAQ ACCORDION SECTION - Better Scaling --- */}
@@ -150,8 +153,9 @@ export default function FAQPage() {
           {/* Need More Help? - Scaling for 4K */}
           <div className="mt-20 2xl:mt-32 text-center p-12 2xl:p-20 rounded-[3rem] border border-white/5 bg-white/[0.01]">
             <h3 className="text-2xl md:text-3xl 2xl:text-5xl font-bold mb-4">Still have questions?</h3>
-            <p className="text-zinc-500 2xl:text-2xl mb-8">Can't find the answer you're looking for? Please chat with our friendly team.</p>
-            <button className="px-10 py-4 2xl:px-16 2xl:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl shadow-[0_0_30px_rgba(37,99,235,0.2)]">
+<p className="text-zinc-500 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 antialiased">
+  Can't find the answer you're looking for? Please chat with our friendly team.
+</p>            <button className="px-10 py-4 2xl:px-16 2xl:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl shadow-[0_0_30px_rgba(37,99,235,0.2)]">
               Get in Touch
             </button>
           </div>

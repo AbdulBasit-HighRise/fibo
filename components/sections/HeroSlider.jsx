@@ -9,13 +9,14 @@ const awardLogos = [
   // { src: "/brands/googleleads.png", alt: "Google" },
   { src: "/brands/google-analisis.png", alt: "Google Analatics" },
   { src: "/brands/google-patner.png", alt: "Google patner" },
-  // { src: "/brands/Google-Partner.png", alt: "Google" },
+  { src: "/brands/wordpress logo.png", alt: "Google" },
   { src: "/brands/linkedin.png", alt: "LinkedIn" },
   { src: "/brands/meta-business.png", alt: "meta" },
-  { src: "/brands/semrush.png", alt: "semrush" }, 
-  { src: "/brands/shopify-patner.png", alt: "shopify" },
-  { src: "/brands/tiktok.png", alt: "tiktok" },
-  { src: "/brands/woocommerce.png", alt: "woocommerce" },
+  { src: "/brands/semrush logo.png", alt: "semrush" }, 
+  { src: "/brands/shopify.png", alt: "shopify" },
+  { src: "/brands/tiktok-partner.webp", alt: "tiktok" },
+  { src: "/brands/woocommerce-partner.png", alt: "woocommerce" },
+  { src: "/brands/hubspot.webp", alt: "woocommerce" },
 
 ];
 

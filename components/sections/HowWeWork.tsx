@@ -102,9 +102,9 @@ export default function Process() {
                         </div>
 
                         {/* ⬇️ Description Below - Fixed Font Sizes for Perfect Readability */}
-                        <p className="text-sm md:text-base 2xl:text-lg 4xl:text-2xl text-zinc-300 group-hover:text-white opacity-90 group-hover:opacity-100 transition-all duration-300 leading-relaxed font-normal">
-                          {step.desc}
-                        </p>
+                     <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+  {step.desc}
+</p>
                       </div>
 
                       {/* Bottom Accent Line */}

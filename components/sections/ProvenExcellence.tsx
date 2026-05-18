@@ -46,28 +46,33 @@ export default function ProvenExcellence() {
             >
             {/* 🎯 MATCHED EXACT DESIGN SYSTEM FRAMEWORK */}
 <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
-  Thrive Your Business 
-  {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}
+  Scale Your Business 
+  {/* 🎯 MATCHED GRADIENT BLOCK: Corrected context, kept perfect breathing padding */}
   <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
     with Marketing Solutions
   </span>
 </h3>
-            {/* 🎯 FIXED WRAPPER: Removed broken 4xl breakpoints and set standard response spacing */}
-<div className="space-y-5 text-zinc-300 text-[18px] 2xl:text-xl font-normal leading-relaxed max-w-xl 2xl:max-w-3xl">
-  <p>
+      {/* 🎯 SYNCED PERFORMANCE BLOCK WITH UNIFORM RESPONSIVE TYPOGRAPHY */}
+<div className="space-y-8 max-w-xl 2xl:max-w-3xl">
+  
+  {/* Paragraph 1 */}
+  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
     We consistently deliver measurable digital growth through strategic planning, creative execution, and performance-focused campaigns.
   </p>
-  <p>
+
+  {/* Paragraph 2 */}
+  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
     Our approach combines data insights with innovative marketing techniques to ensure every project achieves strong visibility and engagement.
   </p>
+
   {/* Left border block adjusted to match contrast */}
   <div className="border-l-2 border-blue-500 pl-5 mt-6">
-    <p className="text-zinc-400 text-[18px] 2xl:text-xl">
+    {/* Paragraph 3 inside Border Block */}
+    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
       We help brands stay competitive and achieve sustainable success.
     </p>
   </div>
-</div>
-            </motion.div>
+</div>  </motion.div>
           </div>
 
           {/* RIGHT: Features Grid (Balanced Layout & Highly Readable Cards) */}
@@ -100,9 +105,9 @@ export default function ProvenExcellence() {
 </div>
                   
                   {/* Janni, Card Description ko Pure White, Bara (15px) aur Medium weight de diya hai */}
-                  <p className="text-white text-sm md:text-[15px] 2xl:text-lg 2xl:text-2xl leading-relaxed font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                    {feature.desc}
-                  </p>
+                 <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+  {feature.desc}
+</p>
                 </div>
 
                 {/* Corner Indicator */}

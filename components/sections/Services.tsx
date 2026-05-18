@@ -29,18 +29,17 @@ export default function Services() {
         
         {/* HEADER - Centered & Slim */}
       <div className="mb-8 md:mb-12 pt-0 text-center">
-  <motion.h3 
-    initial={{ opacity: 0, y: 10 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    /* 🎯 FIXED BREAKPOINTS & ADDED PADDING: Removed broken 3xl, added pr-4 py-1 to stop text clipping */
-    className="mt-3 !text-[2rem] sm:!text-4xl md:!text-5xl lg:!text-[2.8rem] xl:!text-[3.5rem] 2xl:!text-[5.5rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
-  >
-    Our {" "}
-    <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-      Digital Marketing Services
-    </span>
-  </motion.h3>
+<motion.h3 
+  initial={{ opacity: 0, y: 10 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="mt-3 !text-[2rem] sm:!text-4xl md:!text-5xl lg:!text-[2.8rem] xl:!text-[3.5rem] 2xl:!text-[5.5rem] 3xl:!text-[6.5rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
+>
+  Our {" "}
+  <span className="block sm:inline bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+    Digital Marketing Services
+  </span>
+</motion.h3>
 </div>
 
         {/* MAIN GRID */}
@@ -128,7 +127,7 @@ export default function Services() {
     className="overflow-hidden"
   >
     {/* ⚪ Description: High readability and clear text on small/laptop screens */}
-   <p className="text-white text-sm md:text-base leading-relaxed max-w-md md:max-w-xl lg:max-w-2xl font-normal opacity-90">
+ <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
   {item.desc}
 </p>
   </motion.div>

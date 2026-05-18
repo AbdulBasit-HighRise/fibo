@@ -168,7 +168,7 @@ const handleModalSubmit = (e: React.FormEvent) => {
         <div className="absolute top-0 left-0 w-full h-1 bg-blue-600" />
         <button onClick={() => setIsProposalOpen(false)} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors"><X size={24} /></button>
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-black text-white uppercase tracking-tighter">Get a Proposal</h2>
+          <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Book A Strategy Call</h3>
           <p className="text-zinc-500 text-xs">Let's build your project together.</p>
         </div>
         

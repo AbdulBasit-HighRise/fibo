@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
-
+import CTA from "@/components/sections/CTA";
 export default function PrivacyPolicy() {
   return (
     /* 🎯 Exact structural clone with standard top gap framework matching pricing section */
@@ -28,12 +28,12 @@ export default function PrivacyPolicy() {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
         {/* Full Sized Padded Content Wrapper - Identical to Pricing Page */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40">
+        <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 pt-32 pb-16 md:pt-40">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="max-w-5xl"
+            className="w-full"
           >
             {/* Badge Container (Privacy Framework Style) */}
             <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
@@ -50,22 +50,24 @@ export default function PrivacyPolicy() {
             </h1>
 
             {/* Paragraph aligned with typography standards */}
-            <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl font-medium max-w-2xl leading-relaxed opacity-90">
-              Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information.
-            </p>
+        <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+  Your privacy is important to us. This Privacy Policy explains how we collect, use, and safeguard your information.
+</p>
           </motion.div>
         </div>
       </section>
 
-      {/* --- ARTICLE CONTENT SECTION (Clean & High Contrast) --- */}
-      <section className="py-12 md:py-16 px-6 relative border-t border-white/5">
-        <div className="max-w-3xl mx-auto">
+      {/* --- ARTICLE CONTENT SECTION (Optimized Width & Perfectly Balanced Layout) --- */}
+      <section className="py-12 md:py-16 px-6 md:px-12 lg:px-20 relative border-t border-white/5">
+        {/* 🎯 FIXED OVERRIDE: Adjusted to max-w-[85rem] and added mx-auto. 
+            Yeh screens par full stretch bhi karega aur text ko extreme left par bhagne se bhi rokega */}
+        <div className="max-w-[85rem] mx-auto w-full">
           
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="space-y-10 md:space-y-14"
+            className="space-y-10 md:space-y-14 w-full"
           >
             {/* Introduction */}
             <p className="text-base md:text-lg lg:text-xl text-white leading-relaxed font-medium">
@@ -73,7 +75,7 @@ export default function PrivacyPolicy() {
             </p>
 
             {/* Information We Collect */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 Information We Collect
               </h2>
@@ -83,14 +85,14 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* How We Use Your Information */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 How We Use Your Information
               </h2>
               <p className="text-white text-sm md:text-base leading-relaxed mb-4 font-normal opacity-90">
                 High Rise Digital uses your information to:
               </p>
-              <ul className="space-y-3 text-white text-sm md:text-base list-none border-l-2 border-blue-500/40 pl-5 font-normal opacity-95">
+              <ul className="space-y-3 text-white text-sm md:text-base list-none border-l-2 border-blue-500/40 pl-5 font-normal opacity-95 w-full">
                 <li>• Provide and improve our digital marketing services</li>
                 <li>• Respond to inquiries and customer support requests</li>
                 <li>• Send project updates, promotional content, or important notifications</li>
@@ -100,7 +102,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Information Sharing */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 Information Sharing
               </h2>
@@ -110,7 +112,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Data Security */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 Data Security
               </h2>
@@ -120,7 +122,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Cookies Policy */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 Cookies Policy
               </h2>
@@ -130,7 +132,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Third-Party Links */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 Third-Party Links
               </h2>
@@ -140,7 +142,7 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Your Rights */}
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
               <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
                 Your Rights
               </h2>
@@ -150,26 +152,18 @@ export default function PrivacyPolicy() {
             </div>
 
             {/* Updates and Contact Card */}
-            <div className="mt-16 p-8 md:p-10 rounded-[2rem] bg-white/[0.02] border border-white/5">
+            <div className="mt-16 p-8 md:p-10 rounded-[2rem] bg-white/[0.02] border border-white/5 w-full">
               <h3 className="text-lg md:text-xl font-bold mb-2 text-white">Updates to This Policy</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-8">
+              <p className="text-white/80 text-sm leading-relaxed mb-8">
                 High Rise Digital may update this Privacy Policy periodically. Any updates will be posted on this page.
               </p>
-              
-              <hr className="border-white/5 mb-8" />
-
-              <h3 className="text-lg md:text-xl font-bold mb-2 text-white">Contact Us</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-6">
-                If you have any questions regarding this Privacy Policy, please contact our support team.
-              </p>
-              <a href="/contact" className="inline-flex items-center gap-2 text-blue-400 text-sm font-bold hover:text-white transition-colors">
-                Official Communication Channels →
-              </a>
+             
             </div>
 
           </motion.div>
         </div>
       </section>
+
     </main>
   );
 }

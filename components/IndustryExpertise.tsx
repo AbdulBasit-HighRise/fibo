@@ -78,15 +78,9 @@ export default function IndustryExpertise() {
                 </div>
 
                 {/* 🖋️ Text: Smaller and sleek */}
-                <p className="
-                  text-[9px] md:text-[11px] 2xl:text-lg 
-                  font-bold uppercase 
-                  tracking-[0.15em] md:tracking-[0.2em] 
-                  text-zinc-500 transition-colors duration-500 group-hover/card:text-white 
-                  px-4 text-center leading-tight m-0 p-0
-                ">
-                  {item.title}
-                </p>
+             <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-base 3xl:text-lg font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-zinc-500 transition-colors duration-500 group-hover/card:text-white px-4 text-center leading-tight m-0 p-0">
+  {item.title}
+</p>
               </div>
             );
           })}

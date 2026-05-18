@@ -85,17 +85,17 @@ export default async function BlogDetail({ params }: PageProps) {
 
           <div className="relative z-10 space-y-10">
             {/* Excerpt - Size standard rakha */}
-            <p className="text-lg md:text-xl text-zinc-200 leading-relaxed font-normal italic border-l-4 border-blue-500 pl-6 md:pl-8 py-2 !max-w-full">
-              {post.excerpt}
-            </p>
-            
+           <p className="text-lg md:text-xl lg:text-[22px] 2xl:text-2xl 3xl:text-3xl text-zinc-200 font-normal italic leading-relaxed border-l-4 border-blue-500 pl-6 md:pl-8 py-2 max-w-full">
+  {post.excerpt}
+</p>
             <div className="text-zinc-400 text-base leading-relaxed space-y-6 font-normal">
               {/* Global H2 override */}
               <h2 className="!text-2xl !font-black text-white tracking-tight pt-4 uppercase !mb-4">
                 Strategy Overview
               </h2>
-              <p className="!text-base md:!text-lg">{post.content}</p>
-
+<p className="text-zinc-300 text-base md:text-lg lg:text-[19px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed max-w-3xl 2xl:max-w-4xl mx-auto lg:mx-0 antialiased selection:bg-blue-500 selection:text-white">
+  {post.content}
+</p>
               {/* Callout Box */}
               <div className="p-8 bg-blue-500/5 border border-blue-500/10 rounded-[2rem] my-10">
                 <h3 className="!text-[10px] !font-black tracking-widest text-blue-400 uppercase mb-6 flex items-center gap-2 !m-0">
@@ -118,8 +118,9 @@ export default async function BlogDetail({ params }: PageProps) {
           <div className="p-8 rounded-[2.5rem] bg-gradient-to-br from-blue-600 to-blue-900 border border-white/10 shadow-2xl relative overflow-hidden text-left">
             <Bookmark className="text-white/40 mb-4" size={24} />
             <h3 className="!text-xl !font-black text-white tracking-tight leading-tight mb-2 uppercase !m-0">Stay Updated</h3>
-            <p className="text-white/70 !text-[11px] leading-relaxed mb-6 font-normal">Get our latest digital frameworks directly.</p>
-            <div className="space-y-3 relative z-10">
+<p className="text-white/65 text-[11px] sm:text-[12px] lg:text-[13px] 2xl:text-sm leading-relaxed mb-6 font-normal tracking-wide antialiased">
+  Get our latest digital frameworks directly.
+</p>            <div className="space-y-3 relative z-10">
               <input type="email" placeholder="email@agency.com" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-white/40 outline-none" />
               <button className="w-full py-3.5 bg-white text-black font-black text-[10px] tracking-widest uppercase rounded-xl">
                 SUBSCRIBE

@@ -37,55 +37,56 @@ const plans = [
 export default function PricingPage() {
   return (
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden pb-20 selection:bg-blue-600">
-      
-   {/* 1. HERO SECTION (Pricing Plans) */}
-<section className="relative w-full overflow-hidden">
-  {/* Background Image Container with Exact Matching Premium CSS */}
-  <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-    <Image
-      src="/home-hero.jpg"
-      alt="Mesh Grid"
-      fill
-      priority 
-      sizes="100vw"
-      className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
-    />
-    <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
-  </div>
+{/* 🎯 SYNCED PRICING HERO SECTION: Unified responsive layout, text centering rules, and fluid spacing framework */}
+<section className="relative w-full overflow-hidden bg-[#030712]">
+  <div className="container-wide">
+    
+    {/* Background Image Container with Exact Matching Premium CSS */}
+    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <Image
+        src="/home-hero.jpg"
+        alt="Mesh Grid"
+        fill
+        priority 
+        sizes="100vw"
+        className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+    </div>
 
-  {/* Ambient Blur Dot to lock the signature aesthetic */}
-  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+    {/* Ambient Blur Dot to lock the signature aesthetic */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-  {/* Full Sized Padded Content Wrapper - Identical to Insights Page */}
-  <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40">
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
-      className="max-w-5xl"
-    >
-      {/* Badge Container */}
-      <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
-        <Zap size={12} className="text-blue-400 animate-pulse" />
-        <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Affordable Growth</span>
-      </div>
+    {/* Full Sized Padded Content Wrapper - Exact global layout spacing */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4 }}
+        className="max-w-5xl"
+      >
+        {/* Badge Container (Centered on mobile, left on desktop) */}
+        <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+          <Zap size={12} className="text-blue-400 animate-pulse" />
+          <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Affordable Growth</span>
+        </div>
 
-      {/* Main Large Typography Block */}
-      <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-        OUR {" "}
-        <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-          Pricing Plans.
-        </span>
-      </h1>
+        {/* Main Large Typography Block with Tight Line Height */}
+        <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+          OUR {" "}
+          <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            Pricing Plans.
+          </span>
+        </h1>
 
-      {/* Paragraph aligned with the same typography standards */}
-      <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl leading-relaxed font-normal opacity-80">
-        Affordable, transparent pricing plans designed to fit your business needs and help you grow with powerful digital marketing solutions.
-      </p>
-    </motion.div>
+        {/* Paragraph aligned with the same typography standards (Centered on mobile) */}
+     <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+  Affordable, transparent pricing plans designed to fit your business needs and help you grow with powerful digital marketing solutions.
+</p>
+      </motion.div>
+    </div>
   </div>
 </section>
-
       {/* --- PRICING GRID --- */}
       <section className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 -mt-12 2xl:-mt-20">
         <div className="grid lg:grid-cols-3 gap-8 2xl:gap-12">
@@ -154,9 +155,9 @@ export default function PricingPage() {
                </div>
                <h3 className="text-3xl 2xl:text-5xl font-black italic">Enterprise Plan</h3>
             </div>
-            <p className="text-zinc-400 max-w-xl 2xl:max-w-4xl 2xl:text-2xl">
-              For large-scale business growth. Custom Marketing Strategy, Full Funnel Optimization, Advanced PPC + Retargeting, and 24/7 Priority Support.
-            </p>
+          <p className="text-zinc-400 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-4xl opacity-90 antialiased">
+  For large-scale business growth. Custom Marketing Strategy, Full Funnel Optimization, Advanced PPC + Retargeting, and 24/7 Priority Support.
+</p>
           </div>
 
           <div className="text-center md:text-right space-y-4 min-w-[200px]">

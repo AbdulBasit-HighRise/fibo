@@ -46,54 +46,52 @@ export default function ContactPage() {
     <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
 
       {/* 🖼️ HERO SECTION (Privacy Policy Core Container Setup) */}
-      <section className="relative w-full overflow-hidden">
+    {/* 🎯 FIXED CONTACT HERO SECTION: Equal padding level, unified alignment, and restored background */}
+<section className="relative w-full overflow-hidden bg-[#020617]">
+  <div className="container-wide">
+    
+    {/* Background Image Container - Restored & Locked */}
+    <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+      <Image
+        src="/home-hero.jpg"
+        alt="Mesh Grid"
+        fill
+        priority 
+        sizes="100vw"
+        className="object-cover object-top opacity-35"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
+    </div>
+
+    {/* Ambient Glow Dot */}
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+
+    {/* Content Wrapper - Pushed down with pt-48 & md:pt-56 for perfect vertical equality */}
+    <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-16 md:pt-45 text-center md:text-left">
+      <div className="max-w-5xl">
         
-        {/* Background Image Container with Exact Matching Premium CSS */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <Image
-            src="/home-hero.jpg"
-            alt="Mesh Grid"
-            fill
-            priority 
-            sizes="100vw"
-            className="object-cover object-top opacity-35" // Depth consistency locked
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
+        {/* Badge Container */}
+        <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+          <Flame size={12} className="text-blue-400 animate-pulse" />
+          <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Lets Connect</span>
         </div>
 
-        {/* Ambient Blur Dot to lock the signature aesthetic */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
+        {/* Main Large Typography Block */}
+        <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+          Contact {" "}
+          <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            US.
+          </span>
+        </h1>
 
-        {/* Full Sized Padded Content Wrapper - Identical to Privacy Setup with exact pt-32 pb-16 md:pt-40 structure */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-39 pb-16 md:pt-40">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-            className="max-w-5xl"
-          >
-            {/* Badge Container (Exact same positioning) */}
-            <div className="  flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
-              <Flame size={12} className="text-blue-400 animate-pulse" />
-              <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Lets Connect</span>
-            </div>
-
-            {/* Main Large Typography Block - Sizing from your verified design */}
-            <h1 className="  text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-              Contact {" "}
-              <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                US.
-              </span>
-            </h1>
-
-            {/* Paragraph aligned perfectly with identical typography specs */}
-            <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl font-medium max-w-2xl leading-relaxed opacity-90">
-              Connect with our digital experts today for innovative solutions, creative strategies, and personalized support to grow your business successfully online.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
+        {/* Paragraph */}
+       <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+  Connect with our digital experts today for innovative solutions, creative strategies, and personalized support to grow your business successfully online.
+</p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* SECTION 2: FORM & INFO STACK - Flow structure intact */}
       <section className="relative z-10 max-w-[1400px] 2xl:max-w-[1700px] mx-auto px-6 py-12 pb-24">
         <div className="flex flex-col lg:flex-row gap-8 2xl:gap-12 items-stretch">
@@ -224,16 +222,24 @@ export default function ContactPage() {
                   <div className="w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
                     <Phone size={20} />
                   </div>
-                  <div>
-                    <p className="text-[10px] 2xl:text-xs uppercase text-zinc-500 font-bold tracking-wider">WhatsApp</p>
-                    <p className="text-base 2xl:text-xl font-bold text-white">+92 300 2777587</p>
-                  </div>
+<div className="space-y-0.5 2xl:space-y-1">
+  {/* WhatsApp Label */}
+  <p className="text-[10px] md:text-[11px] lg:text-xs 2xl:text-xs 3xl:text-sm uppercase text-zinc-500 font-bold tracking-wider antialiased leading-none">
+    WhatsApp
+  </p>
+  
+  {/* Phone Number */}
+  <p className="text-base md:text-lg lg:text-[19px] 2xl:text-xl 3xl:text-2xl font-black text-white tracking-tight leading-normal">
+    +92 300 2777587
+  </p>
+</div>
                 </div>
               </div>
 
               <div className="pt-8 mt-8 border-t border-white/5">
-                <p className="text-[10px] 2xl:text-xs uppercase text-zinc-500 font-bold tracking-[2px] mb-6">Connect With Us</p>
-                <div className="flex gap-4 2xl:gap-6">
+<p className="text-[10px] md:text-[11px] lg:text-xs 2xl:text-xs 3xl:text-sm uppercase text-zinc-500 font-bold tracking-[2px] mb-4 2xl:mb-6 antialiased leading-none">
+  Connect With Us
+</p>                <div className="flex gap-4 2xl:gap-6">
                   {[
                     { icon: <FaLinkedinIn size={20} />, link: "https://www.linkedin.com/company/high-rise-digital-agency/", color: "hover:text-blue-400" },
                     { icon: <FaInstagram size={20} />, link: "https://www.instagram.com/highrisedigitalagency/", color: "hover:text-pink-400" },

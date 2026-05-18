@@ -20,9 +20,11 @@ export default function AboutPage() {
     <main className="bg-[#020617] text-white overflow-hidden selection:bg-blue-600 ">
       
       {/* 1. HERO SECTION (Optimized) */}
-      <section className="relative w-full overflow-hidden">
-        <div className="container-wide">
-         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+    <section className="relative w-full overflow-hidden bg-[#030712]">
+      <div className="container-wide">
+        
+        {/* Background Image Container with Exact Matching Premium CSS */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <Image
             src="/home-hero.jpg"
             alt="Mesh Grid"
@@ -34,28 +36,35 @@ export default function AboutPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
         </div>
 
+        {/* Ambient Blur Dot to lock the signature aesthetic */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
+        {/* Full Sized Padded Content Wrapper */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
           <div className="max-w-5xl">
+            
+            {/* Glassmorphism Badge Container */}
             <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
               <Flame size={12} className="text-blue-400 animate-pulse" />
-              <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">ABOUT HIGH RISE</span>
+              <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">ABOUT HIGH RISE</span>
             </div>
 
+            {/* Main Typography Block with Tight Line Height */}
             <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
               ABOUT {" "}
               <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                 US.
               </span>
             </h1>
-            
-            <p className="text-white-500 text-lg md:text-xl lg:text-2xl max-w-2xl font-medium leading-relaxed opacity-80 mx-auto md:mx-0">
-              We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
-            </p>
+
+            {/* Description Paragraph */}
+           <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+  We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
+</p>
           </div>
         </div>
-</div>
+      </div>
+    
       </section>
 
       {/* 2. OUR IDENTITY (CLS Fix) */}
@@ -95,9 +104,9 @@ export default function AboutPage() {
             className="space-y-8"
           >
             <div className="space-y-4">
-              <span className="text-[10px] uppercase tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
+              <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9]">
-                WHO WE <span className="text-blue-500">ARE</span>
+                WHO WE <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">ARE</span>
               </h2>
             </div>
 
@@ -105,17 +114,24 @@ export default function AboutPage() {
               High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
             </p>
 
-            <div className="space-y-5 text-zinc-400 text-sm md:text-base leading-relaxed opacity-90">
-              <p className="border-l-2 border-blue-500/30 pl-4">
-                Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
-              </p>
-              <p className="border-l-2 border-white/10 pl-4">
-                With experience across multiple industries, we have completed <span className="text-white font-bold">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
-              </p>
-              <p className="border-l-2 border-white/10 pl-4">
-                Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
-              </p>
-            </div>
+           <div className="space-y-5 lg:space-y-6 text-zinc-400 font-medium leading-relaxed opacity-90 w-full">
+  
+  {/* Paragraph 1 */}
+  <p className="border-l-2 border-blue-500/30 pl-4 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+    Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
+  </p>
+  
+  {/* Paragraph 2 */}
+  <p className="border-l-2 border-white/10 pl-4 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+    With experience across multiple industries, we have completed <span className="text-white font-bold">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
+  </p>
+  
+  {/* Paragraph 3 */}
+  <p className="border-l-2 border-white/10 pl-4 text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+    Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
+  </p>
+
+</div>
           </motion.div>
         </div>
         </div>
@@ -156,8 +172,9 @@ export default function AboutPage() {
                   {val.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-4">{val.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed font-medium">{val.desc}</p>
-              </motion.div>
+<p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+  {val.desc}
+</p>            </motion.div>
             ))}
           </div>
         </div>
@@ -189,8 +206,9 @@ export default function AboutPage() {
               >
                 <span className="text-blue-500 font-black text-xl mb-4 block opacity-50">{proc.step}</span>
                 <h3 className="text-lg font-bold mb-2">{proc.title}</h3>
-                <p className="text-zinc-500 text-xs leading-relaxed">{proc.desc}</p>
-              </motion.div>
+<p className="text-white text-xs leading-relaxed antialiased">
+  {proc.desc}
+</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -221,35 +239,16 @@ export default function AboutPage() {
                 <div className="text-blue-400 shrink-0">{reason.icon}</div>
                 <div>
                   <h3 className="text-xl font-bold mb-2">{reason.title}</h3>
-                  <p className="text-zinc-500 text-sm leading-relaxed">{reason.desc}</p>
-                </div>
+<p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+  {reason.desc}
+</p>            </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 6. CTA SECTION */}
-      <section className="py-28 px-4 md:px-6 bg-gradient-to-b from-[#010307] to-[#0c142c] border-t border-white/5">
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }} 
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-7xl mx-auto rounded-[3.5rem] bg-gradient-to-br from-slate-950 via-[#070d1d] to-slate-950 p-12 md:p-24 text-center relative overflow-hidden border border-white/10"
-        >
-          <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-blue-600/[0.06] blur-[120px] rounded-full pointer-events-none" />
-          <div className="absolute -top-20 -right-20 w-96 h-96 bg-cyan-500/[0.06] blur-[120px] rounded-full pointer-events-none" />
-
-          <h2 className="text-3xl md:text-6xl font-black tracking-tighter mb-10 relative z-10 leading-tight ">
-            Looking For A Trusted Digital Partner? <br className="hidden md:block" />
-            <span className="text-blue-400">Let’s Grow Your Business</span> With Innovative Marketing!
-          </h2>
-          
-          <Link href="/contact" className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-black text-xs uppercase tracking-[3px] rounded-full hover:scale-105 active:scale-95 transition-all relative z-10 shadow-2xl">
-            GET IN TOUCH <ArrowRight size={14} />
-          </Link>
-        </motion.div>
-      </section>
+    
 
     </main>
   );

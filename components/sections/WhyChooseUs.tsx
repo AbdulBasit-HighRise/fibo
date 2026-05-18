@@ -57,23 +57,28 @@ export default function WhyChooseUs() {
     </h2>
 
     {/* 🎯 EXACT TEXT FONT SIZE SYSTEM: Locked 18px on small screens and 20px (xl) on large screens */}
-    <div className="space-y-8 text-zinc-300 text-[18px] 2xl:text-xl font-normal  max-w-xl 2xl:max-w-3xl">
-      <p>
-        Choosing High Rise Digital means working with a team that is fully committed to your success.
-      </p>
+   {/* 🎯 SYNCED PARENT CONTAINER WITH PREMIUM RESPONSIVE TYPOGRAPHY */}
+<div className="space-y-8 max-w-xl 2xl:max-w-3xl">
+  
+  {/* Paragraph 1 */}
+  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    Choosing High Rise Digital means working with a team that is fully committed to your success.
+  </p>
 
-      {/* Border section left panel aligned with font metrics */}
-      <div className="space-y-5 border-l-2 border-blue-500/50 pl-5 mt-6">
-        <p>
-          Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
-        </p>
+  {/* Border section left panel aligned with font metrics */}
+  <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
+    
+    {/* Paragraph 2 inside Border Block */}
+    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+      Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
+    </p>
 
-        {/* 🎯 FIXED: Corrected invalid color utility and injected explicit responsive size text rules */}
-        <p className="text-zinc-300 text-[18px] 2xl:text-xl">
-          Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
-        </p>
-      </div>
-    </div>
+    {/* Paragraph 3 inside Border Block */}
+    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+      Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
+    </p>
+  </div>
+</div>
   </motion.div>
 </div>
           {/* RIGHT SIDE: Cards (Enhanced Contrast & Highly Readable Layout) */}
@@ -107,9 +112,9 @@ export default function WhyChooseUs() {
                     </div>
                     
                     {/* ⚪ Card Description: Pure White, Big Font Size for Perfect Laptop Readability */}
-                    <p className="text-white text-sm md:text-[14px] 2xl:text-lg 4xl:text-2xl leading-relaxed font-medium opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                      {item.desc}
-                    </p>
+                 <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+  {item.desc}
+</p>
                   </div>
 
                   {/* Corner Check Icon */}
