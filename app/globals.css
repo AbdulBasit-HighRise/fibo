@@ -33,27 +33,27 @@
     font-style: normal !important;
   }
 
-  /* 🎯 INCREASED MINIMUM SIZE: clamp limits ko 2.2rem aur 1.8rem se badha kar mobile ke liye large kiya */
+  /* 🎯 ADJUSTED HEADINGS: Mobile par bade rahenge, par bari screens (Laptop/4K) par tight aur balanced rahenge */
   h1 { 
-    font-size: clamp(2.8rem, 5vw, 95px) !important; 
+    font-size: clamp(2.5rem, 4.5vw, 68px) !important; 
     @apply uppercase font-black; 
     margin-bottom: 0.5em; 
   }
 
   h2 { 
-    font-size: clamp(2.5rem, 4.2vw, 75px) !important; 
+    font-size: clamp(2.0rem, 3.8vw, 52px) !important; 
     margin-bottom: 0.4em; 
     @apply font-black;
   }
   
   h3 { 
-    font-size: clamp(1.8rem, 2.2vw, 32px) !important; 
+    font-size: clamp(1.3rem, 2.0vw, 26px) !important; 
   }
 
-  /* 🎯 PARAGRAPH READABILITY: Paragraph size mobile par 0.9rem se badha kar 1.05rem minimum kar di */
+  /* 🎯 PARAGRAPH READABILITY: Minimum size ko exact 1.05rem par balance kiya taake paragraph clean parha jaye */
   p {
     @apply text-white font-normal;
-    font-size: clamp(2.1rem, 0.8vw + 0.5rem, 1.4rem);
+    font-size: clamp(1.05rem, 0.8vw + 0.5rem, 1.4rem);
     line-height: 1.6;
     max-width: 75ch;
   }

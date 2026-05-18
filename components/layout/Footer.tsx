@@ -51,7 +51,7 @@ export default function Footer() {
               />
             </Link>
 
-            <p className="text-white text-[12px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2">
+            <p className="text-white text-[13px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2">
               Let’s discuss your goals and create a powerful strategy to boost your business growth online.
             </p>
 
@@ -72,7 +72,7 @@ export default function Footer() {
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
 
             <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Quick Links</span>
-            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[13px] md:text-[15px] 2xl:text-xl font-bold">
               {[
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Column 3: Our Services */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[13px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { title: "Website Development", slug: "web-dev" },
                 { title: "Search Engine Optimization", slug: "seo" },
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* Column 4: Compliance */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[13px] md:text-[15px] 2xl:text-xl font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Privacy Policy", href: "/privacy" },
                 { name: "Terms & Conditions", href: "/terms" },
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Column 5: Inquiries */}
           <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Inquiries</span>
+            <span className="block text-[13px] md:text-[15px] 2xl:text-xl font-black text-white tracking-widest uppercase">Inquiries</span>
             <div className="space-y-4 2xl:space-y-8">
               <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
                 <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
@@ -140,7 +140,7 @@ export default function Footer() {
                 <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
                 <div className="space-y-1">
                   <p className="text-[9px] 2xl:text-[12px] text-white-500 uppercase font-black tracking-wider">Corporate Support</p>
-                  <p className="text-[12px] md:text-[14px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors">+92 300 2777587</p>
+                  <p className="text-[13px] md:text-[15px] 2xl:text-xl font-bold text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
                 </div>
               </a>
             </div>
@@ -156,7 +156,7 @@ export default function Footer() {
                 <span className="block text-sm md:text-base 2xl:text-xl font-black text-white tracking-tight uppercase">
                   {office.city}
                 </span>
-                <p className="text-[11px] md:text-xs 2xl:text-[15px] text-white-400 font-normal leading-relaxed">
+                <p className="text-[13px] md:text-[14px] 2xl:text-[15px] text-white-400 font-normal leading-relaxed">
                   {office.address}
                 </p>
               </div>

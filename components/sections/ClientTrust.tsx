@@ -26,7 +26,7 @@ export default function ClientTrust() {
   return (
     <section className="relative py-4 md:py-6 2xl:py-8 bg-[#020617] overflow-hidden border-y border-white/5">
       <div className="relative z-10 max-w-full mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+        <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-12">
 
           {/* LEFT SIDE: Heading */}
           <div className="shrink-0 text-center lg:text-left">
@@ -35,7 +35,7 @@ export default function ClientTrust() {
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
     /* 🎯 MATCHED DESIGN SYSTEM: Exact consistent fluid sizing scale, tight tracking, and layout line-height */
-    className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case"
+    className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.2rem] xl:!text-[2.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case"
   >
     Our{" "}
     {/* 🎯 MATCHED GRADIENT BLOCK: Set to 'block' with top margin spacing and right padding safety bounds */}
@@ -47,7 +47,7 @@ export default function ClientTrust() {
           {/* RIGHT SIDE: Heavy Marquee Track */}
           <div className="w-full lg:flex-1 relative h-20 md:h-24 2xl:h-32 flex items-center overflow-hidden">
             <motion.div
-              className="flex gap-16 md:gap-8 2xl:gap-16 w-max items-center" // 🛠️ Gap reduced for tighter slider
+              className="flex gap-6 md:gap-8 2xl:gap-16 w-max items-center" // 🛠️ Gap reduced for tighter slider
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 duration: 40, // Speed slightly adjusted for smoothness
