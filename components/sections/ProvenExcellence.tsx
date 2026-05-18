@@ -45,35 +45,33 @@ export default function ProvenExcellence() {
               transition={{ duration: 0.8 }}
             >
             {/* 🎯 MATCHED EXACT DESIGN SYSTEM FRAMEWORK */}
-<h3 className="text-[23rem] sm:text-4xl md:text-4xl lg:text-[2.5rem] xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
+<h3 className="text-[2.3rem] sm:text-4xl md:text-4xl lg:text-[2.5rem] xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
   
  Scale Your Business 
   {/* 🎯 MATCHED GRADIENT BLOCK: Corrected context, kept perfect breathing padding */}
-  <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+  <span className="block mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
     with Marketing Solutions
   </span>
 </h3>
       {/* 🎯 SYNCED PERFORMANCE BLOCK WITH UNIFORM RESPONSIVE TYPOGRAPHY */}
-<div className="space-y-8 max-w-xl 2xl:max-w-3xl">
+<div className="space-y-4 max-w-xl 2xl:max-w-3xl">
   
   {/* Paragraph 1 */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-    We consistently deliver measurable digital growth through strategic planning, creative execution, and performance-focused campaigns.
+  <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    We consistently deliver measurable digital growth through strategic planning, creative execution, and performance-focused campaigns. Our approach combines data insights with innovative marketing techniques to ensure every project achieves strong visibility and engagement, helping brands stay competitive and achieve sustainable success.
   </p>
 
   {/* Paragraph 2 */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-    Our approach combines data insights with innovative marketing techniques to ensure every project achieves strong visibility and engagement.
+  <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    Instead of relying on guesswork, we dive deep into market trends and audience behavior to build a custom roadmap tailored specifically to your business goals. From high-converting website layouts to targeted search and social campaigns, we optimize every single touchpoint of your online footprint.
   </p>
 
-  {/* Left border block adjusted to match contrast */}
-  <div className="border-l-2 border-blue-500 pl-5 mt-6">
+  {/* Left border block */}
     {/* Paragraph 3 inside Border Block */}
-    <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-      We help brands stay competitive and achieve sustainable success.
+    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+      We don’t just chase temporary vanity metrics like likes or empty clicks; we focus entirely on driving real engagement, capturing qualified leads, and building long-term customer loyalty that scales your business predictably.
     </p>
-  </div>
-</div>  </motion.div>
+</div> </motion.div>
           </div>
 
           {/* RIGHT: Features Grid (Balanced Layout & Highly Readable Cards) */}
@@ -100,9 +98,9 @@ export default function ProvenExcellence() {
   </div>
   
   {/* Card Title - Premium Multi-Color Gradient Layout */}
-  <h4 className="font-black text-sm md:text-base 2xl:text-xl tracking-[1.5px] uppercase leading-tight bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
-    {feature.title}
-  </h4>
+ <h4 className="font-black text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] 3xl:text-[1.875rem] tracking-wider uppercase leading-tight bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
+  {feature.title}
+</h4>
 </div>
                   
                   {/* Janni, Card Description ko Pure White, Bara (15px) aur Medium weight de diya hai */}

@@ -69,82 +69,93 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
+<div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+      Quick Links
+    </span>
+    <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
+      {[
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
+        { name: "Services", href: "/services" },
+        { name: "Case Studies", href: "/portfolio" },
+        { name: "Blogs", href: "/blog" },
+      ].map((link, idx) => (
+        <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
+          {link.name}
+        </Link>
+      ))}
+    </div>
+  </div>
 
-            <span className="block text-[16px] md:text-[18px] font-normal text-white tracking-widest uppercase">Quick Links</span>
-            <div className="flex flex-col space-y-0 2xl:space-y-2 text-[16px] md:text-[18px]  font-normal">
-              {[
-                { name: "Home", href: "/" },
-                { name: "About", href: "/about" },
-                { name: "Services", href: "/services" },
-                { name: "Case Studies", href: "/portfolio" },
-                { name: "Blogs", href: "/blog" },
-              ].map((link, idx) => (
-                <Link key={idx} href={link.href} className="text-white-500 hover:text-white transition-colors w-max">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+  {/* Column 2: Our Services (Expertise) */}
+  <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+      Expertise
+    </span>
+    <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
+      {[
+        { title: "Website Development", slug: "web-dev" },
+        { title: "Search Engine Optimization", slug: "seo" },
+        { title: "Social Media Marketing", slug: "social-media" },
+        { title: "AI Automation", slug: "ai-automation" },
+        { title: "Ecommerce Management", slug: "ecommerce" },
+      ].map((service, idx) => (
+        <Link
+          key={idx}
+          href={`/services/${service.slug}`}
+          className="text-white-400 hover:text-white transition-all duration-300 w-max"
+        >
+          {service.title}
+        </Link>
+      ))}
+    </div>
+  </div>
 
-          {/* Column 3: Our Services */}
-          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[16px] md:text-[18px]  font-normal text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
-              {[
-                { title: "Website Development", slug: "web-dev" },
-                { title: "Search Engine Optimization", slug: "seo" },
-                { title: "Social Media Marketing", slug: "social-media" },
-                { title: "AI Automation", slug: "ai-automation" },
-                { title: "Ecommerce Management", slug: "ecommerce" },
-              ].map((service, idx) => (
-                <Link
-                  key={idx}
-                  href={`/services/${service.slug}`}
-                  className="text-white-500 hover:text-white transition-all duration-300 w-max"
-                >
-                  {service.title}
-                </Link>
-              ))}
-            </div>
-          </div>
+  {/* Column 3: Compliance */}
+  <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+      Compliance
+    </span>
+    <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
+      {[
+        { name: "Privacy Policy", href: "/privacy" },
+        { name: "Terms & Conditions", href: "/terms" },
+        { name: "Global Pricing", href: "/pricing" },
+        { name: "FAQs", href: "/faq" },
+        { name: "Contact US", href: "/contact" }
+      ].map((link, idx) => (
+        <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
+          {link.name}
+        </Link>
+      ))}
+    </div>
+  </div>
 
-          {/* Column 4: Compliance */}
-          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[16px] md:text-[18px]  font-normal text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
-              {[
-                { name: "Privacy Policy", href: "/privacy" },
-                { name: "Terms & Conditions", href: "/terms" },
-                { name: "Global Pricing", href: "/pricing" },
-                { name: "FAQs", href: "/faq" },
-                { name: "Contact US", href: "/contact" }
-              ].map((link, idx) => (
-                <Link key={idx} href={link.href} className="text-white-500 hover:text-white transition-colors w-max">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+  {/* Column 4: Inquiries */}
+  <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+      Inquiries
+    </span>
+    <div className="space-y-4 text-[16px] md:text-[16px]">
+      <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
+        <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
+        <div className="space-y-1">
+          <p className="text-[12px] 2xl:text-[13px] text-zinc-500 uppercase font-black tracking-wider">Drop an email</p>
+          <p className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
+        </div>
+      </a>
+      <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
+        <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
+        <div className="space-y-1">
+          <p className="text-[12px] 2xl:text-[13px] text-zinc-500 uppercase font-black tracking-wider">Corporate Support</p>
+          <p className="text-[15px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors">+92 300 2777587</p>
+        </div>
+      </a>
+    </div>
+  </div>
 
-          {/* Column 5: Inquiries */}
-          <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Inquiries</span>
-            <div className="space-y-4 2xl:space-y-8">
-              <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
-                <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
-                <div className="space-y-1">
-                  <p className="text-[9px] 2xl:text-[12px] text-white-500 uppercase font-black tracking-wider">Drop an email</p>
-                  <p className="text-[12px] md:text-[14px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors">info@highrisedigital.io</p>
-                </div>
-              </a>
-              <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
-                <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
-                <div className="space-y-1">
-                  <p className="text-[9px] 2xl:text-[12px] text-white-500 uppercase font-black tracking-wider">Corporate Support</p>
-                  <p className="text-[13px] md:text-[15px] 2xl:text-xl font-bold text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
-                </div>
-              </a>
-            </div>
-          </div>
+         
         </div>
 
         {/* 🏢 OFFICES GRID */}

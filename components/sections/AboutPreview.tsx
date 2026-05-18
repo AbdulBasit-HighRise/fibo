@@ -54,7 +54,7 @@ export default function AboutPreview() {
                 <h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-6xl font-black tracking-tighter leading-[1.15] text-white">
                   Leading Digital Marketing
                   <br />
-                  <span className="inline-block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                  <span className="inline-block mt-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                     Company Working Globally
                   </span>
                 </h2>
@@ -123,14 +123,14 @@ export default function AboutPreview() {
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
 
           {/* LOGOS GRID (🎯 FIXED: 1 COLUMN WITH BIGGER GAPS ON MOBILE) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-0 2xl:gap-18 items-center justify-center justify-items-center w-full max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-0 2xl:gap-18 items-center justify-center justify-items-center w-full max-w-5xl">
             {awardLogos.map((logo, index) => (
               <div
                 key={index}
                 className="group relative w-full max-w-[180px] md:max-w-[200px] 2xl:max-w-[240px] flex items-center justify-center transition-all duration-500"
               >
                 {/* Logo Wrapper Container */}
-                <div className="h-24 md:h-36 2xl:h-40 w-full relative flex items-center justify-center">
+                <div className="h-28 md:h-36 2xl:h-40 w-full relative flex items-center justify-center">
                   <Image
                     src={logo.src}
                     alt={logo.alt}

@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
       Why Choose
       <br />
       {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-      <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      <span className="block mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
         High Rise Digital
       </span>
     </h2>

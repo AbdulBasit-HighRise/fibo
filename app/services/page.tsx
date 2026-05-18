@@ -100,65 +100,72 @@ export default function ServicesPage() {
           </motion.div>
 
           {/* RIGHT: Content (Exactly as you provided) */}
-          <div className="lg:col-span-7 space-y-10">
-            <div className="space-y-6">
-              <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 backdrop-blur-sm">
-                <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-                <span className="text-[10px] 2xl:text-xs uppercase tracking-[3px] text-blue-300 font-black">Crafting Future Brands.
-</span>
-              </div>
-
-              <h2 className="text-4xl md:text-6xl 2xl:text-8xl font-black tracking-tighter text-white leading-[0.95]">Everything You Need to
-                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500"> Grow, Market, and Scale Your Brand</span>
-              </h2>
-
-            
-            </div>
-
-            <div className="space-y-6">
-              <p className="text-white text-sm md:text-base 2xl:text-2xl leading-relaxed opacity-90 font-medium border-l-2 border-blue-500/30 pl-6 ">
-                High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies.
-                <br /><br />
-                We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
-                <br /><br />
-                Our services include website development, SEO, content creation, lead generation, and customer retention strategies.
-                <br /><br />
-                With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
-                <br /><br />
-                Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
-              </p>
-
-            <div className="flex flex-wrap items-center gap-6 pt-4">
-  <Link href="/contact" className="group block w-full sm:w-auto">
-    <motion.button
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="group relative h-[46px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 border border-zinc-100"
-    >
-      
-      {/* 🛠️ GRADIENT FILL LAYER (Left-to-Right Stretch) */}
-      <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-      
-      {/* Content Span (Fully Optimized & Synchronized) */}
-      <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 text-black font-black text-[10px] sm:text-[11px] 2xl:text-[13px] tracking-[1.5px] sm:tracking-[2px] group-hover:text-white transition-colors duration-500 uppercase">
-        Get Quote Now.
-        <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 2xl:w-5 2xl:h-5 text-black group-hover:text-white group-hover:translate-x-1.5 transition-all duration-500" />
+         <div className="lg:col-span-7 space-y-10">
+  <div className="space-y-6">
+    <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 backdrop-blur-sm">
+      <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
+      <span className="text-[10px] 2xl:text-xs uppercase tracking-[3px] text-blue-300 font-black">
+        Crafting Future Brands.
       </span>
+    </div>
 
-    </motion.button>
-  </Link>
+    {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
+    <h3 className="text-[2.2rem] lg:text-[2.8rem] 2xl:text-[3.2rem] 3xl:text-[5.5rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
+      Everything You Need to{" "}
+      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+        Grow, Market, and Scale Your Brand
+      </span>
+    </h3>
+  </div>
+
+  {/* 🎯 FIX: Paragraphs converted to match the exact spacing, font sizes, and white color of previous sections */}
+  <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full border-l-2 border-blue-500/30 pl-6">
+    
+    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+      High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
+    </p>
+
+    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+      Our services include website development, SEO, content creation, lead generation, and customer retention strategies. With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
+    </p>
+
+    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+      Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
+    </p>
+
+  </div>
+
+  <div className="flex flex-wrap items-center gap-6 pt-4">
+    <Link href="/contact" className="group block w-full sm:w-auto">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="group relative h-[46px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 border border-zinc-100"
+      >
+        {/* GRADIENT FILL LAYER */}
+        <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+        
+        {/* Content Span */}
+        <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 text-black font-black text-[10px] sm:text-[11px] 2xl:text-[13px] tracking-[1.5px] sm:tracking-[2px] group-hover:text-white transition-colors duration-500 uppercase">
+          Get Quote Now.
+          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 2xl:w-5 2xl:h-5 text-black group-hover:text-white group-hover:translate-x-1.5 transition-all duration-500" />
+        </span>
+      </motion.button>
+    </Link>
+  </div>
 </div>
-            </div>
-          </div>
         </div>
       </section>
 
       {/* SECTION 3: SERVICE GRID */}
       <section className="py-24 2xl:py-40 px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto">
-        <h2 className="text-4xl 2xl:text-6xl font-black mb-16 flex items-center gap-4 uppercase italic">
-          Our Complete Range of Digital Marketing Services
+        <h3 className="text-4xl 2xl:text-6xl font-black mb-16 flex items-center gap-4  ">
+          Our Complete Range of {" "}
+           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+       Digital Marketing Services
+      </span>
           <div className="h-px bg-white/10 flex-grow" />
-        </h2>
+        </h3>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
           {serviceList.map((service) => (
@@ -171,15 +178,15 @@ export default function ServicesPage() {
                   <div className="text-blue-500 mb-8 w-12 h-12 2xl:w-16 2xl:h-16 flex items-center justify-center bg-blue-500/5 rounded-2xl border border-blue-500/10 group-hover:bg-blue-500 group-hover:text-white transition-all">
                     {service.icon}
                   </div>
-                  <span className="text-zinc-600 font-black text-xs 2xl:text-base uppercase tracking-widest">{service.id} // SERVICE</span>
-                  <h3 className="text-3xl 2xl:text-5xl font-black uppercase italic mt-4 group-hover:text-blue-400 transition-colors leading-tight">
+                  {/* <span className="text-zinc-600 font-black text-xs 2xl:text-base uppercase tracking-widest">{service.id} // SERVICE</span> */}
+                  <h3 className="text-3xl 2xl:text-5xl font-black   mt-4 group-hover:text-blue-400 transition-colors leading-tight">
                     {service.title}
                   </h3>
                 </div>
                 <div className="mt-12 flex justify-between items-end">
 <p className="text-white text-sm 2xl:text-xl max-w-[150px] 2xl:max-w-[250px] font-medium antialiased">
   Production-grade scale & precision.
-</p>                  <ArrowUpRight className="text-zinc-700 group-hover:text-blue-500 transition-colors 2xl:w-8 2xl:h-8" />
+</p>                  <ArrowUpRight className="text-white-700 group-hover:text-blue-500 transition-colors 2xl:w-8 2xl:h-8" />
                 </div>
               </motion.div>
             </Link>

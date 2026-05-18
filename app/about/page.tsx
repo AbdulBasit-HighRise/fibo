@@ -96,45 +96,49 @@ export default function AboutPage() {
               </div>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="space-y-8"
-            >
-              <div className="space-y-4">
-                <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-[0.9]">
-                  WHO WE <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">ARE</span>
-                </h2>
-              </div>
+           <motion.div
+  initial={{ opacity: 0, x: 30 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="space-y-8"
+>
+  <div className="space-y-4">
+    <span className="text-[10px] tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
+    
+    {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
+    <h2 className="text-[2.5rem] lg:text-[2.8rem] 2xl:text-[3.2rem] 3xl:text-[5.5rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white lg:whitespace-nowrap">
+      Who we{" "}
+      <span className="inline-block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+        are
+      </span>
+    </h2>
+  </div>
 
-          <p className="text-white text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl leading-relaxed font-semibold antialiased tracking-wide">
-  High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
-</p>
-
-<div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed opacity-90 w-full mt-6">
-
-  {/* Paragraph 1 */}
-  <p className="border-l-2 border-blue-500/30 pl-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide">
-    Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
+  {/* Main Lead Paragraph */}
+  <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-semibold leading-relaxed antialiased tracking-wide opacity-90">
+    High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
   </p>
 
-  {/* Paragraph 2 */}
-  <p className="border-l-2 border-white/10 pl-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide">
-    With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
-  </p>
+  <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full mt-6">
 
-  {/* Paragraph 3 */}
-  <p className="border-l-2 border-white/10 pl-4 text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide">
-    Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
-  </p>
+    {/* Paragraph 1 */}
+    <p className="border-l-2 border-blue-500 pl-4 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+      Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
+    </p>
 
+    {/* Paragraph 2 */}
+    <p className="border-l-2 border-white/20 pl-4 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+      With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
+    </p>
 
+    {/* Paragraph 3 */}
+    <p className="border-l-2 border-white/20 pl-4 text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+      Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
+    </p>
 
-              </div>
-            </motion.div>
+  </div>
+</motion.div>
           </div>
         </div>
       </section>
@@ -153,7 +157,7 @@ export default function AboutPage() {
               <Sparkles size={22} />
             </div>
             <span className="text-[10px] uppercase tracking-[4px] text-blue-500 font-extrabold block">OUR PURPOSE</span>
-            <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-tight">Vision & Mission</h2>
+            <h3 className="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-tight">Vision & Mission</h3>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -173,8 +177,8 @@ export default function AboutPage() {
                 <div className="mb-6 text-blue-400 bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
                   {val.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-4">{val.title}</h3>
-                <p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                <h3 className="text-[20px] font-bold mb-4">{val.title}</h3>
+                <p className="text-white text-[10px] md:text-[12px] lg:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
                   {val.desc}
                 </p>            </motion.div>
             ))}
@@ -187,7 +191,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block mb-4">EXECUTION TRACK</span>
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter  leading-none">Our Working Process.</h2>
+            <h3 className="text-4xl md:text-6xl font-black tracking-tighter  leading-none">Our Working Process.</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -207,8 +211,8 @@ export default function AboutPage() {
                 className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all"
               >
                 <span className="text-blue-500 font-black text-xl mb-4 block opacity-50">{proc.step}</span>
-                <h3 className="text-lg font-bold mb-2">{proc.title}</h3>
-                <p className="text-white text-xs leading-relaxed antialiased">
+                <h3 className="text-[25px] font-bold mb-2">{proc.title}</h3>
+                <p className="text-white text-white text-[10px] md:text-[12px] lg:text-[15px] leading-relaxed antialiased">
                   {proc.desc}
                 </p>              </motion.div>
             ))}
@@ -222,7 +226,7 @@ export default function AboutPage() {
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
               <span className="text-[10px] uppercase tracking-[4px] text-blue-500 font-extrabold block mb-4">WHY HIGH RISE?</span>
-              <h2 className="text-4xl md:text-5xl font-black tracking-tighter  leading-tight">4 Reasons To Work With Us</h2>
+              <h3 className="text-4xl md:text-5xl font-black tracking-tighter  leading-tight">4 Reasons To Work With Us</h3>
             </div>
           </div>
 
@@ -240,8 +244,8 @@ export default function AboutPage() {
               >
                 <div className="text-blue-400 shrink-0">{reason.icon}</div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">{reason.title}</h3>
-                  <p className="text-white text-sm md:text-base lg:text-[15px] 2xl:text-base 3xl:text-lg font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                  <h3 className="text-[20px] font-bold mb-2">{reason.title}</h3>
+                  <p className="text-white text-[10px] md:text-[12px] lg:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
                     {reason.desc}
                   </p>            </div>
               </motion.div>
