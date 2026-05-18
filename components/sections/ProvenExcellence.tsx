@@ -45,8 +45,8 @@ export default function ProvenExcellence() {
               transition={{ duration: 0.8 }}
             >
             {/* 🎯 MATCHED EXACT DESIGN SYSTEM FRAMEWORK */}
-<h3 className="text-[2rem] sm:text-4xl md:text-4xl lg:text-[2.5rem] xl:text-[2.6rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
-  Your Heading Text
+<h3 className="text-[23rem] sm:text-4xl md:text-4xl lg:text-[2.5rem] xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
+  
  Scale Your Business 
   {/* 🎯 MATCHED GRADIENT BLOCK: Corrected context, kept perfect breathing padding */}
   <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">

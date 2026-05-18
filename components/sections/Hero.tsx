@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
             
             {/* 🖥️ Heading: Responsive & Tight */}
-           <h1 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black leading-[1.1] lg:leading-[1] tracking-tighter text-white">
+           <h1 className="!text-[2.5rem] sm:!text-4xl md:!text-4xl lg:!text-[3rem] xl:!text-[3.5rem] 2xl:!text-7xl 3xl:!text-8xl font-black leading-[1.1] lg:leading-[1] tracking-tighter text-white">
   Digital
   <br />
   {/* 🎯 FIX: Changed to 'inline-block' and added 'mt-3' for smooth line spacing */}

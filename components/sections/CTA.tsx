@@ -17,9 +17,9 @@ export default function CTA() {
           
   {/* 🎯 ULTRA-PREMIUM 1-LINE HEADING FRAMEWORK */}
   <h3 className="!text-[1.8rem] sm:!text-4xl md:!text-4xl lg:!text-[2.6rem] xl:!text-[3rem]  font-black tracking-tighter leading-[1.1] lg:leading-none text-white normal-case whitespace-normal lg:whitespace-nowrap">
-    Ready To Grow Your{" "}
-    <span className="inline-block py-0.5 pr-1 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-      Brand Online?
+    Ready To Scale?{" "}
+    <span className="inline-block  italic py-0.5 pr-1 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      Let's Chat.
     </span>
   </h3>
   
