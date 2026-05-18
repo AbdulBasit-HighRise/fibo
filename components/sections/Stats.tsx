@@ -52,7 +52,7 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
         className="absolute inset-0 bg-gradient-to-t from-blue-600/20 via-blue-500/5 to-transparent z-0"
       />
 
-      <div className="relative z-10 mb-4 text-zinc-500 group-hover:text-blue-400 transition-all duration-500">
+      <div className="relative z-10 mb-4 text-white-500 group-hover:text-blue-400 transition-all duration-500">
         <div className="scale-125 md:scale-110 2xl:scale-150 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-transform">
           {icon}
         </div>
@@ -65,7 +65,7 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
         </span>
       </span>
 
-      <p className="relative z-10 mt-3 text-[11px] md:text-[12px] 2xl:text-lg font-black tracking-[3px] text-zinc-500 group-hover:text-white uppercase transition-colors duration-500">
+      <p className="relative z-10 mt-3 text-[11px] md:text-[12px] 2xl:text-lg font-black tracking-[3px] text-white-500 group-hover:text-white uppercase transition-colors duration-500">
         {label}
       </p>
 

@@ -13,21 +13,21 @@ export default function CTA() {
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 lg:gap-12 2xl:gap-16">
         
         {/* 📝 LEFT SIDE: TEXT CONTENT */}
-        <div className="text-left space-y-4 flex-[1.4] w-full">
+      <div className="text-left space-y-4 flex-[1.4] w-full">
           
-          {/* 🎯 ULTRA-PREMIUM 1-LINE HEADING FRAMEWORK */}
-          <h3 className="!text-[1.8rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.7rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white normal-case whitespace-normal lg:whitespace-nowrap">
-            Ready To Grow Your{" "}
-            <span className="inline-block py-0.5 pr-1 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Brand Online?
-            </span>
-          </h3>
-          
-          {/* 🎯 GLOBAL TEXT SIZE SYSTEM */}
-          <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl opacity-80">
-            Transform your ideas into digital reality with our expert marketing and design strategies.
-          </p>
-        </div>
+  {/* 🎯 ULTRA-PREMIUM 1-LINE HEADING FRAMEWORK */}
+  <h3 className="!text-[1.8rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[2.7rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white normal-case whitespace-normal lg:whitespace-nowrap">
+    Ready To Grow Your{" "}
+    <span className="inline-block py-0.5 pr-1 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      Brand Online?
+    </span>
+  </h3>
+  
+  {/* 🎯 GLOBAL TEXT SIZE SYSTEM (Locked to 1-Line on Desktop) */}
+  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-none lg:whitespace-nowrap opacity-80 antialiased tracking-wide">
+    Transform your ideas into digital reality with our expert marketing and design strategies.
+  </p>
+</div>
 
         {/* ⚡ RIGHT SIDE: ACTIONS (Shifted to left & optimized for responsive breathing) */}
         <div className="flex flex-nowrap items-center justify-start lg:justify-start gap-3 sm:gap-6 md:gap-8 2xl:gap-12 flex-1 w-full lg:w-auto shrink-0">

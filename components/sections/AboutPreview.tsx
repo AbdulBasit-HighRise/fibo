@@ -3,25 +3,22 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+{/* 🎯 FIXED IMPORT ERROR: Added both missing icons safely */}
 import { ChevronRight, ArrowRight } from "lucide-react";
 
-// Sirf 6 main logos
+// Sirf 5 main logos
 const awardLogos = [
-
   { src: "/baj2.png", alt: "National Excellence" },
   { src: "/baj4.png", alt: "Top 10 Agency" },
-
-  { src: "/baj3.png", alt: "Forbes Member" },
   { src: "/baj1.png", alt: "Clutch Recognition" },
-
-
+  { src: "/baj3.png", alt: "Forbes Member" },
   { src: "/baj5.png", alt: "The Manifest" },
 ];
 
 export default function AboutPreview() {
   return (
     <>
-      {/* 🎯 ABOUT SECTION: Changed bottom padding to 0 to remove gap with logos */}
+      {/* 🎯 ABOUT SECTION */}
       <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#030303] overflow-hidden">
 
         {/* Background Glow */}
@@ -63,33 +60,33 @@ export default function AboutPreview() {
                 </h2>
               </div>
 
-             <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.2 }}
-  viewport={{ once: true }}
-  className="space-y-6 md:space-y-8"
->
-  {/* Paragraph 1 */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-    As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
-  </p>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-6 md:space-y-8"
+              >
+                {/* Paragraph 1 */}
+                <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                  As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
+                </p>
 
-  {/* Paragraph 2 */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-    Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
-  </p>
+                {/* Paragraph 2 */}
+                <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                  Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
+                </p>
 
-  {/* Paragraph 3 (Hidden on Mobile, Visible on Desktop) */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
-    We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
-  </p>
+                {/* Paragraph 3 */}
+                <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
+                  We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
+                </p>
 
-  {/* Paragraph 4 */}
-  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-    Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
-  </p>
-</motion.div>
+                {/* Paragraph 4 */}
+                <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                  Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
+                </p>
+              </motion.div>
 
               {/* Buttons Section */}
               <motion.div
@@ -108,11 +105,11 @@ export default function AboutPreview() {
                   </button>
                 </Link>
 
-                <Link 
-                  href="/services" 
+                <Link
+                  href="/services"
                   className="group flex items-center gap-2 text-zinc-400 hover:text-white font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
                 >
-                  View Services 
+                  View Services
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -121,28 +118,27 @@ export default function AboutPreview() {
         </div>
       </section>
 
-      {/* 🎯 LOGO SECTION: Set pt-0 (Zero top padding) and removed all border utilities */}
-      <section className="pt-15 pb-12 md:pb-16 2xl:pb-20 bg-[#030303]">
+      {/* 🎯 LOGO SECTION */}
+      <section className="pt-12 pb-12 md:pb-16 2xl:pb-20 bg-[#030303]">
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
-          
-          {/* LOGOS GRID */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 md:gap-0 2xl:gap-18 items-center justify-center justify-items-center w-full max-w-5xl">
+
+          {/* LOGOS GRID (🎯 FIXED: 1 COLUMN WITH BIGGER GAPS ON MOBILE) */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-0 2xl:gap-18 items-center justify-center justify-items-center w-full max-w-5xl">
             {awardLogos.map((logo, index) => (
               <div
                 key={index}
-                className="group relative w-full max-w-[160px] md:max-w-[200px] 2xl:max-w-[240px] flex items-center justify-center transition-all duration-500"
+                className="group relative w-full max-w-[180px] md:max-w-[200px] 2xl:max-w-[240px] flex items-center justify-center transition-all duration-500"
               >
                 {/* Logo Wrapper Container */}
-               {/* 🎯 FIXED WRAPPER: Used valid Tailwind standard or arbitrary sizes to prevent compilation errors */}
-<div className="h-20 md:h-36 2xl:h-40 w-full relative flex items-center justify-center">
-  <Image
-    src={logo.src}
-    alt={logo.alt}
-    fill
-    className="object-contain transition-all duration-500   group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105"
-    sizes="(max-width: 768px) 160px, (max-width: 1920px) 220px, 300px"
-  />
-</div>
+                <div className="h-24 md:h-36 2xl:h-40 w-full relative flex items-center justify-center">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    fill
+                    className="object-contain transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105"
+                    sizes="(max-width: 768px) 180px, (max-width: 1920px) 220px, 300px"
+                  />
+                </div>
 
                 {/* Premium Active Hover Glow */}
                 <div className="absolute inset-0 bg-blue-500/5 blur-[40px] 2xl:blur-[60px] opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
@@ -151,7 +147,6 @@ export default function AboutPreview() {
           </div>
         </div>
       </section>
-      
     </>
   );
 }

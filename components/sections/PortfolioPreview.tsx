@@ -65,7 +65,7 @@ export default function PortfolioBento() {
           >
             <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3rem] 2xl:!text-7xl 3xl:!text-8xl font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
               Client’s {""}
-               <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+               <span className=" sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                     Case Studies
                   </span>
             </h3>
@@ -117,7 +117,7 @@ export default function PortfolioBento() {
                   </div>
                   <div className="space-y-4 relative z-10">
                     <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-zinc-500 font-bold block">{project.category}</span>
-                    <h3 className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</h3>
+                    <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
                     <div className="flex flex-wrap gap-2 pt-2">
                       {project.tags.map((tag, idx) => (
                         <span key={idx} className="px-3 2xl:px-6 py-1 2xl:py-3 rounded-full border border-white/5 bg-white/[0.02] text-[10px] 2xl:text-lg font-semibold text-zinc-400 group-hover:text-blue-400 transition-all">

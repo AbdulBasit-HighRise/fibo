@@ -70,7 +70,7 @@ const handleModalSubmit = (e: React.FormEvent) => {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full pointer-events-none">
-      <div className={`w-full max-w-[1700px] mx-auto transition-all duration-500 px-4 md:px-8 pointer-events-auto ${isScrolled ? "pt-1" : "pt-1 md:pt-1"}`}>
+      <div className={`w-full max-w-[1700px] mx-auto transition-all duration-500 px-2 md:px-8 pointer-events-auto ${isScrolled ? "pt-2": "pt-1 md:pt-1"}`}>
         <motion.nav
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -90,15 +90,15 @@ const handleModalSubmit = (e: React.FormEvent) => {
                     {/* Yahan pehle <button> tha, ab <Link> hai taake click pe page khule */}
                     <Link 
                       href={link.href} 
-                      className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-zinc-400 hover:text-white"}`}
+                      className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-white-400 hover:text-white"}`}
                     >
                       {link.name} <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
                     </Link>
                     <AnimatePresence>
                       {showServices && (
-                        <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 w-56 p-2 bg-zinc-950 border border-white/10 rounded-2xl shadow-2xl mt-1">
+                        <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 w-56 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-1">
                           {link.subLinks?.map((sub) => (
-                            <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[10px] font-bold text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
+                            <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[10px] font-bold text-white-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
                               {sub.name}
                             </Link>
                           ))}
@@ -109,7 +109,7 @@ const handleModalSubmit = (e: React.FormEvent) => {
                 );
               }
               return (
-                <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-zinc-400 hover:text-white"}`}>
+                <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-white-400 hover:text-white"}`}>
                   {link.name}
                 </Link>
               );
@@ -196,7 +196,7 @@ const handleModalSubmit = (e: React.FormEvent) => {
   required
   value={modalForm.service}
   onChange={(e) => setModalForm({ ...modalForm, service: e.target.value })}
-  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-zinc-300 outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all"
+  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white-300 outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all"
 >
   <option value="" disabled className="bg-[#070707] text-zinc-500">Select Service</option>
   <option value="Web Development" className="bg-[#070707] text-white">Web Development</option>

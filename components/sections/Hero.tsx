@@ -82,7 +82,7 @@ export default function HeroSection() {
                   <Star key={i} size={10} className="fill-yellow-500 text-yellow-500 2xl:w-4 2xl:h-4" />
                 ))}
               </div>
-              <p className="text-zinc-500 font-bold text-[9px] 2xl:text-xs uppercase tracking-widest">
+              <p className="text-white-500 font-bold text-[9px] 2xl:text-xs uppercase tracking-widest">
                 Trusted by 150+ rapid-scale founders
               </p>
             </div>

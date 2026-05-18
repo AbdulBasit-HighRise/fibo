@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-[1600px] 2xl:max-w-[2400px] mx-auto px-6 2xl:px-16">
 
         {/* --- MAIN LINKS GRID --- */}
-        <div className="pt-4 pb-12 md:pt-6 md:pb-16 2xl:pt-10 2xl:pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
+        <div className="p-3 pt-4 pb-12 md:pt-6 md:pb-16 2xl:pt-10 2xl:pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
 
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
@@ -80,7 +80,7 @@ export default function Footer() {
                 { name: "Case Studies", href: "/portfolio" },
                 { name: "Blogs", href: "/blog" },
               ].map((link, idx) => (
-                <Link key={idx} href={link.href} className="text-zinc-500 hover:text-white transition-colors w-max">
+                <Link key={idx} href={link.href} className="text-white-500 hover:text-white transition-colors w-max">
                   {link.name}
                 </Link>
               ))}
@@ -100,7 +100,7 @@ export default function Footer() {
                 <Link
                   key={idx}
                   href={`/services/${service.slug}`}
-                  className="text-zinc-500 hover:text-white transition-all duration-300 w-max"
+                  className="text-white-500 hover:text-white transition-all duration-300 w-max"
                 >
                   {service.title}
                 </Link>
@@ -118,7 +118,7 @@ export default function Footer() {
                 { name: "FAQs", href: "/faq" },
                 { name: "Contact US", href: "/contact" }
               ].map((link, idx) => (
-                <Link key={idx} href={link.href} className="text-zinc-500 hover:text-white transition-colors w-max">
+                <Link key={idx} href={link.href} className="text-white-500 hover:text-white transition-colors w-max">
                   {link.name}
                 </Link>
               ))}
@@ -132,14 +132,14 @@ export default function Footer() {
               <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
                 <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
                 <div className="space-y-1">
-                  <p className="text-[9px] 2xl:text-[12px] text-zinc-600 uppercase font-black tracking-wider">Drop an email</p>
+                  <p className="text-[9px] 2xl:text-[12px] text-white-500 uppercase font-black tracking-wider">Drop an email</p>
                   <p className="text-[12px] md:text-[14px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors">info@highrisedigital.io</p>
                 </div>
               </a>
               <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
                 <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
                 <div className="space-y-1">
-                  <p className="text-[9px] 2xl:text-[12px] text-zinc-600 uppercase font-black tracking-wider">Corporate Support</p>
+                  <p className="text-[9px] 2xl:text-[12px] text-white-500 uppercase font-black tracking-wider">Corporate Support</p>
                   <p className="text-[12px] md:text-[14px] 2xl:text-xl font-bold text-zinc-300 group-hover:text-white transition-colors">+92 300 2777587</p>
                 </div>
               </a>
@@ -156,7 +156,7 @@ export default function Footer() {
                 <span className="block text-sm md:text-base 2xl:text-xl font-black text-white tracking-tight uppercase">
                   {office.city}
                 </span>
-                <p className="text-[11px] md:text-xs 2xl:text-[15px] text-zinc-400 font-normal leading-relaxed">
+                <p className="text-[11px] md:text-xs 2xl:text-[15px] text-white-400 font-normal leading-relaxed">
                   {office.address}
                 </p>
               </div>
@@ -166,10 +166,10 @@ export default function Footer() {
 
         {/* 🔒 BOTTOM BAR */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] 2xl:text-lg text-zinc-500 font-semibold uppercase tracking-wider">
+          <p className="text-[10px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
             © {currentYear} High Raise Digital LLC.
           </p>
-          <p className="text-[8px] 2xl:text-base tracking-[3px] text-zinc-600 font-bold uppercase">
+          <p className="text-[8px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
             Built for growth • Designed for dominance
           </p>
         </div>

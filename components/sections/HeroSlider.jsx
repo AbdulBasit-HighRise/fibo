@@ -32,7 +32,7 @@ export default function HeroSlider() {
       {/* Track Wrapper (Height & Padding Synced with ClientTrust) */}
       <div className="w-full relative h-20 md:h-24 2xl:h-32 flex items-center overflow-hidden px-4 sm:px-6">
         <motion.div 
-          className="flex gap-16 md:gap-8 2xl:gap-16 w-max items-center"
+          className="flex gap-4 md:gap-8 2xl:gap-16 w-max items-center"
           animate={{ x: ["0%", "-50%"] }}
           transition={{ 
             duration: 35, 
@@ -51,7 +51,7 @@ export default function HeroSlider() {
                 alt={logo.alt}
                 width={180}
                 height={60}
-                className="h-6 md:h-9 2xl:h-10 w-auto object-contain transition-all duration-500 opacity-80 group-hover/logo:opacity-100 filter brightness-110 group-hover/logo:scale-105"
+                className="h-8 md:h-9 2xl:h-10 w-auto object-contain transition-all duration-500 opacity-80 group-hover/logo:opacity-100 filter brightness-110 group-hover/logo:scale-105"
                 sizes="(max-width: 768px) 120px, (max-width: 1536px) 150px, 180px"
               />
 

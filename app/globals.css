@@ -10,11 +10,13 @@
     --text-secondary: #a1a1aa;
   }
 
+  /* 🎯 MOBILE READABILITY BOOST: Mobile par initial font-size badha di taake sab easily parha jaye */
   html {
     scroll-behavior: smooth;
-    font-size: 14px; 
+    font-size: 16px; 
   }
 
+  @media (min-width: 768px) { html { font-size: 14px; } }
   @media (min-width: 1920px) { html { font-size: 15px; } }
   @media (min-width: 2500px) { html { font-size: 16px; } }
 
@@ -31,29 +33,31 @@
     font-style: normal !important;
   }
 
+  /* 🎯 INCREASED MINIMUM SIZE: clamp limits ko 2.2rem aur 1.8rem se badha kar mobile ke liye large kiya */
   h1 { 
-    font-size: clamp(2.2rem, 4.5vw, 95px) !important; 
+    font-size: clamp(2.8rem, 5vw, 95px) !important; 
     @apply uppercase font-black; 
     margin-bottom: 0.5em; 
   }
 
   h2 { 
-    font-size: clamp(1.8rem, 3.8vw, 75px) !important; 
+    font-size: clamp(2.5rem, 4.2vw, 75px) !important; 
     margin-bottom: 0.4em; 
     @apply font-black;
   }
   
   h3 { 
-    font-size: clamp(1.1rem, 1.8vw, 32px) !important; 
+    font-size: clamp(1.8rem, 2.2vw, 32px) !important; 
   }
 
+  /* 🎯 PARAGRAPH READABILITY: Paragraph size mobile par 0.9rem se badha kar 1.05rem minimum kar di */
   p {
     @apply text-white font-normal;
-    font-size: clamp(0.9rem, 0.7vw + 0.4rem, 1.4rem);
+    font-size: clamp(1.09rem, 0.8vw + 0.5rem, 1.4rem);
     line-height: 1.6;
     max-width: 75ch;
   }
-} /* <--- Bracket fix yahan kiya hai */
+}
 
 @layer components {
   .container-main {
