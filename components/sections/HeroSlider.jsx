@@ -23,7 +23,7 @@ export default function HeroSlider() {
   const duplicated = [...awardLogos, ...awardLogos];
 
   return (
-    <section className="relative py-4 md:py-5 2xl:py-6 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] overflow-hidden border-y border-white/5">
+    <section className="relative py-4 md:py-5 2xl:py-5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] overflow-hidden border-y border-white/5">
       
       {/* Side Fades: Ambient Edge Blending */}
       <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-[#030303] to-transparent z-10 pointer-events-none" />
