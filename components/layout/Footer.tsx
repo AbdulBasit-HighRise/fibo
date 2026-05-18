@@ -71,7 +71,7 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
 
-            <span className="block text-[12px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Quick Links</span>
+            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Quick Links</span>
             <div className="flex flex-col space-y-3 2xl:space-y-6 text-[13px] md:text-[15px] 2xl:text-xl font-bold">
               {[
                 { name: "Home", href: "/" },
@@ -89,7 +89,7 @@ export default function Footer() {
 
           {/* Column 3: Our Services */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[13px] md:text-[14px] 2xl:text-xl font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Expertise</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { title: "Website Development", slug: "web-dev" },
                 { title: "Search Engine Optimization", slug: "seo" },
@@ -110,7 +110,7 @@ export default function Footer() {
 
           {/* Column 4: Compliance */}
           <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[13px] md:text-[15px] 2xl:text-xl font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
+            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Compliance</span>            <div className="flex flex-col space-y-3 2xl:space-y-6 text-[11px] md:text-[13px] 2xl:text-xl font-bold">
               {[
                 { name: "Privacy Policy", href: "/privacy" },
                 { name: "Terms & Conditions", href: "/terms" },
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Column 5: Inquiries */}
           <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6 2xl:space-y-12">
-            <span className="block text-[13px] md:text-[15px] 2xl:text-xl font-black text-white tracking-widest uppercase">Inquiries</span>
+            <span className="block text-[16px] md:text-[18px]  font-black text-white tracking-widest uppercase">Inquiries</span>
             <div className="space-y-4 2xl:space-y-8">
               <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
                 <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
