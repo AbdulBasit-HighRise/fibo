@@ -150,16 +150,16 @@ export default function WebDevPage() {
               </div>
 
               {/* Main Typography Block with Tight Line Height - Fixed Spelling "Development" */}
-              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem]  font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-                Website Development Agency
+              <h1 className="text-[3rem] uppercase md:text-[3.2rem] lg:text-[3.8rem]  font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+                Website Development 
                 {" "}
-                <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Agency.
                 </span>
               </h1>
 
               {/* Description Paragraph - Aligned perfectly with global layout standards */}
-              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
                 Professional website development agency delivering responsive, user-friendly, and high-performing websites that help businesses grow, attract customers, and increase online visibility.
               </p>
             </div>
@@ -188,13 +188,13 @@ export default function WebDevPage() {
             <h3 className="text-[2.2rem]  md:text-[2.8rem] lg:text-[3.2rem] font-black leading-[1.1] tracking-tighter text-white mb-8 max-w-4xl">
               Experience  {" "}
 
-              <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ">
+              <span className=" bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ">
                 Web Design & Development Services!
               </span>
             </h3>
 
             {/* 3. Perfectly Bounded Centered Paragraphs */}
-            <div className="space-y-6 text-white-400 text-[16px] md:text-lg lg:text-xl font-normal leading-relaxed max-w-3xl mb-14">
+            <div className="space-y-6 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed max-w-3xl mb-14">
               <p>
                 Our web design and development services help businesses of all sizes build a commanding online presence with modern, intuitive, and easy-to-use websites. We engineer digital assets that look stunningly professional, load instantly, and perform smoothly across all device metrics.
               </p>
@@ -407,7 +407,7 @@ We love helping businesses grow with websites that get results. Browse our recen
                   <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
                     <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-cyan-400 font-bold block">{project.category}</span>
                     <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
-                    <p className="text-[10px] 2xl:text-lg text-zinc-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500">{project.metrics}</p>
+                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{project.metrics}</p>
                   </div>
                 </div>
               )}
@@ -543,19 +543,19 @@ We love helping businesses grow with websites that get results. Browse our recen
               {/* Description Panel */}
               <div className="space-y-8 max-w-xl 2xl:max-w-3xl">
                 {/* Paragraph 1 */}
-                <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                   We create websites that not only look great but also help your business grow online. Our team focuses on clean design, fast performance, mobile responsiveness, and user-friendly experiences.
                 </p>
 
                 {/* Border Block Panels */}
                 <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
                   {/* Paragraph 2 */}
-                  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                     We work closely with every client to understand their goals and deliver websites that match their brand perfectly.
                   </p>
 
                   {/* Paragraph 3 */}
-                  <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                     From planning and development to launch and support, we provide complete website solutions with honest communication, affordable pricing, and reliable service to ensure your project is completed smoothly and successfully.
                   </p>
                 </div>

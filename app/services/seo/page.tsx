@@ -169,7 +169,7 @@ export default function SEOPage() {
               {/* Main Typography Block */}
               <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white mb-8 normal-case">
                 Leading <br />
-                <span className="inline-block mt-3 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                <span className="inline-block mt-3 upperase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   AI & GEO SEO Agency
                 </span>
               </h1>
@@ -190,8 +190,8 @@ export default function SEOPage() {
         <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 lg:max-w-full lg:pl-12 xl:pl-20 2xl:pl-32 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* LEFT COLUMN: Text Content */}
           <div className="lg:col-span-7 space-y-8 max-w-xl 2xl:max-w-3xl w-full mx-auto lg:mx-0">
-            <h3 className="text-[2.2rem] md:text-[2.8rem] lg:text-[3rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white normal-case">
-              Our {" "}
+            <h3 className="text-[2.2rem] md:text-[2.8rem] lg:text-[3rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white ">
+              OUR {" "}
               <span className=" bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ">
                 Specialized SEO Services.
               </span>
@@ -423,7 +423,7 @@ export default function SEOPage() {
             </div>
             <h3 className="text-[2.2rem] md:text-[2.8rem] lg:text-[3.5rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white normal-case">
               Our{" "}
-              <span className="inline-block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent uppercase">
+              <span className="inline-block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent ">
                 Strategy For Success
               </span>
             </h3>
@@ -522,19 +522,19 @@ export default function SEOPage() {
 
                 <div className="space-y-8 max-w-xl 2xl:max-w-3xl">
                   {/* Paragraph 1 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                  <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                     We design high-ranking websites that don't just look great—they actively grow your business online. By blending clean design with advanced SEO strategies, we build fast, mobile-friendly sites that catch Google's attention and turn everyday search traffic into loyal customers.
                   </p>
 
                   {/* Border section left panel */}
                   <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
                     {/* Paragraph 2 */}
-                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                       Our team works side-by-side with you to understand your market, target high-volume keywords, and deliver an online presence that perfectly fits your brand.
                     </p>
 
                     {/* Paragraph 3 */}
-                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                       From the first line of code to ongoing optimization, we offer complete digital solutions backed by clear communication, fair pricing, and reliable results to help your business outrank the competition.
                     </p>
                   </div>
@@ -566,13 +566,13 @@ export default function SEOPage() {
                           {item.icon}
                         </div>
 
-                        <h4 className="flex-1 font-black text-sm md:text-[14px] 2xl:text-xl tracking-[1px]  leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
+                        <h4 className="flex-1 font-bold text-sm md:text-[12px] 2xl:text-[14px] tracking-[1px]  leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
                           {item.title}
                         </h4>
                       </div>
 
                       {/* Card Description */}
-                      <p className="text-white text-[16px] md:text-base lg:text-[16px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                         {item.desc}
                       </p>
                     </div>

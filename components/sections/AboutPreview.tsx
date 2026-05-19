@@ -49,15 +49,16 @@ export default function AboutPreview() {
             </motion.div>
 
             {/* RIGHT: Text Content */}
-            <div className="space-y-6 md:space-y-8 order-1 lg:order-2">
+            <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div>
-                <h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-6xl font-black tracking-tighter leading-[1.15] text-white">
-                  Leading Digital Marketing
-                  <br />
-                  <span className="inline-block mt-0 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                    Company Working Globally
-                  </span>
-                </h2>
+               <h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-[6xl] font-black tracking-tighter leading-[1] text-white">
+  Leading Digital Marketing
+  <br />
+  {/* 🎯 FIX: 'block' use kiya aur 'py-2 pr-4' add kiya taake text aur gradient boundaries safe rahein */}
+  <span className="block mt-2 mb-2 py-2  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+    Company Working Globally
+  </span>
+</h2>
               </div>
 
               <motion.div

@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-[1600px] 2xl:max-w-[2400px] mx-auto px-6 2xl:px-16">
 
         {/* --- MAIN LINKS GRID --- */}
-        <div className="p-3 pt-4 pb-12 md:pt-6 md:pb-16 2xl:pt-10 2xl:pb-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
+        <div className="p-3 pt-4 pb-12 md:pt-6 md:pb-16 2xl:pt-10 2xl:pb-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
 
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
@@ -47,11 +47,11 @@ export default function Footer() {
                 width={800}
                 height={250}
                 priority
-                className="h-24 md:h-32 lg:h-40 2xl:h-60 w-auto object-contain origin-left select-none ml-[-12px] mt-[-20px] mb-[-15px] transition-transform duration-500 group-hover:scale-[1.01]"
+                className="h-28 md:h-32 lg:h-40 2xl:h-60 w-auto object-contain origin-left select-none ml-[-12px] mt-[-20px] mb-[-15px] 2xl:mb-[-48px] transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </Link>
 
-            <p className="text-white text-[16px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2">
+            <p className="text-white text-[16px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2 2xl:mb-[-25px]">
               Let’s discuss your goals and create a powerful strategy to boost your business growth online.
             </p>
 
@@ -60,7 +60,7 @@ export default function Footer() {
                 <Link
                   key={i}
                   href={item.href}
-                  className={`w-10 h-10 2xl:w-20 2xl:h-20 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
+                  className={`w-10 h-10 2xl:w-15 2xl:h-15 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
                 >
                   <div className="scale-90 2xl:scale-[1.6]">{item.icon}</div>
                 </Link>

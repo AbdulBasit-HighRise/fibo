@@ -121,15 +121,15 @@ export default function ServicesPage() {
             {/* 🎯 FIX: Paragraphs converted to match the exact spacing, font sizes, and white color of previous sections */}
             <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full border-l-2 border-blue-500/30 pl-6">
 
-              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                 High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
               </p>
 
-              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                 Our services include website development, SEO, content creation, lead generation, and customer retention strategies. With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
               </p>
 
-              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                 Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
               </p>
 

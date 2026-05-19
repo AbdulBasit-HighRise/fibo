@@ -75,10 +75,10 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full pointer-events-none">
       {/* 🎯 FIXED PADDING: `max-w-[1440px]` lagaya hai aur side paddings set ki hain taake corners se halka sa andar rahe */}
-<div className={`w-full transition-all duration-500 pointer-events-auto ${isScrolled ? "max-w-[1280px] mx-auto pt-2 px-4 md:px-8 lg:px-20" : "max-w-full pt-0 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-80 3xl:px-52"}`}>   <motion.nav
+<div className={`w-full transition-all duration-500 pointer-events-auto ${isScrolled ? "max-w-[1280px] mx-auto pt-1 px-4 md:px-8 lg:px-16 lg:pt-2  " : "max-w-full pt-0 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-80 3xl:px-52"}`}>   <motion.nav
     initial={{ y: -50, opacity: 0 }}
     animate={{ y: 0, opacity: 1 }}
-    className={`relative flex items-center justify-between transition-all duration-500 ease-in-out mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#030303]/90 backdrop-blur-xl border border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
+    className={`relative flex items-center justify-between transition-all duration-500 ease-in-out mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#030303]/90 backdrop-blur-xl border  border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
   >
     <Link href="/" className="flex items-center z-50 shrink-0">
       <Image src="/Hr Logo White.svg" alt="Logo" width={300} height={80} className={`h-auto transition-all duration-500 object-contain origin-left ${isScrolled ? "w-[120px] lg:w-[140px]" : "w-[160px] lg:w-[210px]"}`} priority />
@@ -93,7 +93,7 @@ export default function Navbar() {
             <div key={link.name} className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
               <Link 
                 href={link.href} 
-                className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-zinc-400 hover:text-white"}`}
+                className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-white-400 hover:text-white"}`}
               >
                 {link.name} <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
               </Link>
@@ -101,7 +101,7 @@ export default function Navbar() {
                 {showServices && (
                   <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 w-56 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-1">
                     {link.subLinks?.map((sub) => (
-                      <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[10px] font-bold text-zinc-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
+                      <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[13px] font-bold text-white-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
                         {sub.name}
                       </Link>
                     ))}

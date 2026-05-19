@@ -36,7 +36,7 @@ export default function HeroSection() {
        <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
             
   {/* 🖥️ Heading: Perfectly Responsive, Fluid & No Broken Lines */}
-  <h1 className="text-[3rem]  md:text-[2.8rem] lg:text-[3.2rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white lg:whitespace-nowrap">
+  <h1 className="text-[3rem]  md:text-[2.8rem] lg:text-[3.2rem] 2xl:text-[5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white lg:whitespace-nowrap">
     Digital{" "} <br />
     <span className="inline-block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
      Marketing Agency
@@ -44,7 +44,7 @@ export default function HeroSection() {
   </h1>
 
   {/* 🖥️ Paragraph: Adjusted for a clean hierarchy */}
-  <p className="mt-4 text-white-500 text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0">
+  <p className="mt-4 text-white-500 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0">
     We are a results-driven digital marketing agency providing SEO, PPC, social media, and web solutions for businesses across the USA, UK, Australia, UAE, and worldwide markets.
   </p>
 

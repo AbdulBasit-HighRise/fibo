@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
     transition={{ duration: 0.8 }}
   >
     {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
-    <h2 className="!text-[2.3rem] sm:!text-4xl md:!text-4xl lg:!text-[2.8rem] xl:!text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+    <h2 className=" text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
       Why Choose
       <br />
       {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
 <div className="space-y-8 max-w-xl 2xl:max-w-3xl">
   
   {/* Paragraph 1 */}
-  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+  <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
     Choosing High Rise Digital means working with a team that is fully committed to your success.
   </p>
 
@@ -69,12 +69,12 @@ export default function WhyChooseUs() {
   <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
     
     {/* Paragraph 2 inside Border Block */}
-    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
       Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
     </p>
 
     {/* Paragraph 3 inside Border Block */}
-    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
       Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
     </p>
   </div>
@@ -112,7 +112,7 @@ export default function WhyChooseUs() {
                     </div>
                     
                     {/* ⚪ Card Description: Pure White, Big Font Size for Perfect Laptop Readability */}
-                 <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                 <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
   {item.desc}
 </p>
                   </div>

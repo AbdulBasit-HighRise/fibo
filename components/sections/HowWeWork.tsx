@@ -96,13 +96,13 @@ export default function Process() {
                           <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
                             {step.icon}
                           </div>
-                          <h4 className="text-xl md:text-2xl 2xl:text-4xl  text-white tracking-tight">
+                          <h4 className="text-xl md:text-2xl 2xl:text-2xl font-bold  text-white tracking-tight">
                             {step.title}
                           </h4>
                         </div>
 
                         {/* ⬇️ Description Below - Fixed Font Sizes for Perfect Readability */}
-                     <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                     <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
   {step.desc}
 </p>
                       </div>
