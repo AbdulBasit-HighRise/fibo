@@ -95,9 +95,9 @@ export default function Footer() {
     </span>
     <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
       {[
-        { title: "Website Development", slug: "web-dev" },
+        { title: "Website Development", slug: "web-development" },
         { title: "Search Engine Optimization", slug: "seo" },
-        { title: "Social Media Marketing", slug: "social-media" },
+        { title: "Social Media Marketing", slug: "social-media-marketing" },
         { title: "AI Automation", slug: "ai-automation" },
         { title: "Ecommerce Management", slug: "ecommerce" },
       ].map((service, idx) => (

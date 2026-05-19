@@ -36,9 +36,9 @@ export default function AboutPreview() {
               className="relative flex items-center justify-center lg:justify-start order-2 lg:order-1"
             >
               <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
-              <div className="relative z-10 w-full max-w-[320px] md:max-w-[420px] 2xl:max-w-[650px]">
+              <div className="relative z-10 w-full max-w-[320px] md:max-w-[490px] 2xl:max-w-[650px]">
                 <Image
-                  src="/laptop.png"
+                  src="/about-preview.png"
                   alt="High Rise Digital - Leading Global Agency"
                   width={700}
                   height={700}

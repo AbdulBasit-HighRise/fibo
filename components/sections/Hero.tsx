@@ -36,7 +36,7 @@ export default function HeroSection() {
        <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
             
   {/* 🖥️ Heading: Perfectly Responsive, Fluid & No Broken Lines */}
-  <h1 className="text-[3rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[2.8rem] xl:text-[3.5rem] 2xl:text-[4.2rem] 3xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white lg:whitespace-nowrap">
+  <h1 className="text-[3rem]  md:text-[2.8rem] lg:text-[3.2rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white lg:whitespace-nowrap">
     Digital{" "} <br />
     <span className="inline-block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
      Marketing Agency

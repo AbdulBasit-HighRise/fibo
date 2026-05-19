@@ -51,13 +51,13 @@
     font-size: clamp(1.3rem, 2.0vw, 26px); 
   }
 
-  /* 🎯 PARAGRAPH READABILITY: Minimum size ko exact 1.05rem par balance kiya taake paragraph clean parha jaye */
-  p {
-    @apply text-white font-normal;
-    font-size: clamp(1.05rem, 0.8vw + 0.5rem, 1.4rem);
-    line-height: 1.6;
-    max-width: 75ch;
-  }
+/* 🎯 PARAGRAPH READABILITY: Mobile base size boosted for ultra-clean readability */
+p {
+  @apply text-white font-normal opacity-90;
+  font-size: clamp(1.2rem, 1.2vw + 0.8rem, 1.6rem);
+  line-height: 1.65;
+  max-width: 70ch;
+}
 }
 
 @layer components {

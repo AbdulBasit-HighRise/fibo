@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   Sparkles, ArrowUpRight, Zap, ShieldCheck,
-  BarChart3, Globe, Flame, ChevronRight ,ArrowRight
+  BarChart3, Globe, Flame, ChevronRight, ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -44,23 +44,23 @@ export default function ServicesPage() {
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-16 md:pt-40 text-center md:text-left">
+<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
             <div className="max-w-5xl">
               <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
                 <Flame size={12} className="text-blue-400 animate-pulse" />
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Digital Marketing</span>
               </div>
 
-              <h1 className="text-6xl sm:text-8xl md:text-[100px] font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 Our {" "}
                 <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Services.
                 </span>
               </h1>
 
-<p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
-  We provide SEO, social media marketing, PPC, branding, and web development services to help your business grow and succeed online.            
-</p>            </div>
+              <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+                We provide SEO, social media marketing, PPC, branding, and web development services to help your business grow and succeed online.
+              </p>            </div>
           </div>
         </div>
       </section>
@@ -100,60 +100,60 @@ export default function ServicesPage() {
           </motion.div>
 
           {/* RIGHT: Content (Exactly as you provided) */}
-         <div className="lg:col-span-7 space-y-10">
-  <div className="space-y-6">
-    <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 backdrop-blur-sm">
-      <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
-      <span className="text-[10px] 2xl:text-xs uppercase tracking-[3px] text-blue-300 font-black">
-        Crafting Future Brands.
-      </span>
-    </div>
+          <div className="lg:col-span-7 space-y-10">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-blue-500/5 border border-blue-500/20 backdrop-blur-sm">
+                <span className="h-1.5 w-1.5 rounded-full bg-blue-400 animate-pulse" />
+                <span className="text-[10px] 2xl:text-xs uppercase tracking-[3px] text-blue-300 font-black">
+                  Crafting Future Brands.
+                </span>
+              </div>
 
-    {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-    <h3 className="text-[2.2rem] lg:text-[2.8rem] 2xl:text-[3.2rem] 3xl:text-[5.5rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
-      Everything You Need to{" "}
-      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-        Grow, Market, and Scale Your Brand
-      </span>
-    </h3>
-  </div>
+              {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
+              <h3 className="text-[2.2rem] lg:text-[2.8rem] 2xl:text-[3.2rem] 3xl:text-[5.5rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
+                Everything You Need to{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+                  Grow, Market, and Scale Your Brand
+                </span>
+              </h3>
+            </div>
 
-  {/* 🎯 FIX: Paragraphs converted to match the exact spacing, font sizes, and white color of previous sections */}
-  <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full border-l-2 border-blue-500/30 pl-6">
-    
-    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-      High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
-    </p>
+            {/* 🎯 FIX: Paragraphs converted to match the exact spacing, font sizes, and white color of previous sections */}
+            <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full border-l-2 border-blue-500/30 pl-6">
 
-    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-      Our services include website development, SEO, content creation, lead generation, and customer retention strategies. With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
-    </p>
+              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+                High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
+              </p>
 
-    <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-      Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
-    </p>
+              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+                Our services include website development, SEO, content creation, lead generation, and customer retention strategies. With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
+              </p>
 
-  </div>
+              <p className="text-white text-xs sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+                Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
+              </p>
 
-  <div className="flex flex-wrap items-center gap-6 pt-4">
-    <Link href="/contact" className="group block w-full sm:w-auto">
-      <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="group relative h-[46px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 border border-zinc-100"
-      >
-        {/* GRADIENT FILL LAYER */}
-        <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-        
-        {/* Content Span */}
-        <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 text-black font-black text-[10px] sm:text-[11px] 2xl:text-[13px] tracking-[1.5px] sm:tracking-[2px] group-hover:text-white transition-colors duration-500 uppercase">
-          Get Quote Now.
-          <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 2xl:w-5 2xl:h-5 text-black group-hover:text-white group-hover:translate-x-1.5 transition-all duration-500" />
-        </span>
-      </motion.button>
-    </Link>
-  </div>
-</div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-6 pt-4">
+              <Link href="/contact" className="group block w-full sm:w-auto">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group relative h-[46px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 border border-zinc-100"
+                >
+                  {/* GRADIENT FILL LAYER */}
+                  <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+
+                  {/* Content Span */}
+                  <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 text-black font-black text-[10px] sm:text-[11px] 2xl:text-[13px] tracking-[1.5px] sm:tracking-[2px] group-hover:text-white transition-colors duration-500 uppercase">
+                    Get Quote Now.
+                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 2xl:w-5 2xl:h-5 text-black group-hover:text-white group-hover:translate-x-1.5 transition-all duration-500" />
+                  </span>
+                </motion.button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -161,9 +161,9 @@ export default function ServicesPage() {
       <section className="py-24 2xl:py-40 px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto">
         <h3 className="text-4xl 2xl:text-6xl font-black mb-16 flex items-center gap-4  ">
           Our Complete Range of {" "}
-           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-       Digital Marketing Services
-      </span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+            Digital Marketing Services
+          </span>
           <div className="h-px bg-white/10 flex-grow" />
         </h3>
 
@@ -184,9 +184,9 @@ export default function ServicesPage() {
                   </h3>
                 </div>
                 <div className="mt-12 flex justify-between items-end">
-<p className="text-white text-sm 2xl:text-xl max-w-[150px] 2xl:max-w-[250px] font-medium antialiased">
-  Production-grade scale & precision.
-</p>                  <ArrowUpRight className="text-white-700 group-hover:text-blue-500 transition-colors 2xl:w-8 2xl:h-8" />
+                  <p className="text-white text-sm 2xl:text-xl max-w-[150px] 2xl:max-w-[250px] font-medium antialiased">
+                    Production-grade scale & precision.
+                  </p>                  <ArrowUpRight className="text-white-700 group-hover:text-blue-500 transition-colors 2xl:w-8 2xl:h-8" />
                 </div>
               </motion.div>
             </Link>
