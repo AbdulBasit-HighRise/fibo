@@ -112,7 +112,7 @@ export default function Navbar() {
           );
         }
         return (
-          <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-zinc-400 hover:text-white"}`}>
+          <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-white-400 hover:text-white"}`}>
             {link.name}
           </Link>
         );

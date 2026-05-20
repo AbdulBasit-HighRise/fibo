@@ -60,9 +60,9 @@ export default function Footer() {
                 <Link
                   key={i}
                   href={item.href}
-                  className={`w-10 h-10 2xl:w-15 2xl:h-15 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
+                  className={`w-10 h-10 2xl:w-20 2xl:h-20 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
                 >
-                  <div className="scale-90 2xl:scale-[1.6]">{item.icon}</div>
+                  <div className="scale-90 2xl:scale-[2.0]">{item.icon}</div>
                 </Link>
               ))}
             </div>
@@ -141,15 +141,15 @@ export default function Footer() {
       <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
         <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
         <div className="space-y-1">
-          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-black tracking-wider">Drop an email</p>
-          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-white-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
+          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Drop an email</p>
+          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
         </div>
       </a>
       <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
         <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
         <div className="space-y-1">
-          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-black tracking-wider">Corporate Support</p>
-          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-bold text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
+          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Corporate Support</p>
+          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
         </div>
       </a>
     </div>

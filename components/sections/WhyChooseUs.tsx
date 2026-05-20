@@ -47,37 +47,42 @@ export default function WhyChooseUs() {
     transition={{ duration: 0.8 }}
   >
     {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
-    <h2 className=" text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+    <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
       Why Choose
       <br />
       {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-      <span className="block mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+      <span className="block  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
         High Rise Digital
       </span>
     </h2>
 
     {/* 🎯 EXACT TEXT FONT SIZE SYSTEM: Locked 18px on small screens and 20px (xl) on large screens */}
    {/* 🎯 SYNCED PARENT CONTAINER WITH PREMIUM RESPONSIVE TYPOGRAPHY */}
-<div className="space-y-8 max-w-xl 2xl:max-w-3xl">
+<div className="space-y-4 max-w-xl 2xl:max-w-3xl">
   
   {/* Paragraph 1 */}
-  <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-    Choosing High Rise Digital means working with a team that is fully committed to your success.
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+    At High Rise Digital, we focus on helping businesses grow with smart and effective digital marketing solutions. Our team combines creativity, strategy, and industry experience to deliver real results for every client.
   </p>
 
   {/* Border section left panel aligned with font metrics */}
-  <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
+ 
     
     {/* Paragraph 2 inside Border Block */}
-    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-      Our experts use modern tools, creative thinking, and proven methods to deliver meaningful results. We value clear communication and timely delivery.
+    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+      From website development and SEO to social media marketing and paid advertising, we provide complete services tailored to your business goals. We believe in honest communication, quality work, and long-term partnerships.
     </p>
 
     {/* Paragraph 3 inside Border Block */}
-    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-      Every project is handled with care and attention, ensuring your brand gets the visibility, trust, and growth it deserves.
+    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+      Every project is handled with attention to detail to ensure your brand stands out online. Whether you are a startup or an established company, we work closely with you to increase visibility, attract more customers, and improve business growth.
     </p>
-  </div>
+
+    {/* Paragraph 4 inside Border Block */}
+    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+      Your success is our priority, and we are committed to delivering reliable digital solutions that make a lasting impact.
+    </p>
+  
 </div>
   </motion.div>
 </div>
@@ -106,13 +111,13 @@ export default function WhyChooseUs() {
                       </div>
                       
                       {/* Premium Multi-Color Attractive Gradient for Cards Title */}
-                      <h4 className="flex-1 font-black text-sm md:text-[15px] 2xl:text-xl tracking-[1px] uppercase leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
+                      <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-[1px] uppercase leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
                         {item.title}
                       </h4>
                     </div>
                     
                     {/* ⚪ Card Description: Pure White, Big Font Size for Perfect Laptop Readability */}
-                 <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                 <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
   {item.desc}
 </p>
                   </div>

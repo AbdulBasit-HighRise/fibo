@@ -158,18 +158,15 @@ export default function SEOPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
           {/* Spacing Wrapper */}
-<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
             <div className="max-w-5xl">
               {/* Badge Container */}
-              <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
-                <Flame size={12} className="text-blue-400 animate-pulse" />
-                <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Organic Growth</span>
-              </div>
+
 
               {/* Main Typography Block */}
-              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white mb-8 normal-case">
-                Leading <br />
-                <span className="inline-block mt-3 upperase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+              <h1 className="text-[3rem] uppercase  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white mb-2">
+                LEADING {" "}
+                <span className=" inline-block mb-4 pb-3 upperase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   AI & GEO SEO Agency
                 </span>
               </h1>
@@ -183,62 +180,103 @@ export default function SEOPage() {
         </div>
       </section>
 
-      {/* Dual Column Layout (Text + PNG Image) */}
-      <section className="relative w-full min-h-screen bg-[#030303] text-white overflow-hidden flex items-center justify-center py-20 lg:py-0">
-        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 lg:max-w-full lg:pl-12 xl:pl-20 2xl:pl-32 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
-          {/* LEFT COLUMN: Text Content */}
-          <div className="lg:col-span-7 space-y-8 max-w-xl 2xl:max-w-3xl w-full mx-auto lg:mx-0">
-            <h3 className="text-[2.2rem] md:text-[2.8rem] lg:text-[3rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white ">
-              OUR {" "}
-              <span className=" bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ">
-                Specialized SEO Services.
-              </span>
-            </h3>
 
-            <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full">
-              <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-                Getting traffic to your website is only half the battle; the real goal is turning those clicks into actual buyers. Our tailored search engine optimization focuses on attracting high-intent visitors who are actively looking for the exact services or products you offer.
-              </p>
+      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#030303] overflow-hidden">
 
-              <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-                By targeting commercial keywords, fixing technical site errors, and creating helpful content that builds genuine topical authority, we streamline the path from a simple Google search straight to your checkout page.
-              </p>
+        {/* Background Glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
 
-              <div className="border-l-2 border-blue-500 pl-5 mt-6">
-                <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+        <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+            {/* LEFT: Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center lg:justify-start order-2 lg:order-1"
+            >
+              <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
+              <div className="relative z-10 w-full max-w-[320px] md:max-w-[490px] 2xl:max-w-[650px]">
+                <Image
+                  src="/seo.png"
+                  alt="High Rise Digital - Leading Global Agency"
+                  width={700}
+                  height={700}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* RIGHT: Text Content */}
+            <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
+              <div>
+                <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
+                  Our {" "}
+                  {/* 🎯 FIX: 'block' use kiya aur 'py-2 pr-4' add kiya taake text aur gradient boundaries safe rahein */}
+                  <span className=" mt-0 mb-2 py-1  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                    Specialized SEO Services.
+                  </span>
+                </h2>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-6 md:space-y-8"
+              >
+                {/* Paragraph 1 */}
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                  Getting traffic to your website is only half the battle; the real goal is turning those clicks into actual buyers. Our tailored search engine optimization focuses on attracting high-intent visitors who are actively looking for the exact services or products you offer.
+                </p>
+
+                {/* Paragraph 2 */}
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                  By targeting commercial keywords, fixing technical site errors, and creating helpful content that builds genuine topical authority, we streamline the path from a simple Google search straight to your checkout page.
+                </p>
+
+                {/* Paragraph 3 */}
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
                   We don’t just chase vanity ranking numbers that look good on paper. Instead, we optimize your entire digital presence to build user trust, capture qualified leads, and consistently grow your bottom line through sustainable, long-term organic visibility.
                 </p>
-              </div>
-            </div>
 
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4">
-              <Link href="/contact" className="group block w-full sm:w-auto">
-                <button className="group relative h-[46px] 2xl:h-[54px] px-8 2xl:px-12 rounded-full bg-white overflow-hidden transition-all duration-500 active:scale-95 shadow-xl whitespace-nowrap shrink-0 w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 border border-zinc-100">
-                  <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                  <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3 text-black font-black text-[10px] sm:text-[11px] 2xl:text-[13px] tracking-[1.5px] sm:tracking-[2px] group-hover:text-white transition-colors duration-500 uppercase">
-                    Maximize Your Traffic
-                    <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 2xl:w-5 2xl:h-5 text-black group-hover:text-white group-hover:translate-x-1.5 transition-all duration-500" />
-                  </span>
-                </button>
-              </Link>
-            </div>
-          </div>
 
-          {/* RIGHT COLUMN: PNG Image Wrapper */}
-          <div className="lg:col-span-5 flex items-center justify-center w-full px-4 lg:px-0">
-            <div className="relative w-full max-w-[450px] lg:max-w-full aspect-square flex items-center justify-center">
-              <img
-                src="/seo.png"
-                alt="SEO Strategy Analytics"
-                className="w-full h-auto max-h-[450px] 2xl:max-h-[550px] object-contain drop-shadow-[0_0_30px_rgba(59,130,246,0.2)] animate-pulse [animation-duration:4s]"
-              />
+              </motion.div>
+
+              {/* Buttons Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap items-center gap-6 pt-4"
+              >
+                <Link href="/contact">
+                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
+                    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+                    <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
+                      Get Quote <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </button>
+                </Link>
+
+                <Link
+                  href="/services"
+                  className="group flex items-center gap-2 text-zinc-400 hover:text-white font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
+                >
+                  View Services
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
-
       {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
       <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
         <div className="absolute inset-0 z-0">
@@ -249,13 +287,11 @@ export default function SEOPage() {
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
             <div className="max-w-4xl">
-              <div className="flex items-center gap-2 mb-4 bg-blue-500/10 w-fit px-3 py-1 rounded-full border border-blue-500/20">
-                <Zap size={12} className="text-blue-400" />
-                <span className="text-[9px] 2xl:text-xs font-black uppercase tracking-[3px] text-blue-300">Engineered Ranking</span>
-              </div>
-              <h2 className="text-[2.2rem] md:text-[2.8rem] lg:text-[3.2rem] 2xl:text-[4.5rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
-                Our <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text uppercase">Specialized SEO Services.</span>
-              </h2>
+
+              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
+                Our <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ">
+                  Specialized SEO Services.</span>
+              </h3>
             </div>
           </div>
 
@@ -275,25 +311,35 @@ export default function SEOPage() {
               >
                 <div className="absolute inset-0 bg-blue-600/[0.02] opacity-0 group-hover:opacity-100 transition-opacity rounded-[2.5rem]" />
                 <div className="relative z-10">
-                  <div className="mb-6 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 transition-all duration-500">
-                    <div className="text-blue-400">{s.icon}</div>
+
+                  {/* 🎯 FIX: Icon aur Title ko ek hi horizontal line mein laane ke liye flex wrapper wrapper */}
+                  <div className="flex items-center gap-5 mb-6">
+
+                    {/* Icon Container with Hover States */}
+                    <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 transition-all duration-500">
+                      <div className="text-blue-400">{s.icon}</div>
+                    </div>
+
+                    {/* Card Title Header */}
+                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-tight text-white group-hover:text-blue-400 transition-colors leading-tight">
+                      {s.title}
+                    </h4>
+
                   </div>
-                  <h3 className="text-xl 2xl:text-2xl font-black uppercase tracking-wider text-white-500 mb-4 transition-colors">
-                    {s.title}
-                  </h3>
-                  <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
+
+                  {/* Description Paragraph synced with global fluid sizing */}
+                  <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium  leading-relaxed antialiased tracking-wide opacity-90 transition-colors duration-300 !max-w-none">
                     {s.desc}
                   </p>
-                  <div className="mt-8 flex items-center gap-2 text-[8px] 2xl:text-xs font-black uppercase tracking-widest text-zinc-600 group-hover:text-blue-400/60 transition-colors">
-                    <div className="w-1.5 h-1.5 bg-blue-600 rounded-full animate-pulse" />
-                    Rank Verified
-                  </div>
+
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
+
+
 
       <Stats />
 
@@ -310,10 +356,10 @@ export default function SEOPage() {
               transition={{ duration: 0.5 }}
               className="text-left"
             >
-              <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[3rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
+              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
                 Our {" "}<span className="  sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">SEO Results</span>
               </h3>
-              <p className=" mt-2 text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
+              <p className=" mt-2 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors">
                 We deliver clear, measurable growth by boosting your Google rankings, increasing organic traffic, and driving real revenue to your business.
               </p>
             </motion.div>
@@ -410,30 +456,32 @@ export default function SEOPage() {
       <AuditCTA />
 
       {/* 🚀 WORKING PROCESS MATRIX SECTION */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303] selection:bg-blue-600/30">
-        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.05)_0%,transparent_70%)] pointer-events-none" />
 
-        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
-          {/* HEADER SECTION */}
-          <div className="mb-20 text-center md:text-left border-b border-white/5 pb-10">
-            <div className="flex items-center gap-2 mb-4 bg-blue-500/10 w-fit px-3 py-1 rounded-full border border-blue-500/20 mx-auto md:mx-0">
-              <Zap size={12} className="text-blue-400" />
-              <span className="text-[9px] 2xl:text-xs font-black uppercase tracking-[3px] text-blue-300">Engineered Ranking</span>
-            </div>
-            <h3 className="text-[2.2rem] md:text-[2.8rem] lg:text-[3.5rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white normal-case">
+      {/* section 2  */}
+      <section className="relative py-16 md:py-24 bg-[#020617] overflow-hidden selection:bg-blue-600/30">
+
+        {/* 🌌 Luxury Background Elements */}
+        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
+
+        <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
+
+          {/* 📋 HEADER */}
+          <div className="mb-12 md:mb-16 pt-0 text-center">
+            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
               Our{" "}
-              <span className="inline-block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent ">
-                Strategy For Success
-              </span>
+              <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Strategy For Success            </span>
             </h3>
           </div>
 
-          {/* TIMELINE MATRIX */}
+          {/* 🧠 TIMELINE MATRIX */}
           <div className="relative">
+
+            {/* Central Progress Line */}
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/30 via-white/10 to-transparent -translate-x-1/2 hidden md:block" />
 
-            <div className="flex flex-col gap-6 md:gap-12">
+            {/* Cards Container */}
+            <div className="flex flex-col gap-3 md:gap-6">
               {steps.map((step, index) => {
                 const isEven = index % 2 === 0;
 
@@ -450,38 +498,43 @@ export default function SEOPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5 }}
-                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500 text-left"
+                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500"
                       >
-                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:border-blue-500/50 transition-colors z-10 shadow-lg">
+                        {/* Floating Step Number */}
+                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-[#030712] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:border-blue-500/50 transition-colors z-10 shadow-lg">
                           {step.id}
                         </div>
 
                         <div className="flex flex-col gap-4">
+                          {/* Icon & Heading */}
                           <div className="flex items-center gap-4">
-                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-16 2xl:h-16 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
                               {step.icon}
                             </div>
-                            <h3 className="text-xl md:text-2xl 2xl:text-3xl font-bold text-white tracking-tight uppercase">
+                            <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]  text-white tracking-tight">
                               {step.title}
-                            </h3>
+                            </h4>
                           </div>
 
-                          <p className="text-white text-[16px] sm:text-sm md:text-base lg:text-[16px] 2xl:text-lg 3xl:text-xl font-medium leading-relaxed antialiased tracking-wide opacity-90 group-hover:opacity-100 transition-all duration-300">
+                          {/* Description Below */}
+                          <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
                             {step.desc}
                           </p>
                         </div>
 
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-500 to-cyan-400 group-hover:w-[40%] transition-all duration-700" />
+                        {/* Bottom Accent Line */}
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 group-hover:w-[35%] transition-all duration-700" />
                       </motion.div>
                     </div>
 
-                    {/* CENTRAL TIMELINE DOT */}
+                    {/* CENTRAL NODE */}
                     <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
-                      <div className="w-5 h-5 2xl:w-8 2xl:h-8 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-all duration-500 group-hover:scale-110">
-                        <div className="w-2 h-2 2xl:w-3 2xl:h-3 bg-zinc-700 rounded-full group-hover:bg-blue-400 transition-all" />
+                      <div className="w-5 h-5 2xl:w-10 2xl:h-10 rounded-full bg-[#020617] border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-all duration-500 group-hover:scale-110">
+                        <div className="w-2 h-2 2xl:w-4 2xl:h-4 bg-zinc-700 rounded-full group-hover:bg-blue-400 transition-all" />
                       </div>
                     </div>
 
+                    {/* Spacer */}
                     <div className="hidden md:block md:w-[45%]" />
                   </div>
                 );
@@ -494,11 +547,13 @@ export default function SEOPage() {
       <IndustryExpertise />
 
       {/* Why Chose ue */}
-      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#020617] overflow-hidden border-b border-white/5">
+       <section className="relative py-16 md:py-24 2xl:py-32 bg-[#020617] overflow-hidden border-b border-white/5">
 
         {/* Background Dots & Glow */}
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none"
+          style={{ backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }}
+        />
         <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
@@ -512,79 +567,80 @@ export default function SEOPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="!text-[2.3rem]  md:!text-[2.5rem] lg:!text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+                <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2">
                   Why Choose Our SEO
                   <br />
-                  <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                  <span className="block mt-2  pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                     Company For Your Business?
                   </span>
                 </h3>
 
-                <div className="space-y-8 max-w-xl 2xl:max-w-3xl">
+                <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
                   {/* Paragraph 1 */}
-                  <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                     We design high-ranking websites that don't just look great—they actively grow your business online. By blending clean design with advanced SEO strategies, we build fast, mobile-friendly sites that catch Google's attention and turn everyday search traffic into loyal customers.
                   </p>
 
                   {/* Border section left panel */}
-                  <div className="space-y-6 border-l-2 border-blue-500/50 pl-5 mt-6">
-                    {/* Paragraph 2 */}
-                    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                      Our team works side-by-side with you to understand your market, target high-volume keywords, and deliver an online presence that perfectly fits your brand.
-                    </p>
 
-                    {/* Paragraph 3 */}
-                    <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                      From the first line of code to ongoing optimization, we offer complete digital solutions backed by clear communication, fair pricing, and reliable results to help your business outrank the competition.
-                    </p>
-                  </div>
+                  {/* Paragraph 2 */}
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    Our team works side-by-side with you to understand your market, target high-volume keywords, and deliver an online presence that perfectly fits your brand.
+                  </p>
+
+                  {/* Paragraph 3 */}
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    From the first line of code to ongoing optimization, we offer complete digital solutions backed by clear communication, fair pricing, and reliable results to help your business outrank the competition.
+                  </p>
+
                 </div>
               </motion.div>
             </div>
 
-            {/* RIGHT SIDE: Cards */}
-            <div className="lg:col-span-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none" />
-
-                {features.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl group transition-all duration-500 hover:border-blue-500/50 hover:bg-white/[0.07] flex flex-col justify-between
-                    ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
-                  >
-                    <div className="relative z-10 space-y-4 md:space-y-5">
-
-                      {/* Icon & Heading */}
-                      <div className="flex items-center gap-4">
-                        <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-white/[0.05] text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
-                          {item.icon}
+            {/* RIGHT SIDE: Cards Grid */}
+             <div className="lg:col-span-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
+          
+                          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none" />
+          
+                          {features.map((item, index) => (
+                            <motion.div
+                              key={index}
+                              initial={{ opacity: 0, y: 20 }}
+                              whileInView={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.5, delay: index * 0.1 }}
+                              viewport={{ once: true }}
+                              className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl group transition-all duration-500 hover:border-blue-500/50 hover:bg-white/[0.07] flex flex-col justify-between
+                              ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
+                            >
+                              <div className="relative z-10 space-y-4 md:space-y-5">
+          
+                                {/* Icon & Heading Row */}
+                                <div className="flex items-center gap-4">
+                                  <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-white/[0.05] text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                                    {item.icon}
+                                  </div>
+          
+                                  {/* Interactive Title Gradient */}
+                                  <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
+                                    {item.title}
+                                  </h4>
+                                </div>
+          
+                                {/* Card Description */}
+                                <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                                  {item.desc}
+                                </p>
+                              </div>
+          
+                              {/* Hover Check Icon */}
+                              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <CheckCircle2 className="text-blue-500 w-4 h-4 2xl:w-6 2xl:h-6" />
+                              </div>
+                            </motion.div>
+                          ))}
                         </div>
-
-                        <h4 className="flex-1 font-bold text-sm md:text-[12px] 2xl:text-[14px] tracking-[1px]  leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
-                          {item.title}
-                        </h4>
                       </div>
-
-                      {/* Card Description */}
-                      <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                        {item.desc}
-                      </p>
-                    </div>
-
-                    {/* Corner Check Icon */}
-                    <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <CheckCircle2 className="text-blue-500 w-4 h-4 2xl:w-6 2xl:h-6" />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
 
           </div>
         </div>

@@ -3,16 +3,19 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-{/* 🎯 FIXED IMPORT ERROR: Added both missing icons safely */}
+{/* 🎯 FIXED IMPORT ERROR: Added both missing icons safely */ }
 import { ChevronRight, ArrowRight } from "lucide-react";
 
 // Sirf 5 main logos
 const awardLogos = [
   { src: "/baj2.png", alt: "National Excellence" },
   { src: "/baj4.png", alt: "Top 10 Agency" },
-  { src: "/baj1.png", alt: "Clutch Recognition" },
+
   { src: "/baj3.png", alt: "Forbes Member" },
+  { src: "/baj1.png", alt: "Clutch Recognition" },
+
   { src: "/baj5.png", alt: "The Manifest" },
+  { src: "/hubspot.png", alt: "The hubspot" },
 ];
 
 export default function AboutPreview() {
@@ -51,14 +54,14 @@ export default function AboutPreview() {
             {/* RIGHT: Text Content */}
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div>
-               <h2 className="!text-[1.8rem] sm:!text-3xl md:!text-4xl lg:!text-4xl 2xl:!text-[6xl] font-black tracking-tighter leading-[1] text-white">
-  Leading Digital Marketing
-  <br />
-  {/* 🎯 FIX: 'block' use kiya aur 'py-2 pr-4' add kiya taake text aur gradient boundaries safe rahein */}
-  <span className="block mt-2 mb-2 py-2  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-    Company Working Globally
-  </span>
-</h2>
+                <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
+                  Leading Digital Marketing
+                  <br />
+                  {/* 🎯 FIX: 'block' use kiya aur 'py-2 pr-4' add kiya taake text aur gradient boundaries safe rahein */}
+                  <span className="block mt-0 mb-2 py-1  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                    Company Working Globally
+                  </span>
+                </h2>
               </div>
 
               <motion.div
@@ -124,7 +127,7 @@ export default function AboutPreview() {
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
 
           {/* LOGOS GRID (🎯 FIXED: 1 COLUMN WITH BIGGER GAPS ON MOBILE) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-0 2xl:gap-18 items-center justify-center justify-items-center w-full max-w-5xl">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 md:gap-0 2xl:gap-20 items-center justify-center justify-items-center w-full max-w-5xl">
             {awardLogos.map((logo, index) => (
               <div
                 key={index}

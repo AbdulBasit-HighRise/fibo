@@ -110,30 +110,33 @@ export default function ServicesPage() {
               </div>
 
               {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-              <h3 className="text-[2.2rem] lg:text-[2.8rem] 2xl:text-[3.2rem] 3xl:text-[5.5rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
+              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
                 Everything You Need to{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+                <span className="mt-4 pt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                   Grow, Market, and Scale Your Brand
                 </span>
               </h3>
             </div>
 
             {/* 🎯 FIX: Paragraphs converted to match the exact spacing, font sizes, and white color of previous sections */}
-            <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full border-l-2 border-blue-500/30 pl-6">
+           <div className="space-y-6 text-white font-medium leading-relaxed w-full ">
 
-              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-                High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
-              </p>
+  {/* Paragraph 1 */}
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+    High Rise Digital Agency has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
+  </p>
 
-              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-                Our services include website development, SEO, content creation, lead generation, and customer retention strategies. With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
-              </p>
+  {/* Paragraph 2 */}
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+    Our services include website development, SEO, content creation, lead generation, and customer retention strategies. With a focus on innovation and performance, we help businesses stay ahead in the competitive digital world.
+  </p>
 
-              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-                Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
-              </p>
+  {/* Paragraph 3 */}
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
+    Our goal is simple—grow your brand, increase visibility, and drive real, measurable success online.
+  </p>
 
-            </div>
+</div>
 
             <div className="flex flex-wrap items-center gap-6 pt-4">
               <Link href="/contact" className="group block w-full sm:w-auto">
@@ -157,38 +160,45 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SECTION 3: SERVICE GRID */}
-      <section className="py-24 2xl:py-40 px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto">
-        <h3 className="text-4xl 2xl:text-6xl font-black mb-16 flex items-center gap-4  ">
-          Our Complete Range of {" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-            Digital Marketing Services
-          </span>
-          <div className="h-px bg-white/10 flex-grow" />
-        </h3>
+    {/* SECTION 3: SERVICE GRID */}
+<section className="py-24 2xl:py-40 px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto">
+  <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-6 mb-8 flex items-center gap-4 text-white">
+    Our Complete Range of {" "}
+    {/* 🎯 FIX: 'block' or 'inline-block' with padding to prevent bottom/right text cutting */}
+    <span className="inline-block pb-2 py-1 pr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+      Digital Marketing Services
+    </span>
+    <div className="h-px bg-white/10 flex-grow animate-pulse" />
+  </h3>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
-          {serviceList.map((service) => (
-            <Link href={`/services/${service.slug}`} key={service.id}>
-              <motion.div
-                whileHover={{ y: -10 }}
-                className="p-10 2xl:p-16 border border-white/10 bg-[#070b14] rounded-[3rem] group hover:border-blue-500/50 transition-all cursor-pointer h-full flex flex-col justify-between"
-              >
-                <div>
-                  <div className="text-blue-500 mb-8 w-12 h-12 2xl:w-16 2xl:h-16 flex items-center justify-center bg-blue-500/5 rounded-2xl border border-blue-500/10 group-hover:bg-blue-500 group-hover:text-white transition-all">
-                    {service.icon}
-                  </div>
-                  {/* <span className="text-zinc-600 font-black text-xs 2xl:text-base uppercase tracking-widest">{service.id} // SERVICE</span> */}
-                  <h4 className="text-[2.2rem] md:text-[2rem] lg:text-[2.5rem]  font-bold   mt-4 group-hover:text-blue-400 transition-colors leading-tight">
-                    {service.title}
-                  </h4>
-                </div>
+  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+    {serviceList.map((service) => (
+      <Link href={`/services/${service.slug}`} key={service.id}>
+        <motion.div
+          whileHover={{ y: -10 }}
+          className="p-10 2xl:p-16 border border-white/10 bg-[#070b14] rounded-[3rem] group hover:border-blue-500/50 transition-all cursor-pointer h-full flex flex-col justify-between"
+        >
+          <div>
+            {/* 🎯 FIX: Icon aur Title ko ek clean single line row mein handle kiya */}
+            <div className="flex items-center gap-5 mb-8">
               
-              </motion.div>
-            </Link>
-          ))}
-        </div>
-      </section>
+              {/* 🎯 HOVER EFFECT: Scale classes + neon glow drop shadow seamlessly injected */}
+              <div className="shrink-0 text-blue-500 w-12 h-12 2xl:w-16 2xl:h-16 flex items-center justify-center bg-blue-500/5 rounded-2xl border border-blue-500/10 scale-125 md:scale-110 2xl:scale-150 group-hover:scale-[1.35] md:group-hover:scale-[1.2] 2xl:group-hover:scale-[1.6] group-hover:bg-blue-500 group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300">
+                {service.icon}
+              </div>
+              
+              <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.8rem] 2xl:text-[1.9rem] group-hover:text-blue-400 transition-colors leading-tight tracking-tight">
+                {service.title}
+              </h4>
+            </div>
+            
+            {/* <span className="text-zinc-600 font-black text-xs 2xl:text-base uppercase tracking-widest">{service.id} // SERVICE</span> */}
+          </div>
+        </motion.div>
+      </Link>
+    ))}
+  </div>
+</section>
 
     </main>
   );

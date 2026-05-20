@@ -75,36 +75,36 @@ export default function TermsAndConditions() {
 </section>
 
       {/* --- ARTICLE CONTENT SECTION (Exact Privacy Full-Width Architecture) --- */}
-      <section className="py-12 md:py-16 px-6 md:px-12 lg:px-20 relative border-t border-white/5">
-        {/* 🎯 FIXED OVERRIDE: Shifted from tight max-w-3xl to balanced max-w-[85rem] with auto-centering */}
-        <div className="max-w-[85rem] mx-auto w-full">
-          
-          <motion.div 
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="space-y-10 md:space-y-14 w-full"
-          >
-            {/* Loop through Terms - Styled like Privacy Sections */}
-            {terms.map((item, index) => (
-              <div key={index} className="space-y-4 w-full">
-                {/* Heading Style */}
-                <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
-                  {item.title}
-                </h2>
-                {/* Paragraph Style */}
-                <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-
-            {/* Final Contact Card - Synced with Pure White Systems */}
-       
-
-          </motion.div>
+<section className="py-12 md:py-16 px-6 md:px-12 lg:px-20 relative border-t border-white/5">
+  {/* 🎯 FIX 1: Width ko max-w-[85rem] se badha kar max-w-[110rem] kiya taake 2K/4K pr full space mile */}
+  <div className="max-w-[110rem] mx-auto w-full">
+    
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="space-y-10 md:space-y-14 w-full"
+    >
+      {/* Loop through Terms - Styled like Privacy Sections */}
+      {terms.map((item, index) => (
+        <div key={index} className="space-y-4 w-full">
+          {/* Heading Style */}
+          <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+            {item.title}
+          </h2>
+          {/* Paragraph Style */}
+          {/* 🎯 FIX 2: '!max-w-none' force kiya taake global CSS ki character-limit override ho aur lines lambi hon */}
+          <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">
+            {item.desc}
+          </p>
         </div>
-      </section>
+      ))}
+
+      {/* Final Contact Card - Synced with Pure White Systems */}
+
+    </motion.div>
+  </div>
+</section>
 
     </main>
   );

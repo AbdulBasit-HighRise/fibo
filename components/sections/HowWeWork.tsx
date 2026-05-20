@@ -48,7 +48,7 @@ export default function Process() {
         {/* 📋 HEADER */}
  <div className="mb-12 md:mb-16 pt-0 text-center">
   {/* 🎯 MATCHED DESIGN SYSTEM: Applied identical fluid sizes, tracking, and leading from the reference design layout */}
-  <h3 className="!text-[2.3rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+  <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
     Our 
   {" "}
     {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with precise margins and horizontal breathing space padding to avoid letter cut-offs */}
@@ -96,13 +96,13 @@ export default function Process() {
                           <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
                             {step.icon}
                           </div>
-                          <h4 className="text-xl md:text-2xl 2xl:text-2xl font-bold  text-white tracking-tight">
+                          <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]  text-white tracking-tight">
                             {step.title}
                           </h4>
                         </div>
 
                         {/* ⬇️ Description Below - Fixed Font Sizes for Perfect Readability */}
-                     <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                     <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
   {step.desc}
 </p>
                       </div>

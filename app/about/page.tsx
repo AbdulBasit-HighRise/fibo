@@ -108,10 +108,12 @@ export default function AboutPage() {
     <span className="text-[10px] tracking-[4px] text-cyan-400 font-extrabold block">OUR IDENTITY</span>
     
     {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-    <h2 className="text-[2.5rem] lg:text-[2.8rem] 2xl:text-[3.2rem] 3xl:text-[5.5rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white lg:whitespace-nowrap">
-      Who we{" "}
-      <span className="inline-block bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-        are
+    <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+     Who We{" "}
+  
+      {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
+      <span className="  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+       Are
       </span>
     </h2>
   </div>
@@ -121,20 +123,20 @@ export default function AboutPage() {
     High Rise Digital was founded in 2019. We are a growing <span className="text-blue-400">AI-enabled digital solutions</span> company powered by 12+ skilled professionals.
   </p>
 
-  <div className="space-y-5 lg:space-y-6 text-white font-medium leading-relaxed w-full mt-6">
+  <div className="space-y-4 lg:space-y-4 text-white font-medium leading-relaxed w-full mt-6">
 
     {/* Paragraph 1 */}
-    <p className="border-l-2 border-blue-500 pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+    <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
       Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
     </p>
 
     {/* Paragraph 2 */}
-    <p className="border-l-2 border-white/20 pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+    <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
       With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
     </p>
 
     {/* Paragraph 3 */}
-    <p className="border-l-2 border-white/20 pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
+    <p className=" pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
       Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
     </p>
 
@@ -145,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. VISION & MISSION */}
-      <section className="py-32 bg-[#02040a] px-6 relative border-y border-white/[0.03]">
+      <section className="py-24 bg-[#02040a] px-6 relative border-y border-white/[0.03]">
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -157,42 +159,53 @@ export default function AboutPage() {
             <div className="w-12 h-12 rounded-2xl bg-zinc-900 border border-white/10 flex items-center justify-center mx-auto text-blue-400 shadow-2xl">
               <Sparkles size={22} />
             </div>
-            <span className="text-[10px] uppercase tracking-[4px] text-blue-500 font-extrabold block">OUR PURPOSE</span>
-            <h3 className="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-tight">Vision & Mission</h3>
+            <span className="text-[10px]  tracking-[4px] text-blue-500 font-extrabold block">Our Purpose</span>
+            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">Vision & Mission</h3>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              { title: "Our Vision", icon: <Globe size={26} />, desc: "To become a globally trusted digital agency that empowers businesses with innovative strategies, creativity, and long-term digital growth solutions." },
-              { title: "Our Mission", icon: <Target size={26} />, desc: "To deliver high-quality digital marketing, branding, and web solutions that help businesses grow, connect, and succeed online." },
-              { title: "Our Goal", icon: <Rocket size={26} />, desc: "To build lasting client relationships by providing reliable services, measurable results, and creative solutions tailored to every business need." },
-            ].map((val, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-10 rounded-[2.5rem] bg-zinc-950/50 border border-white/5 hover:border-blue-500/30 transition-all duration-400 group"
-              >
-                <div className="mb-6 text-blue-400 bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                  {val.icon}
-                </div>
-                <h3 className="text-[20px] font-bold mb-4">{val.title}</h3>
-                <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
-                  {val.desc}
-                </p>            </motion.div>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+  {[
+    { title: "Our Vision", icon: <Globe size={26} />, desc: "To become a globally trusted digital agency that empowers businesses with innovative strategies, creativity, and long-term digital growth solutions." },
+    { title: "Our Mission", icon: <Target size={26} />, desc: "To deliver high-quality digital marketing, branding, and web solutions that help businesses grow, connect, and succeed online." },
+    { title: "Our Goal", icon: <Rocket size={26} />, desc: "To build lasting client relationships by providing reliable services, measurable results, and creative solutions tailored to every business need." },
+  ].map((val, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: i * 0.1 }}
+      className="p-10 rounded-[2.5rem] bg-zinc-950/50 border border-white/5 hover:border-blue-500/30 transition-all duration-400 group"
+    >
+      {/* 🎯 FIX: Icon aur Heading ko ek row line mein laane ke liye wrapper parent code */}
+      <div className="flex items-center gap-4 mb-6">
+        <div className="shrink-0 text-blue-400 bg-blue-500/10 w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+          {val.icon}
+        </div>
+        <h3 className="text-[20px] font-bold text-white tracking-tight">{val.title}</h3>
+      </div>
+
+      {/* Description Panel */}
+      <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+        {val.desc}
+      </p> 
+    </motion.div>
+  ))}
+</div>
         </div>
       </section>
 
       {/* 4. WORKING PROCESS */}
-      <section className="py-32 px-6 bg-gradient-to-b from-[#02040a] to-[#0c142d] relative">
+      <section className="py-24 px-6 bg-gradient-to-b from-[#02040a] to-[#0c142d] relative">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <span className="text-[10px]  tracking-[4px] text-cyan-400 font-extrabold block mb-4">EXECUTION TRACK</span>
-            <h3 className="text-4xl md:text-6xl font-black tracking-tighter  leading-none">Our Working Process.</h3>
+            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-none">Our {" "}
+
+               <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                 Working Process.
+                </span>
+            </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -212,8 +225,8 @@ export default function AboutPage() {
                 className="p-8 rounded-[2rem] bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] transition-all"
               >
                 <span className="text-blue-500 font-black text-xl mb-4 block opacity-50">{proc.step}</span>
-                <h3 className="text-[25px] font-bold mb-2">{proc.title}</h3>
-                <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl leading-relaxed antialiased">
+                <h3 className="mb-2 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-[1px]">{proc.title}</h3 >
+                <p className="mb-2 text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased">
                   {proc.desc}
                 </p>              </motion.div>
             ))}
@@ -222,12 +235,16 @@ export default function AboutPage() {
       </section>
 
       {/* 5. 4 REASONS TO WORK WITH US */}
-      <section className="py-32 bg-[#010307] px-6 relative border-t border-white/[0.02]">
+      <section className="py-24 bg-[#010307] px-6 relative border-t border-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
-              <span className="text-[10px] uppercase tracking-[4px] text-blue-500 font-extrabold block mb-4">WHY HIGH RISE?</span>
-              <h3 className="text-4xl md:text-5xl font-black tracking-tighter  leading-tight">4 Reasons To Work With Us</h3>
+              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">4 Reasons {" "}
+                  <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+ To Work With Us.
+                 </span>
+
+              </h3>
             </div>
           </div>
 
@@ -245,8 +262,8 @@ export default function AboutPage() {
               >
                 <div className="text-blue-400 shrink-0">{reason.icon}</div>
                 <div>
-                  <h3 className="text-[20px] font-bold mb-2">{reason.title}</h3>
-                  <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
+                  <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]">{reason.title}</h4>
+                  <p className="mb-2 mt-2 text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased">
                     {reason.desc}
                   </p>            </div>
               </motion.div>
