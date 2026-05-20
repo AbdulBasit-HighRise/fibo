@@ -61,9 +61,10 @@ export default function Navbar() {
         { name: "Web Development", href: "/services/web-development" },
         { name: "SEO Optimization", href: "/services/seo" },
         { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-        { name: "Content Writing", href: "/services/content-writing" },
-        { name: "Branding & Identity", href: "/services/branding" },
-        { name: "Google Ads (PPC)", href: "/services/google-ads" },
+        // { name: "Content Writing", href: "/services/content-writing" },
+        // { name: "Branding & Identity", href: "/services/branding" },
+        // { name: "Google Ads (PPC)", href: "/services/google-ads" },
+       { name: "Ecommerce Management ", href: "/services/ecommerce" },
         { name: "AI Automation", href: "/services/ai-automation" },
       ]
     },

@@ -34,6 +34,7 @@ import IndustryExpertise from "@/components/IndustryExpertise";
 import { ArrowUpRight, BarChart3 } from "lucide-react";
 import { TrendingUp, Star, CheckCircle2 } from "lucide-react";
 import TrustClient from "@/components/sections/ClientTrust"
+import ServiceCTA from "@/components/sections/ServiceCTA"
 
 const features = [
   {
@@ -308,64 +309,74 @@ export default function WebDevPage() {
         </section>
       </>
 
-      {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO Layout System) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
-        </div>
+    {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO & Digital Marketing Hover Architecture) */}
+<section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
+  <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
+  </div>
 
-        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
+  <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
+    <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
+      <div>
+        <h3 className="text-[2.3rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
+          All Kinds of {" "}
+          <span className="inline-block pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            Web Solutions We Offer.
+          </span>
+        </h3>
+      </div>
+    </div>
+
+    {/* 🎯 Grid Wrapper mapped with the 6 requested core services */}
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+      {[
+        { title: "Custom Website", desc: "Bespoke digital architecture built from scratch. High performance solutions tailored precisely to your functional scale.", icon: <Monitor size={24} /> },
+        { title: "eCommerce Store", desc: "High-converting WooCommerce, Shopify, and specialized headless commerce systems built for heavy transaction volume.", icon: <ShoppingBag size={24} /> },
+        { title: "Corporate Website", desc: "Enterprise-grade elite digital platforms designed to command market authority, speed, and seamless credibility.", icon: <Building2 size={24} /> },
+        { title: "CMS Websites", desc: "Scalable content systems giving you complete modular control without compromising speed, layout, or structural security.", icon: <Database size={24} /> },
+        { title: "Website Redesign", desc: "Transform legacy architectures into modern, ultra-fast interfaces optimized for maximum UX conversions and core web vitals.", icon: <RefreshCw size={24} /> },
+        { title: "Maintenance & Support", desc: "Proactive server monitoring, dependency updates, and database tuning to keep your systems operational 24/7.", icon: <Wrench size={24} /> }
+      ].map((s, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ y: -10 }}
+          className="group relative bg-[#070707] p-10 2xl:p-16 rounded-[2.5rem] border border-white/5 hover:border-blue-500/50 transition-all duration-500 cursor-pointer h-full flex flex-col justify-between overflow-hidden"
+        >
+          {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Gradient (Glow Fill Effect) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+
+          {/* Foreground content inside relative z-10 for perfect layering */}
+          <div className="relative z-10 flex flex-col h-full justify-between w-full">
             <div>
-              <h3 className="text-[2.3rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
-                All Kinds of {" "}
-                <span className="inline-block pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Web Solutions We Offer.
-                </span>
-              </h3>
+              {/* Icon aur Title Row Layout */}
+              <div className="flex items-center gap-5 mb-8">
+                
+                {/* Icon Box with Scale and Glowing Drop Shadow */}
+                <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
+                  <div className="text-blue-400 transition-colors duration-500">
+                    {s.icon}
+                  </div>
+                </div>
+
+                <h4 className="font-black text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-blue-400 transition-colors leading-tight tracking-tight">
+                  {s.title}
+                </h4>
+              </div>
+
+              {/* Description Paragraph synced with global text sizing */}
+              <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 transition-colors duration-300 antialiased !max-w-none">
+                {s.desc}
+              </p>
             </div>
           </div>
 
-          {/* 🎯 Grid Wrapper mapped with the 6 requested core services */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
-            {[
-              { title: "Custom Website", desc: "Bespoke digital architecture built from scratch. High performance solutions tailored precisely to your functional scale.", icon: <Monitor size={24} /> },
-              { title: "eCommerce Store", desc: "High-converting WooCommerce, Shopify, and specialized headless commerce systems built for heavy transaction volume.", icon: <ShoppingBag size={24} /> },
-              { title: "Corporate Website", desc: "Enterprise-grade elite digital platforms designed to command market authority, speed, and seamless credibility.", icon: <Building2 size={24} /> },
-              { title: "CMS Websites", desc: "Scalable content systems giving you complete modular control without compromising speed, layout, or structural security.", icon: <Database size={24} /> },
-              { title: "Website Redesign", desc: "Transform legacy architectures into modern, ultra-fast interfaces optimized for maximum UX conversions and core web vitals.", icon: <RefreshCw size={24} /> },
-              { title: "Maintenance & Support", desc: "Proactive server monitoring, dependency updates, and database tuning to keep your systems operational 24/7.", icon: <Wrench size={24} /> }
-            ].map((s, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10 }}
-                className="group relative bg-[#070707] p-10 2xl:p-16 rounded-[2.5rem] border border-white/5 hover:border-blue-500/40 transition-all duration-500"
-              >
-                <div className="relative z-10">
-
-                  {/* 🎯 FIX 1: Icon aur Title ko SEO section ki tarah ek single line row mein set kiya */}
-                  <div className="flex items-center gap-5 mb-8">
-
-                    {/* 🎯 HOVER FIX: Custom scales aur glowing drop-shadow perfect ratios ke sath link kar di hai */}
-                    <div className="shrink-0 text-blue-500 w-12 h-12 2xl:w-16 2xl:h-16 flex items-center justify-center bg-blue-500/5 rounded-2xl border border-blue-500/10 scale-125 md:scale-110 2xl:scale-150 group-hover:scale-[1.35] md:group-hover:scale-[1.2] 2xl:group-hover:scale-[1.6] group-hover:bg-blue-500 group-hover:text-white group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-300">
-                      {s.icon}
-                    </div>
-
-                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-blue-400 transition-colors leading-tight tracking-tight">
-                      {s.title}
-                    </h4>
-                  </div>
-
-                  {/* Description Paragraph synced with global text sizing */}
-                  <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 transition-colors duration-300 antialiased !max-w-none">
-                    {s.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
       <Stats />
 
       {/* portfolio section       */}
@@ -496,11 +507,96 @@ export default function WebDevPage() {
 
         </div>
       </section>
-      <CTA />
 
+       <ServiceCTA />
 
+      {/* process section  */}
+      <section className="relative py-16 md:py-24 bg-[#020617] overflow-hidden selection:bg-blue-600/30">
 
-     
+        {/* 🌌 Luxury Background Elements */}
+        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
+
+        <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
+
+          {/* 📋 HEADER */}
+          <div className="mb-12 md:mb-16 pt-0 text-center">
+            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+              Our{" "}
+              <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Website Development Process
+              </span>
+            </h3>
+          </div>
+
+          {/* 🧠 TIMELINE MATRIX */}
+          <div className="relative">
+
+            {/* Central Progress Line */}
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/30 via-white/10 to-transparent -translate-x-1/2 hidden md:block" />
+
+            {/* Cards Container */}
+            <div className="flex flex-col gap-3 md:gap-6">
+              {steps.map((step, index) => {
+                const isEven = index % 2 === 0;
+
+                return (
+                  <div
+                    key={step.id}
+                    className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
+                      }`}
+                  >
+                    {/* CARD CONTAINER */}
+                    <div className="w-full md:w-[45%] pl-8 md:pl-0">
+                      <motion.div
+                        initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.5 }}
+                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] bg-white/[0.02] border border-white/5 backdrop-blur-3xl hover:bg-white/[0.04] hover:border-blue-500/30 transition-all duration-500"
+                      >
+                        {/* Floating Step Number */}
+                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-[#030712] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:border-blue-500/50 transition-colors z-10 shadow-lg">
+                          {step.id}
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          {/* Icon & Heading */}
+                          <div className="flex items-center gap-4">
+                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
+                              {step.icon}
+                            </div>
+                            <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem]  text-white tracking-tight">
+                              {step.title}
+                            </h4>
+                          </div>
+
+                          {/* Description Below */}
+                          <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                            {step.desc}
+                          </p>
+                        </div>
+
+                        {/* Bottom Accent Line */}
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 group-hover:w-[35%] transition-all duration-700" />
+                      </motion.div>
+                    </div>
+
+                    {/* CENTRAL NODE */}
+                    <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
+                      <div className="w-5 h-5 2xl:w-10 2xl:h-10 rounded-full bg-[#020617] border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-all duration-500 group-hover:scale-110">
+                        <div className="w-2 h-2 2xl:w-4 2xl:h-4 bg-zinc-700 rounded-full group-hover:bg-blue-400 transition-all" />
+                      </div>
+                    </div>
+
+                    {/* Spacer */}
+                    <div className="hidden md:block md:w-[45%]" />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
       <IndustryExpertise />
       {/* Why Choose US  */}
       <section className="relative py-16 md:py-24 2xl:py-32 bg-[#020617] overflow-hidden border-b border-white/5">
@@ -606,114 +702,109 @@ export default function WebDevPage() {
 
       <Testimonials />
       {/* Core experties  */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
-        <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px]" />
+    {/* Core expertise - Website Design Services (Perfect Hover Sync) */}
+<section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
+  <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px]" />
 
-        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
-          <div className="text-center mb-20">
+  <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
+    <div className="text-center mb-20">
+      <h3 className="text-[2.3rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
+        Our Expertise In{" "}
+        <span className="inline-block pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+          Website Design.
+        </span>
+      </h3>
 
-            <h3 className="text-[2.3rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
-              Our Expertise  In{" "}
-              <span className="inline-block pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                Website Design.
-              </span>
-            </h3>
+      <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-tight max-w-3xl 2xl:max-w-5xl mx-auto antialiased tracking-wide">
+        We build websites that look great and actually work for your business. Our team focuses on clean layouts, easy navigation, and designs that match your brand to help you connect with customers.
+      </p>
+    </div>
 
-            <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium  leading-tight max-w-3xl 2xl:max-w-5xl mx-auto antialiased tracking-wide">
-              "We build websites that look great and actually work for your business. Our team focuses on clean layouts, easy navigation, and designs that match your brand to help you connect with customers."
+    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
+      {[
+        {
+          step: "01",
+          title: "WordPress Website",
+          keywords: "Speed Optimized, SEO Ready, Dynamic CMS",
+          desc: "We build easy-to-manage WordPress sites that load fast and rank well on Google, helping customers find your business online."
+        },
+        {
+          step: "02",
+          title: "Shopify Website",
+          keywords: "E-Commerce Ops, High CRO, Secure Checkout",
+          desc: "We design high-converting Shopify stores that look great, simplify checkout, and turn everyday website visitors into paying customers."
+        },
+        {
+          step: "03",
+          title: "Custom Website",
+          keywords: "Next.js / React, Custom Code, Clean Architecture",
+          desc: "We code unique websites from scratch, giving you tailored features, faster speeds, and complete freedom from standard templates."
+        },
+        {
+          step: "04",
+          title: "Wix Website",
+          keywords: "Drag-and-Drop, Fast Launch, Mobile Responsive",
+          desc: "We create beautiful, fast-to-launch Wix sites with clean layouts, mobile-friendly designs, and simple tools you can update yourself."
+        }
+      ].map((p, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ y: -10 }} // 🎯 Signature elevation lift
+          className="group relative bg-[#080808] p-8 2xl:p-8 rounded-[3rem] border border-white/5 hover:border-blue-500/50 transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer"
+        >
+          {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Gradient (Glow Fill Effect) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+
+          {/* 🎯 Header Container Row */}
+          <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10">
+
+            {/* Step Number Background Effect */}
+            <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-white/5 group-hover:text-blue-600/20 select-none pointer-events-none z-0 transition-colors duration-500">
+              {p.step}
+            </span>
+
+            {/* Title Header */}
+            <div className="space-y-2 flex-grow relative z-10 pt-6">
+              <h3 className="text-[16px] 2xl:text-xl font-black text-white group-hover:text-white transition-colors leading-tight">
+                {p.title}
+              </h3>
+            </div>
+
+            {/* Chevron Right Icon */}
+            <div className="relative z-10 pt-5 pl-4 shrink-0">
+              <ChevronRight size={16} className="text-zinc-600 group-hover:text-blue-400 transition-colors" />
+            </div>
+          </div>
+
+          {/* Content Body Block */}
+          <div className="space-y-2 flex-grow relative z-10">
+            {/* Tech Stack Focus Badge Container */}
+         
+
+            {/* Description Paragraph */}
+            <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed  max-w-xl 2xl:max-w-2xl antialiased">
+              {p.desc}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
-            {[
-              {
-                step: "01",
-                title: "WordPress Website",
-                keywords: "Speed Optimized, SEO Ready, Dynamic CMS",
-                desc: "We build easy-to-manage WordPress sites that load fast and rank well on Google, helping customers find your business online."
-              },
-              {
-                step: "02",
-                title: "Shopify Website",
-                keywords: "E-Commerce Ops, High CRO, Secure Checkout",
-                desc: "We design high-converting Shopify stores that look great, simplify checkout, and turn everyday website visitors into paying customers."
-              },
-              {
-                step: "03",
-                title: "Custom Website",
-                keywords: "Next.js / React, Custom Code, Clean Architecture",
-                desc: "We code unique websites from scratch, giving you tailored features, faster speeds, and complete freedom from standard templates."
-              },
-              {
-                step: "04",
-                title: "Wix Website",
-                keywords: "Drag-and-Drop, Fast Launch, Mobile Responsive",
-                desc: "We create beautiful, fast-to-launch Wix sites with clean layouts, mobile-friendly designs, and simple tools you can update yourself."
-              }
-            ].map((p, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.02 }}
-                className="group relative bg-[#080808] p-8 2xl:p-8 rounded-[3rem] border border-white/5 hover:border-blue-500/40 transition-all duration-500 flex flex-col h-full"
-              >
-                {/* 🎯 FIX: Is header container ko relative kiya aur min-h di taake layer absolute bounds mein theek bethe */}
-                <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between">
-
-                  {/* Step Number (Now Background Layer) */}
-                  {/* 🎯 FIX: 'absolute' karke z-0 par phenk diya taake title iske upar aaye */}
-                  <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-white/5 group-hover:text-blue-600/20  select-none pointer-events-none z-0 transition-colors duration-500">
-                    {p.step}
-                  </span>
-
-                  {/* Title Header (Now Foreground Layer floating on top of Step) */}
-                  {/* 🎯 FIX: 'relative z-10' lagaya taake step number iske bilkul peeche chala jaye */}
-                  <div className="space-y-4 flex-grow relative  pt-4">
-                    <h3 className="text-[16px] 2xl:text-4xl font-black   text-white group-hover:text-blue-500 transition-colors leading-tight">
-                      {p.title}
-                    </h3>
-                  </div>
-
-                  {/* Chevron Right Icon (Top-Right par static alignment) */}
-                  <div className="relative z-10 pt-5 pl-4 shrink-0">
-                    <ChevronRight size={16} className="text-zinc-600 group-hover:text-blue-400 transition-colors" />
-                  </div>
-                </div>
-
-                {/* Content Body Block */}
-                <div className="space-y-4 flex-grow">
-                  <div className="bg-blue-600/5 border border-blue-600/10 rounded-xl p-3 lg:p-4 2xl:p-5">
-                    {/* Tech Specs Label */}
-                    <p className="text-[16px] md:text-[11px] lg:text-xs 2xl:text-sm font-black text-blue-400  tracking-widest mb-0  antialiased leading-none">
-                      Tech Stack Focus:
-                    </p>
-
-                    {/* Dynamic Keywords / Tech Specs Text */}
-                    <p className=" text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium text-zinc-400 font-medium leading-relaxed antialiased">
-                      {p.keywords}
-                    </p>
-                  </div>
-
-                  {/* Description Style (Cleaned invalid text-white-500 class) */}
-                  <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased">
-                    {p.desc}
-                  </p>
-                </div>
-
-                {/* Progress Bar Loader Panel */}
-                <div className="mt-2 h-1 w-full bg-white/5 rounded-full overflow-hidden subpixel-antialiased">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 1.5, delay: i * 0.2 }}
-                    viewport={{ once: true }}
-                    className="h-full bg-blue-600/40"
-                  />
-                </div>
-              </motion.div>
-            ))}
+          {/* Progress Bar Loader */}
+          <div className="mt-2 h-1 w-full bg-white/5 rounded-full overflow-hidden subpixel-antialiased relative z-10">
+            <motion.div
+              initial={{ width: 0 }}
+              whileInView={{ width: "100%" }}
+              transition={{ duration: 1.5, delay: i * 0.2 }}
+              viewport={{ once: true }}
+              className="h-full bg-blue-600/40"
+            />
           </div>
-        </div>
-      </section>
+
+          {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       <WebDevFAQ />
       <TrustClient />

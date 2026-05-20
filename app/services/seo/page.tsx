@@ -277,67 +277,74 @@ export default function SEOPage() {
           </div>
         </div>
       </section>
-      {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
-        </div>
+   {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
+<section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#030303]">
+  <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
+    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
+  </div>
 
-        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
-            <div className="max-w-4xl">
+  <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
+    <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
+      <div className="max-w-4xl">
+        <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
+          Our <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            Specialized SEO Services.
+          </span>
+        </h3>
+      </div>
+    </div>
 
-              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
-                Our <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text ">
-                  Specialized SEO Services.</span>
-              </h3>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+      {[
+        { title: "AI SEO", desc: "We leverage smart AI tools to analyze data, find hidden keyword opportunities, and speed up growth.", icon: <FileCode2 size={24} /> },
+        { title: "Technical SEO", desc: "We fix backend site issues, boost page speed, and optimize code so Google can rank you.", icon: <Search size={24} /> },
+        { title: "eCommerce SEO", desc: "We optimize product pages and category structures to drive targeted shoppers directly to your online store.", icon: <Link2 size={24} /> },
+        { title: "Local SEO", desc: "We put your business on the map, helping nearby customers find you first on Google.", icon: <Globe2 size={24} /> },
+        { title: "Link Building", desc: "We earn high-quality, trusted backlinks that boost your website’s authority and push rankings higher.", icon: <BarChart4 size={24} /> },
+        { title: "Content Writing", desc: "We create engaging, helpful blog posts that rank well and turn everyday readers into buyers.", icon: <LineChart size={24} /> }
+      ].map((s, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ y: -10 }}
+          className="group relative bg-[#070707] p-10 2xl:p-16 rounded-[2.5rem] border border-white/5 hover:border-blue-500/50 transition-all duration-500 text-left cursor-pointer h-full flex flex-col justify-between overflow-hidden"
+        >
+          {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Gradient (Glow Fill Effect) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+
+          {/* Foreground content wrapper inside relative z-10 */}
+          <div className="relative z-10 flex flex-col h-full justify-between w-full">
+            <div>
+              {/* 🎯 Icon aur Title Container Row */}
+              <div className="flex items-center gap-5 mb-8">
+                
+                {/* Icon Box with Scale and Glowing Drop Shadow */}
+                <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
+                  <div className="text-blue-400 transition-colors duration-500">
+                    {s.icon}
+                  </div>
+                </div>
+
+                {/* Card Title Header */}
+                <h4 className="font-black text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] 2xl:text-[1.6rem] tracking-tight text-white group-hover:text-blue-400 transition-colors leading-tight">
+                  {s.title}
+                </h4>
+              </div>
+
+              {/* Description Paragraph synced with global fluid sizing */}
+              <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased tracking-wide opacity-90 transition-colors duration-300 !max-w-none">
+                {s.desc}
+              </p>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
-            {[
-              { title: "AI SEO", desc: "We leverage smart AI tools to analyze data, find hidden keyword opportunities, and speed up growth.", icon: <FileCode2 size={24} /> },
-              { title: "Technical SEO", desc: "We fix backend site issues, boost page speed, and optimize code so Google can rank you.", icon: <Search size={24} /> },
-              { title: "eCommerce SEO", desc: "We optimize product pages and category structures to drive targeted shoppers directly to your online store.", icon: <Link2 size={24} /> },
-              { title: "Local SEO", desc: "We put your business on the map, helping nearby customers find you first on Google.", icon: <Globe2 size={24} /> },
-              { title: "Link Building", desc: "We earn high-quality, trusted backlinks that boost your website’s authority and push rankings higher.", icon: <BarChart4 size={24} /> },
-              { title: "Content Writing", desc: "We create engaging, helpful blog posts that rank well and turn everyday readers into buyers.", icon: <LineChart size={24} /> }
-            ].map((s, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10 }}
-                className="group relative bg-[#070707] p-8 2xl:p-12 rounded-[2.5rem] border border-white/5 hover:border-blue-500/40 transition-all duration-500 text-left"
-              >
-                <div className="absolute inset-0 bg-blue-600/[0.02] opacity-0 group-hover:opacity-100 transition-opacity rounded-[2.5rem]" />
-                <div className="relative z-10">
-
-                  {/* 🎯 FIX: Icon aur Title ko ek hi horizontal line mein laane ke liye flex wrapper wrapper */}
-                  <div className="flex items-center gap-5 mb-6">
-
-                    {/* Icon Container with Hover States */}
-                    <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 transition-all duration-500">
-                      <div className="text-blue-400">{s.icon}</div>
-                    </div>
-
-                    {/* Card Title Header */}
-                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-tight text-white group-hover:text-blue-400 transition-colors leading-tight">
-                      {s.title}
-                    </h4>
-
-                  </div>
-
-                  {/* Description Paragraph synced with global fluid sizing */}
-                  <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium  leading-relaxed antialiased tracking-wide opacity-90 transition-colors duration-300 !max-w-none">
-                    {s.desc}
-                  </p>
-
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+          {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
+          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
 
 

@@ -27,7 +27,7 @@ export default function Footer() {
 
   return (
     <footer className="text-white relative bg-[#030303] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
-    < CTA />
+      < CTA />
 
       {/* 🌌 Cosmic Glows */}
       <div className="absolute top-0 left-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-blue-600/[0.04] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
@@ -55,107 +55,110 @@ export default function Footer() {
               Let’s discuss your goals and create a powerful strategy to boost your business growth online.
             </p>
 
-            <div className="flex items-center gap-3 mt-6 2xl:mt-12">
+            <div className="flex items-center gap-3 mt-6 2xl:mt-10">
               {socials.map((item, i) => (
                 <Link
                   key={i}
                   href={item.href}
-                  className={`w-10 h-10 2xl:w-20 2xl:h-20 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
+                  className={`w-10 h-10 2xl:w-14 2xl:h-14 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
                 >
-                  <div className="scale-90 2xl:scale-[2.0]">{item.icon}</div>
+                  {/* 🎯 FIX: Scale ko 2xl par exact balance kiya taake spacing/padding har screen par normal dikhe */}
+                  <div className="scale-90 md:scale-100 2xl:scale-[1.35] flex items-center justify-center shrink-0">
+                    {item.icon}
+                  </div>
                 </Link>
               ))}
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
-<div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-      Quick Links
-    </span>
-    <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
-      {[
-        { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Services", href: "/services" },
-        { name: "Case Studies", href: "/portfolio" },
-        { name: "Blogs", href: "/blog" },
-      ].map((link, idx) => (
-        <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
-          {link.name}
-        </Link>
-      ))}
-    </div>
-  </div>
+          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+              Quick Links
+            </span>
+            <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
+              {[
+                { name: "Home", href: "/" },
+                { name: "About", href: "/about" },
+                { name: "Services", href: "/services" },
+                { name: "Case Studies", href: "/portfolio" },
+                { name: "Blogs", href: "/blog" },
+              ].map((link, idx) => (
+                <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
 
-  {/* Column 2: Our Services (Expertise) */}
-  <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-      Expertise
-    </span>
-    <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
-      {[
-        { title: "Website Development", slug: "web-development" },
-        { title: "Search Engine Optimization", slug: "seo" },
-        { title: "Social Media Marketing", slug: "social-media-marketing" },
-        { title: "AI Automation", slug: "ai-automation" },
-        { title: "Ecommerce Management", slug: "ecommerce" },
-      ].map((service, idx) => (
-        <Link
-          key={idx}
-          href={`/services/${service.slug}`}
-          className="text-white-400 hover:text-white transition-all duration-300 w-max"
-        >
-          {service.title}
-        </Link>
-      ))}
-    </div>
-  </div>
+          {/* Column 2: Our Services (Expertise) */}
+          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+              Expertise
+            </span>
+            <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
+              {[
+                { title: "Website Development", slug: "web-development" },
+                { title: "Search Engine Optimization", slug: "seo" },
+                { title: "Social Media Marketing", slug: "social-media-marketing" },
+                { title: "AI Automation", slug: "ai-automation" },
+                { title: "Ecommerce Management", slug: "ecommerce" },
+              ].map((service, idx) => (
+                <Link
+                  key={idx}
+                  href={`/services/${service.slug}`}
+                  className="text-white-400 hover:text-white transition-all duration-300 w-max"
+                >
+                  {service.title}
+                </Link>
+              ))}
+            </div>
+          </div>
 
-  {/* Column 3: Compliance */}
-  <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-      Compliance
-    </span>
-    <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
-      {[
-        { name: "Privacy Policy", href: "/privacy" },
-        { name: "Terms & Conditions", href: "/terms" },
-        { name: "Global Pricing", href: "/pricing" },
-        { name: "FAQs", href: "/faq" },
-        { name: "Contact US", href: "/contact" }
-      ].map((link, idx) => (
-        <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
-          {link.name}
-        </Link>
-      ))}
-    </div>
-  </div>
+          {/* Column 3: Compliance */}
+          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+              Compliance
+            </span>
+            <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
+              {[
+                { name: "Privacy Policy", href: "/privacy" },
+                { name: "Terms & Conditions", href: "/terms" },
+                { name: "Global Pricing", href: "/pricing" },
+                { name: "FAQs", href: "/faq" },
+                { name: "Contact US", href: "/contact" }
+              ].map((link, idx) => (
+                <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          </div>
 
-  {/* Column 4: Inquiries */}
-  <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-    <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-      Inquiries
-    </span>
-    <div className="space-y-4 text-[16px] md:text-[16px]">
-      <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
-        <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
-        <div className="space-y-1">
-          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Drop an email</p>
-          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
-        </div>
-      </a>
-      <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
-        <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
-        <div className="space-y-1">
-          <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Corporate Support</p>
-          <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
-        </div>
-      </a>
-    </div>
-  </div>
+          {/* Column 4: Inquiries */}
+          <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
+            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
+              Inquiries
+            </span>
+            <div className="space-y-4 text-[16px] md:text-[16px]">
+              <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
+                <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
+                <div className="space-y-1">
+                  <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Drop an email</p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
+                </div>
+              </a>
+              <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
+                <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
+                <div className="space-y-1">
+                  <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Corporate Support</p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
+                </div>
+              </a>
+            </div>
+          </div>
 
-         
+
         </div>
 
         {/* 🏢 OFFICES GRID */}
