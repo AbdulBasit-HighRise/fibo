@@ -164,7 +164,7 @@ export default function SEOPage() {
 
 
               {/* Main Typography Block */}
-              <h1 className="text-[3rem] uppercase  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white mb-2">
+              <h1 className="text-[3rem] uppercase  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[1.1] md:leading-[1.05] text-white mb-2">
                 LEADING {" "}
                 <span className=" inline-block mb-4 pb-3 upperase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   AI & GEO SEO Agency

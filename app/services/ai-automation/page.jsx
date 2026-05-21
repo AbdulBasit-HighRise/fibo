@@ -117,7 +117,7 @@ export default function WebDevPage() {
 
 
               {/* Main Typography Block with Tight Line Height - Fixed Spelling "Development" */}
-              <h1 className="text-[3rem] uppercase md:text-[3.2rem] lg:text-[3.8rem] uppercase  font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[3rem] uppercase md:text-[3.2rem] 2xl:text-[5rem] lg:text-[3.8rem] uppercase  font-black tracking-tighter leading-[0.8] text-white mb-8">
                 AI Automation
                 {" "}
                 <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">

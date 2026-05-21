@@ -48,7 +48,7 @@ export default function ServicesPage() {
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Digital Marketing</span>
               </div>
 
-              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 Our {" "}
                 <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Services.

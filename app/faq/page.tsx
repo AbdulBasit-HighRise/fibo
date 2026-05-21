@@ -88,7 +88,7 @@ export default function FAQPage() {
         </div>
 
         {/* Main Large Typography Block with Tight Line Height */}
-        <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] font-black tracking-tighter leading-[1] text-white mb-8 normal-case">
+        <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[1] text-white mb-8 normal-case">
           FREQUENTLY {" "}
           <span className="inline-block  mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
             Asked Questions.
