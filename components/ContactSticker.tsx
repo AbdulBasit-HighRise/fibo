@@ -104,8 +104,8 @@ const ContactSticker = () => {
                   <option value="SEO Optimization" className="bg-[#09090b] text-white">SEO Optimization</option>
                   <option value="Social Media Marketing" className="bg-[#09090b] text-white">Social Media Marketing</option>
                   <option value="AI Automation" className="bg-[#09090b] text-white">AI Automation</option>
-                  <option value="Branding" className="bg-[#09090b] text-white">Branding</option>
-                  <option value="Google Ads" className="bg-[#09090b] text-white">Google Ads</option>
+                  {/* <option value="Branding" className="bg-[#09090b] text-white">Branding</option> */}
+                  {/* <option value="Google Ads" className="bg-[#09090b] text-white">Google Ads</option> */}
                   <option value="E-commerce Management" className="bg-[#09090b] text-white">E-commerce Management</option>
                 </select>
               </div>

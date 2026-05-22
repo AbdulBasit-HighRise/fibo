@@ -1,4 +1,4 @@
- /** @type {import('next').NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   // 🚀 PERFORMANCE & 4K SCALING
   images: {
@@ -16,6 +16,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      // 🎯 ADDED CONTENTFUL HOSTNAME: Ab dynamic images allow ho jayengi
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+      },
     ],
   },
 
@@ -25,11 +30,9 @@ const nextConfig = {
   },
 
   // ⚡ SPEED MODE: Performance optimizations
- experimental: {
+  experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
-
-
 };
 
 export default nextConfig;

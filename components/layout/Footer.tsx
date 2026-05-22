@@ -36,7 +36,7 @@ export default function Footer() {
       <div className="relative z-10 max-w-[1600px] 2xl:max-w-[2400px] mx-auto px-6 2xl:px-16">
 
         {/* --- MAIN LINKS GRID --- */}
-        <div className="p-3 pt-4 pb-12 md:pt-6 md:pb-16 2xl:pt-10 2xl:pb-15 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
+        <div className="p-3 pt-4 pb-18 md:pt-6 md:pb-16 2xl:pt-8 lg:pt-4 2xl:pb-12 lg:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
 
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
@@ -81,7 +81,7 @@ export default function Footer() {
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
                 { name: "Services", href: "/services" },
-                { name: "Case Studies", href: "/portfolio" },
+                { name: "Case Studies", href: "/casestudies" },
                 { name: "Blogs", href: "/blog" },
               ].map((link, idx) => (
                 <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">

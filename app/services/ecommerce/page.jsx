@@ -25,6 +25,8 @@ import { ArrowUpRight, BarChart3 } from "lucide-react";
 import { TrendingUp, Star, CheckCircle2 } from "lucide-react";
 import TrustClient from "@/components/sections/ClientTrust"
 import ServiceCTA from "@/components/sections/ServiceCTA"
+import ContentFAQ from "@/components/faqs/ContentFAQ";
+
 
 // import EcommerceFAQ from "@/components/faq/EcommerceFAQ"
 
@@ -617,7 +619,7 @@ export default function WebDevPage() {
       <Testimonials />
       {/* Core experties  */}
          {/* <EcommerceFAQ /> */}
-
+<ContentFAQ />
       <TrustClient />
 
     </main>

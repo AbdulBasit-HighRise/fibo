@@ -128,7 +128,7 @@ export default function PortfolioPage() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
           {/* 🎯 FIXED: Full Sized Padded Content Wrapper with dynamic center/left text rules */}
-<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
             <div className="max-w-5xl">
 
               {/* 🎯 FIXED: Glassmorphism Badge auto-centered on mobile */}
@@ -175,72 +175,72 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-    {/* 3. CASE STUDIES GRID - Pixel Perfect Scaling */}
-<section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 py-12 md:py-16 2xl:py-20 relative z-20">
-  <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 2xl:gap-10">
-    <AnimatePresence mode="popLayout">
-      {filtered.map((item) => (
-        <Link href={`/portfolio/${item.slug}`} key={item.slug} className="group block h-full">
-          <motion.div
-            layout
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.4 }}
-            className="rounded-2xl overflow-hidden border border-white/5 bg-zinc-950/30 p-4 2xl:p-5 flex flex-col h-full cursor-pointer shadow-2xl transition-all duration-500 hover:border-blue-500/30 hover:bg-zinc-950/60"
-          >
-            {/* --- IMAGE CONTAINER (Slicker Radius Applied) --- */}
-            <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 border border-white/5 relative bg-zinc-900">
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                className="object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
+      {/* 3. CASE STUDIES GRID - Pixel Perfect Scaling */}
+      <section className="max-w-7xl 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 py-12 md:py-16 2xl:py-20 relative z-20">
+        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 2xl:gap-10">
+          <AnimatePresence mode="popLayout">
+            {filtered.map((item) => (
+              <Link href={`/portfolio/${item.slug}`} key={item.slug} className="group block h-full">
+                <motion.div
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.4 }}
+                  className="rounded-2xl overflow-hidden border border-white/5 bg-zinc-950/30 p-4 2xl:p-5 flex flex-col h-full cursor-pointer shadow-2xl transition-all duration-500 hover:border-blue-500/30 hover:bg-zinc-950/60"
+                >
+                  {/* --- IMAGE CONTAINER (Slicker Radius Applied) --- */}
+                  <div className="aspect-[4/3] rounded-xl overflow-hidden mb-4 border border-white/5 relative bg-zinc-900">
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
 
-              {/* Top Metric Badge */}
-              <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg px-2.5 py-1 flex items-center gap-1.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                <span className="text-[10px] 2xl:text-xs font-mono font-bold tracking-tight text-zinc-200">{item.metric}</span>
-              </div>
-            </div>
+                    {/* Top Metric Badge */}
+                    <div className="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-white/10 rounded-lg px-2.5 py-1 flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                      <span className="text-[10px] 2xl:text-xs font-mono font-bold tracking-tight text-zinc-200">{item.metric}</span>
+                    </div>
+                  </div>
 
-            {/* --- CARD CONTENT WRAPPER --- */}
-            <div className="px-1 flex flex-col flex-grow justify-between">
-              <div className="space-y-2.5">
-                <span className="text-[9px] 2xl:text-[10px] font-black uppercase tracking-[2px] text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/10 inline-block">
-                  {item.category === 'web' ? 'Web Development' :
-                   item.category === 'branding' ? 'Branding' :
-                   item.category === 'seo' ? 'SEO' : 'Social Media'}
-                </span>
-                
-                <h3 className="text-lg 2xl:text-xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors duration-300 leading-snug">
-                  {item.title}
-                </h3>
-                
-                <p className="text-white text-[16px] sm:text-[13px] lg:text-sm 2xl:text-sm 3xl:text-base font-medium leading-relaxed line-clamp-2 max-w-full antialiased opacity-90">
-                  {item.tagline}
-                </p>
-              </div>
+                  {/* --- CARD CONTENT WRAPPER --- */}
+                  <div className="px-1 flex flex-col flex-grow justify-between">
+                    <div className="space-y-2.5">
+                      <span className="text-[9px] 2xl:text-[10px] font-black uppercase tracking-[2px] text-blue-400 bg-blue-500/10 px-2.5 py-1 rounded-md border border-blue-500/10 inline-block">
+                        {item.category === 'web' ? 'Web Development' :
+                          item.category === 'branding' ? 'Branding' :
+                            item.category === 'seo' ? 'SEO' : 'Social Media'}
+                      </span>
 
-              {/* --- CARD FOOTER (Padding & Margins Fixed) --- */}
-              <div className="pt-4 mt-5 border-t border-white/[0.03] flex items-center justify-between">
-                <span className="text-[10px] 2xl:text-xs uppercase font-bold tracking-widest text-zinc-500 group-hover:text-blue-400 transition-colors">
-                  View Execution
-                </span>
-                <div className="w-8 h-8 2xl:w-9 2xl:h-9 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 group-hover:rotate-45">
-                  <ArrowUpRight size={14} className="2xl:w-4 2xl:h-4" />
-                </div>
-              </div>
-            </div>
-            
-          </motion.div>
-        </Link>
-      ))}
-    </AnimatePresence>
-  </motion.div>
-</section>
+                      <h3 className="text-lg 2xl:text-xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors duration-300 leading-snug">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-white text-[16px] sm:text-[13px] lg:text-sm 2xl:text-sm 3xl:text-base font-medium leading-relaxed line-clamp-2 max-w-full antialiased opacity-90">
+                        {item.tagline}
+                      </p>
+                    </div>
+
+                    {/* --- CARD FOOTER (Padding & Margins Fixed) --- */}
+                    <div className="pt-4 mt-5 border-t border-white/[0.03] flex items-center justify-between">
+                      <span className="text-[10px] 2xl:text-xs uppercase font-bold tracking-widest text-zinc-500 group-hover:text-blue-400 transition-colors">
+                        View Execution
+                      </span>
+                      <div className="w-8 h-8 2xl:w-9 2xl:h-9 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 group-hover:rotate-45">
+                        <ArrowUpRight size={14} className="2xl:w-4 2xl:h-4" />
+                      </div>
+                    </div>
+                  </div>
+
+                </motion.div>
+              </Link>
+            ))}
+          </AnimatePresence>
+        </motion.div>
+      </section>
     </main>
   );
 }

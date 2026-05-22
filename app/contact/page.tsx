@@ -67,7 +67,7 @@ export default function ContactPage() {
     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
     {/* Content Wrapper - Pushed down with pt-48 & md:pt-56 for perfect vertical equality */}
-<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+<div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-60 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
       <div className="max-w-5xl">
         
         {/* Badge Container */}
@@ -152,11 +152,11 @@ export default function ContactPage() {
                       <option value="Website Development" className="bg-[#0a0a0a]">Website Development</option>
                       <option value="SEO" className="bg-[#0a0a0a]">SEO</option>
                       <option value="Social Media Marketing" className="bg-[#0a0a0a]">Social Media Marketing</option>
-                      <option value="Branding" className="bg-[#0a0a0a]">Branding</option>
+                      {/* <option value="Branding" className="bg-[#0a0a0a]">Branding</option> */}
                       <option value="AI Automation" className="bg-[#0a0a0a]">AI Automation</option>
-                      <option value="Content Creation" className="bg-[#0a0a0a]">Content Creation</option>
+                      {/* <option value="Content Creation" className="bg-[#0a0a0a]">Content Creation</option> */}
                       <option value="Ecommerce Management" className="bg-[#0a0a0a]">Ecommerce Management</option>
-                      <option value="Google Ads" className="bg-[#0a0a0a]">Google Ads</option>
+                      {/* <option value="Google Ads" className="bg-[#0a0a0a]">Google Ads</option> */}
                     </select>
                     <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500 transition-all">
                       <ChevronDown size={18} strokeWidth={2.5} />

@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,6 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Plus, Minus } from "lucide-react"; 
 import Image from "next/image";
+import { createClient } from 'contentful';
+
+// 🎯 Contentful Client Setup
+const client = createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || 'aprr3d93u7vz',
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || 'LXVuIdmXm-IK71j-DfjMMgSZQnAoM_aqxz-KzAlaMdA',
+  environment: 'master'
+});
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,6 +21,7 @@ export default function Navbar() {
   const [showServices, setShowServices] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [isProposalOpen, setIsProposalOpen] = useState(false);
+  const [dynamicLinks, setDynamicLinks] = useState<any[]>([]); // 🎯 Dynamic links state
   const pathname = usePathname();
 
   useEffect(() => {
@@ -28,6 +35,27 @@ export default function Navbar() {
     setShowServices(false);
     setMobileServicesOpen(false);
   }, [pathname]);
+
+  // 🎯 Contentful se pages dynamically fetch karne ke liye effect
+  useEffect(() => {
+    async function fetchNavbarPages() {
+      try {
+        const response = await client.getEntries({
+          content_type: 'page',
+        });
+        
+        const formattedLinks = response.items.map((item: any) => ({
+          name: item.fields.title || "Untitled Page",
+          href: `/${item.fields.slug || ""}`,
+        }));
+        
+        setDynamicLinks(formattedLinks);
+      } catch (error) {
+        console.error("Error fetching navigation pages from Contentful:", error);
+      }
+    }
+    fetchNavbarPages();
+  }, []);
 
   const [modalForm, setModalForm] = useState({
     name: "",
@@ -50,118 +78,129 @@ export default function Navbar() {
     setIsProposalOpen(false);
   };
 
-  const links = [
+  // Static Links aur Services dropdown ko maintain rakha hai
+  const baseLinksLeft = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { 
-      name: "Services", 
-      href: "/services", 
-      isDropdown: true,
-      subLinks: [
-        { name: "Web Development", href: "/services/web-development" },
-        { name: "SEO Optimization", href: "/services/seo" },
-        { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-        // { name: "Content Writing", href: "/services/content-writing" },
-        // { name: "Branding & Identity", href: "/services/branding" },
-        // { name: "Google Ads (PPC)", href: "/services/google-ads" },
-       { name: "Ecommerce Management ", href: "/services/ecommerce" },
-        { name: "AI Automation", href: "/services/ai-automation" },
-      ]
-    },
-    { name: "Portfolio", href: "/portfolio" },
+  ];
+
+  const baseLinksRight = [
+    { name: "Case Studies", href: "/casestudies" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 
+  const servicesDropdown = { 
+    name: "Services", 
+    href: "/services", 
+    isDropdown: true,
+    subLinks: [
+      { name: "Web Development", href: "/services/web-development" },
+      { name: "SEO Optimization", href: "/services/seo" },
+      { name: "Social Media Marketing", href: "/services/social-media-marketing" },
+      { name: "Ecommerce Management ", href: "/services/ecommerce" },
+      { name: "AI Automation", href: "/services/ai-automation" },
+    ]
+  };
+
+  // 🎯 COMBINED LINKS array: Jo layout order ko tabah nahi karega
+  const links = [
+    ...baseLinksLeft,
+    ...dynamicLinks, // Contentful wale dynamic pages automatic About wagera yahan inject honge
+    servicesDropdown,
+    ...baseLinksRight
+  ];
+
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full pointer-events-none">
-      {/* 🎯 FIXED PADDING: `max-w-[1440px]` lagaya hai aur side paddings set ki hain taake corners se halka sa andar rahe */}
-<div className={`w-full transition-all duration-500 pointer-events-auto ${isScrolled ? "max-w-[1280px] mx-auto pt-1 px-4 md:px-8 lg:px-16 lg:pt-2  " : "max-w-full pt-0 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-80 3xl:px-52"}`}>   <motion.nav
-    initial={{ y: -50, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    className={`relative flex items-center justify-between transition-all duration-500 ease-in-out mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#030303]/90 backdrop-blur-xl border  border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
-  >
-    <Link href="/" className="flex items-center z-50 shrink-0">
-      <Image src="/Hr Logo White.svg" alt="Logo" width={300} height={80} className={`h-auto transition-all duration-500 object-contain origin-left ${isScrolled ? "w-[120px] lg:w-[140px]" : "w-[160px] lg:w-[210px]"}`} priority />
-    </Link>
-
-    {/* 🔗 DESKTOP NAV */}
-    <div className="hidden lg:flex items-center gap-1">
-      {links.map((link) => {
-        const isActive = pathname === link.href;
-        if (link.isDropdown) {
-          return (
-            <div key={link.name} className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
-              <Link 
-                href={link.href} 
-                className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-white-400 hover:text-white"}`}
-              >
-                {link.name} <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
-              </Link>
-              <AnimatePresence>
-                {showServices && (
-                  <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 w-56 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-1">
-                    {link.subLinks?.map((sub) => (
-                      <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[13px] font-bold text-white-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
-                        {sub.name}
-                      </Link>
-                    ))}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-          );
-        }
-        return (
-          <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-white-400 hover:text-white"}`}>
-            {link.name}
+      <div className={`w-full transition-all duration-500 pointer-events-auto ${isScrolled ? "max-w-[1280px] mx-auto pt-1 px-4 md:px-8 lg:px-16 lg:pt-2   " : "max-w-full pt-0 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-80 3xl:px-52"}`}>
+        <motion.nav
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          className={`relative flex items-center justify-between transition-all duration-500 ease-in-out mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#030303]/90 backdrop-blur-xl border  border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
+        >
+          <Link href="/" className="flex items-center z-50 shrink-0">
+            <Image src="/Hr Logo White.svg" alt="Logo" width={300} height={80} className={`h-auto transition-all duration-500 object-contain origin-left ${isScrolled ? "w-[120px] lg:w-[140px]" : "w-[160px] lg:w-[210px]"}`} priority />
           </Link>
-        );
-      })}
-    </div>
 
-    <div className="flex items-center gap-4 z-50 shrink-0">
-      <button onClick={() => setIsProposalOpen(true)} className={`group relative overflow-hidden hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest transition-all active:scale-95 ${isScrolled ? "px-5 py-2 text-[9px] xl:text-[10px]" : "px-7 py-3 text-[10px] xl:text-[11px]"}`}>
-        <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-        <span className="relative z-10 group-hover:text-white transition-colors duration-500">Get Proposal</span>
-      </button>
-      <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white p-2">
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
-      </button>
-    </div>
-
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="absolute top-full left-0 right-0 bg-[#070707]/95 backdrop-blur-xl border border-white/10 lg:hidden flex flex-col gap-0 p-4 mt-2 rounded-3xl pointer-events-auto shadow-2xl overflow-hidden">
-          {links.map((link) => {
-            if (link.isDropdown) {
-              return (
-                <div key={link.name} className="border-b border-white/5 flex flex-col">
-                  <div className="flex items-center justify-between py-3.5 px-4 active:bg-white/5 transition-colors rounded-xl">
-                    <Link href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 flex-1" onClick={() => setIsOpen(false)}>{link.name}</Link>
-                    <button onClick={(e) => { e.preventDefault(); setMobileServicesOpen(!mobileServicesOpen); }} className="p-1 text-zinc-400 hover:text-white transition-colors">
-                      {mobileServicesOpen ? <Minus size={14} /> : <Plus size={14} />}
-                    </button>
+          {/* 🔗 DESKTOP NAV */}
+          <div className="hidden lg:flex items-center gap-1">
+            {links.map((link) => {
+              const isActive = pathname === link.href;
+              if (link.isDropdown) {
+                return (
+                  <div key={link.name} className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
+                    <Link 
+                      href={link.href} 
+                      className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-white-400 hover:text-white"}`}
+                    >
+                      {link.name} <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
+                    </Link>
+                    <AnimatePresence>
+                      {showServices && (
+                        <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} className="absolute top-full left-0 w-56 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-1">
+                          {/* 🎯 FIXED: sub parameters typed as any */}
+                          {link.subLinks?.map((sub: any) => (
+                            <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[13px] font-bold text-white-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                  <motion.div initial={false} animate={{ height: mobileServicesOpen ? "auto" : 0, opacity: mobileServicesOpen ? 1 : 0 }} className="overflow-hidden bg-white/[0.02] rounded-xl mx-2">
-                    <div className="flex flex-col py-1 pl-4 border-l border-white/10 my-1 gap-1">
-                      {link.subLinks?.map((sub) => (
-                        <Link key={sub.name} href={sub.href} className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 hover:text-white py-2.5 px-3 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                </div>
+                );
+              }
+              return (
+                <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-white-400 hover:text-white"}`}>
+                  {link.name}
+                </Link>
               );
-            }
-            return (
-              <Link key={link.name} href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 py-3.5 px-4 border-b border-white/5 last:border-0" onClick={() => setIsOpen(false)}>{link.name}</Link>
-            );
-          })}
-        </motion.div>
-      )}
-    </AnimatePresence>
-  </motion.nav>
-</div>
+            })}
+          </div>
+
+          <div className="flex items-center gap-4 z-50 shrink-0">
+            <button onClick={() => setIsProposalOpen(true)} className={`group relative overflow-hidden hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest transition-all active:scale-95 ${isScrolled ? "px-5 py-2 text-[9px] xl:text-[10px]" : "px-7 py-3 text-[10px] xl:text-[11px]"}`}>
+              <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+              <span className="relative z-10 group-hover:text-white transition-colors duration-500">Get Proposal</span>
+            </button>
+            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white p-2">
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          <AnimatePresence>
+            {isOpen && (
+              <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="absolute top-full left-0 right-0 bg-[#070707]/95 backdrop-blur-xl border border-white/10 lg:hidden flex flex-col gap-0 p-4 mt-2 rounded-3xl pointer-events-auto shadow-2xl overflow-hidden">
+                {links.map((link) => {
+                  if (link.isDropdown) {
+                    return (
+                      <div key={link.name} className="border-b border-white/5 flex flex-col">
+                        <div className="flex items-center justify-between py-3.5 px-4 active:bg-white/5 transition-colors rounded-xl">
+                          <Link href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 flex-1" onClick={() => setIsOpen(false)}>{link.name}</Link>
+                          <button onClick={(e) => { e.preventDefault(); setMobileServicesOpen(!mobileServicesOpen); }} className="p-1 text-zinc-400 hover:text-white transition-colors">
+                            {mobileServicesOpen ? <Minus size={14} /> : <Plus size={14} />}
+                          </button>
+                        </div>
+                        <motion.div initial={false} animate={{ height: mobileServicesOpen ? "auto" : 0, opacity: mobileServicesOpen ? 1 : 0 }} className="overflow-hidden bg-white/[0.02] rounded-xl mx-2">
+                          <div className="flex flex-col py-1 pl-4 border-l border-white/10 my-1 gap-1">
+                            {/* 🎯 FIXED: sub parameters typed as any */}
+                            {link.subLinks?.map((sub: any) => (
+                              <Link key={sub.name} href={sub.href} className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 hover:text-white py-2.5 px-3 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      </div>
+                    );
+                  }
+                  return (
+                    <Link key={link.name} href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 py-3.5 px-4 border-b border-white/5 last:border-0" onClick={() => setIsOpen(false)}>{link.name}</Link>
+                  );
+                })}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.nav>
+      </div>
 
       {/* PROPOSAL MODAL */}
       <AnimatePresence>

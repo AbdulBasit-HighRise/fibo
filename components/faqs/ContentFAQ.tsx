@@ -6,18 +6,38 @@ import { Plus, Minus } from "lucide-react";
 export default function ContentFAQ() {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
-  const faqs = [
+   const faqs = [
     {
-      q: "What type of content do you specialize in?",
-      a: "We handle everything from high-converting website copy and SEO blogs to engaging social media captions and professional whitepapers."
+      q: "Which e-commerce platforms do you specialize in managing?",
+      a: "We manage and optimize storefronts across all major platforms and marketplaces. This includes building dedicated Shopify and WooCommerce stores, as well as optimizing sales pipelines on Amazon, eBay, TikTok Shop, and Etsy."
     },
     {
-      q: "Is the content original and AI-free?",
-      a: "Absolutely. While we use AI for research, every single word is written and polished by human experts to ensure brand voice, emotional depth, and 100% originality."
+      q: "Can you help us transition our physical business into an online store?",
+      a: "Yes, absolutely. We handle the entire technical process, including setting up your domain, designing a secure checkout experience, organizing your digital or physical product inventory, and launching your initial marketing campaigns."
     },
     {
-      q: "How many revisions do I get?",
-      a: "Your satisfaction is priority. We offer up to 2 rounds of revisions to ensure the tone and messaging perfectly align with your expectations."
+      q: "How do you help lower our customer acquisition costs?",
+      a: "We focus on high-intent marketing. Instead of wasting your budget on broad, generic traffic, we target buyers who are already looking for your specific products. We also build automated retargeting funnels to win back abandoned carts."
+    },
+    {
+      q: "Will you write our product descriptions and create ad imagery?",
+      a: "Yes, our team handles all creative assets. We design clean, professional visuals and write clear, natural product copy. We strictly avoid stiff, robotic AI wording to ensure your brand voice feels authentic and trustworthy to shoppers."
+    },
+    {
+      q: "Do you handle daily store operations like inventory tracking?",
+      a: "Yes, we offer complete account management. We can monitor your stock levels, update product variations, organize digital delivery pipelines, and ensure your backend settings run flawlessly so you can focus entirely on big-picture business growth."
+    },
+    {
+      q: "How do you measure the performance of our marketing campaigns?",
+      a: "We focus entirely on metrics that impact your revenue. You will receive transparent, easy-to-read dashboards tracking your exact Return on Ad Spend (ROAS), average order value (AOV), website conversion rate, and overall net sales."
+    },
+    {
+      q: "Can you help us scale our digital products marketplace shop?",
+      a: "Yes. We have specialized strategies for digital products, focusing on marketplace SEO, highly optimized search tags, and creating clean, attractive mockup presentations that stand out from competitors and drive immediate downloads."
+    },
+    {
+      q: "How long does it take to see an increase in online sales?",
+      a: "While paid advertising on social media can drive immediate traffic and sales within the first week of launch, sustainable organic growth through e-commerce SEO and funnel optimization typically builds momentum over 30 to 90 days."
     }
   ];
 
@@ -26,9 +46,9 @@ export default function ContentFAQ() {
       <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="relative z-10 max-w-4xl mx-auto px-6">
         <div className="mb-12">
-          <p className="text-[10px] uppercase tracking-[6px] text-[#00f2ff] font-black italic mb-2">Word Craft</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase italic leading-none">
-            Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">FAQ.</span>
+          {/* <p className="text-[10px] uppercase tracking-[6px] text-[#00f2ff] font-black italic mb-2">Word Craft</p> */}
+          <h2 className="text-4xl md:text-5xl font-black text-white   leading-none">
+            E-Commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">FAQ.</span>
           </h2>
         </div>
         <div className="space-y-4">
