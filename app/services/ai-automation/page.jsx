@@ -126,7 +126,7 @@ export default function WebDevPage() {
               </h1>
 
               {/* Description Paragraph - Aligned perfectly with global layout standards */}
-              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full mx-auto lg:mx-0 opacity-80">
                 Streamline your workflows and maximize efficiency with our custom AI automation services. We integrate intelligent systems into your business operations to eliminate manual tasks and accelerate predictable growth.
               </p>
             </div>

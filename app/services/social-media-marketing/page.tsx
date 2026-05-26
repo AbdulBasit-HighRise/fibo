@@ -82,43 +82,35 @@ import ServiceCTA from "@/components/sections/ServiceCTA"
 
 import { ArrowUpRight, BarChart3 } from "lucide-react";
 
-const bentoProjects = [
-    {
-        id: "01",
-        title: "SaaS Growth Engine",
-        category: "Web Engineering",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600",
-        size: "lg:col-span-2 h-[400px] 2xl:h-[600px]",
-        metrics: "+180% Revenue Scale",
-        tags: ["Next.js", "GraphQL", "AWS"]
-    },
-    {
-        id: "02",
-        title: "Analytics Dashboard",
-        category: "Data Architecture",
-        size: "lg:col-span-1 h-[400px] 2xl:h-[600px]",
-        metrics: "Sub-Second Latency",
-        tags: ["TypeScript", "Python", "Tailwind"],
-        isTechCard: true
-    },
-    {
-        id: "03",
-        title: "Conversion Impact",
-        category: "Optimization Pipeline",
-        size: "lg:col-span-1 h-[400px] 2xl:h-[600px]",
-        metrics: "4.2x Conversion Multiplier",
-        tags: ["Technical SEO", "UI/UX"],
-        isMetricCard: true
-    },
-    {
-        id: "04",
-        title: "Ecommerce Experience",
-        category: "Headless Commerce",
-        image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1600",
-        size: "lg:col-span-2 h-[400px] 2xl:h-[600px]",
-        metrics: "Load Time < 400ms",
-        tags: ["Shopify Hydrogen", "Sanity CMS"]
-    }
+const socialProjects = [
+  {
+    id: "01",
+    title: "Premium Home & Living Brand",
+    image: "/roas.jpg", // 🎯 Apni social media graphics/results ka real path yahan dalo
+    slug: "home-living-ecommerce",
+    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+  },
+  {
+    id: "02",
+    title: "E-Commerce Fashion Brand",
+    image: "/brand.jpg", // 🎯 Real image path
+    slug: "fashion-brand-ecommerce",
+    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
+  },
+  {
+    id: "03",
+    title: "Premium Fitness Brand",
+    image: "/gym.jpg", // 🎯 Real image path
+    slug: "fitness-brand-ecommerce",
+    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
+  },
+  {
+    id: "04",
+    title: "Victoria Property Network",
+    image: "/realestate.jpg", // 🎯 Real image path
+    slug: "australia-real-estate-social",
+    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+  }
 ];
 
 export default function SocialMediaPage() {
@@ -161,7 +153,7 @@ export default function SocialMediaPage() {
                             </h1>
 
                             {/* Description Paragraph - Aligned perfectly with global white opacity layout standards */}
-                            <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
+                            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full mx-auto lg:mx-0 opacity-80">
                                 We build social media strategies that stop the scroll. Our team creates engaging content and targeted ad campaigns to grow your community, boost brand loyalty, and drive real business sales.</p>
                         </div>
                     </div>
@@ -279,9 +271,9 @@ export default function SocialMediaPage() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
                         <div>
                             <h3 className="text-[2.3rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
-                                All Kinds of {" "}
+                                Our Social {" "}
                                 <span className="inline-block pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                                    Web Solutions We Offer.
+                                    Media Services
                                 </span>
                             </h3>
                         </div>
@@ -341,133 +333,108 @@ export default function SocialMediaPage() {
 
             <Stats />
             {/* portfolio section       */}
-            <section className="relative py-16 md:py-20 2xl:py-32 bg-[#030303] text-white overflow-hidden select-none border-t border-white/5">
+           <section className="relative py-16 md:py-20 2xl:py-32 bg-[#030303] text-white overflow-hidden select-none border-t border-white/5">
+      {/* Background Glows */}
+      <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
 
-                {/* Background Glows */}
-                <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
+      <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
 
-                <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
+        {/* ⚡ HEADER BLOCK - Content Kept Exactly Same */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 md:mb-10 2xl:mb-16 border-b border-white/5 pb-4 pt-0">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-left"
+          >
+            <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
+              Just some of our{" "}
+              <span className="sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Social Results
+              </span>
+            </h3>
+            <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed opacity-80">
+              See how our social media strategies helped businesses increase engagement, reach new audiences, generate leads, and grow online successfully.
+            </p>
+          </motion.div>
 
-                    {/* ⚡ HEADER BLOCK - Optimized with Important Modifiers */}
-                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 md:mb-10 2xl:mb-16 border-b border-white/5 pb-4 pt-0">
+          {/* RIGHT SIDE: View All Button */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex items-center shrink-0"
+          >
+            <Link
+              href="/portfolio"
+              className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-zinc-500 hover:text-white transition-all duration-500 group"
+            >
+              <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
+                View All Projects
+                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 group-hover:w-full" />
+              </span>
+              <div className="w-10 h-10 md:w-11 md:h-11 2xl:w-14 2xl:h-14 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center relative overflow-hidden group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.1)] transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <ArrowUpRight
+                  size={16}
+                  className="text-zinc-500 group-hover:text-white group-hover:rotate-45 group-hover:scale-110 transform transition-all duration-500 2xl:w-5 2xl:h-5"
+                />
+              </div>
+            </Link>
+          </motion.div>
+        </div>
 
-                        {/* LEFT SIDE: Heading Adjusted For Small Laptops & Mobile */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 15 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5 }}
-                            className="text-left"
-                        >
-                            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
-                                Just some of our
-                                {" "}
-                                <span className=" sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                                    Social Results
-                                </span>
-                            </h3>
-                            <p className=" mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed  opacity-80">
-                                See how our social media strategies helped businesses increase engagement, reach new audiences, generate leads, and grow online successfully.              </p>
-                        </motion.div>
+        {/* 🎬 THE INTERACTIVE BENTO GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-8 relative z-10">
+          {socialProjects.map((project, i) => {
+            const CardWrapper = motion.div;
 
-                        {/* RIGHT SIDE: View All Button */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            className="flex items-center shrink-0"
-                        >
-                            <Link
-                                href="/portfolio"
-                                className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-zinc-500 hover:text-white transition-all duration-500 group"
-                            >
-                                <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
-                                    View All Projects
-                                    <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 group-hover:w-full" />
-                                </span>
-
-                                <div className="w-10 h-10 md:w-11 md:h-11 2xl:w-14 2xl:h-14 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center relative overflow-hidden group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.1)] transition-all duration-500">
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                                    <ArrowUpRight
-                                        size={16}
-                                        className="text-zinc-500 group-hover:text-white group-hover:rotate-45 group-hover:scale-110 transform transition-all duration-500 2xl:w-5 2xl:h-5"
-                                    />
-                                </div>
-                            </Link>
-                        </motion.div>
+            return (
+              <Link href={`/portfolio/${project.slug}`} key={project.id} className={`${project.size} block`}>
+                <CardWrapper
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="w-full h-full group relative rounded-[2rem] 2xl:rounded-[4rem] border border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent backdrop-blur-md flex flex-col justify-between overflow-hidden hover:border-blue-500/30 transition-all duration-500 cursor-pointer"
+                >
+                  <div className="absolute inset-0 w-full h-full">
+                    {/* Next.js Image Element - 100% Crisp & Full Color 🎨 */}
+                    <div className="absolute inset-0 w-full h-full transition-all duration-500">
+                      <Image
+                        src={project.image || "/placeholder.png"}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        priority={i < 2}
+                      />
                     </div>
 
-                    {/* 🎬 THE INTERACTIVE BENTO GRID */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-8 relative z-10">
-                        {bentoProjects.map((project, i) => (
-                            <motion.div
-                                key={project.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                viewport={{ once: true }}
-                                className={`group relative ${project.size} rounded-[2rem] 2xl:rounded-[4rem] p-8 2xl:p-14 border border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent backdrop-blur-md flex flex-col justify-between overflow-hidden hover:border-blue-500/30 transition-all duration-500 cursor-pointer`}
-                            >
-                                {project.isTechCard ? (
-                                    <>
-                                        <div className="w-12 h-12 2xl:w-20 2xl:h-20 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400 group-hover:scale-110 transition-transform duration-500">
-                                            <Cpu size={22} className="2xl:w-10 2xl:h-10" />
-                                        </div>
-                                        <div className="space-y-4 relative z-10">
-                                            <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-zinc-500 font-bold block">{project.category}</span>
-                                            <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
-                                            <div className="flex flex-wrap gap-2 pt-2">
-                                                {project.tags.map((tag, idx) => (
-                                                    <span key={idx} className="px-3 2xl:px-6 py-1 2xl:py-3 rounded-full border border-white/5 bg-white/[0.02] text-[10px] 2xl:text-lg font-semibold text-zinc-400 group-hover:text-blue-400 transition-all">
-                                                        {tag}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </>
-                                ) : project.isMetricCard ? (
-                                    <>
-                                        <div className="w-12 h-12 2xl:w-20 2xl:h-20 rounded-2xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-500">
-                                            <BarChart3 size={22} className="2xl:w-10 2xl:h-10" />
-                                        </div>
-                                        <div className="space-y-2">
-                                            <span className="text-4xl 2xl:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{project.metrics}</span>
-                                            <p className="text-xs 2xl:text-xl text-zinc-400 font-medium leading-relaxed">System parameters benchmarked via real-time testing.</p>
-                                        </div>
-                                        <div className="space-y-1 relative z-10">
-                                            <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-zinc-500 font-bold block">{project.category}</span>
-                                            <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <div className="absolute inset-0 w-full h-full">
-                                        <div className="absolute inset-0 w-full h-full opacity-40 group-hover:opacity-95 transition-all duration-500">
-                                            <img
-                                                src={project.image}
-                                                alt={project.title}
-                                                className="w-full h-full object-cover filter grayscale contrast-110 group-hover:scale-105 transition-transform duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/40 to-transparent opacity-90" />
-                                        </div>
-                                        <div className="absolute top-8 left-8 z-20">
-                                            <span className="px-3 py-1 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] 2xl:text-base font-bold text-gray-300 uppercase tracking-widest">
-                                                {project.id}
-                                            </span>
-                                        </div>
-                                        <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                                            <span className="text-[10px] 2xl:text-base uppercase tracking-[3px] text-cyan-400 font-bold block">{project.category}</span>
-                                            <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase">{project.title}</span>
-                                            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">{project.metrics}</p>
-                                        </div>
-                                    </div>
-                                )}
-                            </motion.div>
-                        ))}
+                    {/* Project ID Tag */}
+                    <div className="absolute top-8 left-8 z-20">
+                      <span className="px-3 py-1 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] 2xl:text-base font-bold text-gray-300 uppercase tracking-widest">
+                        {project.id}
+                      </span>
                     </div>
 
-                </div>
-            </section>
+                    {/* Project Title Display */}
+                    <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                      <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
+                        {project.title}
+                      </span>
+                    </div>
+                  </div>
+                </CardWrapper>
+              </Link>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
             {/* CTA   */}
             <ServiceCTA />
 
@@ -623,7 +590,7 @@ export default function SocialMediaPage() {
 
                                     {/* Title text floating over step layer */}
                                     <div className="space-y-2 flex-grow relative z-10 pt-6">
-                                        <h3 className="text-[16px] 2xl:text-xl font-black text-white group-hover:text-blue-500 transition-colors duration-300 leading-tight">
+                                        <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-blue-500 transition-colors duration-300 leading-tight">
                                             {p.title}
                                         </h3>
                                     </div>

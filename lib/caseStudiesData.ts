@@ -70,18 +70,18 @@ export const caseStudiesData: CaseStudy[] = [
   // ========================================================
   // 🔥 1. RHINO ROOFING ORLANDO (SEO CASE STUDY)
   // ========================================================
-  {
-    slug: "rhino-orlando",
+ {
+    slug: "rhino-orlando", // Matches your portfolio list slug
     category: "seo",
     isSocial: false,
-    title: "Rhino Roofing Orlando",
-    description: "How we built a scalable digital acquisition channel, driving massive ranking improvements and local service dominance in a highly competitive market.",
-    primaryOutcome: "+1,194% Traffic",
-    image: "/rino-roffers.jpg",
+    title: "Rhino Roofing Orlando Scale",
+    description: "170% Leads Increased For Roofing Company",
+    primaryOutcome: "+1,194% Organic Traffic",
+    image: "/rino-roffers.jpg", // Top Image Path as per your blueprint
     metrics: [
-      { value: "+1,194%", label: "Organic traffic growth achieved in 6 months.", highlight: false },
-      { value: "+170%", label: "Lead generation increase across channels.", highlight: true },
-      { value: "+4.4K", label: "Monthly organic visitors systematically sustained.", highlight: false }
+      { value: "+1,194%", label: "Organic traffic growth in 6 months", highlight: true },
+      { value: "+170%", label: "Lead generation increase", highlight: false },
+      { value: "+4.4K", label: "Monthly organic visitors achieved", highlight: false }
     ],
     sections: [
       {
@@ -92,7 +92,8 @@ export const caseStudiesData: CaseStudy[] = [
         paragraphs: [
           "Rhino Roofing Orlando approached us looking to strengthen its online presence and generate more qualified roofing leads in a highly competitive local market.",
           "The existing website lacked modern design standards, had weak SEO foundations, and struggled to attract consistent organic traffic. Despite offering quality roofing services, the business was not receiving enough visibility on Google to compete effectively against established local competitors.",
-          "The challenge was not only to redesign the website visually but also to create a scalable SEO strategy that could improve search visibility, increase local traffic, and convert visitors into real customer inquiries."
+          "The challenge was not only to redesign the website visually but also to create a scalable SEO strategy that could improve search visibility, increase local traffic, and convert visitors into real customer inquiries.",
+          "With aggressive competition in the Orlando roofing industry, the business needed a strong digital foundation capable of delivering long-term growth."
         ]
       },
       {
@@ -108,18 +109,19 @@ export const caseStudiesData: CaseStudy[] = [
         featuresHeader: "Key Improvements Included:",
         features: [
           "Modern and responsive website design",
-          "Improved mobile usability layouts",
-          "Faster loading speed optimisation loops",
-          "SEO-friendly clean site architecture",
-          "Clear service-focused custom landing pages",
-          "Better call-to-actions and conversion lead forms"
+          "Improved mobile usability",
+          "Faster loading speed optimisation",
+          "SEO-friendly site architecture",
+          "Clear service-focused landing pages",
+          "Better call-to-actions and lead forms",
+          "Improved internal linking structure"
         ],
         conclusion: "The redesign created a stronger user experience while providing a solid technical foundation for SEO growth."
       },
       {
         id: "03",
         tag: "Execution",
-        title: "SEO FOUNDATION & TECHNICAL OPTIMISATION",
+        title: "SEO Foundation & Technical Optimisation",
         theme: "dark",
         paragraphs: [
           "After launching the new website, we focused on strengthening the technical SEO framework to improve search engine crawlability and indexing."
@@ -131,14 +133,16 @@ export const caseStudiesData: CaseStudy[] = [
           "Meta title and description optimisation",
           "Technical SEO fixes",
           "Schema implementation",
+          "URL structure improvements",
+          "Image optimisation",
           "Local SEO enhancements"
         ],
-        conclusion: "This helped improve search visibility for high-intent roofing keywords across Orlando."
+        conclusion: "This helped improve search visibility for high-intent roofing keywords across Orlando and the surrounding areas."
       },
       {
         id: "04",
-        tag: "Locality",
-        title: "CONTENT & LOCAL SEO GROWTH STRATEGY",
+        tag: "Optimization",
+        title: "Content & Local SEO Growth Strategy",
         theme: "variant",
         paragraphs: [
           "To expand local visibility and authority, we developed a targeted content and local SEO strategy focused on attracting qualified roofing traffic."
@@ -149,14 +153,16 @@ export const caseStudiesData: CaseStudy[] = [
           "Location-based SEO pages",
           "Google Business Profile optimisation",
           "Local citation improvements",
+          "Content optimisation for roofing services",
+          "Competitor gap analysis",
           "High-quality backlink acquisition"
         ],
         conclusion: "The strategy focused on capturing users actively searching for roofing services while strengthening local ranking signals."
       },
       {
         id: "05",
-        tag: "Agile Loops",
-        title: "CONTINUOUS SEO OPTIMISATION",
+        tag: "Monitoring",
+        title: "Continuous SEO Optimisation",
         theme: "dark",
         paragraphs: [
           "Throughout the 6-month campaign, we continuously monitored rankings, traffic behaviour, and conversion performance to maximise growth opportunities."
@@ -166,7 +172,9 @@ export const caseStudiesData: CaseStudy[] = [
           "Monthly SEO audits",
           "Performance tracking and reporting",
           "Keyword ranking improvements",
-          "Conversion optimisation"
+          "Conversion optimisation",
+          "User behaviour analysis",
+          "Technical performance monitoring"
         ],
         conclusion: "This agile approach allowed us to adapt quickly and scale performance consistently over time."
       }
@@ -178,14 +186,14 @@ export const caseStudiesData: CaseStudy[] = [
       description: "The campaign delivered significant growth across organic traffic, online visibility, and lead generation within just 6 months.",
       cards: [
         {
-          badge: "Traffic Velocity",
+          badge: "6-Month SEO Results",
           value: "+1,194%",
           label: "Organic Traffic Growth",
-          desc: "Monthly website traffic scaled systematically from a baseline of 340 visitors directly to 4.4K active monthly visitors.",
+          desc: "Monthly website traffic increased from 340 visitors to 4.4K monthly visitors.",
           isEmerald: true
         },
         {
-          badge: "Conversion Loop",
+          badge: "Lead Volume",
           value: "+170%",
           label: "Increase in Leads",
           desc: "The improved website experience and SEO visibility generated a substantial increase in qualified customer inquiries.",
@@ -197,12 +205,15 @@ export const caseStudiesData: CaseStudy[] = [
         "Higher rankings for competitive roofing keywords",
         "Stronger visibility in local Google searches",
         "Increased engagement and lower bounce rates",
-        "Improved conversion rates from organic traffic"
+        "Improved conversion rates from organic traffic",
+        "Enhanced brand authority in the Orlando roofing market"
       ],
       conclusionTitle: "TURNING SEO INTO LONG-TERM BUSINESS GROWTH",
       conclusionParagraphs: [
         "Rhino Roofing Orlando’s growth demonstrates the impact of combining a modern, conversion-focused website with a strategic SEO campaign built around long-term scalability.",
-        "By improving technical performance, strengthening local SEO signals, and continuously optimising user experience, we helped transform the website into a reliable lead generation asset."
+        "By improving technical performance, strengthening local SEO signals, and continuously optimising user experience, we helped transform the website into a reliable lead generation asset.",
+        "The result was not only dramatic traffic growth, but also a significant increase in qualified roofing leads and stronger market visibility in a competitive industry.",
+        "With the right SEO structure and ongoing optimisation in place, Rhino Roofing Orlando is now positioned for continued growth, stronger search visibility, and more sustainable lead generation moving forward."
       ]
     },
     proof: {
@@ -210,16 +221,16 @@ export const caseStudiesData: CaseStudy[] = [
       subheader: "Live platform snapshots capturing the exact transition loops and metric adjustments.",
       images: [
         {
-          src: "/rino-reviews.jpg",
-          alt: "Rhino Roofing Google Search Console Organic Traffic Analytics",
-          caption: "Figure 1.1: Verified 6-month growth loop capturing organic search impressions.",
+          src: "/rino-results.jpg", // Aap is asset image ka path adjust kar sakte hain array layout mein
+          alt: "Rhino Roofing Orlando Google Analytics and Traffic Growth Proof",
+          caption: "Figure 4.1: Live metrics capture indicating massive organic scaling up to 4.4K monthly organic users.",
           color: "blue"
         },
         {
-          src: "/rino-results.jpg",
-          alt: "Rhino Roofing Orlando Local Keyword Positioning Dashboard",
-          caption: "Figure 1.2: Local map pack tracking loops for primary Orlando high-intent search terms.",
-          color: "emerald"
+          src: "/rino-reviews.jpg", // Aap is asset image ka path adjust kar sakte hain array layout mein
+          alt: "Rhino Roofing Orlando Google Analytics and Traffic Growth Proof",
+          caption: "Figure 4.1: Live metrics capture indicating massive organic scaling up to 4.4K monthly organic users.",
+          color: "blue"
         }
       ]
     }
@@ -1069,5 +1080,418 @@ export const caseStudiesData: CaseStudy[] = [
     //   ]
     // }
   },
+// ========================================================
+  // 🔥 FITNESS BRAND E-COMMERCE (PAID SOCIAL & PERFORMANCE CASE STUDY)
+  // ========================================================
+  {
+    slug: "fitness-brand-ecommerce",
+    category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
+    isSocial: true,
+    title: "Premium Fitness Brand",
+    description: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
+    primaryOutcome: "22.21x Purchase ROAS",
+    image: "/gym.jpg", // 👈 Top Image Path for your Fitness Campaign asset
+    metrics: [
+      { value: "22.21x", label: "Average Purchase ROAS generated", highlight: true },
+      { value: "$598,541", label: "Total Purchases Conversion Value scaled", highlight: false },
+      { value: "1,072", label: "Total Website Purchases captured", highlight: false },
+      { value: "$26,948", label: "Total Amount Spent on advertising", highlight: false }
+    ],
+    sections: [
+      {
+        id: "01",
+        tag: "Context",
+        title: "THE CHALLENGE",
+        theme: "dark",
+        paragraphs: [
+          "Our eCommerce client, a premium private label brand, approached us to scale their digital advertising performance, increase conversion volume, and maximize their return on ad spend (ROAS) across paid channels.",
+          "As a private label entity in a highly competitive digital marketplace, the brand was facing steep customer acquisition costs, fluctuating ad delivery metrics, and fierce competition from copycat sellers.",
+          "While their proprietary products boasted exceptional build quality and strong margins, their existing advertising strategy was highly fragmented—relying on loose interest targeting and unoptimized creative assets that failed to clearly communicate the brand's unique value proposition.",
+          "The challenge was to transition the account away from inefficient ad spend and build a high-yielding, conversion-focused funnel. The brand required a sophisticated paid media strategy capable of identifying and scaling high-intent buyer segments while systematically turning ad spend into explosive, measurable revenue growth."
+        ]
+      },
+      {
+        id: "02",
+        tag: "Roadmap",
+        title: "THE STRATEGY",
+        subtitle: "Technical Pixel Architecture & Funnel Optimisation",
+        theme: "variant",
+        paragraphs: [
+          "To drive market dominance and unlock hyper-efficient scaling, we deployed a comprehensive, full-funnel paid advertising and conversion rate optimization strategy.",
+          "The immediate priority was establishing a flawless data tracking foundation to give ad platform algorithms clean, real-time conversion signals."
+        ],
+        featuresHeader: "Key Improvements Included:",
+        features: [
+          "Full-funnel Conversion API (CAPI) and advanced pixel tracking integration",
+          "Precise data-deduplication setup across web touchpoints to optimize algorithmic attribution",
+          "Web performance tuning to slash drop-offs between ad clicks and page loads",
+          "Deep implementation of product catalog feeds to enable flawless dynamic remarketing",
+          "Granular custom conversion mapping tailored around the micro-steps of the purchase journey",
+          "Streamlining checkout flows to eradicate cart abandonment roadblocks",
+          "Technical optimization of mobile product landing pages for friction-free browsing",
+          "Implementation of custom URL parameters for precise multi-platform data tracking"
+        ],
+        conclusion: "This data-driven baseline enabled rapid ad delivery optimization, ensuring ad spend was instantly funneled into top-performing audiences."
+      },
+      {
+        id: "03",
+        tag: "Execution",
+        title: "Audience Segmentation & Creative Performance Scale",
+        theme: "dark",
+        paragraphs: [
+          "To outpace competitors and capture high-intent buyers, we built a target-rich audience framework paired with high-impact, direct-response creative assets."
+        ],
+        featuresHeader: "Activities Included:",
+        features: [
+          "Development of premium Lookalike Audiences (LLAs) based on historical high-value buyers",
+          "Strategic structural separation of top-of-funnel (TOFU) prospecting and bottom-of-funnel (BOFU) remarketing",
+          "Creation of high-converting, user-generated content (UGC) ad styles showcasing real product benefits",
+          "In-depth competitor creative analysis to identify hook and angle opportunities",
+          "Systematic testing of dynamic catalog ads targeting warm, high-intent website browsers",
+          "Precise exclusion filtering to ensure prospecting budgets targeted only clean, cold audiences"
+        ],
+        conclusion: "By feeding the algorithms high-converting creative assets and highly refined custom audiences, we drove down acquisition costs while rapidly scaling conversion volume."
+      },
+      {
+        id: "04",
+        tag: "Optimization",
+        title: "Continuous ROAS Maximisation & Scaling Efficiency",
+        theme: "variant",
+        paragraphs: [
+          "The final pillar focused strictly on aggressively scaling budgets while continuously protecting the account's profitability metrics."
+        ],
+        featuresHeader: "Growth Optimisation Included:",
+        features: [
+          "Rapid budget scaling across high-performing ad sets utilizing advanced scaling mechanics",
+          "Systematic creative refresh cadences to preemptively combat ad fatigue across target markets",
+          "Ongoing landing page conversion optimization to squeeze the maximum revenue out of every ad click",
+          "Granular demographic and placement optimization to eliminate wasted ad spend in lower-yielding zones"
+        ],
+        conclusion: "This constant, disciplined optimization loop allowed us to scale ad spend efficiently without sacrificing our exceptionally high return metrics."
+      }
+    ],
+    results: {
+      id: "05",
+      tag: "Impact",
+      title: "THE RESULTS",
+      description: "The private label advertising campaign achieved industry-leading efficiency metrics, generating massive top-line revenue from a highly controlled ad spend.",
+      cards: [
+        {
+          badge: "Conversion Efficiency",
+          value: "22.21x",
+          label: "Average Purchase ROAS",
+          desc: "The ad campaigns operated at an extraordinary level of efficiency, returning over $22 in revenue for every single dollar invested in advertising.",
+          isEmerald: false // Pink layout color sync for core efficiency scale
+        },
+        {
+          badge: "Revenue Scale",
+          value: "$598,541",
+          label: "Total Conversion Value",
+          desc: "Paid acquisition channels drove massive business scale, generating nearly $600,000 ($598,541.78) in tracked top-line revenue for the brand via 1,072 web sales.",
+          isEmerald: true // Emerald green theme to balance the pure conversion value metrics
+        }
+      ],
+      additionalHeader: "Additional Improvements:",
+      additionalImprovements: [
+        "Significant elevation of private label brand equity and digital market share",
+        "Drastic inflation of customer lifetime value (LTV) through premium product positioning",
+        "Exceptional mobile-first shopping experience, driving record-low cart drop-off rates",
+        "Accumulation of high-value custom audience pools ready for future product drops",
+        "A highly scalable digital framework primed to launch and scale secondary private label product lines"
+      ],
+      conclusionTitle: "TURNING AD SPEND INTO AN EXPLOSIVE REVENUE ENGINE",
+      conclusionParagraphs: [
+        "This campaign serves as a masterclass in how a precise, data-backed paid advertising framework can turn a private label brand into a highly profitable digital powerhouse.",
+        "By cleanly blending impeccable pixel tracking, highly calculated audience segmentation, and high-impact creative strategies, we transformed a modest ad budget into a multi-hundred-thousand-dollar revenue engine.",
+        "The private label brand now commands a highly optimized, predictable digital asset built to dominate search and social feeds, maximize profit margins, and lock in long-term e-commerce success."
+      ]
+    },
+    proof: {
+      header: "Verified Business Manager Analytics Proof:",
+      subheader: "Live ROAS dashboards and transaction mapping sheets capturing scale velocity parameters.",
+      images: [
+        {
+          src: "/gym-result.jpg", // 👈 Bottom Snapshot Image Path (Ad Manager Matrix Screenshot)
+          alt: "E-commerce store performance analytics mapping tracking verified conversions and scaled revenue loops.",
+          caption: "Figure 8.1: Confirmed dashboard capture revealing 22.21x purchase performance metrics and tracking architecture integrity parameters.",
+          color: "pink" // 👈 Automated dynamic color selection match for footer snap
+        }
+      ]
+    }
+  },
+
+  // ========================================================
+  // 🔥 FASHION BRAND E-COMMERCE (PAID SOCIAL & PERFORMANCE CASE STUDY)
+  // ========================================================
+  {
+    slug: "fashion-brand-ecommerce",
+    category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
+    isSocial: true,
+    title: "E-Commerce Fashion Brand",
+    description: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
+    primaryOutcome: "23.85x Purchase ROAS",
+    image: "/brand.jpg", // 👈 Top Image Path for your Fashion Campaign asset
+    metrics: [
+      { value: "23.85x", label: "Average Purchase ROAS achieved", highlight: true },
+      { value: "$166,549", label: "Total Website Purchases Conversion Value", highlight: false },
+      { value: "1,044", label: "Total Website Purchases generated", highlight: false },
+      { value: "32,444", label: "Total Clicks Generated across campaigns", highlight: false }
+    ],
+    sections: [
+      {
+        id: "01",
+        tag: "Context",
+        title: "THE CHALLENGE",
+        theme: "dark",
+        paragraphs: [
+          "Our e-commerce fashion client approached us looking to overhaul their paid social media advertising strategy, lower their escalating customer acquisition costs, and dramatically increase conversion volume heading into their peak sales season.",
+          "Despite having a strong social media presence and highly aesthetic product photography, the brand’s ad account was struggling with ad fatigue, broad targeting overlap, and inefficient budget scaling.",
+          "Their previous campaigns relied heavily on standard product collection images without clear hooks, leading to dropping click-through rates and an unstable return on ad spend.",
+          "The challenge was to transition the brand away from passive social media advertising to an aggressive, direct-response paid social strategy. The goal was to build a sustainable, high-converting funnel that could scale budget rapidly while maximizing purchase efficiency and driving profitable top-line revenue."
+        ]
+      },
+      {
+        id: "02",
+        tag: "Roadmap",
+        title: "THE STRATEGY",
+        subtitle: "Advanced Technical Tracking & Paid Social Architecture",
+        theme: "variant",
+        paragraphs: [
+          "To optimize performance and drive explosive revenue growth, we deployed a comprehensive full-funnel paid social strategy centered around creative testing, advanced conversion signals, and high-intent audience targeting.",
+          "The immediate focus was configuring a bulletproof data tracking foundation to provide the social platform algorithms with clean, real-time optimization signals."
+        ],
+        featuresHeader: "Key Improvements Included:",
+        features: [
+          "Full-funnel Meta Pixel and Conversions API (CAPI) technical integration",
+          "Advanced matching setup to maximize data attribution accuracy across browsers",
+          "Strategic event mapping for micro-conversions (ViewContent, AddToCart, InitiateCheckout)",
+          "Optimization of product catalog feeds for seamless dynamic product ad (DPA) setups",
+          "Custom landing page performance tuning to decrease bounce rates from mobile ad clicks",
+          "Systematic tracking structure optimization to cleanly isolate top-of-funnel vs. bottom-of-funnel performance"
+        ],
+        conclusion: "This data-first foundation allowed the ad platform’s machine learning to rapidly find high-intent buyers,drastically lowering wasted ad spend."
+      },
+      {
+        id: "03",
+        tag: "Execution",
+        title: "Creative Testing & Direct-Response Optimization",
+        theme: "dark",
+        paragraphs: [
+          "To break through crowded social media feeds and capture qualified shoppers, we introduced a robust creative testing framework paired with hyper-targeted audience segments."
+        ],
+        featuresHeader: "Activities Included:",
+        features: [
+          "Development of high-impact User Generated Content (UGC) focusing on product styling and social proof",
+          "Split-testing varied dynamic hooks, direct-response ad copy angles, and strong call-to-actions",
+          "Structural implementation of Broad Prospecting, Lookalike Audiences (LLAs), and custom high-value customer segments",
+          "Setup of lookback window dynamic remarketing carousels targeting warm cart-abandoners",
+          "Rigorous creative testing cycles to isolate winning visual formats before scaling budgets"
+        ],
+        conclusion: "By keeping the ad creative fresh, engaging, and directly aligned with target customer behaviors, we successfully scaled overall ad click volume without experiencing performance drops."
+      },
+      {
+        id: "04",
+        tag: "Optimization",
+        title: "Budget Scaling & ROAS Maximization",
+        theme: "variant",
+        paragraphs: [
+          "The final phase prioritized scaling the top-performing campaign components while strictly defending profit margins."
+        ],
+        featuresHeader: "Growth Optimisation Included:",
+        features: [
+          "Execution of vertical and horizontal scaling methods across the most efficient ad sets",
+          "Regular demographic, placement, and device optimization to shift spend to high-converting zones",
+          "Landing page conversion rate optimization (CRO) to maximize purchase values from ad traffic",
+          "Preemptive creative refreshes to preserve stable click metrics across high-budget scaling periods"
+        ],
+        conclusion: "This disciplined operational cadence allowed us to scale the brand's budget smoothly while securing incredibly high performance across the entire funnel."
+      }
+    ],
+    results: {
+      id: "05",
+      tag: "Impact",
+      title: "THE RESULTS",
+      description: "The paid social marketing campaign achieved elite levels of advertising efficiency, transforming a highly controlled ad spend budget into exceptional retail revenue.",
+      cards: [
+        {
+          badge: "Conversion Efficiency",
+          value: "23.85x",
+          label: "Average Purchase ROAS",
+          desc: "The paid social campaigns achieved a remarkable return on ad spend, generating $23.85 in purchase revenue for every single dollar spent on ads.",
+          isEmerald: false // Pink layout color sync for core efficiency scale
+        },
+        {
+          badge: "Revenue Scale",
+          value: "$166,549",
+          label: "Total Conversion Value",
+          desc: "Our conversion-focused social ad funnels drove substantial business growth, resulting in over $166,000 ($166,549.30) across 1,044 verified website sales from an ad investment of $6,983.25.",
+          isEmerald: true // Emerald green theme to balance the pure conversion value metrics
+        }
+      ],
+      additionalHeader: "Additional Improvements:",
+      additionalImprovements: [
+        "Drastic inflation of local and digital brand market authority",
+        "Growth of massive custom retargeting and lookalike audience data pools for future scaling",
+        "Highly efficient Customer Acquisition Cost (CAC) metrics achieved during highly competitive market periods",
+        "Improved conversion flow tracking, providing long-term predictability for ad scaling"
+      ],
+      conclusionTitle: "SCALING SOCIAL MEDIA ADVERTISING INTO PREDICTABLE REVENUE",
+      conclusionParagraphs: [
+        "This campaign stands as an absolute proof of how a structured, data-centric paid social media marketing strategy can completely transform an e-commerce brand’s revenue baseline.",
+        "By successfully marrying high-fidelity conversion tracking, constant creative testing, and strategic audience segmentation, we converted a highly efficient advertising investment into a multi-six-figure sales channel.",
+        "The e-commerce brand now holds a scalable digital customer acquisition model engineered to drive ongoing market capture, high conversion margins, and long-term online success."
+      ]
+    },
+    proof: {
+      header: "Verified Business Manager Analytics Proof:",
+      subheader: "Live Meta Ads dashboard snapshots and client checkout reports mapping scaling metrics.",
+      images: [
+        {
+          src: "/brand-result.jpg", // 👈 Bottom Snapshot Image Path (Meta Ads Performance Matrix)
+          alt: "Meta Ads Manager and analytics dashboard showing verified purchase metrics and acquisition scale for fashion brand.",
+          caption: "Figure 9.1: Confirmed dashboard capture revealing 23.85x purchase performance metrics, exact budget configuration, and pixel tracking data loops.",
+          color: "pink" // 👈 Automated dynamic color selection match for footer snap
+        }
+      ]
+    }
+  },
+// ========================================================
+  // 🔥 HOME & LIVING BRAND E-COMMERCE (PAID SOCIAL CASE STUDY)
+  // ========================================================
+  {
+    slug: "home-living-ecommerce",
+    category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
+    isSocial: true,
+    title: "Premium Home & Living Brand",
+    description: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
+    primaryOutcome: "25.10x Purchase ROAS",
+    image: "/roas.jpg", // 👈 Top Image Path for your Home & Living Asset
+    metrics: [
+      { value: "25.10x", label: "Average Purchase ROAS generated", highlight: true },
+      { value: "$239,392", label: "Total Website Purchases Conversion Value", highlight: false },
+      { value: "2,752", label: "Total Website Purchases captured", highlight: false },
+      { value: "$9,537", label: "Total Amount Spent on social advertising", highlight: false }
+    ],
+    sections: [
+      {
+        id: "01",
+        tag: "Context",
+        title: "THE CHALLENGE",
+        theme: "dark",
+        paragraphs: [
+          "Our eCommerce client, a premium Home & Living brand, approached us looking to optimize their paid social media advertising, scale conversion volume, and dramatically increase their return on ad spend (ROAS) during a pivotal market period.",
+          "Despite offering high-fidelity, artisan-quality products, the brand's digital presence was facing significant market friction.",
+          "Their previous social media campaigns suffered from inconsistent ad spend efficiency, ad fatigue among core audiences, and an overall lack of sophisticated funnel structure. Customer acquisition costs were volatile, and the brand was struggling to turn browsers into committed buyers.",
+          "The challenge was to transition the account away from inefficient ad spend and build a high-performing, data-driven paid social funnel. The brand required a targeted social media marketing strategy capable of identifying and converting high-intent segments while systematically scaling revenue and profitability."
+        ]
+      },
+      {
+        id: "02",
+        tag: "Roadmap",
+        title: "THE STRATEGY",
+        subtitle: "Full-Funnel Technical Architecture & Optimization",
+        theme: "variant",
+        paragraphs: [
+          "To achieve industry-leading performance and unlock hyper-efficient scaling, we deployed a multi-channel, conversion-focused paid social marketing and user experience strategy.",
+          "The first priority was ensuring flawless conversion tracking and data fidelity to allow algorithmic ad optimization to function at peak efficiency."
+        ],
+        featuresHeader: "Key Improvements Included:",
+        features: [
+          "Extensive Conversion API (CAPI) and advanced server-side pixel tracking integration",
+          "Precise setup of deduplicated conversion events across all e-commerce funnel micro-steps",
+          "Implementation of custom data-layer tracking tailored around key purchase behavior",
+          "Website and landing page optimization to decrease drop-offs between ad clicks and views",
+          "Structuring product catalog feeds to allow dynamic retargeting to function perfectly",
+          "Streamlining checkout flows to eradicate friction and boost purchase completion rates",
+          "Technical tuning of product landing pages for optimal mobile-first browsing experience"
+        ],
+        conclusion: "This robust data baseline ensured ad spend was instantly funneled into the highest-yielding audiences and creative formats."
+      },
+      {
+        id: "03",
+        tag: "Execution",
+        title: "Hyper-Targeted Audiences & High-Impact Creative",
+        theme: "dark",
+        paragraphs: [
+          "To outpace competitors in the visual-first Home & Living vertical, we built a target-rich audience architecture paired with aesthetic, direct-response creative assets."
+        ],
+        featuresHeader: "Activities Included:",
+        features: [
+          "Creation of premium Lookalike Audiences (LLAs) based on historical high-lifetime-value (LTV) buyers",
+          "Systematic structural separation of TOFU prospecting from BOFU dynamic remarketing",
+          "Setup of layered custom audiences targeting recent website browsers, cart-abandoners, and view-content segments",
+          "Strategic deployment of User Generated Content (UGC) ad styles demonstrating product functionality and lifestyle appeal",
+          "A/B testing of varied direct-response hooks, ad copy angles, and strong call-to-actions (CTAs)"
+        ],
+        conclusion: "By feeding the algorithms clean, warm audiences and engaging, conversion-optimized creative, we rapidly lower acquisition costs and boosted conversion volume."
+      },
+      {
+        id: "04",
+        tag: "Optimization",
+        title: "Continuous ROAS Scaling & Efficiency Refinement",
+        theme: "variant",
+        paragraphs: [
+          "The final pillar focused strictly on aggressively scaling budgets while continuously protecting the account's massive profitability metrics."
+        ],
+        featuresHeader: "Growth Optimisation Included:",
+        features: [
+          "Dynamic budget re-allocation to high-performing ad sets utilizing advanced scaling mechanics",
+          "Systematic creative refresh cadences to preemptively combat ad fatigue across target regions",
+          "Ongoing product landing page conversion optimization to squeeze the maximum revenue from every single ad click",
+          "Segmenting placement and device optimization to eliminate wasted ad spend in lower-yielding zones"
+        ],
+        conclusion: "This constant, disciplined operational loop allowed us to scale the brand's budget smoothly while securing incredibly high performance across the entire funnel."
+      }
+    ],
+    results: {
+      id: "05",
+      tag: "Impact",
+      title: "THE RESULTS",
+      description: "The Home & Living marketing campaign achieved elite levels of advertising efficiency, generating immense retail revenue from a very efficient ad budget.",
+      cards: [
+        {
+          badge: "Conversion Efficiency",
+          value: "25.10x",
+          label: "Average Purchase ROAS",
+          desc: "The ad campaigns operated at an extraordinary level of efficiency, returning over $25 in revenue for every single dollar invested in social media advertising.",
+          isEmerald: false // Pink layout color sync for core efficiency scale
+        },
+        {
+          badge: "Revenue Scale",
+          value: "$239,392",
+          label: "Total Conversion Value",
+          desc: "Paid acquisition channels drove massive business scale, generating nearly a quarter-million dollars ($239,392.35) in tracked top-line retail revenue via 2,752 verified website purchases.",
+          isEmerald: true // Emerald green theme to balance the pure conversion value metrics
+        }
+      ],
+      additionalHeader: "Additional Improvements:",
+      additionalImprovements: [
+        "Drastic inflation of local and digital brand market authority within the Home & Living vertical",
+        "Accumulation of massive custom retargeting and lookalike audience data pools for future scaling",
+        "Highly efficient Customer Acquisition Cost (CAC) metrics achieved during competitive market periods",
+        "Improved conversion flow tracking, providing long-term predictability for ad scaling and inventory management"
+      ],
+      conclusionTitle: "TURNING AD SPEND INTO A HIGH-PROFIT REVENUE ENGINE",
+      conclusionParagraphs: [
+        "This campaign stands as definitive proof of how a specialized, data-centric paid social media marketing strategy can completely transform an eCommerce brand’s profitability baseline.",
+        "By successfully marrying high-fidelity conversion signals, constant creative optimization, and calculated audience segmentation, we converted a very efficient advertising investment of $9,537.40 into a quarter-million dollar sales channel.",
+        "The Home & Living brand now commands a highly optimized, predictable digital asset engineered to dominate search and social feeds, maximize conversion margins, and lock in long-term e-commerce success."
+      ]
+    },
+    proof: {
+      header: "Verified Business Manager Analytics Proof:",
+      subheader: "Live ROAS dashboards and storefront checkout parameters tracking order scale velocity.",
+      images: [
+        {
+          src: "/roas-results.jpg", // 👈 Bottom Snapshot Image Path (Meta Ads Performance Matrix)
+          alt: "Meta Ads Manager dashboard tracking conversions, scale hooks, and performance attribution loops for Home & Living store.",
+          caption: "Figure 10.1: Verified funnel performance capture revealing 25.10x purchase ROAS metrics and pixel tracking data loops.",
+          color: "pink" // 👈 Automated dynamic color selection match for footer snap
+        }
+      ]
+    }
+  },
+
+
 
 ];

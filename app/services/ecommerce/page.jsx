@@ -120,18 +120,17 @@ export default function WebDevPage() {
 
 
               {/* Main Typography Block with Tight Line Height - Fixed Spelling "Development" */}
-              <h1 className="text-[3rem] uppercase md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] uppercase  font-black tracking-tighter leading-[0.8] text-white mb-8">
-                AI-Powered
-                {" "}
-                <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  eCommerce Agency
-                </span>
-              </h1>
+            <h1 className="text-[3rem] uppercase md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.9] text-white mb-6">
+  AI-Powered{" "}
+  <span className="inline bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text uppercase">
+    eCommerce Agency
+  </span>
+</h1>
 
-              {/* Description Paragraph - Aligned perfectly with global layout standards */}
-              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
-                Scale your online storefront with our data-driven e-commerce solutions. We build high-converting shopping experiences, optimize your product pipelines, and launch targeted marketing strategies that maximize your digital sales
-              </p>
+{/* Description Paragraph - Width fully matching the heading stretch boundary */}
+<p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full mx-auto lg:mx-0 opacity-80">
+  Scale your online storefront with our data-driven e-commerce solutions. We build high-converting shopping experiences, optimize your product pipelines, and launch targeted marketing strategies that maximize your digital sales.
+</p>
             </div>
           </div>
         </div>
@@ -311,7 +310,7 @@ export default function WebDevPage() {
 
 
       {/* CTA   */}
-       <ServiceCTA />
+      <ServiceCTA />
 
 
 
@@ -470,7 +469,7 @@ export default function WebDevPage() {
 
                   {/* Title Header */}
                   <div className="space-y-2 flex-grow relative z-10 pt-6">
-                    <h3 className="text-[16px] 2xl:text-xl font-black text-white group-hover:text-white transition-colors leading-tight">
+                    <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-white transition-colors leading-tight">
                       {p.title}
                     </h3>
                   </div>
@@ -618,8 +617,8 @@ export default function WebDevPage() {
 
       <Testimonials />
       {/* Core experties  */}
-         {/* <EcommerceFAQ /> */}
-<ContentFAQ />
+      {/* <EcommerceFAQ /> */}
+      <ContentFAQ />
       <TrustClient />
 
     </main>
