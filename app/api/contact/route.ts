@@ -1,11 +1,20 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// 🔐 Secret API Key initialized from .env.local
-const resend = new Resend(process.env.RESEND_API_KEY);
+// 🎯 Build crash check: Agar key na mile to dummy text pass hoga taake production build successfully pass ho jaye
+const apiKey = process.env.RESEND_API_KEY;
+const resend = new Resend(apiKey || "re_dummy_key_for_build_validation");
 
 export async function POST(req: Request) {
   try {
+    // 🎯 Runtime check: Agar asli key configuratons mein miss ho to request par crash hone ke bajaye safly respond kare
+    if (!apiKey) {
+      return NextResponse.json(
+        { success: false, error: "Resend API Key is missing on the server configuration. Please add it to Netlify environment variables." },
+        { status: 500 }
+      );
+    }
+
     const body = await req.json();
     const { name, email, phone, service, subject, message } = body;
 
