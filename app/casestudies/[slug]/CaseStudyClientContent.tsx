@@ -76,66 +76,124 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
       {/* ========================================================
     📊 2. PROJECT INTRO: Pure Black Canvas Layout (Balanced Gap)
     ======================================================== */}
-      <section className="w-full bg-[#030303] py-20 border-t border-white/[0.02]">
-        <div className="max-w-7xl mx-auto px-6">
-          {/* Grid setup with proper top items alignment */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section className="w-full bg-[#030303] py-20 border-t border-white/[0.02]">
+  <div className="max-w-7xl mx-auto px-6 space-y-16">
+    
+    {/* ⚡ 1. TOP BLOCK: Picture and Main Title Side-by-Side */}
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center animate-fadeIn">
+      
+      {/* LEFT: Large Punchy Typography & Description */}
+      <div className="order-2 lg:order-1 lg:col-span-7 space-y-6">
+        <h2 className="text-[2.3rem] md:text-[2.8rem] lg:text-[3.3rem] 2xl:text-[3.8rem] font-black tracking-tight leading-[1.1] text-white">
+          {project.description}
+        </h2>
+        <div className={`h-1 w-24 ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
+        <p className="text-zinc-300 text-base md:text-lg lg:text-[19px] 2xl:text-xl font-medium leading-relaxed max-w-2xl">
+          Transforming a fragmented digital presence into a high-yielding, conversion-focused revenue engine through data-driven technical optimization.
+        </p>
+      </div>
 
-            {/* LEFT: Project Details Card (🛠️ Sticky implementation balances the height during scroll) */}
-            <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-28 transition-all duration-500 animate-slideUp">
-              {/* Image wrapper with custom aspect ratio to prevent overwelming height */}
-              <div className="relative aspect-[4/3] sm:aspect-square w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                <Image src={project.image} alt={project.title} fill className="object-cover" />
-              </div>
+      {/* RIGHT: Image Adjusted Right Next to the Main Title */}
+      <div className="order-1 lg:order-2 lg:col-span-5 w-full">
+        <div className="relative aspect-[16/11] sm:aspect-[4/3] md:aspect-[16/10] lg:aspect-[4/3] w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-zinc-900 group">
+          <Image 
+            src={project.image} 
+            alt={project.title} 
+            fill 
+            className="object-cover transition-all duration-700 group-hover:scale-[1.02]" 
+            priority
+          />
+          {/* Subtle depth overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
+        </div>
+      </div>
 
-              {/* Clean details card with tight spacing */}
-              <div className="bg-[#0a0a0a] border border-white/[0.08] rounded-2xl p-6 relative overflow-hidden group shadow-xl">
-                <div className={`absolute top-0 left-0 w-1 h-full ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
-                <h3 className="text-lg font-black uppercase tracking-wider text-zinc-300 mb-4">Project Details</h3>
+    </div>
 
-                <div className="space-y-4">
-                  <DetailItem label="Category" value={project.category === 'seo' ? 'Ecommerce SEO' : 'Paid Social'} icon={<Tag size={14} />} />
-                  <DetailItem label="Client" value={project.title} icon={<Globe size={14} />} />
-                  <DetailItem label="Location" value="Australia / Global" icon={<MapPin size={14} />} />
-                  <DetailItem label="Website" value="Multiple Webstacks" icon={<Link2 size={14} />} />
-                </div>
-              </div>
-            </div>
+    {/* ⚡ 2. MIDDLE BLOCK: Premium Performance Metrics Strip */}
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-white/[0.06] animate-fadeIn delay-100">
+      {project.metrics.map((metric, i) => (
+        <div key={i} className="flex flex-col border-l border-zinc-800 pl-5 hover:border-zinc-400 transition-colors duration-300">
+          <span className={`text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none ${
+            metric.highlight ? (isSocial ? 'text-pink-500' : 'text-blue-500') : 'text-white'
+          }`}>
+            {metric.value}
+          </span>
+          <span className="text-[10px] font-bold uppercase tracking-[2px] text-zinc-400 mt-3 block leading-tight">
+            {metric.label}
+          </span>
+        </div>
+      ))}
+    </div>
 
-            {/* RIGHT: Main Punchy Content + Metrics (🛠️ Top started but visually expanded) */}
-            <div className="lg:col-span-8 lg:pt-2 flex flex-col justify-start space-y-12 animate-fadeIn delay-100">
+    {/* 📐 3. BOTTOM BLOCK: Full-Width Dashboard Card with Heading */}
+    <div className="w-full bg-[#0a0a0a] border border-white/[0.08] rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-2xl group animate-slideUp">
+      {/* Top indicator color strip */}
+      <div className={`absolute top-0 left-0 h-1 w-full ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
+      
+      {/* Added Main Heading for Full-Width Details Card */}
+      <div className="mb-6 border-b border-white/[0.04] pb-4">
+        <h3 className="text-lg font-black uppercase tracking-wider text-zinc-300">
+          Project Blueprints & Overview
+        </h3>
+      </div>
 
-              {/* Text Block with elegant block spacing */}
-              <div className="space-y-6 lg:pr-6">
-                <h2 className="text-[2.3rem] md:text-[2.8rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight leading-[1.1] text-white ">
-                  {project.description}
-                </h2>
-                <div className={`h-1 w-24 ${isSocial ? 'bg-pink-500' : 'bg-blue-500'}`} />
-                <p className="text-zinc-300 text-[16px] md:text-lg lg:text-[19px] 2xl:text-xl font-medium leading-relaxed max-w-3xl">
-                  Transforming a fragmented digital presence into a high-yielding, conversion-focused revenue engine through data-driven technical optimization.
-                </p>
-              </div>
-
-              {/* FITTED METRICS STRIP: Clean border separator to anchor the content bottom */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-10 border-t border-white/[0.06]">
-                {project.metrics.map((metric, i) => (
-                  <div key={i} className="flex flex-col border-l border-zinc-800 pl-5 hover:border-zinc-400 transition-colors duration-300">
-                    <span className={`text-4xl md:text-5xl lg:text-6xl font-black tracking-tighter leading-none ${metric.highlight ? (isSocial ? 'text-pink-500' : 'text-blue-500') : 'text-white'
-                      }`}>
-                      {metric.value}
-                    </span>
-                    <span className="text-[10px] font-bold uppercase tracking-[2px] text-zinc-400 mt-3 block leading-tight">
-                      {metric.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-            </div>
-
+      {/* Grid Content */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center text-left">
+        
+        {/* Detail 1: Category */}
+        <div className="flex items-center gap-4">
+          <div className={`p-3 rounded-xl bg-zinc-900 border border-white/5 ${isSocial ? 'text-pink-500' : 'text-blue-500'}`}>
+            <Tag size={18} />
+          </div>
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Category</span>
+            <span className="text-sm md:text-base font-black text-zinc-200">
+              {project.category === 'seo' ? 'Ecommerce SEO' : 'Paid Social'}
+            </span>
           </div>
         </div>
-      </section>
+
+        {/* Detail 2: Client */}
+        <div className="flex items-center gap-4">
+          <div className={`p-3 rounded-xl bg-zinc-900 border border-white/5 ${isSocial ? 'text-pink-500' : 'text-blue-500'}`}>
+            <Globe size={18} />
+          </div>
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Client</span>
+            <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[180px] block">
+              {project.title}
+            </span>
+          </div>
+        </div>
+
+        {/* Detail 3: Location */}
+        <div className="flex items-center gap-4">
+          <div className={`p-3 rounded-xl bg-zinc-900 border border-white/5 ${isSocial ? 'text-pink-500' : 'text-blue-500'}`}>
+            <MapPin size={18} />
+          </div>
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Location</span>
+            <span className="text-sm md:text-base font-black text-zinc-200">Australia / Global</span>
+          </div>
+        </div>
+
+        {/* Detail 4: Website */}
+        <div className="flex items-center gap-4">
+          <div className={`p-3 rounded-xl bg-zinc-900 border border-white/5 ${isSocial ? 'text-pink-500' : 'text-blue-500'}`}>
+            <Link2 size={18} />
+          </div>
+          <div>
+            <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Website</span>
+            <span className="text-sm md:text-base font-black text-zinc-200">Multiple Webstacks</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* ========================================================
           🔄 3. DYNAMIC SECTIONS: Alternating Colors (Black vs #020617)

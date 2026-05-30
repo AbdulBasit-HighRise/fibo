@@ -37,28 +37,28 @@ export const projects = [
     title: "Doctors Of Osteo",
     category: "web",
     image: "/web4.jpg",
-    liveUrl: "https://fintech-banking-core.vercel.app"
+    liveUrl: "https://www.doctorsofosteo.com.au/"
   },
   {
     slug: "feeding-fussy-kids",
     title: "Feeding Fussy Kids",
     category: "web",
     image: "/web5.jpg",
-    liveUrl: "https://saas-crm-flow.vercel.app"
+    liveUrl: "https://feedingfussykids.com/"
   },
   {
     slug: "fund-me",
     title: "Fund Me",
     category: "web",
     image: "/web6.jpg",
-    liveUrl: "https://ai-prompt-market.vercel.app"
+    liveUrl: "https://fundme.nz/"
   },
   {
     slug: "mango-credit",
     title: "Mango Credit",
     category: "web",
     image: "/web7.jpg",
-    liveUrl: "https://mangocredit.com/"
+    liveUrl: "https://mangocredit.com.au/"
   },
   {
     slug: "car-recovery",
@@ -76,10 +76,10 @@ export const projects = [
   },
   {
     slug: "rino-roofing",
-    title: "Rino Roofer",
+    title: "Rhino Roofing Orlando",
     category: "web",
     image: "/web10.jpg",
-    liveUrl: "https://rhinoroofer.com/"
+    liveUrl: "https://rhinoroofingorlando.com/"
   },
 
   // --- SEO PERFORMANCE CAMPAIGNS (6 Projects) ---
@@ -157,7 +157,6 @@ const filters = [
 export default function PortfolioPage() {
   const [active, setActive] = useState("all");
 
-  // Aapke original array se absolute filters control mapping
   const filtered = active === "all" ? projects : projects.filter(p => p.category === active);
 
   return (
@@ -211,17 +210,18 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 2. PREMIUM FILTER CONTROL CONTROLLER (Centered Perfectly) */}
+      {/* 2. PREMIUM FILTER CONTROL CONTROLLER */}
       <section className="w-full px-6 mb-16 relative z-30 flex justify-center mt-6">
         <div className="flex flex-wrap gap-1.5 bg-zinc-900/60 p-1.5 rounded-xl border border-white/5 backdrop-blur-xl shadow-2xl items-center justify-center">
           {filters.map((f) => (
             <button
               key={f.id}
               onClick={() => setActive(f.id)}
-              className={`px-5 py-2 rounded-lg text-[10px] font-mono uppercase tracking-wider font-bold transition-all duration-300 ${active === f.id
+              className={`px-5 py-2 rounded-lg text-[10px] font-mono uppercase tracking-wider font-bold transition-all duration-300 ${
+                active === f.id
                   ? "bg-blue-600 text-white shadow-lg shadow-blue-600/10"
                   : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
-                }`}
+              }`}
             >
               {f.label}
             </button>
@@ -229,11 +229,12 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 3. PREMIUM FULL PAGE 2-COLUMN PICTURE DISPLAY WITH HOVER TEXT REVEAL */}
-      <section className="w-full px-4 md:px-12 max-w-none relative z-20">
+      {/* 3. PREMIUM 3-COLUMN COMPACT CARDS GRID WITH CONSTANT CLEAR TITLES */}
+      <section className="w-full px-6 md:px-16 max-w-[1600px] mx-auto relative z-20">
         <motion.div
           layout
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 w-full"
+          // 🎯 FIXED: Grid updated from cols-2 to cols-3 for sleeker, smaller desktop card layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((item) => {
@@ -248,48 +249,40 @@ export default function PortfolioPage() {
                   transition={{ duration: 0.35, ease: "easeOut" }}
                   className="w-full flex flex-col group cursor-pointer"
                 >
-                  {/* Dynamic Scaled Image Block with Signature Top-Right Curve */}
-                  <div className="aspect-[16/10] w-full rounded-2xl rounded-tr-[45px] overflow-hidden mb-4 border border-white/[0.04] relative bg-zinc-900 shadow-2xl">
+                  {/* Image wrapper with high aspect ratio */}
+                  <div className="aspect-[16/10] w-full rounded-2xl rounded-tr-[35px] overflow-hidden mb-4 border border-white/[0.04] relative bg-zinc-900 shadow-xl">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-w-768px) 100vw, 50vw"
-                      className="object-cover transition-all duration-700 group-hover:scale-[1.02]"
+                      sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+                      className="object-cover transition-all duration-700 group-hover:scale-[1.03]"
                       priority
                     />
 
                     {/* Dark depth masking layer */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent opacity-60" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/50 via-transparent to-transparent opacity-80" />
 
                     {/* Meta Performance Floating Dot Badge */}
                     <div className="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-md p-1.5 flex items-center justify-center">
-                      <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${item.category === "web" ? "bg-emerald-400" : item.category === "seo" ? "bg-blue-400" : "bg-purple-400"
-                        }`} />
+                      <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                        item.category === "web" ? "bg-emerald-400" : item.category === "seo" ? "bg-blue-400" : "bg-purple-400"
+                      }`} />
                     </div>
                   </div>
 
-                  {/* 🎭 Reveal On Hover Information Wrapper */}
-                  <div className="px-2 overflow-hidden transition-all duration-500 max-h-7 group-hover:max-h-24 opacity-80 group-hover:opacity-100 transform translate-y-0 group-hover:translate-y-0.5">
-                    <div className="flex items-center justify-between pt-1">
-                      <h3 className="text-base md:text-lg font-black tracking-wider text-white group-hover:text-blue-400 transition-colors duration-300">
+                  {/* 🎯 FIXED: Text area is now fully visible, larger, and cleanly styled without any truncation bugs */}
+                  <div className="px-1 w-full mt-1">
+                    <div className="flex items-start justify-between gap-3">
+                      <h3 className="text-[17px] sm:text-lg md:text-xl font-black tracking-wide text-zinc-100 leading-snug group-hover:text-blue-400 transition-colors duration-300">
                         {item.title}
                       </h3>
 
-                      {/* Arrow Icon fades & slides in seamlessly on hover */}
-                      <div className="opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-blue-400 shrink-0">
-                        {isWeb && item.liveUrl ? <ExternalLink size={15} /> : <ArrowUpRight size={15} />}
+                      {/* Arrow Icon handles layout beautifully */}
+                      <div className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 text-blue-400 shrink-0 pt-1">
+                        {isWeb && item.liveUrl ? <ExternalLink size={16} /> : <ArrowUpRight size={16} />}
                       </div>
                     </div>
-
-                    {/* Animated subtitle details text that shows on hover */}
-                    <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      {item.category === "web"
-                        ? "Engineering / Live Interface"
-                        : item.category === "seo"
-                          ? "Marketing / Search Optimization"
-                          : "Social Media / Performance Campaign"}
-                    </p>
                   </div>
 
                 </motion.div>

@@ -76,11 +76,10 @@ export default function JuicerReviews() {
 
         </div>
 
-        {/* 🔥 Infinite Marquee Slider (Cleaned & Optimized Large Size) */}
+        {/* 🔥 Infinite Marquee Slider (Shadows Removed - Style Untouched) */}
         <div className="relative w-full overflow-hidden flex items-center">
-          {/* Edge Fading Gradients */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-[#030303] to-transparent z-20 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-[#030303] to-transparent z-20 pointer-events-none" />
+          
+          {/* ❌ Left and Right black shadow overlay divs removed from here */}
 
           {/* Track Animation at perfect slow speed */}
           <div
@@ -90,7 +89,7 @@ export default function JuicerReviews() {
             {doubledReviews.map((review, index) => (
               <div
                 key={`${review.id}-${index}`}
-                className="w-[450px] md:w-[540px] lg:w-[600px] shrink-0 rounded-2xl border border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-2 overflow-hidden shadow-[0_20px_40px_-20px_rgba(0,0,0,0.9)] hover:border-blue-500/20 hover:scale-[1.01] transition-all duration-500 group"
+                className="w-[450px] md:w-[540px] lg:w-[600px] shrink-0 rounded-2xl border border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-2 overflow-hidden hover:border-blue-500/20 hover:scale-[1.01] transition-all duration-500 group"
               >
                 <div className="relative w-full overflow-hidden rounded-xl bg-zinc-950/20">
                   <img
