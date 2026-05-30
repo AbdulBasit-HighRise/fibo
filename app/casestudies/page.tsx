@@ -85,37 +85,37 @@ export const projects = [
   // --- SEO PERFORMANCE CAMPAIGNS (6 Projects) ---
   {
     slug: "rhino-orlando",
-    title: "Rhino Roofing Orlando Scale",
+    title: "170% Leads Increased For Roofing Company",
     category: "seo",
     image: "/rino-roffers.jpg"
   },
   {
     slug: "breez-care",
-    title: "Breez Care",
+    title: "+11% Total Sales Revenue Increased For Oral Care Brand",
     category: "seo",
     image: "/smile-care.jpg"
   },
   {
     slug: "west-london-cleaners",
-    title: "West London Cleaning Company",
+    title: "+28% Organic Traffic Increase For Local Cleaning Company",
     category: "seo",
     image: "/cleaning.jpg"
   },
   {
     slug: "australia-restaurant-seo",
-    title: "Local Restaurant Australia",
+    title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     category: "seo",
     image: "/burger.jpg"
   },
   {
     slug: "aesthetic-clinic-seo",
-    title: "Aesthetic Clinic",
+    title: "+1.76K Leads For Aesthetic Clinic",
     category: "seo",
     image: "/clinic.jpg"
   },
   {
     slug: "holistic-doctor-clinic",
-    title: "Holistic Doctor Clinic",
+    title: "#1 Position in SERP For Holistic Doctor Clinic",
     category: "seo",
     image: "/dr.jpg"
   },
@@ -123,25 +123,25 @@ export const projects = [
   // --- SOCIAL MEDIA MARKETING PERFORMANCE ---
   {
     slug: "australia-real-estate-social",
-    title: "Victoria Property Network",
+    title: "31% INCREASE IN QUALIFIED PROPERTY LEADS VIA HIGH-INTENT SOCIAL FUNNELS",
     category: "social",
     image: "/realestate.jpg"
   },
   {
     slug: "fitness-brand-ecommerce",
-    title: "Premium Fitness Brand",
+    title: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
     category: "social",
     image: "/gym.jpg"
   },
   {
     slug: "fashion-brand-ecommerce",
-    title: "E-Commerce Fashion Brand",
+    title: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
     category: "social",
     image: "/brand.jpg"
   },
   {
     slug: "home-living-ecommerce",
-    title: "Premium Home & Living Brand",
+    title: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
     category: "social",
     image: "/roas.jpg"
   }
@@ -150,7 +150,7 @@ export const projects = [
 const filters = [
   { id: "all", label: "All Cases" },
   { id: "web", label: "Web Development" },
-  { id: "seo", label: "SEO Strategy" },
+  { id: "seo", label: "SEO " },
   { id: "social", label: "Social Media Marketing" }
 ];
 
@@ -218,11 +218,10 @@ export default function PortfolioPage() {
             <button
               key={f.id}
               onClick={() => setActive(f.id)}
-              className={`px-5 py-2 rounded-lg text-[10px] font-mono uppercase tracking-wider font-bold transition-all duration-300 ${
-                active === f.id
+              className={`px-5 py-2 rounded-lg text-[10px] font-mono uppercase tracking-wider font-bold transition-all duration-300 ${active === f.id
                   ? "bg-blue-600 text-white shadow-lg shadow-blue-600/10"
                   : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
-              }`}
+                }`}
             >
               {f.label}
             </button>
@@ -232,8 +231,8 @@ export default function PortfolioPage() {
 
       {/* 3. PREMIUM FULL PAGE 2-COLUMN PICTURE DISPLAY WITH HOVER TEXT REVEAL */}
       <section className="w-full px-4 md:px-12 max-w-none relative z-20">
-        <motion.div 
-          layout 
+        <motion.div
+          layout
           className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 w-full"
         >
           <AnimatePresence mode="popLayout">
@@ -259,15 +258,14 @@ export default function PortfolioPage() {
                       className="object-cover transition-all duration-700 group-hover:scale-[1.02]"
                       priority
                     />
-                    
+
                     {/* Dark depth masking layer */}
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/40 via-transparent to-transparent opacity-60" />
 
                     {/* Meta Performance Floating Dot Badge */}
                     <div className="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-md p-1.5 flex items-center justify-center">
-                      <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-                        item.category === "web" ? "bg-emerald-400" : item.category === "seo" ? "bg-blue-400" : "bg-purple-400"
-                      }`} />
+                      <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${item.category === "web" ? "bg-emerald-400" : item.category === "seo" ? "bg-blue-400" : "bg-purple-400"
+                        }`} />
                     </div>
                   </div>
 
@@ -277,20 +275,20 @@ export default function PortfolioPage() {
                       <h3 className="text-base md:text-lg font-black tracking-wider text-white group-hover:text-blue-400 transition-colors duration-300">
                         {item.title}
                       </h3>
-                      
+
                       {/* Arrow Icon fades & slides in seamlessly on hover */}
                       <div className="opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300 text-blue-400 shrink-0">
                         {isWeb && item.liveUrl ? <ExternalLink size={15} /> : <ArrowUpRight size={15} />}
                       </div>
                     </div>
-                    
+
                     {/* Animated subtitle details text that shows on hover */}
                     <p className="text-[10px] text-zinc-500 font-mono uppercase tracking-widest mt-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                      {item.category === "web" 
-                        ? "Engineering / Live Interface" 
-                        : item.category === "seo" 
-                        ? "Marketing / Search Optimization" 
-                        : "Social Media / Performance Campaign"}
+                      {item.category === "web"
+                        ? "Engineering / Live Interface"
+                        : item.category === "seo"
+                          ? "Marketing / Search Optimization"
+                          : "Social Media / Performance Campaign"}
                     </p>
                   </div>
 
