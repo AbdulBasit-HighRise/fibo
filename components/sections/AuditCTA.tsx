@@ -71,8 +71,10 @@ export default function AuditCTA() {
 
   return (
     // 🛠️ Premium Padding: Restored healthy vertical height so the section feels premium and spacious
-    <section className="relative w-full overflow-hidden border-y border-white/5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-6 md:px-12 lg:px-20 2xl:px-32 py-12 md:py-16 2xl:py-20">
-      
+    <section className="relative w-full overflow-hidden border-y border-white/5 bg-[#023675]
+    px-6 md:px-12 lg:px-20 2xl:px-32 py-12 md:py-16 2xl:py-20">
+          {/* bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]  */}
+
       {/* 🌌 Background Glows */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[600px] h-[300px] bg-blue-600/[0.06] blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[250px] bg-indigo-600/[0.04] blur-[100px] rounded-full pointer-events-none" />
@@ -105,7 +107,7 @@ export default function AuditCTA() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Business Email"
-                className="w-full h-[46px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white/20 pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
+                className="w-full h-[46px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-white outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
               />
             </div>
 
@@ -118,7 +120,7 @@ export default function AuditCTA() {
                 value={url}
                 onChange={(e) => setUrl(e.target.value)}
                 placeholder="Website URL"
-                className="w-full h-[46px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white/20 pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-zinc-500 outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
+                className="w-full h-[46px] 2xl:h-[54px] rounded-full bg-white/[0.05] border border-white pl-5 pr-5 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-white outline-none transition-all focus:border-blue-500/50 focus:bg-white/[0.08] backdrop-blur-md disabled:opacity-40"
               />
             </div>
 

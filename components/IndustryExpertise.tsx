@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   Home, Hammer, ShoppingBag, Building2, Truck, Car,
@@ -23,10 +23,19 @@ const INDUSTRIES = [
 ];
 
 export default function IndustryExpertise() {
-  const duplicatedIndustries = [...INDUSTRIES, ...INDUSTRIES, ...INDUSTRIES];
+  const duplicatedIndustries = [...INDUSTRIES, ...INDUSTRIES, ...INDUSTRIES, ...INDUSTRIES];
+  const dragSliderRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState(0);
+
+  // 🧠 Dragging limits calculate karne ke liye loop container effect
+  useEffect(() => {
+    if (dragSliderRef.current) {
+      setWidth(dragSliderRef.current.scrollWidth - dragSliderRef.current.offsetWidth);
+    }
+  }, []);
 
   return (
-    // 🛠️ Padding reduced to py-8/12 to make it compact
+    // 🛠️ Main Section Component
     <section className="bg-[#030303] text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
@@ -37,27 +46,29 @@ export default function IndustryExpertise() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            /* 🎯 MATCHED DESIGN SYSTEM: Identical responsive sizes, line-height, and safety padding cloned from your core heading framework */
-            className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case pr-4 py-1"
+            className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case pr-4 py-1"
           >
-            Industries We
-            {" "}
-            {/* 🎯 MATCHED GRADIENT BLOCK: Made 'block' with exact top-margin spacing to perfectly sync with your page aesthetic */}
-            <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+            Industries We{" "}
+            <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
               Work With
             </span>
           </motion.h3>
         </div>
       </div>
 
-      <div className="relative flex overflow-hidden py-2 select-none group">
-        {/* Edge Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#030303] to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#030303] to-transparent z-20 pointer-events-none" />
-
+      {/* 🎯 DRAG CONTAINER LAYER: Isme mouse lane par slider pause hoga, aur left-right shadows delete kar diye hain */}
+      <div 
+        ref={dragSliderRef} 
+        className="relative flex overflow-hidden py-4 select-none cursor-grab active:cursor-grabbing w-full px-4"
+      >
         <motion.div
-          className="flex flex-nowrap gap-3 md:gap-5"
-          animate={{ x: ["0%", "-33.33%"] }}
+          className="flex flex-nowrap gap-3 md:gap-5 py-2"
+          animate={{ x: ["0%", "-50%"] }}
+          // 🛑 PAUSE ON HOVER: Jab container par mouse aayega infinite sliding ruk jayegi
+          whileHover={{ animationPlayState: "paused" }}
+          // 🖱️ DRAG SETUP: Isse user mouse click kar ke khud slider piche ya aage khinch sakta hai
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
           transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
         >
           {duplicatedIndustries.map((item, index) => {
@@ -65,20 +76,19 @@ export default function IndustryExpertise() {
             return (
               <div
                 key={index}
-                // 🛠️ Card size reduced for better density, hover gradient added
                 className="flex-shrink-0 w-[140px] h-[150px] md:w-[220px] md:h-[200px] 2xl:w-[320px] 2xl:h-[280px] 
-                           rounded-2xl md:rounded-[2rem] bg-white/[0.02] border border-white/5 
-                           flex flex-col items-center justify-center gap-4 
-                           transition-all duration-500 cursor-pointer group/card 
-                           hover:bg-gradient-to-br hover:from-blue-900/40 hover:to-black hover:border-blue-500/50 hover:-translate-y-1"
+                           rounded-2xl md:rounded-[2rem] border transition-all duration-500 group/card pointer-events-auto
+                           bg-gradient-to-br from-blue-900/40 to-black border-blue-500/50 -translate-y-1
+                           flex flex-col items-center justify-center gap-4 hover:border-cyan-400/80"
               >
-                {/* 🌀 Icon: Made bigger and clear */}
-                <div className="relative">
-                  <Icon className="w-8 h-12 md:w-14 2xl:w-20 text-blue-500 transition-transform duration-700 ease-in-out group-hover/card:rotate-[360deg] group-hover/card:text-white" />
+                {/* 🌀 Icon Wrapper */}
+                <div className="relative overflow-hidden">
+                  {/* 🔄 HOVER ICON SPIN: Default simple text-white hai, mouse lane par spin karega */}
+                  <Icon className="w-8 h-12 md:w-14 2xl:w-16 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg] group-hover/card:text-cyan-400" />
                 </div>
 
-                {/* 🖋️ Text: Smaller and sleek */}
-                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-base 3xl:text-lg font-bold  tracking-[0.15em] md:tracking-[0.2em] text-white-500 transition-colors duration-500 group-hover/card:text-white px-4 text-center leading-tight m-0 p-0">
+                {/* 🖋️ Text Description Element */}
+                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-base font-bold tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0 uppercase group-hover/card:text-cyan-300 transition-colors duration-300">
                   {item.title}
                 </p>
               </div>

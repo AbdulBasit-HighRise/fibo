@@ -75,7 +75,6 @@ export default function Navbar() {
     message: "",
   });
 
-  // 🚀 FIXED: Ab ye mailto open nahi karega balkay direct API hit karega!
   const handleModalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setModalStatus({ loading: true, success: null, message: "" });
@@ -105,10 +104,8 @@ export default function Navbar() {
           message: "Strategy call requested successfully! 🚀",
         });
         
-        // Clear fields
         setModalForm({ name: "", email: "", service: "", message: "" });
 
-        // 🕒 2.5 seconds ke baad automatic modal close ho jayega
         setTimeout(() => {
           setIsProposalOpen(false);
           setModalStatus({ loading: false, success: null, message: "" });
@@ -126,12 +123,12 @@ export default function Navbar() {
     }
   };
 
-  // Static Links aur Services dropdown ko maintain rakha hai
   const baseLinksLeft = [
     { name: "Home", href: "/" },
   ];
 
   const baseLinksRight = [
+    {name: "About", href: "/about"},
     { name: "Case Studies", href: "/casestudies" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
@@ -150,12 +147,14 @@ export default function Navbar() {
     ]
   };
 
-  // 🎯 COMBINED LINKS array: Jo layout order ko tabah nahi karega
   const links = [
     ...baseLinksLeft,
-    ...dynamicLinks, 
+    { name: "About", href: "/about" },
     servicesDropdown,
-    ...baseLinksRight
+    { name: "Case Studies", href: "/casestudies" },
+    { name: "Blog", href: "/blog" },
+    ...dynamicLinks,
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -215,6 +214,7 @@ export default function Navbar() {
             </button>
           </div>
 
+          {/* MOBILE NAV MENU */}
           <AnimatePresence>
             {isOpen && (
               <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="absolute top-full left-0 right-0 bg-[#070707]/95 backdrop-blur-xl border border-white/10 lg:hidden flex flex-col gap-0 p-4 mt-2 rounded-3xl pointer-events-auto shadow-2xl overflow-hidden">
@@ -231,7 +231,8 @@ export default function Navbar() {
                         <motion.div initial={false} animate={{ height: mobileServicesOpen ? "auto" : 0, opacity: mobileServicesOpen ? 1 : 0 }} className="overflow-hidden bg-white/[0.02] rounded-xl mx-2">
                           <div className="flex flex-col py-1 pl-4 border-l border-white/10 my-1 gap-1">
                             {link.subLinks?.map((sub: any) => (
-                              <Link key={sub.name} href={sub.href} className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 hover:text-white py-2.5 px-3 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
+                              // 🎯 FIXED: Updated sublinks styling to look identical to parent navigation elements
+                              <Link key={sub.name} href={sub.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 hover:text-white py-3.5 px-4 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
                             ))}
                           </div>
                         </motion.div>
@@ -255,7 +256,7 @@ export default function Navbar() {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => !modalStatus.loading && setIsProposalOpen(false)} className="absolute inset-0 bg-black/85 backdrop-blur-md" />
             <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative w-full max-w-lg bg-[#070707] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl">
               <div className="absolute top-0 left-0 w-full h-1 bg-blue-600" />
-              <button onClick={() => setIsProposalOpen(false)} disabled={modalStatus.loading} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors disabled:opacity-30"><X size={24} /></button>
+              <button onClick={() => setIsOpen(false)} disabled={modalStatus.loading} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors disabled:opacity-30"><X size={24} /></button>
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Book A Strategy Call</h3>
                 <p className="text-zinc-500 text-xs">Let's build your project together.</p>
@@ -287,11 +288,11 @@ export default function Navbar() {
                   disabled={modalStatus.loading}
                   value={modalForm.service}
                   onChange={(e) => setModalForm({ ...modalForm, service: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-zinc-300 outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all disabled:opacity-40"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[10px] xl:text-[11px] font-bold text-white outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all disabled:opacity-40"
                 >
                   <option value="" disabled className="bg-[#070707] text-zinc-500">Select Service</option>
                   <option value="Web Development" className="bg-[#070707] text-white">Web Development</option>
-                  <option value="SEO Optimization" className="bg-[#070707] text-white">SEO Optimization</option>
+                  <option value="SEO Optimization" className="bg-[#070707] text-white">SEO Optimization</option>  
                   <option value="Social Media Marketing" className="bg-[#070707] text-white">Social Media Marketing</option>
                   <option value="AI Automation" className="bg-[#070707] text-white">AI Automation</option>
                   <option value="Branding" className="bg-[#070707] text-white">Branding</option>

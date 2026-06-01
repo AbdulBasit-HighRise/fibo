@@ -88,7 +88,7 @@ export default function ProvenExcellence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group p-6 md:p-8 2xl:p-12 rounded-2xl md:rounded-3xl border border-white/10 bg-white/[0.03] hover:border-blue-500/50 hover:bg-white/[0.07] transition-all duration-500 relative overflow-hidden shadow-2xl flex flex-col justify-between"
+                className="group p-6 md:p-8 2xl:p-12 rounded-2xl md:rounded-3xl border border-white/10 bg-[#023675] transition-all duration-500 relative overflow-hidden shadow-2xl flex flex-col justify-between"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

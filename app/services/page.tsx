@@ -159,49 +159,51 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 3: SERVICE GRID */}
-     <section className="py-24 2xl:py-40 px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto">
-  <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-6 mb-8 flex items-center gap-4 text-white">
+    <section className="py-16 md:py-24 2xl:py-40 px-4 sm:px-6 max-w-7xl 2xl:max-w-[1600px] mx-auto overflow-hidden">
+  {/* ⚡ FIXED HEADING: Mobile par line hide hogi aur spacing sahi rahegi */}
+  <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-4 md:pb-6 mb-8 flex flex-wrap md:flex-nowrap items-center gap-4 text-white leading-tight">
     Our Complete Range of {" "}
-    <span className="inline-block pb-2 py-1 pr-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+    <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
       Digital Marketing Services
     </span>
-    <div className="h-px bg-white/10 flex-grow animate-pulse" />
+    <div className="hidden md:block h-px bg-white/10 flex-grow animate-pulse" />
   </h3>
 
-  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
     {serviceList.map((service) => (
-      <Link href={`/services/${service.slug}`} key={service.id}>
+      <Link href={`/services/${service.slug}`} key={service.id} className="block h-full">
         <motion.div
           whileHover={{ y: -10 }}
-          className="p-10 2xl:p-16 border border-white/10 bg-[#070b14] rounded-[3rem] group hover:border-blue-500/50 transition-all duration-500 cursor-pointer h-full flex flex-col justify-between relative overflow-hidden"
+          className="p-6 sm:p-8 md:p-10 2xl:p-16 border border-white/10 bg-[#070b14] rounded-[2rem] md:rounded-[3rem] group hover:border-blue-500/50 transition-all duration-500 cursor-pointer h-full flex flex-col justify-between relative overflow-hidden"
         >
-          {/* 🎯 EFFECTS LAYER 1: Slide-Up Background Gradient (Glow Fill Effect) */}
+          {/* 🎯 EFFECTS LAYER 1 */}
           <div className="absolute inset-0 bg-gradient-to-t from-blue-600/15 via-blue-500/[0.02] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-          {/* Foreground content inside relative z-10 for layered separation */}
+          {/* Foreground content */}
           <div className="relative z-10 flex flex-col h-full justify-between w-full">
             <div>
-              {/* Icon aur Title Row Layout */}
-              <div className="flex items-center justify-between gap-5 mb-8 w-full">
+              {/* 🎯 FIXED ROW LAYOUT: Mobile par layout handle karne ke liye justify badla hai */}
+              <div className="flex items-start justify-between gap-4 mb-6 md:mb-8 w-full">
                 
-                {/* Left: Icon aur Title Wrapper */}
-                <div className="flex items-center gap-5">
-                  {/* Icon Box with Scale and Glowing Drop Shadow */}
-                  <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
+                {/* Left side: Icon + Title */}
+                <div className="flex items-center gap-4 sm:gap-5 min-w-0">
+                  {/* Icon Box */}
+                  <div className="shrink-0 w-11 h-11 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 bg-white/[0.03] rounded-xl flex items-center justify-center border border-white/10 group-hover:bg-blue-600/20 group-hover:text-blue-400 group-hover:border-blue-500/50 scale-100 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(59,130,246,0.5)] transition-all duration-500">
                     <div className="text-blue-400 transition-colors duration-500">
                       {service.icon}
                     </div>
                   </div>
 
-                  <h4 className="font-black text-[1.5rem] sm:text-[1.6rem] lg:text-[1.8rem] 2xl:text-[1.9rem] text-white group-hover:text-blue-400 transition-colors leading-tight tracking-tight">
+                  {/* 🎯 FIXED TITLE TEXT: text sizes ko responsive banaya aur break-words lagaya */}
+                  <h4 className="font-black text-[1.25rem] sm:text-[1.5rem] lg:text-[1.8rem] 2xl:text-[1.9rem] text-white group-hover:text-blue-400 transition-colors leading-snug tracking-tight break-words">
                     {service.title}
                   </h4>
                 </div>
 
-                {/* Right: 🎯 Arrow Link Action Icon Layer */}
-                <div className="shrink-0 relative z-10 p-2 overflow-hidden">
+                {/* Right side: Arrow */}
+                <div className="shrink-0 p-1 md:p-2">
                   <ArrowUpRight 
-                    size={24} 
+                    size={22} 
                     className="text-zinc-600 group-hover:text-blue-400 transform transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 ease-out" 
                   />
                 </div>
@@ -210,7 +212,7 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
+          {/* 🎯 EFFECTS LAYER 2 */}
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-blue-500 shadow-[0_0_15px_#3b82f6] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
         </motion.div>
       </Link>

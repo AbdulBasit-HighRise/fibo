@@ -22,7 +22,7 @@ export default function Services() {
     <section className="relative bg-[#030303] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
 
       {/* Background Glows */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-blue-500/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[400px] h-[400px]  pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-400/5 blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">

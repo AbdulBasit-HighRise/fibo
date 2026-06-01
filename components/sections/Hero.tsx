@@ -35,16 +35,16 @@ export default function HeroSection() {
           {/* 📝 LEFT CONTENT (Clean performance load) */}
           <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
 
-            {/* 🖥️ Heading: Perfectly Responsive, Fluid & No Broken Lines */}
-            <h1 className="text-[3rem]  md:text-[2.8rem] lg:text-[3.2rem] 2xl:text-[5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white lg:whitespace-nowrap">
-              Digital{" "} <br />
-              <span className="inline-block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+            {/* 🖥️ Heading: Fixed line wrapping for mobile & desktop perfectly */}
+            <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3.8rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white max-w-2xl lg:max-w-none">
+              Digital{" "}
+              <span className="inline-block lg:block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                 Marketing Agency
               </span>
             </h1>
 
             {/* 🖥️ Paragraph: Adjusted for a clean hierarchy */}
-            <p className="mt-4 text-white-500 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0">
+            <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0 opacity-90">
               We are a results-driven digital marketing agency providing SEO, PPC, social media, and web solutions for businesses across the USA, UK, Australia, UAE, and worldwide markets.
             </p>
 
@@ -73,14 +73,14 @@ export default function HeroSection() {
               </Link>
             </div>
 
-            {/* Social Trust */}
-            <div className="flex items-center gap-3 pt-6 mt-6 border-t border-white/5 w-full max-w-md 2xl:max-w-2xl mx-auto lg:mx-0">
-              <div className="flex items-center gap-1">
+            {/* 🎯 FIXED SOCIAL TRUST BLOCK: Error-free responsive handling */}
+            <div className="flex flex-col-reverse md:flex-row items-center gap-3 pt-6 mt-6 border-t border-white/5 w-full max-w-md 2xl:max-w-2xl mx-auto lg:mx-0 text-center md:text-left">
+              <div className="flex items-center gap-1 justify-center md:justify-start">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={10} className="fill-yellow-500 text-yellow-500 2xl:w-4 2xl:h-4" />
                 ))}
               </div>
-              <p className="text-white-400 font-bold text-[12px] 2xl:text-xs uppercase tracking-widest">
+              <p className="text-white/70 font-bold text-[12px] 2xl:text-xs uppercase tracking-widest">
                 Trusted by 150+ rapid-scale founders
               </p>
             </div>

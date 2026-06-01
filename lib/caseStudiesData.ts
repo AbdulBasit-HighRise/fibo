@@ -1347,7 +1347,7 @@ export const caseStudiesData: CaseStudy[] = [
       subheader: "Live Meta Ads dashboard snapshots and client checkout reports mapping scaling metrics.",
       images: [
         {
-          src: "/brand-result.jpg", // 👈 Bottom Snapshot Image Path (Meta Ads Performance Matrix)
+          src: "/brand-results.jpg", // 👈 Bottom Snapshot Image Path (Meta Ads Performance Matrix)
           alt: "Meta Ads Manager and analytics dashboard showing verified purchase metrics and acquisition scale for fashion brand.",
           caption: "Figure 9.1: Confirmed dashboard capture revealing 23.85x purchase performance metrics, exact budget configuration, and pixel tracking data loops.",
           color: "pink" // 👈 Automated dynamic color selection match for footer snap

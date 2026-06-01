@@ -28,7 +28,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#020617] overflow-hidden border-b border-white/5">
+    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#023675] overflow-hidden border-b border-white/5">
 
       {/* Background Dots & Glow */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
@@ -48,10 +48,9 @@ export default function WhyChooseUs() {
             >
               {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
               <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-                Why Choose
-                <br />
+                Why Choose{" "}
                 {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-                <span className="block  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   High Rise Digital
                 </span>
               </h2>
@@ -87,49 +86,53 @@ export default function WhyChooseUs() {
             </motion.div>
           </div>
           {/* RIGHT SIDE: Cards (Enhanced Contrast & Highly Readable Layout) */}
-          <div className="lg:col-span-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
+       <div className="lg:col-span-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
 
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/20 blur-[100px] rounded-full pointer-events-none" />
+    {/* 🌌 Center Ambient Soft Glow Underlay */}
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-              {features.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl group transition-all duration-500 hover:border-blue-500/50 hover:bg-white/[0.07] flex flex-col justify-between
-                    ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
-                >
-                  <div className="relative z-10 space-y-4 md:space-y-5">
+    {features.map((item, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        viewport={{ once: true }}
+        // 🎯 FIXED: Background is now fully deep solid #030303 with luxury glowing state configurations
+        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/5 bg-[#030303] backdrop-blur-xl group transition-all duration-500 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)] flex flex-col justify-between ${
+          index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''
+        }`}
+      >
+        <div className="relative z-10 space-y-4 md:space-y-5">
 
-                    {/* 🟢 Icon & Heading in ONE Row Line Wrapper */}
-                    <div className="flex items-center gap-4">
-                      <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-white/[0.05] text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-all duration-500">
-                        {item.icon}
-                      </div>
-
-                      {/* Premium Multi-Color Attractive Gradient for Cards Title */}
-                      <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-[1px] uppercase leading-tight bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
-                        {item.title}
-                      </h4>
-                    </div>
-
-                    {/* ⚪ Card Description: Pure White, Big Font Size for Perfect Laptop Readability */}
-                    <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                  {/* Corner Check Icon */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <CheckCircle2 className="text-blue-500 w-4 h-4 2xl:w-6 2xl:h-6" />
-                  </div>
-                </motion.div>
-              ))}
+          {/* 🟢 Icon & Heading Wrapper */}
+          <div className="flex items-center gap-4">
+            {/* Smooth Icon Box */}
+            <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-xl bg-white/[0.03] text-cyan-400 border border-white/5 group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-cyan-400 group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm">
+              {item.icon}
             </div>
+
+            {/* Title Gradient Text */}
+            <h4 className="flex-1 font-black text-[1.0rem] sm:text-[1.1rem] lg:text-[1.1rem] 2xl:text-[1.3rem] tracking-[1px] uppercase leading-tight bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-400 transition-all duration-500">
+              {item.title}
+            </h4>
           </div>
+
+          {/* ⚪ Card Description paragraph */}
+          <p className="text-white text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+            {item.desc}
+          </p>
+        </div>
+
+        {/* Corner Check Icon Indicators */}
+        <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+          <CheckCircle2 className="text-cyan-400 w-4 h-4 2xl:w-5 2xl:h-5" />
+        </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
 
         </div>
       </div>

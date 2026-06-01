@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+// 🎯 FIXED: Missing icons (ArrowUpRight, ExternalLink) successfully imported here
 import { ArrowUpRight, Flame, ExternalLink } from "lucide-react";
 
 // ========================================================
@@ -165,7 +166,6 @@ export default function PortfolioPage() {
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#030712]">
         <div className="w-full">
-
           {/* Background Image Container */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
@@ -185,7 +185,6 @@ export default function PortfolioPage() {
           {/* Full Sized Content Wrapper */}
           <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-16 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pl-80">
             <div className="max-w-5xl">
-
               {/* Glassmorphism Badge Container */}
               <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0">
                 <Flame size={12} className="text-blue-400 animate-pulse" />
@@ -229,83 +228,90 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 3. PREMIUM 3-COLUMN COMPACT CARDS GRID WITH CONSTANT CLEAR TITLES */}
-      <section className="w-full px-6 md:px-16 max-w-[1600px] mx-auto relative z-20">
-        <motion.div
-          layout
-          // 🎯 FIXED: Grid updated from cols-2 to cols-3 for sleeker, smaller desktop card layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
-        >
-          <AnimatePresence mode="popLayout">
-            {filtered.map((item) => {
-              const isWeb = item.category === "web";
+  {/* 🎯 PREMIUM 3-COLUMN LUXURY BENTO GRID */}
+<section className="w-full px-4 sm:px-6 md:px-16 max-w-[1400px] mx-auto relative z-20 py-12">
+  <motion.div
+    layout
+    // 🎯 FIXED: Grid layout altered seamlessly from 2 to 3 columns on desktop views
+    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
+  >
+    <AnimatePresence mode="popLayout">
+      {filtered.map((item) => {
+        const isWeb = item.category === "web";
 
-              const CardContent = (
-                <motion.div
-                  layout
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -15 }}
-                  transition={{ duration: 0.35, ease: "easeOut" }}
-                  className="w-full flex flex-col group cursor-pointer"
-                >
-                  {/* Image wrapper with high aspect ratio */}
-                  <div className="aspect-[16/10] w-full rounded-2xl rounded-tr-[35px] overflow-hidden mb-4 border border-white/[0.04] relative bg-zinc-900 shadow-xl">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
-                      className="object-cover transition-all duration-700 group-hover:scale-[1.03]"
-                      priority
-                    />
+        const CardContent = (
+          <motion.div
+            layout
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+            // 🔄 UPGRADED HOVER EFFECTS: Dynamic lift, active glass intensity, and deep glow shadows applied below
+            className="w-full flex flex-col group cursor-pointer relative rounded-3xl p-3 bg-zinc-900/30 border border-white/[0.05] hover:border-blue-500/40 hover:bg-zinc-900/60 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_rgba(0,112,255,0.1)] transition-all duration-500 backdrop-blur-sm h-full justify-between"
+          >
+            <div>
+              {/* Image wrapper with Cinematic Aspect Ratio */}
+              <div className="aspect-[16/9.5] w-full rounded-2xl overflow-hidden mb-5 border border-white/[0.03] relative bg-[#070b14] shadow-xl">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06] filter brightness-[0.85] group-hover:brightness-100"
+                  priority
+                />
 
-                    {/* Dark depth masking layer */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/50 via-transparent to-transparent opacity-80" />
+                {/* Ambient Deep Depth Vignette overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
 
-                    {/* Meta Performance Floating Dot Badge */}
-                    <div className="absolute top-4 left-4 bg-zinc-950/80 backdrop-blur-md border border-white/10 rounded-md p-1.5 flex items-center justify-center">
-                      <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-                        item.category === "web" ? "bg-emerald-400" : item.category === "seo" ? "bg-blue-400" : "bg-purple-400"
-                      }`} />
-                    </div>
+                {/* 🔥 LUXURY BADGE: Smooth floating status indicator */}
+                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 transform transition-transform duration-500 group-hover:translate-x-1">
+                  <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                    item.category === "web" ? "bg-cyan-400 shadow-[0_0_8px_#22d3ee]" : item.category === "seo" ? "bg-blue-400 shadow-[0_0_8px_#60a5fa]" : "bg-purple-400 shadow-[0_0_8px_#c084fc]"
+                  }`} />
+                  <span className="text-[9px] uppercase tracking-widest font-black text-white/80">
+                    {item.category}
+                  </span>
+                </div>
+              </div>
+
+              {/* Typography Content Area */}
+              <div className="px-3 w-full pb-3">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-[18px] sm:text-xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 leading-snug">
+                    {item.title}
+                  </h3>
+
+                  {/* Micro-interactive Action trigger container */}
+                  <div className="w-8 h-8 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-cyan-400 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/40 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 mt-0.5">
+                    {isWeb && item.liveUrl ? <ExternalLink size={14} /> : <ArrowUpRight size={14} />}
                   </div>
+                </div>
+              </div>
+            </div>
 
-                  {/* 🎯 FIXED: Text area is now fully visible, larger, and cleanly styled without any truncation bugs */}
-                  <div className="px-1 w-full mt-1">
-                    <div className="flex items-start justify-between gap-3">
-                      <h3 className="text-[17px] sm:text-lg md:text-xl font-black tracking-wide text-zinc-100 leading-snug group-hover:text-blue-400 transition-colors duration-300">
-                        {item.title}
-                      </h3>
+            {/* 🔥 PREMIUM LASER AURA UNDERLAY: Bottom glow strip animation */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out shadow-[0_0_20px_#06b6d4] z-10" />
+          </motion.div>
+        );
 
-                      {/* Arrow Icon handles layout beautifully */}
-                      <div className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 text-blue-400 shrink-0 pt-1">
-                        {isWeb && item.liveUrl ? <ExternalLink size={16} /> : <ArrowUpRight size={16} />}
-                      </div>
-                    </div>
-                  </div>
+        if (isWeb && item.liveUrl) {
+          return (
+            <a href={item.liveUrl} key={item.slug} target="_blank" rel="noopener noreferrer" className="block h-full">
+              {CardContent}
+            </a>
+          );
+        }
 
-                </motion.div>
-              );
-
-              // Conditional routing setup depending upon deployment nature
-              if (isWeb && item.liveUrl) {
-                return (
-                  <a href={item.liveUrl} key={item.slug} target="_blank" rel="noopener noreferrer" className="block h-full">
-                    {CardContent}
-                  </a>
-                );
-              }
-
-              return (
-                <Link href={`/casestudies/${item.slug}`} key={item.slug} className="block h-full">
-                  {CardContent}
-                </Link>
-              );
-            })}
-          </AnimatePresence>
-        </motion.div>
-      </section>
+        return (
+          <Link href={`/casestudies/${item.slug}`} key={item.slug} className="block h-full">
+            {CardContent}
+          </Link>
+        );
+      })}
+    </AnimatePresence>
+  </motion.div>
+</section>
 
     </main>
   );

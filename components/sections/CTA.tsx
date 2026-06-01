@@ -5,7 +5,9 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="relative w-full overflow-hidden border-t border-b border-white/5 bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] px-4 sm:px-6 md:px-8 lg:px-16 2xl:px-24 py-10 md:py-14 2xl:py-20">
+    <section className="relative w-full overflow-hidden border-t border-b border-white/5 
+    bg-[#023675]
+     px-4 sm:px-6 md:px-8 lg:px-16 2xl:px-24 py-10 md:py-14 2xl:py-20">
       
       {/* 🌌 Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] 2xl:w-[1200px] h-[200px] 2xl:h-[300px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
@@ -24,7 +26,7 @@ export default function CTA() {
   </h3>
   
   {/* 🎯 GLOBAL TEXT SIZE SYSTEM (Locked to 1-Line on Desktop) */}
-  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-none lg:whitespace-nowrap opacity-80 antialiased tracking-wide">
+  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-none lg:whitespace-nowrap  antialiased tracking-wide">
     Transform your ideas into digital reality with our expert marketing and design strategies.
   </p>
 </div>
@@ -53,7 +55,7 @@ export default function CTA() {
               <Phone className="w-3.5 h-3.5 text-blue-400 sm:w-5 sm:h-5 2xl:w-6 2xl:h-6 group-hover:scale-110 transition-transform" />
             </div>
             <div className="flex flex-col">
-              <span className="text-[8px] sm:text-[10px] 2xl:text-xs text-zinc-500 font-bold uppercase tracking-widest leading-none mb-1 2xl:mb-1.5">Talk to experts</span>
+              <span className="text-[8px] sm:text-[10px] 2xl:text-xs text-white font-bold uppercase tracking-widest leading-none mb-1 2xl:mb-1.5">Talk to experts</span>
               <span className="text-xs sm:text-base md:text-lg 2xl:text-2xl text-white font-black tracking-tight group-hover:text-blue-400 transition-colors">
                 +923002777587
               </span>

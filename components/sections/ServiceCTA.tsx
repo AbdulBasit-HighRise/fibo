@@ -214,19 +214,20 @@ export default function ConsultationCTA() {
             </div>
 
             {/* RIGHT SIDE IMAGE */}
-            <div className="relative h-full min-h-[620px] hidden lg:block">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-transparent" />
-              <div className="absolute inset-y-10 right-10 left-0 rounded-tl-[180px] rounded-bl-[180px] rounded-tr-[40px] rounded-br-[40px] bg-gradient-to-br from-blue-500/20 to-cyan-400/20 border border-white/10 overflow-hidden">
-                <Image
-                  src="/contact-png.png"
-                  alt="Consultation Team"
-                  fill
-                  priority
-                  className="object-contain object-bottom scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/50 via-transparent to-transparent" />
-              </div>
-            </div>
+      {/* RIGHT IMAGE */}
+<div className="hidden lg:flex items-end justify-center relative min-h-[600px]">
+
+  {/* Shape */}
+  <div className="absolute bottom-0 right-0 w-[80%] h-[65%] bg-blue-500/10 rounded-tl-[180px] rounded-tr-[40px]" />
+
+  {/* Image */}
+  <img
+    src="/contact-png.png"
+    alt="Team"
+    className="relative z-10 max-h-[600px] w-auto"
+  />
+
+</div>
 
           </div>
         </div>
