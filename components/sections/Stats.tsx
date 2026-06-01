@@ -40,7 +40,7 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
     <motion.div
       ref={ref}
       whileHover="hover"
-      className="group relative flex flex-col items-center justify-center py-10 md:py-12 2xl:py-20 px-4 transition-all duration-500 overflow-hidden cursor-default"
+      className="group relative flex flex-col items-center justify-center py-10 md:py-12 2xl:py-20 px-4 transition-all duration-500 overflow-hidden cursor-default rounded-[2rem]"
     >
       {/* 🎨 HOVER COLOR FILL: Niche se upar fill hone wala gradient */}
       <motion.div
@@ -81,15 +81,14 @@ const StatItem = ({ value, label, icon, suffix = "+" }: StatProps) => {
 
 export default function Stats() {
   return (
-    // 🛠️ PADDING TIGHT: py-6 (mobile) aur py-10 (desktop) kar diya hai
-    <section className="relative py-6 md:py-10 2xl:py-16 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303]       border-t border-b border-white/5 overflow-hidden">
+    <section className="relative py-6 md:py-10 2xl:py-16 bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] border-t border-b border-white/5 overflow-hidden">
 
       <div className="absolute inset-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:25px_25px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl 2xl:max-w-[100rem] mx-auto px-6">
 
         <div className="text-center mb-6 md:mb-8 2xl:mb-12">
-          <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
+          <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
             Some {" "}
             <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Facts About Us
@@ -97,14 +96,16 @@ export default function Stats() {
           </h3>
         </div>
 
+        {/* 🎯 FIXED: Main outer card container with borders removed on active dividers */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative bg-white/[0.01] border border-white/10 rounded-[2rem] md:rounded-[2.5rem] backdrop-blur-md overflow-hidden"
+          className="relative bg-white/[0.01] rounded-[2rem] md:rounded-[2.5rem] backdrop-blur-md overflow-hidden"
         >
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 bg-black/20">
+          {/* 🎯 FIXED: Removed divide-y and divide-x layout parameters completely */}
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 bg-black/20">
             <StatItem value={100} label="Active Clients" icon={<Users size={24} />} />
             <StatItem value={700} label="Projects Completed" icon={<Rocket size={24} />} />
             <StatItem value={12} label="Professional Team" icon={<Zap size={24} />} />
