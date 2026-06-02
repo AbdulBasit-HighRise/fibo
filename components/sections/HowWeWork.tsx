@@ -75,40 +75,42 @@ export default function Process() {
             >
               {/* CARD CONTAINER */}
               <div className="w-full md:w-[45%] pl-8 md:pl-0">
-                <motion.div
-                  initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  // 🎯 REFINED: Dark card with specialized premium glow states and drop shadows on hover
-                  className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-[#023675] border border-white/5 backdrop-blur-3xl hover:bg-[#030303]/90 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.15)] transition-all duration-500"
-                >
-                  {/* Floating Step Number */}
-                  <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-sm font-bold group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-colors z-10 shadow-xl">
-                    {step.id}
-                  </div>
+  <motion.div
+    initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true, margin: "-100px" }}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+    // 🎯 FIXED: Style tag lagakar background color #0971A6 ko completely lock kar diya hai
+    style={{ backgroundColor: "#0971A6" }}
+    className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] border border-white/10 transition-all duration-500 shadow-xl"
+  >
+    {/* Floating Step Number */}
+    <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-sm font-bold group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-colors z-10 shadow-xl">
+      {step.id}
+    </div>
 
-                  <div className="flex flex-col gap-4">
-                    {/* Icon & Heading Line */}
-                    <div className="flex items-center gap-4">
-                      <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-14 2xl:h-14 rounded-xl bg-blue-500/10 text-cyan-400 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-cyan-400 group-hover:text-white transition-all duration-500 shadow-md">
-                        {step.icon}
-                      </div>
-                      <h4 className="font-black text-[1.1rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.4rem] text-white tracking-tight group-hover:text-cyan-300 transition-colors duration-300">
-                        {step.title}
-                      </h4>
-                    </div>
+    <div className="flex flex-col gap-4">
+      {/* Icon & Heading Line */}
+      <div className="flex items-center gap-4">
+        {/* 🌀 Icon Wrapper: Background transparent black tint taake blue background par pop kare */}
+        <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-14 2xl:h-14 rounded-xl bg-black/20 text-cyan-300 flex items-center justify-center group-hover:bg-white group-hover:text-[#0971A6] transition-all duration-500 shadow-md">
+          {step.icon}
+        </div>
+        <h4 className="font-black text-[1.1rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.4rem] text-white tracking-tight transition-colors duration-300">
+          {step.title}
+        </h4>
+      </div>
 
-                    {/* Description Paragraph */}
-                    <p className="text-white/80 text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl opacity-90 group-hover:opacity-100 transition-all duration-300">
-                      {step.desc}
-                    </p>
-                  </div>
+      {/* Description Paragraph */}
+      <p className="text-white/90 text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl group-hover:opacity-100 transition-all duration-300">
+        {step.desc}
+      </p>
+    </div>
 
-                  {/* 🎯 REFINED: Dynamic running cyan laser accent at the card bottom */}
-                  <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-blue-500 to-cyan-400 group-hover:w-[40%] transition-all duration-700 ease-out rounded-bl-full" />
-                </motion.div>
-              </div>
+    {/* 🎯 Running Laser Accent */}
+    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-white to-cyan-300 group-hover:w-[40%] transition-all duration-700 ease-out rounded-bl-full" />
+  </motion.div>
+</div>
 
               {/* 🎯 REFINED: CENTRAL INTERACTIVE NODE */}
               <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">

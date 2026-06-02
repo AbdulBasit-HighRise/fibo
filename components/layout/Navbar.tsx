@@ -163,7 +163,7 @@ export default function Navbar() {
         <motion.nav
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className={`relative flex items-center justify-between transition-all duration-500 ease-in-out mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#030303]/90 backdrop-blur-xl border  border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
+          className={`relative flex items-center justify-between transition-all duration-500 ease-in-out mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#111827] backdrop-blur-xl border  border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
         >
           <Link href="/" className="flex items-center z-50 shrink-0">
             <Image src="/Hr Logo White.svg" alt="Logo" width={300} height={80} className={`h-auto transition-all duration-500 object-contain origin-left ${isScrolled ? "w-[120px] lg:w-[140px]" : "w-[160px] lg:w-[210px]"}`} priority />

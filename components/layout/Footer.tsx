@@ -26,7 +26,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="text-white relative bg-[#030303] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
+    <footer className="text-white relative bg-[#111827] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
       < CTA />
 
       {/* 🌌 Cosmic Glows */}
@@ -181,7 +181,7 @@ export default function Footer() {
         {/* 🔒 BOTTOM BAR */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
-            © {currentYear} High Raise Digital LLC.
+            © {currentYear} High Rise Digital LLC.
           </p>
           <p className="text-[10px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
             Built for growth • Designed for dominance

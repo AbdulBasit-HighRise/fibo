@@ -56,7 +56,7 @@ export default function JuicerReviews() {
                   ))}
                 </div>
                 <p className="text-zinc-500 text-[11px] font-medium tracking-wide hidden sm:block">
-                  High Rise SEO Agency
+                  High Rise Digital Agency
                 </p>
               </div>
 
@@ -89,13 +89,12 @@ export default function JuicerReviews() {
               // 🎯 FIXED: Dynamic calculation percentage metrics to fill huge 2K/4K monitors smoothly
               <div
                 key={`${review.id}-${index}`}
-                className="w-[85vw] sm:w-[45vw] md:w-[35vw] lg:w-[28vw] xl:w-[24vw] 2xl:w-[20vw] 3xl:w-[16vw] shrink-0 rounded-2xl border border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-2 overflow-hidden hover:border-blue-500/20 hover:scale-[1.01] transition-all duration-500 group"
-              >
+className="w-[90vw] sm:w-[50vw] md:w-[42vw] lg:w-[38vw] xl:w-[30vw] 2xl:w-[26vw] 3xl:w-[22vw] shrink-0 rounded-2xl border-white/[0.05] bg-[#09090b]/60 backdrop-blur-md p-0 overflow-hidden transition-all duration-500 group"              >
                 <div className="relative w-full overflow-hidden rounded-xl bg-zinc-950/20">
                   <img
                     src={review.src}
                     alt={review.alt}
-                    className="w-full h-auto object-contain transition-all duration-500 brightness-[0.95] group-hover:brightness-100"
+                    className="w-full h-auto object-contain transition-all duration-500 "
                   />
                 </div>
               </div>

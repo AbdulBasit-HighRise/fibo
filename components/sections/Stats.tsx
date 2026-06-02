@@ -89,9 +89,9 @@ export default function Stats() {
 
         <div className="text-center mb-6 md:mb-8 2xl:mb-12">
           <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
-            Some {" "}
+            Some Facts About Us{" "}
             <span className="block sm:inline bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Facts About Us
+              
             </span>
           </h3>
         </div>
@@ -102,10 +102,10 @@ export default function Stats() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative bg-white/[0.01] rounded-[2rem] md:rounded-[2.5rem] backdrop-blur-md overflow-hidden"
+          className="relative  rounded-[2rem] md:rounded-[2.5rem] backdrop-blur-md overflow-hidden"
         >
           {/* 🎯 FIXED: Removed divide-y and divide-x layout parameters completely */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 bg-black/20">
+          <div className="relative  grid grid-cols-1 md:grid-cols-4 ">
             <StatItem value={100} label="Active Clients" icon={<Users size={24} />} />
             <StatItem value={700} label="Projects Completed" icon={<Rocket size={24} />} />
             <StatItem value={12} label="Professional Team" icon={<Zap size={24} />} />

@@ -86,7 +86,7 @@ export default function WhyChooseUs() {
             </motion.div>
           </div>
           {/* RIGHT SIDE: Cards (Enhanced Contrast & Highly Readable Layout) */}
-       <div className="lg:col-span-6">
+      <div className="lg:col-span-6">
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
 
     {/* 🌌 Center Ambient Soft Glow Underlay */}
@@ -99,8 +99,9 @@ export default function WhyChooseUs() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
         viewport={{ once: true }}
-        // 🎯 FIXED: Background is now fully deep solid #030303 with luxury glowing state configurations
-        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/5 bg-[#023675] backdrop-blur-xl group transition-all duration-500 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(34,211,238,0.12)] flex flex-col justify-between ${
+        // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+        style={{ backgroundColor: "#0971A6" }}
+        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between ${
           index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''
         }`}
       >
@@ -108,13 +109,16 @@ export default function WhyChooseUs() {
 
           {/* 🟢 Icon & Heading Wrapper */}
           <div className="flex items-center gap-4">
-            {/* Smooth Icon Box */}
-            <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-xl bg-white/[0.03] text-cyan-400 border border-white/5 group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-cyan-400 group-hover:text-white group-hover:border-transparent transition-all duration-500 shadow-sm">
+            {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+            <div 
+              style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+              className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+            >
               {item.icon}
             </div>
 
-            {/* Title Gradient Text */}
-            <h4 className="flex-1 font-black text-[1.0rem] sm:text-[1.1rem] lg:text-[1.1rem] 2xl:text-[1.3rem] tracking-[1px] uppercase leading-tight bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-400 transition-all duration-500">
+            {/* Title Text */}
+            <h4 className="flex-1 font-black text-[1.0rem] sm:text-[1.1rem] lg:text-[1.1rem] 2xl:text-[1.3rem] tracking-[1px] uppercase leading-tight text-white group-hover:text-cyan-200 transition-all duration-500">
               {item.title}
             </h4>
           </div>
@@ -127,7 +131,7 @@ export default function WhyChooseUs() {
 
         {/* Corner Check Icon Indicators */}
         <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-          <CheckCircle2 className="text-cyan-400 w-4 h-4 2xl:w-5 2xl:h-5" />
+          <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-5 2xl:h-5" />
         </div>
       </motion.div>
     ))}

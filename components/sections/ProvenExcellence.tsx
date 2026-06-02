@@ -80,47 +80,52 @@ export default function ProvenExcellence() {
           </div>
 
           {/* RIGHT: Features Grid (Balanced Layout & Highly Readable Cards) */}
-          <div className="grid sm:grid-cols-2 gap-6 xl:gap-8">
-            {FEATURES.map((feature, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="group p-6 md:p-8 2xl:p-12 rounded-2xl md:rounded-3xl border border-white/10 bg-[#023675] transition-all duration-500 relative overflow-hidden shadow-2xl flex flex-col justify-between"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+       <div className="grid sm:grid-cols-2 gap-6 xl:gap-8">
+  {FEATURES.map((feature, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: i * 0.1 }}
+      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+      style={{ backgroundColor: "#0971A6" }}
+      className="group p-6 md:p-8 2xl:p-12 rounded-2xl md:rounded-3xl border border-white/10 transition-all duration-500 relative overflow-hidden shadow-2xl flex flex-col justify-between hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+    >
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative z-10 space-y-4 md:space-y-5">
+      <div className="relative z-10 space-y-4 md:space-y-5">
 
-                  {/* Icon Container */}
-                  {/* 🟢 Icon & Heading in ONE LINE with Attractive Gradient Color */}
-                  <div className="flex items-center gap-4">
-                    {/* Icon Container */}
-                    <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 rounded-xl bg-white/[0.05] flex items-center justify-center group-hover:bg-blue-500/20 transition-all duration-500">
-                      {feature.icon}
-                    </div>
-
-                    {/* Card Title - Premium Multi-Color Gradient Layout */}
-                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-wider uppercase leading-tight bg-gradient-to-r from-white via-cyan-300 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-500">
-                      {feature.title}
-                    </h4>
-                  </div>
-
-                  {/* Janni, Card Description ko Pure White, Bara (15px) aur Medium weight de diya hai */}
-                  <p className="text-white text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px]  font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                    {feature.desc}
-                  </p>
-                </div>
-
-                {/* Corner Indicator */}
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]" />
-                </div>
-              </motion.div>
-            ))}
+        {/* 🟢 Icon & Heading in ONE LINE with Consistent Style */}
+        <div className="flex items-center gap-4">
+          
+          {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+          <div 
+            style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+            className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+          >
+            {feature.icon}
           </div>
+
+          {/* Card Title */}
+          <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-wider uppercase leading-tight text-white group-hover:text-cyan-200 transition-all duration-500">
+            {feature.title}
+          </h4>
+        </div>
+
+        {/* Card Description */}
+        <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+          {feature.desc}
+        </p>
+      </div>
+
+      {/* Corner Indicator */}
+      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="w-1.5 h-1.5 rounded-full bg-cyan-300 shadow-[0_0_10px_#67e8f9]" />
+      </div>
+    </motion.div>
+  ))}
+</div>
 
         </div>
       </div>

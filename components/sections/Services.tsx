@@ -23,7 +23,7 @@ export default function Services() {
 
       {/* Background Glows */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px]  pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-cyan-400/5 blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[300px] h-[300px]  pointer-events-none" />
 
       <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
 
@@ -49,7 +49,7 @@ export default function Services() {
           <div className="hidden lg:block lg:col-span-5 h-full min-h-[450px] 2xl:min-h-[650px] relative">
             {/* 🛠️ Dynamic container: No mirror effect, clean border-glow */}
             <motion.div
-              className="absolute left-0 w-full h-[380px] 2xl:h-[550px] rounded-[2.5rem] 2xl:rounded-[4rem] overflow-hidden border border-white/5 bg-[#080808] shadow-[0_0_50px_rgba(0,0,0,0.5)]"
+              className="absolute left-0 w-full h-[380px] 2xl:h-[550px] rounded-[2.5rem] 2xl:rounded-[4rem] overflow-hidden"
               animate={{
                 // Smooth vertical tracking
                 y: active * 75, // Halka sa offset taake active link ke samne rahe
@@ -72,17 +72,17 @@ export default function Services() {
                     alt={SERVICES[active].title}
                     fill
                     priority
-                    className="object-contain p-6 2xl:p-12 drop-shadow-[0_20px_50px_rgba(59,130,246,0.2)]"
+                    className="object-contain p-6 2xl:p-12 "
                   />
 
                   {/* Subtle Inner Glow instead of heavy mirror gradient */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.05)_0%,transparent_70%)] pointer-events-none" />
+                  <div className="absolute inset-0  pointer-events-none" />
                 </motion.div>
               </AnimatePresence>
             </motion.div>
 
             {/* Background Decorative Element (Optional: for depth) */}
-            <div className="absolute -z-10 inset-0 bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute -z-10 inset-0  rounded-full pointer-events-none" />
           </div>
           {/* RIGHT SIDE: THE SERVICES LIST */}
           <div className="lg:col-span-7">

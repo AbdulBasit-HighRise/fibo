@@ -36,7 +36,7 @@ export default function IndustryExpertise() {
 
   return (
     // 🛠️ Main Section Component
-    <section className="bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526] text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
+    <section className="bg-[#030207] text-white py-8 md:py-12 relative overflow-hidden border-t border-white/5">
 
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
@@ -48,9 +48,9 @@ export default function IndustryExpertise() {
             viewport={{ once: true }}
             className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case pr-4 py-1"
           >
-            Industries We{" "}
+            Industries We Work With
+
             <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              Work With
             </span>
           </motion.h3>
         </div>
@@ -78,18 +78,18 @@ export default function IndustryExpertise() {
                 key={index}
                 className="flex-shrink-0 w-[140px] h-[150px] md:w-[220px] md:h-[200px] 2xl:w-[320px] 2xl:h-[280px] 
                            rounded-2xl md:rounded-[2rem] border transition-all duration-500 group/card pointer-events-auto
-                           bg-[#111827] -translate-y-1
+                           -translate-y-1  bg-gradient-to-br from-blue-900/40 to-black border-blue-500/50
+
                            flex flex-col items-center justify-center gap-4 hover:border-cyan-400/80"
               >
-                 {/* bg-gradient-to-br from-blue-900/40 to-black border-blue-500/50 */}
                 {/* 🌀 Icon Wrapper */}
                 <div className="relative overflow-hidden">
                   {/* 🔄 HOVER ICON SPIN: Default simple text-white hai, mouse lane par spin karega */}
-                  <Icon className="w-8 h-12 md:w-14 2xl:w-16 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg] group-hover/card:text-cyan-400" />
+                  <Icon className="w-8 h-12 md:w-16 2xl:w-18 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg] group-hover/card:text-[#0971A6]" />
                 </div>
 
                 {/* 🖋️ Text Description Element */}
-                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-base font-bold tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0 uppercase group-hover/card:text-cyan-300 transition-colors duration-300">
+                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-base font-bold tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0 uppercase group-hover/card:text-[#0971A6] transition-colors duration-300">
                   {item.title}
                 </p>
               </div>
