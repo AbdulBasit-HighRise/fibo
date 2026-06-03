@@ -10,35 +10,35 @@ const bentoProjects = [
     id: "01",
     title: "Rhino Roofing Orlando Scale",
     image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
-    slug: "rhino-orlando",
+    slug: "casestudies/rhino-orlando",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "02",
     title: "Breez Care",
     image: "/smile-care.jpg", // 🎯 Real image path
-    slug: "breez-care",
+    slug: "casestudies/breez-care",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "03",
     title: "West London Cleaning Company",
     image: "/cleaning.jpg", // 🎯 Real image path
-    slug: "west-london-cleaners",
+    slug: "casestudies/west-london-cleaners",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "04",
     title: "Local Restaurant Australia",
     image: "/burger.jpg", // 🎯 Real image path
-    slug: "australia-restaurant-seo",
+    slug: "casestudies/australia-restaurant-seo",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   }
 ];
 // bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526]
 export default function PortfolioBento() {
   return (
-<section className="relative py-16 md:py-20 2xl:py-32  text-white overflow-hidden bg-[#111827] select-none border-t border-white/5">      {/* Background Glows */}
+    <section className="relative py-16 md:py-20 2xl:py-32  text-white overflow-hidden bg-[#111827] select-none border-t border-white/5">      {/* Background Glows */}
       <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
@@ -93,7 +93,8 @@ export default function PortfolioBento() {
             const CardWrapper = motion.div;
 
             return (
-              <Link href={`/portfolio/${project.slug}`} key={project.id} className={`${project.size} block`}>
+              // {/* Insteading of /portfolio/${project.slug}, just pass the exact slug */}
+              <Link href={`/${project.slug}`} key={project.id} className={`${project.size} block`}>
                 <CardWrapper
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
