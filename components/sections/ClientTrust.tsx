@@ -24,7 +24,7 @@ export default function ClientTrust() {
   const duplicated = [...clientLogos, ...clientLogos];
 
   return (
-    <section className="relative py-4 md:py-6 2xl:py-8 bg-[#020617] overflow-hidden border-y border-white/5">
+    <section className="relative py-4 md:py-6 2xl:py-8 bg-[#111827] overflow-hidden border-y border-white/5">
       <div className="relative z-10 max-w-full mx-auto px-6 lg:px-12">
         <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-12">
 

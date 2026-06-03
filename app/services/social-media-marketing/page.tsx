@@ -79,7 +79,7 @@ import Portfolio from "@/components/sections/PortfolioPreview";
 import IndustryExpertise from "@/components/IndustryExpertise";
 import TrustClients from "@/components/sections/ClientTrust"
 import ServiceCTA from "@/components/sections/ServiceCTA"
-
+import SocialMediaFAQ from "@/components/faqs/SocialMediaFAQ";
 import { ArrowUpRight, BarChart3 } from "lucide-react";
 
 const socialProjects = [
@@ -138,7 +138,7 @@ export default function SocialMediaPage() {
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
                     {/* Full Sized Padded Content Wrapper - 🎯 FIXED: Aligned perfectly with your AI Automation global structure */}
-          <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
+                    <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
                         <div className="max-w-5xl">
 
                             {/* Glassmorphism Badge Container */}
@@ -162,8 +162,7 @@ export default function SocialMediaPage() {
             </section>
 
             {/* 🎯 ABOUT SECTION */}
-            <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-4 bg-[#1E2939] overflow-hidden">
-
+            <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#1E2939] overflow-hidden">
                 {/* Background Glow */}
                 <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
 
@@ -290,48 +289,48 @@ export default function SocialMediaPage() {
                             { title: "Content Production", desc: "Creative content creation, including graphics, videos, captions, and posts tailored for your business and audience.", icon: <RefreshCw size={24} /> },
                             { title: "Analytics & Reporting", desc: "Detailed reports and insights help you track campaign performance, audience engagement, and overall marketing results clearly.", icon: <Wrench size={24} /> }
                         ].map((s, i) => (
-                          <motion.div
-  key={i}
-  whileHover={{ y: -10 }}
-  // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-  style={{ backgroundColor: "#0971A6" }}
-  className="group relative p-10 2xl:p-16 rounded-[2.5rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 cursor-pointer h-full flex flex-col justify-between overflow-hidden"
->
-  {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
-  <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+                            <motion.div
+                                key={i}
+                                whileHover={{ y: -10 }}
+                                // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+                                style={{ backgroundColor: "#0971A6" }}
+                                className="group relative p-10 2xl:p-16 rounded-[2.5rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 cursor-pointer h-full flex flex-col justify-between overflow-hidden"
+                            >
+                                {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-  {/* Foreground content inside relative z-10 for perfect layering */}
-  <div className="relative z-10 flex flex-col h-full justify-between w-full">
-    <div>
-      {/* Icon aur Title Row Layout */}
-      <div className="flex items-center gap-5 mb-8">
+                                {/* Foreground content inside relative z-10 for perfect layering */}
+                                <div className="relative z-10 flex flex-col h-full justify-between w-full">
+                                    <div>
+                                        {/* Icon aur Title Row Layout */}
+                                        <div className="flex items-center gap-5 mb-8">
 
-        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-        <div 
-          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-          className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
-        >
-          <div className="transition-colors duration-500">
-            {s.icon}
-          </div>
-        </div>
+                                            {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
+                                            <div
+                                                style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+                                                className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+                                            >
+                                                <div className="transition-colors duration-500">
+                                                    {s.icon}
+                                                </div>
+                                            </div>
 
-        {/* Title Text (Kept original sizes, added text-white and hover states) */}
-        <h4 className="font-black text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight tracking-tight">
-          {s.title}
-        </h4>
-      </div>
+                                            {/* Title Text (Kept original sizes, added text-white and hover states) */}
+                                            <h4 className="font-black text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight tracking-tight">
+                                                {s.title}
+                                            </h4>
+                                        </div>
 
-      {/* Description Paragraph synced with global text sizing */}
-      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 antialiased !max-w-none">
-        {s.desc}
-      </p>
-    </div>
-  </div>
+                                        {/* Description Paragraph synced with global text sizing */}
+                                        <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 antialiased !max-w-none">
+                                            {s.desc}
+                                        </p>
+                                    </div>
+                                </div>
 
-  {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
-  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
-</motion.div>
+                                {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
+                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -356,12 +355,12 @@ export default function SocialMediaPage() {
                             className="text-left"
                         >
 
-                            <h1 className="text-[3rem] uppercase md:text-[3.2rem] 2xl:text-[5rem] lg:text-[3.8rem] uppercase  font-black tracking-tighter leading-[0.8] text-white mb-8">
+                            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                                 Just some of our{" "}
-                                <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                                <span className="inline-block mt-2  bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                                     Social Results
                                 </span>
-                            </h1>
+                            </h3>
                             <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed opacity-80">
                                 See how our social media strategies helped businesses increase engagement, reach new audiences, generate leads, and grow online successfully.
                             </p>
@@ -484,57 +483,49 @@ export default function SocialMediaPage() {
                                         className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
                                             }`}
                                     >
-                                      {/* CARD CONTAINER */}
-<div className="w-full md:w-[45%] pl-8 md:pl-0">
-  <motion.div
-    initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.5 }}
-    // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-    style={{ backgroundColor: "#0971A6" }}
-    className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
-  >
-    {/* 🌀 FLOATING STEP NUMBER BADGE: Hover se pehle dark, hover ke baad clean white surface with 0971A6 text */}
-    <div 
-      style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-      className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 z-10 shadow-lg"
-    >
-      {step.id}
-    </div>
+                                        {/* CARD CONTAINER */}
+                                        <div className="w-full md:w-[45%] pl-8 md:pl-0">
+                                            <motion.div
+                                                initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                                                whileInView={{ opacity: 1, x: 0 }}
+                                                viewport={{ once: true, margin: "-100px" }}
+                                                transition={{ duration: 0.5, ease: "easeOut" }}
+                                                // 🎯 FIXED: Style tag lagakar background color #0971A6 ko completely lock kar diya hai
+                                                style={{ backgroundColor: "#0971A6" }}
+                                                className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] border border-white/10 transition-all duration-500 shadow-xl"
+                                            >
+                                                {/* Floating Step Number */}
+                                                <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-sm font-bold group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-colors z-10 shadow-xl">
+                                                    {step.id}
+                                                </div>
 
-    <div className="flex flex-col gap-4">
-      {/* Icon & Heading */}
-      <div className="flex items-center gap-4">
-        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-        <div 
-          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-          className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
-        >
-          {step.icon}
-        </div>
-        
-        {/* Heading text (Maintained original sizes) */}
-        <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 tracking-tight">
-          {step.title}
-        </h4>
-      </div>
+                                                <div className="flex flex-col gap-4">
+                                                    {/* Icon & Heading Line */}
+                                                    <div className="flex items-center gap-4">
+                                                        {/* 🌀 Icon Wrapper: Background transparent black tint taake blue background par pop kare */}
+                                                        <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-14 2xl:h-14 rounded-xl bg-black/20 text-cyan-300 flex items-center justify-center group-hover:bg-white group-hover:text-[#0971A6] transition-all duration-500 shadow-md">
+                                                            {step.icon}
+                                                        </div>
+                                                        <h4 className="font-black text-[1.1rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.4rem] text-white tracking-tight transition-colors duration-300">
+                                                            {step.title}
+                                                        </h4>
+                                                    </div>
 
-      {/* Description Below */}
-      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-        {step.desc}
-      </p>
-    </div>
+                                                    {/* Description Paragraph */}
+                                                    <p className="text-white/90 text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl group-hover:opacity-100 transition-all duration-300">
+                                                        {step.desc}
+                                                    </p>
+                                                </div>
 
-    {/* 🎯 BOTTOM ACCENT LINE: Cyan matching expand line */}
-    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-300 shadow-[0_0_10px_#67e8f9] group-hover:w-[35%] transition-all duration-700" />
-  </motion.div>
-</div>
+                                                {/* 🎯 Running Laser Accent */}
+                                                <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-white to-cyan-300 group-hover:w-[40%] transition-all duration-700 ease-out rounded-bl-full" />
+                                            </motion.div>
+                                        </div>
 
-                                        {/* CENTRAL NODE */}
+                                        {/* 🎯 REFINED: CENTRAL INTERACTIVE NODE */}
                                         <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
-                                            <div className="w-5 h-5 2xl:w-10 2xl:h-10 rounded-full bg-[#020617] border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-all duration-500 group-hover:scale-110">
-                                                <div className="w-2 h-2 2xl:w-4 2xl:h-4 bg-zinc-700 rounded-full group-hover:bg-blue-400 transition-all" />
+                                            <div className="w-6 h-6 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-500 group-hover:scale-125">
+                                                <div className="w-2 h-2 bg-white/40 rounded-full group-hover:bg-cyan-400 transition-all duration-300" />
                                             </div>
                                         </div>
 
@@ -568,80 +559,80 @@ export default function SocialMediaPage() {
                         </p>
                     </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
-  {[
-    {
-      step: "01",
-      title: "Meta Ads",
-      keywords: "Lookalike Audiences, CBO/ABO Tuning, Pixel Tracking",
-      desc: "Scale your brand on Facebook and Instagram with high-converting, laser-targeted visual ad campaigns."
-    },
-    {
-      step: "02",
-      title: "LinkedIn Advertising",
-      keywords: "B2B Matched Audiences, Account Targeting, Lead Gen",
-      desc: "Connect directly with B2B decision-makers, generate premium leads, and drive professional business growth."
-    },
-    {
-      step: "03",
-      title: "YouTube Advertising",
-      keywords: "In-Stream Formats, Retargeting Funnels, Custom Intent",
-      desc: "Capture attention and boost conversions using high-impact video ads on the world’s largest video platform."
-    },
-    {
-      step: "04",
-      title: "TikTok Advertising",
-      keywords: "Spark Ads, UGC Optimization, Viral Trend Hacking",
-      desc: "Engage viral audiences and drive massive impulse sales with trendy, native video content strategies."
-    }
-  ].map((p, i) => (
-    <div
-      key={i}
-      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-      style={{ backgroundColor: "#0971A6" }}
-      className="group relative p-8 2xl:p-8 rounded-[3rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer hover:-translate-y-2 transform will-change-transform z-10"
-    >
-      {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
+                        {[
+                            {
+                                step: "01",
+                                title: "Meta Ads",
+                                keywords: "Lookalike Audiences, CBO/ABO Tuning, Pixel Tracking",
+                                desc: "Scale your brand on Facebook and Instagram with high-converting, laser-targeted visual ad campaigns."
+                            },
+                            {
+                                step: "02",
+                                title: "LinkedIn Advertising",
+                                keywords: "B2B Matched Audiences, Account Targeting, Lead Gen",
+                                desc: "Connect directly with B2B decision-makers, generate premium leads, and drive professional business growth."
+                            },
+                            {
+                                step: "03",
+                                title: "YouTube Advertising",
+                                keywords: "In-Stream Formats, Retargeting Funnels, Custom Intent",
+                                desc: "Capture attention and boost conversions using high-impact video ads on the world’s largest video platform."
+                            },
+                            {
+                                step: "04",
+                                title: "TikTok Advertising",
+                                keywords: "Spark Ads, UGC Optimization, Viral Trend Hacking",
+                                desc: "Engage viral audiences and drive massive impulse sales with trendy, native video content strategies."
+                            }
+                        ].map((p, i) => (
+                            <div
+                                key={i}
+                                // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
+                                style={{ backgroundColor: "#0971A6" }}
+                                className="group relative p-8 2xl:p-8 rounded-[3rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer hover:-translate-y-2 transform will-change-transform z-10"
+                            >
+                                {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-      {/* Header row area layout */}
-      <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10 pointer-events-none">
-        
-        {/* 🌀 FIXED STEP NUMBER WATERMARK: Made more readable on the blue surface, turns into glowing tint on hover */}
-        <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-black/15 group-hover:text-black/30 select-none pointer-events-none z-0 transition-colors duration-500">
-          {p.step}
-        </span>
+                                {/* Header row area layout */}
+                                <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10 pointer-events-none">
 
-        {/* Title text floating over step layer */}
-        <div className="space-y-2 flex-grow relative z-10 pt-6">
-          <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 leading-tight">
-            {p.title}
-          </h3>
-        </div>
+                                    {/* 🌀 FIXED STEP NUMBER WATERMARK: Made more readable on the blue surface, turns into glowing tint on hover */}
+                                    <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-black/15 group-hover:text-black/30 select-none pointer-events-none z-0 transition-colors duration-500">
+                                        {p.step}
+                                    </span>
 
-        {/* Icon Alignment */}
-        <div className="relative z-10 pt-5 pl-4 shrink-0">
-          <ChevronRight size={16} className="text-white/60 group-hover:text-cyan-200 transition-colors duration-300 transform group-hover:translate-x-1" />
-        </div>
-      </div>
+                                    {/* Title text floating over step layer */}
+                                    <div className="space-y-2 flex-grow relative z-10 pt-6">
+                                        <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 leading-tight">
+                                            {p.title}
+                                        </h3>
+                                    </div>
 
-      {/* Content block content wraps safely */}
-      <div className="space-y-2 flex-grow relative z-10 pointer-events-none">
-        <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          {p.desc}
-        </p>
-      </div>
+                                    {/* Icon Alignment */}
+                                    <div className="relative z-10 pt-5 pl-4 shrink-0">
+                                        <ChevronRight size={16} className="text-white/60 group-hover:text-cyan-200 transition-colors duration-300 transform group-hover:translate-x-1" />
+                                    </div>
+                                </div>
 
-      {/* 🌀 PROGRESS BAR AREA: Switched to track background opacity and a glowing cyan loader fill */}
-      <div className="mt-4 h-1 w-full bg-black/20 rounded-full overflow-hidden subpixel-antialiased relative z-10 pointer-events-none">
-        <div className="h-full bg-cyan-300 shadow-[0_0_8px_#67e8f9] w-full transition-all duration-1000" />
-      </div>
+                                {/* Content block content wraps safely */}
+                                <div className="space-y-2 flex-grow relative z-10 pointer-events-none">
+                                    <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed pt-2 max-w-xl 2xl:max-w-2xl antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                                        {p.desc}
+                                    </p>
+                                </div>
 
-      {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20 pointer-events-none" />
-    </div>
-  ))}
-</div>
+                                {/* 🌀 PROGRESS BAR AREA: Switched to track background opacity and a glowing cyan loader fill */}
+                                <div className="mt-4 h-1 w-full bg-black/20 rounded-full overflow-hidden subpixel-antialiased relative z-10 pointer-events-none">
+                                    <div className="h-full bg-cyan-300 shadow-[0_0_8px_#67e8f9] w-full transition-all duration-1000" />
+                                </div>
+
+                                {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
+                                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20 pointer-events-none" />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -700,65 +691,64 @@ export default function SocialMediaPage() {
                             </motion.div>
                         </div>
 
-                   {/* RIGHT SIDE: Cards Grid */}
-<div className="lg:col-span-6">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
+                        {/* RIGHT SIDE: Cards Grid */}
+                        <div className="lg:col-span-6">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
 
-    {/* Background soft glow setup */}
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+                                {/* Background soft glow setup */}
+                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-    {features.map((item, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
-        viewport={{ once: true }}
-        // 🎯 FIXED: Background color #0971A6 ko style tag se solid completely lock kiya hai
-        style={{ backgroundColor: "#0971A6" }}
-        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
+                                {features.map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                                        viewport={{ once: true }}
+                                        // 🎯 FIXED: Background color #0971A6 ko style tag se solid completely lock kiya hai
+                                        style={{ backgroundColor: "#0971A6" }}
+                                        className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
         ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
-      >
-        <div className="relative z-10 space-y-4 md:space-y-5">
+                                    >
+                                        <div className="relative z-10 space-y-4 md:space-y-5">
 
-          {/* Icon & Heading Row */}
-          <div className="flex items-center gap-4">
-            
-            {/* 🌀 FIXED ICON BOX: Hover se pehle dark tint, hover par white background aur custom blue text icon */}
-            <div 
-              style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-              className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
-            >
-              {item.icon}
-            </div>
+                                            {/* Icon & Heading Row */}
+                                            <div className="flex items-center gap-4">
 
-            {/* Title Text (Solid crisp white, text-gradient removed for better contrast on blue background) */}
-            <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
-              {item.title}
-            </h4>
-          </div>
+                                                {/* 🌀 FIXED ICON BOX: Hover se pehle dark tint, hover par white background aur custom blue text icon */}
+                                                <div
+                                                    style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+                                                    className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+                                                >
+                                                    {item.icon}
+                                                </div>
 
-          {/* Card Description */}
-          <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-            {item.desc}
-          </p>
-        </div>
+                                                {/* Title Text (Solid crisp white, text-gradient removed for better contrast on blue background) */}
+                                                <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
+                                                    {item.title}
+                                                </h4>
+                                            </div>
 
-        {/* Hover Check Icon */}
-        <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-          <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
-        </div>
-      </motion.div>
-    ))}
-  </div>
-</div>
+                                            {/* Card Description */}
+                                            <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                                                {item.desc}
+                                            </p>
+                                        </div>
+
+                                        {/* Hover Check Icon */}
+                                        <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                                            <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
 
                     </div>
                 </div>
             </section>
 
-
-
+            <SocialMediaFAQ />
             <Testimonials />
             <TrustClients />
 

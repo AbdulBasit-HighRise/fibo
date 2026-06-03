@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     slug: "famme-propre",
-    title: "Famme Propre",
+    title: " Femmepropre",
     category: "web",
     image: "/web2.jpg",
     liveUrl: "https://www.femmepropre.co.uk/"
@@ -209,109 +209,112 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* 2. PREMIUM FILTER CONTROL CONTROLLER */}
-      <section className="w-full px-6 mb-16 relative z-30 flex justify-center mt-6">
-        <div className="flex flex-wrap gap-1.5 bg-zinc-900/60 p-1.5 rounded-xl border border-white/5 backdrop-blur-xl shadow-2xl items-center justify-center">
-          {filters.map((f) => (
-            <button
-              key={f.id}
-              onClick={() => setActive(f.id)}
-              className={`px-5 py-2 rounded-lg text-[10px] font-mono uppercase tracking-wider font-bold transition-all duration-300 ${
-                active === f.id
-                  ? "bg-blue-600 text-white shadow-lg shadow-blue-600/10"
-                  : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
-              }`}
-            >
-              {f.label}
-            </button>
-          ))}
+     
+      {/* 🎯 FIXED: Invalid 'pt:lg-4' ko hata kar perfect top/bottom desktop aur mobile padding (py-6 md:py-10) set kar di hai */}
+      <section className="w-full px-4 py-6 md:py-6 relative z-30 flex justify-center">
+        <div className="w-full max-w-fit overflow-x-auto no-scrollbar flex bg-zinc-900/60 p-1.5 rounded-xl border border-white/5 backdrop-blur-xl shadow-2xl items-center">
+          <div className="flex gap-1.5 whitespace-nowrap mx-auto">
+            {filters.map((f) => (
+              <button
+                key={f.id}
+                onClick={() => setActive(f.id)}
+                className={`px-4 py-1.5 md:px-5 md:py-2 rounded-lg text-[10px] md:text-xs font-mono uppercase tracking-wider font-bold transition-all duration-300 ${active === f.id
+                    ? "bg-[#0971A6] text-white shadow-lg shadow-blue-600/10"
+                    : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
+                  }`}
+              >
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
       </section>
 
-  {/* 🎯 PREMIUM 3-COLUMN LUXURY BENTO GRID */}
-<section className="w-full px-4 sm:px-6 md:px-16 max-w-[1400px] mx-auto relative z-20 py-12">
-  <motion.div
-    layout
-    // 🎯 FIXED: Grid layout altered seamlessly from 2 to 3 columns on desktop views
-    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
-  >
-    <AnimatePresence mode="popLayout">
-      {filtered.map((item) => {
-        const isWeb = item.category === "web";
+      {/* 🎯 PREMIUM 3-COLUMN LUXURY BENTO GRID (WIDE SCALE) */}
+      {/* 🎯 FIXED: Max-width ko 1920px kiya hai taake container bada ho, aur padding horizontal adjust ki hai */}
+      <section className="w-full px-4 sm:px-6 md:px-12 2xl:px-16 max-w-[1400px] 2xl:max-w-[1950px] 3xl:max-w-[1920px] mx-auto relative z-20 py-12">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 2xl:gap-10 w-full"
+        >
+          <AnimatePresence mode="popLayout">
+            {filtered.map((item) => {
+              const isWeb = item.category === "web";
 
-        const CardContent = (
-          <motion.div
-            layout
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
-            // 🔄 UPGRADED HOVER EFFECTS: Dynamic lift, active glass intensity, and deep glow shadows applied below
-            className="w-full flex flex-col group cursor-pointer relative rounded-3xl p-3 bg-zinc-900/30 border border-white/[0.05] hover:border-blue-500/40 hover:bg-zinc-900/60 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_rgba(0,112,255,0.1)] transition-all duration-500 backdrop-blur-sm h-full justify-between"
-          >
-            <div>
-              {/* Image wrapper with Cinematic Aspect Ratio */}
-              <div className="aspect-[16/9.5] w-full rounded-2xl overflow-hidden mb-5 border border-white/[0.03] relative bg-[#070b14] shadow-xl">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06] filter brightness-[0.85] group-hover:brightness-100"
-                  priority
-                />
+              const CardContent = (
+                <motion.div
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                  className="w-full flex flex-col group cursor-pointer relative rounded-[2rem] p-3 2xl:p-5 3xl:p-6 bg-zinc-900/30 border border-white/[0.05] hover:border-blue-500/40 hover:bg-zinc-900/60 hover:-translate-y-2 shadow-xl hover:shadow-[0_20px_40px_rgba(0,112,255,0.1)] transition-all duration-500 backdrop-blur-sm h-full justify-between"
+                >
+                  <div>
+                    {/* Image wrapper with Cinematic Aspect Ratio */}
+                    {/* 🎯 FIXED: aspect-[16/9.5] width ke sath automatic vertical height bhi barhayega, image perfect scale hogi */}
+                    <div className="aspect-[16/9.5] w-full rounded-2xl overflow-hidden mb-6 border border-white/[0.03] relative bg-[#070b14] shadow-xl">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06] filter brightness-[0.85] group-hover:brightness-100"
+                        priority
+                      />
 
-                {/* Ambient Deep Depth Vignette overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
+                      {/* Ambient Deep Depth Vignette overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/10 to-transparent opacity-70 group-hover:opacity-40 transition-opacity duration-500" />
 
-                {/* 🔥 LUXURY BADGE: Smooth floating status indicator */}
-                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 transform transition-transform duration-500 group-hover:translate-x-1">
-                  <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-                    item.category === "web" ? "bg-cyan-400 shadow-[0_0_8px_#22d3ee]" : item.category === "seo" ? "bg-blue-400 shadow-[0_0_8px_#60a5fa]" : "bg-purple-400 shadow-[0_0_8px_#c084fc]"
-                  }`} />
-                  <span className="text-[9px] uppercase tracking-widest font-black text-white/80">
-                    {item.category}
-                  </span>
-                </div>
-              </div>
+                      {/* LUXURY BADGE */}
+                      <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-white/10 rounded-full px-3 py-1 flex items-center gap-2 transform transition-transform duration-500 group-hover:translate-x-1">
+                        <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${item.category === "web" ? "bg-cyan-400 shadow-[0_0_8px_#22d3ee]" : item.category === "seo" ? "bg-blue-400 shadow-[0_0_8px_#60a5fa]" : "bg-purple-400 shadow-[0_0_8px_#c084fc]"
+                          }`} />
+                        <span className="text-[9px] uppercase tracking-widest font-black text-white/80">
+                          {item.category}
+                        </span>
+                      </div>
+                    </div>
 
-              {/* Typography Content Area */}
-              <div className="px-3 w-full pb-3">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-[18px] sm:text-xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 leading-snug">
-                    {item.title}
-                  </h3>
+                    {/* Typography Content Area */}
+                    <div className="px-3 w-full pb-3">
+                      <div className="flex items-start justify-between gap-4">
+                        {/* 🎯 FIXED: Text size ko 2xl aur 3xl screens par bada kiya hai (2xl:text-2xl 3xl:text-3xl) taake bade card me text chota na lage */}
+                        <h3 className="text-[18px] sm:text-xl 2xl:text-2xl 3xl:text-3xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 leading-snug">
+                          {item.title}
+                        </h3>
 
-                  {/* Micro-interactive Action trigger container */}
-                  <div className="w-8 h-8 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-cyan-400 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/40 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 mt-0.5">
-                    {isWeb && item.liveUrl ? <ExternalLink size={14} /> : <ArrowUpRight size={14} />}
+                        {/* Micro-interactive Action trigger container */}
+                        {/* 🎯 FIXED: Icon trigger box ka size bhi screen ke mutabiq scale up hoga */}
+                        <div className="w-8 h-8 2xl:w-11 2xl:h-11 rounded-full bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 group-hover:text-cyan-400 group-hover:bg-cyan-500/10 group-hover:border-cyan-500/40 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 mt-0.5">
+                          {isWeb && item.liveUrl ? <ExternalLink className="w-3.5 h-3.5 2xl:w-4 2xl:h-4" /> : <ArrowUpRight className="w-3.5 h-3.5 2xl:w-4 2xl:h-4" />}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </div>
 
-            {/* 🔥 PREMIUM LASER AURA UNDERLAY: Bottom glow strip animation */}
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out shadow-[0_0_20px_#06b6d4] z-10" />
-          </motion.div>
-        );
+                  {/* PREMIUM LASER AURA UNDERLAY */}
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85%] h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out shadow-[0_0_20px_#06b6d4] z-10" />
+                </motion.div>
+              );
 
-        if (isWeb && item.liveUrl) {
-          return (
-            <a href={item.liveUrl} key={item.slug} target="_blank" rel="noopener noreferrer" className="block h-full">
-              {CardContent}
-            </a>
-          );
-        }
+              if (isWeb && item.liveUrl) {
+                return (
+                  <a href={item.liveUrl} key={item.slug} target="_blank" rel="noopener noreferrer" className="block h-full">
+                    {CardContent}
+                  </a>
+                );
+              }
 
-        return (
-          <Link href={`/casestudies/${item.slug}`} key={item.slug} className="block h-full">
-            {CardContent}
-          </Link>
-        );
-      })}
-    </AnimatePresence>
-  </motion.div>
-</section>
+              return (
+                <Link href={`/case-studies/${item.slug}`} key={item.slug} className="block h-full">
+                  {CardContent}
+                </Link>
+              );
+            })}
+          </AnimatePresence>
+        </motion.div>
+      </section>
 
     </main>
   );

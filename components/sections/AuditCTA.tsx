@@ -95,46 +95,37 @@ export default function AuditCTA() {
                 onSubmit={handleSubmit}
                 className="w-full grid grid-cols-1 sm:grid-cols-[2fr_2fr_1.2fr] items-end gap-3 md:gap-4 2xl:gap-6"
               >
-                {/* EMAIL INPUT */}
-                {/* EMAIL INPUT */}
-                <div className="relative w-full">
-                  <label className="block text-[10px] uppercase tracking-widest text-blue-200/80 mb-1.5 font-bold pl-1">Business Email</label>
-                  <input
-                    type="email"
-                    required
-                    disabled={status.loading}
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="name@company.com"
-                    style={{ color: "#000000" }}
-                    className="w-full h-[48px] 2xl:h-[54px] rounded-[1.0rem] md:rounded-[1rem] bg-white border border-transparent pl-5 pr-5 text-xs sm:text-sm 2xl:text-base font-bold !text-black outline-none transition-all focus:ring-2 focus:ring-cyan-400/60 disabled:opacity-50 [color-scheme:light]"
-                  />
-                  {/* 🎯 EMAIL INPUT STYLE: Forces black text and placeholder strictly */}
-                  <style>{`
-    input[type="email"] { color: #000000 !important; }
-    input[type="email"]::placeholder { color: #000000 !important; opacity: 1 !important; }
-  `}</style>
-                </div>
+             {/* EMAIL INPUT */}
+<div className="relative w-full">
+  <label className="block text-[10px] uppercase tracking-widest text-blue-200/80 mb-1.5 font-bold pl-1">
+    Business Email
+  </label>
+  <input
+    type="email"
+    required
+    disabled={status.loading}
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    placeholder="name@company.com"
+    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-white/30 placeholder:font-normal outline-none focus:border-blue-500 focus:bg-white/[0.06] transition-all disabled:opacity-50"
+  />
+</div>
 
-                {/* URL INPUT */}
-                <div className="relative w-full">
-                  <label className="block text-[10px] uppercase tracking-widest text-blue-200/80 mb-1.5 font-bold pl-1">Website URL</label>
-                  <input
-                    type="text"
-                    required
-                    disabled={status.loading}
-                    value={url}
-                    onChange={(e) => setUrl(e.target.value)}
-                    placeholder="example.com"
-                    style={{ color: "#000000" }}
-                    className="w-full h-[48px] 2xl:h-[54px] rounded-[1.0rem] md:rounded-[1rem] bg-white border border-transparent pl-5 pr-5 text-xs sm:text-sm 2xl:text-base font-bold !text-black outline-none transition-all focus:ring-2 focus:ring-cyan-400/60 disabled:opacity-50 [color-scheme:light]"
-                  />
-                  {/* 🎯 URL INPUT STYLE: Isolated style to strictly force black text on text input as well */}
-                  <style>{`
-    input[type="text"] { color: #000000 !important; }
-    input[type="text"]::placeholder { color: #000000 !important; opacity: 1 !important; }
-  `}</style>
-                </div>
+{/* URL INPUT */}
+<div className="relative w-full mt-4">
+  <label className="block text-[10px] uppercase tracking-widest text-blue-200/80 mb-1.5 font-bold pl-1">
+    Website URL
+  </label>
+  <input
+    type="text"
+    required
+    disabled={status.loading}
+    value={url}
+    onChange={(e) => setUrl(e.target.value)}
+    placeholder="example.com"
+    className="w-full bg-white/[0.03] border border-white/10 rounded-2xl p-4 2xl:p-6 text-xs sm:text-sm 2xl:text-base text-white placeholder:text-white/30 placeholder:font-normal outline-none focus:border-blue-500 focus:bg-white/[0.06] transition-all disabled:opacity-50"
+  />
+</div>
                 {/* ⚡ ANALYZE BUTTON */}
                 <div className="w-full">
                   <button

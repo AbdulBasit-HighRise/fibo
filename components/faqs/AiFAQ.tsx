@@ -49,10 +49,9 @@ export default function AutomationFAQ() {
   {/* 🎯 FIXED: Max-width upgraded and standardized for fluid scaling on all devices */}
   <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
         {/* Header Title Section */}
-        <div className="mb-12">
-         
+         <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-black text-white   leading-none">
-            Automation <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">FAQ.</span>
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">Questions (FAQs)</span>
           </h2>
         </div>
 

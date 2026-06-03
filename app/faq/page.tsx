@@ -6,45 +6,45 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Plus, HelpCircle } from "lucide-react";
 
 const faqs = [
-  { 
-    q: "What services does your digital agency provide?", 
-    a: "A digital marketing agency provides services like SEO, social media marketing, PPC advertising, web development, branding, and content marketing to grow your online presence." 
+  {
+    q: "What services does your digital agency provide?",
+    a: "A digital marketing agency provides services like SEO, social media marketing, PPC advertising, web development, branding, and content marketing to grow your online presence."
   },
-  { 
-    q: "How can digital marketing help my business?", 
-    a: "It helps you reach the right audience, increase website traffic, generate leads, and improve sales through targeted online strategies." 
+  {
+    q: "How can digital marketing help my business?",
+    a: "It helps you reach the right audience, increase website traffic, generate leads, and improve sales through targeted online strategies."
   },
-  { 
-    q: "How long does it take to see results from SEO?", 
-    a: "SEO usually takes 3 to 6 months to show noticeable results, depending on competition, industry, and strategy." 
+  {
+    q: "How long does it take to see results from SEO?",
+    a: "SEO usually takes 3 to 6 months to show noticeable results, depending on competition, industry, and strategy."
   },
-  { 
-    q: "Do you work with international clients?", 
-    a: "Yes, we work with clients worldwide including the USA, UK, Australia, UAE, and many other countries." 
+  {
+    q: "Do you work with international clients?",
+    a: "Yes, we work with clients worldwide including the USA, UK, Australia, UAE, and many other countries."
   },
-  { 
-    q: "What is PPC advertising?", 
-    a: "PPC (Pay-Per-Click) is a paid marketing strategy where you pay only when someone clicks on your ad, helping drive instant traffic." 
+  {
+    q: "What is PPC advertising?",
+    a: "PPC (Pay-Per-Click) is a paid marketing strategy where you pay only when someone clicks on your ad, helping drive instant traffic."
   },
-  { 
-    q: "Can you help grow my social media pages?", 
-    a: "Yes, we create and manage social media strategies to increase engagement, followers, and brand awareness." 
+  {
+    q: "Can you help grow my social media pages?",
+    a: "Yes, we create and manage social media strategies to increase engagement, followers, and brand awareness."
   },
-  { 
-    q: "How much do your services cost?", 
-    a: "Pricing depends on your project requirements, goals, and selected services. We offer customized packages for every business." 
+  {
+    q: "How much do your services cost?",
+    a: "Pricing depends on your project requirements, goals, and selected services. We offer customized packages for every business."
   },
-  { 
-    q: "Do you guarantee results?", 
-    a: "We focus on proven strategies and best practices, but results may vary based on industry, competition, and market conditions." 
+  {
+    q: "Do you guarantee results?",
+    a: "We focus on proven strategies and best practices, but results may vary based on industry, competition, and market conditions."
   },
-  { 
-    q: "Will I get regular updates on my project?", 
-    a: "Yes, we provide regular progress reports and updates to keep you informed about your campaign performance." 
+  {
+    q: "Will I get regular updates on my project?",
+    a: "Yes, we provide regular progress reports and updates to keep you informed about your campaign performance."
   },
-  { 
-    q: "How do I get started with your agency?", 
-    a: "You can contact us through our website, share your requirements, and our team will guide you with the best strategy for your business." 
+  {
+    q: "How do I get started with your agency?",
+    a: "You can contact us through our website, share your requirements, and our team will guide you with the best strategy for your business."
   }
 ];
 
@@ -52,19 +52,19 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600">
-      
+    <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-[#111827]">
+
       {/* 🎯 SYNCED FAQ HERO SECTION */}
-      <section className="relative w-full overflow-hidden bg-[#030712]">
+      <section className="relative w-full overflow-hidden bg-[#111827]">
         <div className="container-wide">
-          
+
           {/* Background Image Container */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
               src="/home-hero.jpg"
               alt="Mesh Grid"
               fill
-              priority 
+              priority
               sizes="100vw"
               className="object-cover object-top opacity-35"
             />
@@ -76,7 +76,7 @@ export default function FAQPage() {
 
           {/* Content Wrapper */}
           <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
@@ -105,71 +105,71 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* --- FAQ ACCORDION SECTION - Fluid Scaling Engineered --- */}
-      <section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
-        {/* Background Glow */}
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
-        
-        {/* 🎯 FIXED: Max-width layer perfectly upgraded with responsive grid container */}
-        <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl flex flex-col gap-4 md:gap-6">
-          {faqs.map((faq, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className={`rounded-[2rem] border transition-all duration-500 overflow-hidden ${
-                openIndex === i ? "border-blue-500/50 bg-blue-500/[0.03]" : "border-white/5 bg-white/[0.01] hover:bg-white/[0.03]"
-              }`}
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full p-8 2xl:p-12 flex justify-between items-center text-left gap-4"
-              >
-                <span className={`text-xl md:text-2xl 2xl:text-3xl font-bold transition-colors ${openIndex === i ? "text-blue-400" : "text-white"}`}>
-                  {faq.q}
-                </span>
-                <div className={`shrink-0 p-2 2xl:p-4 rounded-full border transition-all duration-500 ${
-                  openIndex === i ? "bg-blue-500 border-blue-500 rotate-45 text-white" : "bg-white/5 border-white/10 text-blue-400"
-                }`}>
-                  <Plus size={20} className="2xl:w-8 2xl:h-8" />
-                </div>
-              </button>
+    {/* --- FAQ ACCORDION SECTION - Fluid Scaling Engineered --- */}
+{/* 🎯 FIXED: 'bg-[#111827]' ko badal kar 'bg-[#020617]' kar diya hai taake black hissa permanently khatam ho jaye */}
+<section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
+  {/* Background Glow */}
+  <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-              <AnimatePresence>
-                {openIndex === i && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
-                  >
-                    <div className="px-8 pb-8 2xl:px-12 2xl:pb-12 text-zinc-400 text-lg 2xl:text-2xl leading-relaxed border-t border-white/5 pt-6">
-                      {faq.a}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
-
-          {/* Need More Help? - Centered and scaled beautifully under the fluid framework */}
-          <div className="mt-20 2xl:mt-32 text-center p-8 md:p-12 2xl:p-20 rounded-[3rem] border border-white/5 bg-white/[0.01]">
-            <h3 className="text-2xl md:text-3xl 2xl:text-5xl font-bold mb-4">Still have questions?</h3>
-            {/* 🎯 FIXED: Invalid text-white-500 class swapped with clean responsive typography standard */}
-            <p className="text-zinc-400 text-[15px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-2xl mx-auto antialiased">
-              Can't find the answer you're looking for? Please chat with our friendly team.
-            </p>            
-        {/* 🎯 LINK INTEGRATED: Wrap your premium button inside Next.js Link component */}
-<Link href="/contact" className="inline-block">
-  <button className="px-10 py-4 2xl:px-16 2xl:py-6 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl shadow-[0_0_30px_rgba(37,99,235,0.2)] active:scale-95 duration-300">
-    Get in Touch
-  </button>
-</Link>
+  {/* 🎯 FIXED & UPGRADED WIDTH: Bari screens (lg, xl, 2xl, 3xl, 4xl) par ab width full fluid aur solid scale hogi */}
+  <div className="relative z-10 w-full mx-auto px-6 max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1500px] 3xl:max-w-[1700px] 4xl:max-w-[1900px] flex flex-col gap-4 md:gap-6">
+    {faqs.map((faq, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: i * 0.05 }}
+        className={`rounded-[2rem] border transition-all duration-500 overflow-hidden ${
+          openIndex === i ? "border-blue-500/50 bg-blue-500/[0.03]" : "border-white/5 bg-white/[0.01] hover:bg-white/[0.03]"
+        }`}
+      >
+        <button
+          onClick={() => setOpenIndex(openIndex === i ? null : i)}
+          className="w-full p-8 2xl:p-12 flex justify-between items-center text-left gap-4"
+        >
+          <span className={`text-xl md:text-2xl 2xl:text-3xl 3xl:text-4xl font-bold transition-colors ${openIndex === i ? "text-blue-400" : "text-white"}`}>
+            {faq.q}
+          </span>
+          <div className={`shrink-0 p-2 2xl:p-4 rounded-full border transition-all duration-500 ${
+            openIndex === i ? "bg-blue-500 border-blue-500 rotate-45 text-white" : "bg-white/5 border-white/10 text-blue-400"
+          }`}>
+            <Plus size={20} className="2xl:w-8 2xl:h-8 3xl:w-10 3xl:h-10" />
           </div>
-        </div>
-      </section>
+        </button>
+
+        <AnimatePresence>
+          {openIndex === i && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+            >
+              <div className="px-8 pb-8 2xl:px-12 2xl:pb-12 text-zinc-400 text-lg 2xl:text-2xl 3xl:text-3xl leading-relaxed border-t border-white/5 pt-6">
+                {faq.a}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
+    ))}
+
+    {/* Need More Help? - Centered and scaled beautifully under the fluid framework */}
+    {/* 🎯 FIXED WIDTH FOR BANNER: CTA box ki width ko bhi badi screen ke mutabiq full spread kiya hai */}
+    <div className="mt-20 2xl:mt-32 text-center p-8 md:p-12 2xl:p-20 3xl:p-24 rounded-[3rem] border border-white/5 bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526] w-full">
+      <h3 className="text-2xl md:text-3xl 2xl:text-5xl 3xl:text-6xl font-bold mb-4">Still have questions?</h3>
+      <p className="text-zinc-400 text-[15px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mb-6 md:mb-8 max-w-2xl 3xl:max-w-4xl mx-auto antialiased">
+        Can't find the answer you're looking for? Please chat with our friendly team.
+      </p>
+      <Link href="/contact" className="inline-block">
+        <button className="px-10 py-4 2xl:px-16 2xl:py-6 3xl:px-20 3xl:py-7 bg-blue-600 hover:bg-blue-500 text-white font-black rounded-full transition-all text-sm 2xl:text-xl 3xl:text-2xl shadow-[0_0_30px_rgba(37,99,235,0.2)] active:scale-95 duration-300">
+          Get in Touch
+        </button>
+      </Link>
+    </div>
+  </div>
+</section>
     </main>
   );
 }

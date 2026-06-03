@@ -21,10 +21,10 @@ export default function TermsAndConditions() {
 
   return (
     /* 🎯 Exact structural clone from Privacy/Pricing logic to maintain zero-gap navbar integration */
-    <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
+    <main className="min-h-screen bg-[#111827] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
       
      {/* 🎯 ADJUSTED TERMS & CONDITIONS HERO SECTION: Enhanced top padding to force layout down and equalize space */}
-<section className="relative w-full overflow-hidden bg-[#030712]">
+<section className="relative w-full overflow-hidden bg-[#111827]">
   <div className="container-wide">
     
     {/* Background Image Container with Exact Matching Premium CSS */}
@@ -89,7 +89,7 @@ export default function TermsAndConditions() {
       {terms.map((item, index) => (
         <div key={index} className="space-y-4 w-full">
           {/* Heading Style */}
-          <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+          <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
             {item.title}
           </h2>
           {/* Paragraph Style */}

@@ -138,7 +138,7 @@ export default function WebDevPage() {
 
       <>
         {/* 🎯 ABOUT SECTION */}
-        <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-4 bg-[#1E2939] overflow-hidden">
+            <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#1E2939] overflow-hidden">
 
           {/* Background Glow */}
           <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
@@ -362,50 +362,43 @@ export default function WebDevPage() {
                         initial={{ opacity: 0, x: isEven ? -30 : 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.5 }}
-                        // 🎯 FIXED: Solid background flavor lagaya hai jo dynamic layout ke sath clear dikhega
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        // 🎯 FIXED: Style tag lagakar background color #0971A6 ko completely lock kar diya hai
                         style={{ backgroundColor: "#0971A6" }}
-                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] border border-white/10 transition-all duration-500 shadow-xl"
                       >
-                        {/* 🌀 FLOATING STEP NUMBER BADGE: Safe cross-platform custom variable line styling */}
-                        <div
-                          style={{ '--hover-color': '#0971A6' }}
-                          className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 z-10 shadow-lg"
-                        >
+                        {/* Floating Step Number */}
+                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-sm font-bold group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-colors z-10 shadow-xl">
                           {step.id}
                         </div>
 
                         <div className="flex flex-col gap-4">
-                          {/* Icon & Heading */}
+                          {/* Icon & Heading Line */}
                           <div className="flex items-center gap-4">
-                            {/* 🌀 FIXED ICON BOX: Safe style property for type verification */}
-                            <div
-                              style={{ '--hover-color': '#0971A6' }}
-                              className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
-                            >
+                            {/* 🌀 Icon Wrapper: Background transparent black tint taake blue background par pop kare */}
+                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-14 2xl:h-14 rounded-xl bg-black/20 text-cyan-300 flex items-center justify-center group-hover:bg-white group-hover:text-[#0971A6] transition-all duration-500 shadow-md">
                               {step.icon}
                             </div>
-
-                            <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white tracking-tight">
+                            <h4 className="font-black text-[1.1rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.4rem] text-white tracking-tight transition-colors duration-300">
                               {step.title}
                             </h4>
                           </div>
 
-                          {/* Description Below */}
-                          <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                          {/* Description Paragraph */}
+                          <p className="text-white/90 text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl group-hover:opacity-100 transition-all duration-300">
                             {step.desc}
                           </p>
                         </div>
 
-                        {/* Bottom Accent Line */}
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-300 group-hover:w-[35%] transition-all duration-700" />
+                        {/* 🎯 Running Laser Accent */}
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-white to-cyan-300 group-hover:w-[40%] transition-all duration-700 ease-out rounded-bl-full" />
                       </motion.div>
                     </div>
 
-                    {/* CENTRAL NODE */}
+                    {/* 🎯 REFINED: CENTRAL INTERACTIVE NODE */}
                     <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
-                      <div className="w-5 h-5 2xl:w-10 2xl:h-10 rounded-full bg-[#020617] border border-white/10 flex items-center justify-center group-hover:border-blue-500 transition-all duration-500 group-hover:scale-110">
-                        <div className="w-2 h-2 2xl:w-4 2xl:h-4 bg-zinc-700 rounded-full group-hover:bg-blue-400 transition-all" />
+                      <div className="w-6 h-6 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-500 group-hover:scale-125">
+                        <div className="w-2 h-2 bg-white/40 rounded-full group-hover:bg-cyan-400 transition-all duration-300" />
                       </div>
                     </div>
 

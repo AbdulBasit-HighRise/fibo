@@ -170,96 +170,90 @@ export default function AboutPage() {
     { title: "Our Goal", icon: <Rocket size={26} />, desc: "To build lasting client relationships by providing reliable services, measurable results, and creative solutions tailored to every business need." },
   ].map((val, i) => (
     <motion.div
-      key={i}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: i * 0.1 }}
-      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-      style={{ backgroundColor: "#0971A6" }}
-      className="p-10 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
-    >
-      {/* Icon aur Heading wrapper */}
-      <div className="flex items-center gap-4 mb-6">
-        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-        <div 
-          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-          className="shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
-        >
-          {val.icon}
-        </div>
-        
-        {/* Heading text (Maintained 20px font-size) */}
-        <h3 className="text-[20px] font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors duration-300">
-          {val.title}
-        </h3>
+  key={i}
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ delay: i * 0.1 }}
+  style={{ backgroundColor: "#0971A6" }}
+  className="p-10 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+>
+  {/* Icon aur Heading wrapper */}
+  <div className="flex items-center gap-4 mb-6">
+    {/* 🌀 FIXED ICON BOX & ICON: Hover par custom text color override structural system */}
+    <div className="shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:border-transparent transition-all duration-500 shadow-sm">
+      {/* 🎯 FIXED: Icon ko wrapper element diya hai jo group-hover par text color badal kar icon ko perfect blue kardega */}
+      <div className="group-hover:text-[#0971A6] transition-colors duration-500 flex items-center justify-center">
+        {val.icon}
       </div>
+    </div>
+    
+    {/* Heading text */}
+    <h4 className="text-[20px] font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors duration-300">
+      {val.title}
+    </h4>
+  </div>
 
-      {/* Description Panel (Maintained font setups) */}
-      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
-        {val.desc}
-      </p>
-    </motion.div>
+  {/* Description Panel */}
+  <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
+    {val.desc}
+  </p>
+</motion.div>
   ))}
 </div>
         </div>
       </section>
-
-      {/* 4. WORKING PROCESS */}
-      <section className="py-24 px-6 bg-[#1E2939] relative">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <span className="text-[10px]  tracking-[4px] text-blue-400 font-extrabold block mb-4">EXECUTION TRACK</span>
-            <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-none">Our {" "}
-
-              <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Working Process.
-              </span>
-            </h3>
-          </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-  {[
-    { step: "01", title: "Understanding", desc: "Learning about your business and goals." },
-    { step: "02", title: "Research", desc: "Detailed market research and planning." },
-    { step: "03", title: "Creative", desc: "Engaging designs and digital solutions." },
-    { step: "04", title: "Launch", desc: "Optimization and performance marketing." },
-    { step: "05", title: "Growth", desc: "Monitoring and long-term support." }
-  ].map((proc, idx) => (
-    <motion.div
-      key={idx}
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      transition={{ delay: idx * 0.1 }}
-      // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-      style={{ backgroundColor: "#0971A6" }}
-      className="p-8 rounded-[2rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between"
-    >
-      <div>
-        {/* 🌀 FIXED STEP NUMBER BADGE: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-        <span 
-          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-          className="w-10 h-10 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 font-black text-sm mb-4 group-hover:bg-white group-hover:text-blue/500 group-hover:border-transparent transition-all duration-500 shadow-sm"
-        >
-          {proc.step}
+{/* 4. WORKING PROCESS */}
+<section className="py-24 px-6 bg-[#1E2939] relative text-white">
+  <div className="max-w-7xl mx-auto">
+    <div className="mb-20">
+      <span className="text-[10px] tracking-[4px] text-blue-400 font-extrabold block mb-4">EXECUTION TRACK</span>
+      <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-none">
+        Our{" "}
+        <span className="mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+          Working Process.
         </span>
-        
-        {/* Title Text (Kept original sizes, added text-white) */}
-        <h3 className="mb-2 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] tracking-[1px] text-white group-hover:text-cyan-200 transition-colors duration-300">
-          {proc.title}
-        </h3>
-        
-        {/* Description Paragraph (Kept original sizes & configuration) */}
-        <p className="mb-2 text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          {proc.desc}
-        </p>
-      </div>
-    </motion.div>
-  ))}
-</div>
-        </div>
-      </section>
+      </h3>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+      {[
+        { step: "01", title: "Understanding", desc: "Learning about your business and goals." },
+        { step: "02", title: "Research", desc: "Detailed market research and planning." },
+        { step: "03", title: "Creative", desc: "Engaging designs and digital solutions." },
+        { step: "04", title: "Launch", desc: "Optimization and performance marketing." },
+        { step: "05", title: "Growth", desc: "Monitoring and long-term support." }
+      ].map((proc, idx) => (
+        <motion.div
+          key={idx}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: idx * 0.1 }}
+          style={{ backgroundColor: "#0971A6" }}
+          className="p-8 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between"
+        >
+          <div>
+            <div className="flex flex-col gap-4 mb-6">
+              <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-2xl bg-black/20 text-cyan-300 border border-white/5 font-black text-sm group-hover:text-white group-hover:border-cyan-300/50 transition-all duration-500 shadow-sm">
+                {proc.step}
+              </div>
+              
+              <h3 className="text-[20px] font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors duration-300">
+                {proc.title}
+              </h3>
+            </div>
+
+            {/* 🎯 FIXED: Swapped 'val.desc' to 'proc.desc' */}
+            <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
+              {proc.desc}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* 5. 4 REASONS TO WORK WITH US */}
       <section className="py-24 bg-[#111827] px-6 relative border-t border-white/[0.02]">

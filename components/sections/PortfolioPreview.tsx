@@ -72,7 +72,7 @@ export default function PortfolioBento() {
             className="flex items-center shrink-0"
           >
             <Link
-              href="/portfolio"
+              href="/case-studies"
               className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white hover:text-white transition-all duration-500 group"
             >
               <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">

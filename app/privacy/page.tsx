@@ -6,7 +6,7 @@ import CTA from "@/components/sections/CTA";
 export default function PrivacyPolicy() {
   return (
     /* 🎯 Exact structural clone with standard top gap framework matching pricing section */
-    <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
+    <main className="min-h-screen bg-[#111827] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
 
       {/* 1. HERO SECTION (Privacy Policy - Identical Setup to Pricing Plans) */}
       <section className="relative w-full overflow-hidden">
@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
             sizes="100vw"
             className="object-cover object-top opacity-35" // Depth consistency locked
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/40 to-[#020617]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#111827]/40 to-[#111827]" />
         </div>
 
         {/* Ambient Blur Dot to lock the signature aesthetic */}
@@ -76,7 +76,7 @@ export default function PrivacyPolicy() {
 
       {/* Information We Collect */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           Information We Collect
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">
@@ -86,7 +86,7 @@ export default function PrivacyPolicy() {
 
       {/* How We Use Your Information */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           How We Use Your Information
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed mb-4 font-normal opacity-90 !max-w-none">
@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
 
       {/* Information Sharing */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           Information Sharing
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">
@@ -113,7 +113,7 @@ export default function PrivacyPolicy() {
 
       {/* Data Security */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           Data Security
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">
@@ -123,7 +123,7 @@ export default function PrivacyPolicy() {
 
       {/* Cookies Policy */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           Cookies Policy
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">
@@ -133,7 +133,7 @@ export default function PrivacyPolicy() {
 
       {/* Third-Party Links */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           Third-Party Links
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">
@@ -143,7 +143,7 @@ export default function PrivacyPolicy() {
 
       {/* Your Rights */}
       <div className="space-y-4 w-full">
-        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight uppercase border-b border-white/5 pb-2">
+        <h2 className="!text-xl md:!text-2xl lg:!text-3xl font-black text-white tracking-tight  border-b border-white/5 pb-2">
           Your Rights
         </h2>
         <p className="text-white text-sm md:text-base leading-relaxed font-normal opacity-90 !max-w-none">

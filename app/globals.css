@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --bg-dark: #030303;
+    --bg-dark: #111827;
     --accent-blue: #3b82f6;
     --text-primary: #ffffff;
     --text-secondary: #a1a1aa;
@@ -101,9 +101,19 @@ p {
 .gradient-text {
   @apply bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent;
 }
-
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
 /* --- CUSTOM SCROLLBAR --- */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #030303; }
+::-webkit-scrollbar-track { background: #111827; }
 ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }

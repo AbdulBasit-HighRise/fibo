@@ -81,7 +81,7 @@ export default function Footer() {
                 { name: "Home", href: "/" },
                 { name: "About", href: "/about" },
                 { name: "Services", href: "/services" },
-                { name: "Case Studies", href: "/casestudies" },
+                { name: "Case Studies", href: "/case-studies" },
                 { name: "Blogs", href: "/blog" },
               ].map((link, idx) => (
                 <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
@@ -98,7 +98,7 @@ export default function Footer() {
             </span>
             <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
               {[
-                { title: "Website Development", slug: "web-development" },
+                { title: "Website Development", slug: "website-development" },
                 { title: "Search Engine Optimization", slug: "seo" },
                 { title: "Social Media Marketing", slug: "social-media-marketing" },
                 { title: "AI Automation", slug: "ai-automation" },

@@ -129,7 +129,7 @@ export default function Navbar() {
 
   const baseLinksRight = [
     {name: "About", href: "/about"},
-    { name: "Case Studies", href: "/casestudies" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
@@ -139,7 +139,7 @@ export default function Navbar() {
     href: "/services", 
     isDropdown: true,
     subLinks: [
-      { name: "Web Development", href: "/services/web-development" },
+      { name: "Web Development", href: "/services/website-development" },
       { name: "SEO Optimization", href: "/services/seo" },
       { name: "Social Media Marketing", href: "/services/social-media-marketing" },
       { name: "Ecommerce Management ", href: "/services/e-commerce-management" },
@@ -151,7 +151,7 @@ export default function Navbar() {
     ...baseLinksLeft,
     { name: "About", href: "/about" },
     servicesDropdown,
-    { name: "Case Studies", href: "/casestudies" },
+    { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
     ...dynamicLinks,
     { name: "Contact", href: "/contact" },

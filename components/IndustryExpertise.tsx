@@ -72,15 +72,15 @@ export default function IndustryExpertise() {
                 className="flex-shrink-0 w-[140px] h-[150px] md:w-[220px] md:h-[200px] 2xl:w-[320px] 2xl:h-[280px] 
                            rounded-2xl md:rounded-[2rem] border transition-all duration-500 group/card pointer-events-auto
                            bg-gradient-to-br from-blue-900/40 to-black border-blue-500/30
-                           flex flex-col items-center justify-center gap-4 hover:border-blue-400 hover:shadow-[0_10px_30px_rgba(9,113,166,0.2)]"
+                           flex flex-col items-center justify-center gap-4  hover:shadow-[0_10px_30px_rgba(9,113,166,0.2)]"
               >
                 {/* 🌀 Icon Wrapper */}
                 <div className="relative overflow-hidden">
-                  <Icon className="w-8 h-12 md:w-16 2xl:w-20 lg:w-20 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg] group-hover/card:text-blue-400" />
+                  <Icon className="w-8 h-12 md:w-16 2xl:w-20 lg:w-20 text-white transition-transform duration-700 ease-out group-hover/card:rotate-[360deg]" />
                 </div>
 
                 {/* 🖋️ Text Description Element */}
-                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-base font-black tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0 uppercase group-hover/card:text-blue-400 transition-colors duration-300">
+                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-[16px] font-black tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0  transition-colors duration-300">
                   {item.title}
                 </p>
               </div>

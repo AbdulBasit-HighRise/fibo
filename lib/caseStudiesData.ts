@@ -65,6 +65,10 @@ export interface CaseStudy {
   sections: SectionItem[];
   results: ResultsData;
   proof?: ProofData;
+  displayCategory?: string;
+  clientName?: string;
+  location?: string;
+  websiteName?: string;
 }
 export const caseStudiesData: CaseStudy[] = [
   // ========================================================
@@ -77,7 +81,12 @@ export const caseStudiesData: CaseStudy[] = [
     title: "Rhino Roofing Orlando Scale",
     description: "170% Leads Increased For Roofing Company",
     primaryOutcome: "+1,194% Organic Traffic",
-    image: "/rino-roffers.jpg", // Top Image Path as per your blueprint
+    image: "/rino-roffers.jpg",
+    displayCategory: "Local SEO",
+    clientName: "Rhino Roofing Orlando",
+    location: "USA",
+    websiteName: "WordPress",
+    // Top Image Path as per your blueprint
     metrics: [
       { value: "+1,194%", label: "Organic traffic growth in 6 months", highlight: true },
       { value: "+170%", label: "Lead generation increase", highlight: false },
@@ -247,6 +256,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "+11% Total Sales Revenue Increased For Oral Care Brand",
     primaryOutcome: "+28% Sessions",
     image: "/smile-care.jpg", // 👈 Top Image Path (Yahan apni file ka naam set kar lena)
+     displayCategory: "Local SEO",
+    clientName: "Breez Care",
+    location: "USA",
+    websiteName: "E-commerce",
     metrics: [
       { value: "+28%", label: "Increase in website sessions", highlight: false },
       { value: "+11%", label: "Growth in total sales revenue", highlight: true },
@@ -390,6 +403,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "+28% Organic Traffic Increase For Local Cleaning Company",
     primaryOutcome: "Top #1 Positions",
     image: "/cleaning.jpg", // 👈 Top Image Path (Yahan apni top image file ka naam set karein)
+     displayCategory: "Local SEO",
+    clientName: "West London Cleaners",
+    location: "UK",
+    websiteName: "WIX",
     metrics: [
       { value: "+28%", label: "Increase in organic website sessions", highlight: false },
       { value: "Top #1", label: "Position for multiple high-intent keywords", highlight: true },
@@ -532,6 +549,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     primaryOutcome: "+6.69K Clicks",
     image: "/burger.jpg", // 👈 Top Image Path (Yahan apni banner image set karein)
+     displayCategory: "Local SEO",
+    clientName: "Hash Burger",
+    location: "Australia",
+    websiteName: "WordPress",
     metrics: [
       { value: "+6.69K", label: "Total Organic Clicks realized", highlight: false },
       { value: "+291K", label: "Total Search Impressions achieved", highlight: true },
@@ -671,6 +692,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "+1.76K Leads For Aesthetic Clinic",
     primaryOutcome: "+1.76K Leads",
     image: "/clinic.jpg", // 👈 Top Image Path
+     displayCategory: "Local SEO",
+    clientName: "Aesthetic Clinic",
+    location: "USA",
+    websiteName: "WordPress",
     metrics: [
       { value: "+1.76K", label: "Total Organic Clicks realized", highlight: false },
       { value: "+198K", label: "Total Search Impressions achieved", highlight: true },
@@ -811,6 +836,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "#1 Position in SERP For Holistic Doctor Clinic",
     primaryOutcome: "#1 SERP Position",
     image: "/dr.jpg", // 👈 Top Image Path
+     displayCategory: "Local SEO",
+    clientName: "Dr. Anjana",
+    location: "USA",
+    websiteName: "WordPress",
     metrics: [
       { value: "+2.51K", label: "Total Organic Clicks realized", highlight: false },
       { value: "+145K", label: "Total Search Impressions achieved", highlight: true },
@@ -952,6 +981,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "31% INCREASE IN QUALIFIED PROPERTY LEADS VIA HIGH-INTENT SOCIAL FUNNELS",
     primaryOutcome: "+31% Property Leads",
     image: "/realestate.jpg", // 👈 Top Image Path (Real Estate Banner Asset)
+     displayCategory: "Paid Social",
+    clientName: "Victoria Property Network",
+    location: "Australia",
+    websiteName: "Facebook & Instagram",
     metrics: [
       { value: "+31%", label: "Increase in qualified property leads realized", highlight: true },
       { value: "+19%", label: "Improvement in digital campaign conversion rate", highlight: false },
@@ -1091,6 +1124,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
     primaryOutcome: "22.21x Purchase ROAS",
     image: "/gym.jpg", // 👈 Top Image Path for your Fitness Campaign asset
+     displayCategory: "Paid Social",
+    clientName: "Premium Fitness Brand",
+    location: "USA",
+    websiteName: "Facebook & Instagram",
     metrics: [
       { value: "22.21x", label: "Average Purchase ROAS generated", highlight: true },
       { value: "$598,541", label: "Total Purchases Conversion Value scaled", highlight: false },
@@ -1211,7 +1248,7 @@ export const caseStudiesData: CaseStudy[] = [
       subheader: "Live ROAS dashboards and transaction mapping sheets capturing scale velocity parameters.",
       images: [
         {
-          src: "/gym-result.jpg", // 👈 Bottom Snapshot Image Path (Ad Manager Matrix Screenshot)
+          src: "/gym-results.jpg", // 👈 Bottom Snapshot Image Path (Ad Manager Matrix Screenshot)
           alt: "E-commerce store performance analytics mapping tracking verified conversions and scaled revenue loops.",
           caption: "Figure 8.1: Confirmed dashboard capture revealing 22.21x purchase performance metrics and tracking architecture integrity parameters.",
           color: "pink" // 👈 Automated dynamic color selection match for footer snap
@@ -1231,6 +1268,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
     primaryOutcome: "23.85x Purchase ROAS",
     image: "/brand.jpg", // 👈 Top Image Path for your Fashion Campaign asset
+     displayCategory: "Paid Social",
+    clientName: "E-Commerce Fashion Brand",
+    location: "USA",
+    websiteName: "Facebook & Instagram",
     metrics: [
       { value: "23.85x", label: "Average Purchase ROAS achieved", highlight: true },
       { value: "$166,549", label: "Total Website Purchases Conversion Value", highlight: false },
@@ -1366,6 +1407,10 @@ export const caseStudiesData: CaseStudy[] = [
     description: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
     primaryOutcome: "25.10x Purchase ROAS",
     image: "/roas.jpg", // 👈 Top Image Path for your Home & Living Asset
+     displayCategory: "Paid Social",
+    clientName: "Premium Home & Living Brand",
+    location: "UK",
+    websiteName: "Facebook & Instagram",
     metrics: [
       { value: "25.10x", label: "Average Purchase ROAS generated", highlight: true },
       { value: "$239,392", label: "Total Website Purchases Conversion Value", highlight: false },

@@ -33,7 +33,7 @@ export const metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#030303",
+  themeColor: "#111827",
   maximumScale: 5,
 };
 
@@ -49,7 +49,7 @@ export default function RootLayout({
       className={`scroll-smooth ${inter.variable} ${instrumentSans.variable}`}
     >
       <body
-        className="bg-[#030303] text-white antialiased overflow-x-hidden selection:bg-blue-600/30"
+        className="bg-[#111827] text-white antialiased overflow-x-hidden selection:bg-blue-600/30"
         suppressHydrationWarning
       >
         <CustomCursor />

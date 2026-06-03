@@ -40,10 +40,10 @@ const plans = [
 
 export default function PricingPage() {
   return (
-    <main className="min-h-screen bg-[#020617] text-white overflow-x-hidden pb-20 selection:bg-blue-600">
+    <main className="min-h-screen bg-[#111827] text-white overflow-x-hidden pb-20  selection:bg-blue-600">
       
       {/* 🎯 PRICING HERO SECTION */}
-      <section className="relative w-full overflow-hidden bg-[#030712]">
+      <section className="relative w-full overflow-hidden bg-[#111827]">
         <div className="container-wide">
           
           {/* Background Image Container */}
@@ -94,7 +94,7 @@ export default function PricingPage() {
       </section>
 
     {/* --- PRICING GRID --- */}
-<section className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 -mt-12 2xl:-mt-20">
+<section className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6  2xl:-mt-20">
   <div className="grid lg:grid-cols-3 gap-8 2xl:gap-12">
     {plans.map((plan, i) => (
       <motion.div
@@ -162,7 +162,8 @@ export default function PricingPage() {
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    className="mt-12 2xl:mt-20 p-8 md:p-12 2xl:p-20 rounded-[3.5rem] border border-white/10 bg-[#0971A6] flex flex-col md:flex-row items-center justify-between gap-8"
+    className="mt-12 2xl:mt-20 p-8 md:p-12 2xl:p-20 rounded-[3.5rem] border border-white/10    bg-gradient-to-bl from-[#0971A6] via-[#054f7a] to-[#021526]
+ flex flex-col md:flex-row items-center justify-between gap-8"
   >
     <div className="space-y-4">
       <div className="flex items-center gap-3">
