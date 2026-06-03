@@ -93,104 +93,107 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* --- PRICING GRID --- */}
-      <section className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 -mt-12 2xl:-mt-20">
-        <div className="grid lg:grid-cols-3 gap-8 2xl:gap-12">
-          {plans.map((plan, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
-              className={`relative p-8 md:p-10 2xl:p-14 rounded-[3rem] border flex flex-col transition-all duration-500 group ${
-                plan.featured 
-                ? "bg-gradient-to-b from-blue-500/10 to-transparent border-blue-500/30 scale-105 shadow-[0_20px_50px_rgba(59,130,246,0.1)] z-20" 
-                : "bg-white/[0.02] border-white/5 hover:border-white/20"
-              }`}
-            >
-              {plan.featured && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-blue-500 text-[10px] 2xl:text-xs font-black uppercase tracking-widest rounded-full shadow-lg">
-                  Most Popular
-                </div>
-              )}
+    {/* --- PRICING GRID --- */}
+<section className="relative z-10 max-w-7xl 2xl:max-w-[1600px] mx-auto px-6 -mt-12 2xl:-mt-20">
+  <div className="grid lg:grid-cols-3 gap-8 2xl:gap-12">
+    {plans.map((plan, i) => (
+      <motion.div
+        key={i}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: i * 0.1 }}
+        viewport={{ once: true }}
+        className={`relative p-8 md:p-10 2xl:p-14 rounded-[3rem] bg-[#0971A6] border flex flex-col transition-all duration-500 group ${
+          plan.featured 
+          ? "border-white/40 scale-105 shadow-[0_20px_50px_rgba(9,113,166,0.3)] z-20" 
+          : "border-white/10 hover:border-white/30 hover:scale-[1.02]"
+        }`}
+      >
+        {plan.featured && (
+          /* 🎯 FIXED: Synced Badge color with the exact background */
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-[#0b5f8a] text-white text-[10px] 2xl:text-xs font-black uppercase tracking-widest rounded-full shadow-lg">
+            Most Popular
+          </div>
+        )}
 
-              <div className="mb-8 p-4 2xl:p-6 w-fit rounded-2xl bg-white/5 border border-white/5 group-hover:scale-110 transition-transform">
-                {plan.icon}
-              </div>
+        <div className="mb-8 p-4 2xl:p-6 w-fit rounded-2xl bg-white/10 border border-white/10 group-hover:scale-110 transition-transform text-white">
+          {plan.icon}
+        </div>
 
-              <h3 className="text-2xl 2xl:text-4xl font-black mb-2">{plan.name}</h3>
-              <p className="text-zinc-500 text-[16px] 2xl:text-xl mb-8 leading-relaxed">{plan.desc}</p>
+        <h3 className="text-2xl 2xl:text-4xl font-black mb-2 text-white">{plan.name}</h3>
+        {/* 🎯 FIXED: 'text-white-500' fallback class changed to 'text-zinc-100' for better contrast over blue background */}
+        <p className="text-zinc-100 text-[16px] 2xl:text-xl mb-8 leading-relaxed opacity-90">{plan.desc}</p>
 
-              <div className="flex items-baseline gap-1 mb-10">
-                <span className="text-5xl 2xl:text-7xl font-black text-white">{plan.price}</span>
-                <span className="text-zinc-500 text-sm 2xl:text-lg">{plan.billing}</span>
-              </div>
+        <div className="flex items-baseline gap-1 mb-10">
+          <span className="text-5xl 2xl:text-7xl font-black text-white">{plan.price}</span>
+          {/* 🎯 FIXED: 'text-black-500' changed to 'text-zinc-200' so the text is perfectly visible over the dark blue */}
+          <span className="text-zinc-200 text-sm 2xl:text-lg">{plan.billing}</span>
+        </div>
 
-              <div className="space-y-4 2xl:space-y-6 mb-12 flex-1">
-                {plan.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-start gap-3 text-zinc-400">
-                    <Check size={18} className="text-blue-500 mt-0.5 flex-shrink-0 2xl:w-6 2xl:h-6" />
-                    <span className="text-sm 2xl:text-xl font-medium leading-tight">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* 🎯 PRICING CARD BUTTON: Sliding Gradient Animation Integrated */}
-              <Link href={plan.link} passHref className="w-full">
-                <button className="group relative overflow-hidden flex items-center justify-center gap-3 px-8 py-4 w-full bg-white text-black font-black text-[10px] 2xl:text-sm tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 shadow-lg shadow-black/10">
-                  <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                  <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-2">
-                    Get Started
-                    <Send 
-                      size={12} 
-                      className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 text-zinc-700 group-hover:text-white" 
-                    />
-                  </span>
-                </button>
-              </Link>
-            </motion.div>
+        <div className="space-y-4 2xl:space-y-6 mb-12 flex-1">
+          {plan.features.map((feature, idx) => (
+            <div key={idx} className="flex items-start gap-3 text-white">
+              {/* Checkmark icon syncs with light white context */}
+              <Check size={18} className="text-white mt-0.5 flex-shrink-0 2xl:w-6 2xl:h-6 bg-white/20 rounded-full p-0.5" />
+              <span className="text-sm 2xl:text-xl font-medium leading-tight opacity-9ated">{feature}</span>
+            </div>
           ))}
         </div>
 
-        {/* --- ENTERPRISE PLAN (STANDALONE) --- */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-12 2xl:mt-20 p-8 md:p-12 2xl:p-20 rounded-[3.5rem] border border-red-500/20 bg-gradient-to-r from-red-500/5 via-transparent to-transparent flex flex-col md:flex-row items-center justify-between gap-8"
-        >
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
-               <div className="p-3 2xl:p-5 rounded-xl bg-red-500/10 text-red-500">
-                  <Flame size={24} className="2xl:w-10 2xl:h-10" />
-               </div>
-               <h3 className="text-3xl 2xl:text-5xl font-black italic">Enterprise Plan</h3>
-            </div>
-            <p className="text-zinc-400 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-4xl opacity-90 antialiased">
-              For large-scale business growth. Custom Marketing Strategy, Full Funnel Optimization, Advanced PPC + Retargeting, and 24/7 Priority Support.
-            </p>
-          </div>
+        {/* PRICING CARD BUTTON */}
+        <Link href={plan.link} passHref className="w-full">
+          <button className="group relative overflow-hidden flex items-center justify-center gap-3 px-8 py-4 w-full bg-white text-black font-black text-[10px] 2xl:text-sm tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 shadow-lg shadow-black/10">
+            <div className="absolute inset-0 w-0 bg-gradient-to-r from-cyan-500 to-blue-600 transition-all duration-500 ease-out group-hover:w-full" />
+            <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-2">
+              Get Started
+              <Send 
+                size={12} 
+                className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 text-zinc-700 group-hover:text-white" 
+              />
+            </span>
+          </button>
+        </Link>
+      </motion.div>
+    ))}
+  </div>
 
-          <div className="text-center md:text-right space-y-4 min-w-[200px]">
-            <div className="text-4xl 2xl:text-6xl font-black text-white">Custom Pricing</div>
-            
-            {/* 🎯 ENTERPRISE BUTTON: Sliding Gradient Animation Integrated */}
-            <Link href="/contact" passHref>
-              <button className="group relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 md:px-10 md:py-5 bg-white text-black font-black text-[10px] 2xl:text-xs tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 w-full sm:w-auto shadow-lg shadow-black/10">
-                <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-3">
-                  Contact Sales
-                  <Send 
-                    size={13} 
-                    className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 text-zinc-700 group-hover:text-white" 
-                  />
-                </span>
-              </button>
-            </Link>
-          </div>
-        </motion.div>
-      </section>
+  {/* --- ENTERPRISE PLAN --- */}
+  <motion.div 
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="mt-12 2xl:mt-20 p-8 md:p-12 2xl:p-20 rounded-[3.5rem] border border-white/10 bg-[#0971A6] flex flex-col md:flex-row items-center justify-between gap-8"
+  >
+    <div className="space-y-4">
+      <div className="flex items-center gap-3">
+         <div className="p-3 2xl:p-5 rounded-xl bg-white/10 text-white">
+            <Flame size={24} className="2xl:w-10 2xl:h-10" />
+         </div>
+         <h3 className="text-3xl 2xl:text-5xl font-black italic text-white">Enterprise Plan</h3>
+      </div>
+      <p className="text-zinc-100 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-4xl opacity-90 antialiased">
+        For large-scale business growth. Custom Marketing Strategy, Full Funnel Optimization, Advanced PPC + Retargeting, and 24/7 Priority Support.
+      </p>
+    </div>
+
+    <div className="text-center md:text-right space-y-4 min-w-[200px]">
+      <div className="text-4xl 2xl:text-6xl font-black text-white">Custom Pricing</div>
+      
+      <Link href="/contact" passHref>
+        <button className="group relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 md:px-10 md:py-5 bg-white text-black font-black text-[10px] 2xl:text-xs tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 w-full sm:w-auto shadow-lg shadow-black/10">
+          <div className="absolute inset-0 w-0 bg-gradient-to-r from-cyan-500 to-blue-600 transition-all duration-500 ease-out group-hover:w-full" />
+          <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-3">
+            Contact Sales
+            <Send 
+              size={13} 
+              className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-500 text-zinc-700 group-hover:text-white" 
+            />
+          </span>
+        </button>
+      </Link>
+    </div>
+  </motion.div>
+</section>
     </main>
   );
 }

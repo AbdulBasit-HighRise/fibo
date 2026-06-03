@@ -356,51 +356,51 @@ export default function WebDevPage() {
                     className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
                       }`}
                   >
-                  {/* CARD CONTAINER */}
-<div className="w-full md:w-[45%] pl-8 md:pl-0">
-  <motion.div
-    initial={{ opacity: 0, x: isEven ? -30 : 30 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.5 }}
-    // 🎯 FIXED: Solid background flavor lagaya hai jo dynamic layout ke sath clear dikhega
-    style={{ backgroundColor: "#0971A6" }}
-    className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
-  >
-    {/* 🌀 FLOATING STEP NUMBER BADGE: Safe cross-platform custom variable line styling */}
-    <div 
-style={{ '--hover-color': '#0971A6' }}
-      className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 z-10 shadow-lg"
-    >
-      {step.id}
-    </div>
+                    {/* CARD CONTAINER */}
+                    <div className="w-full md:w-[45%] pl-8 md:pl-0">
+                      <motion.div
+                        initial={{ opacity: 0, x: isEven ? -30 : 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.5 }}
+                        // 🎯 FIXED: Solid background flavor lagaya hai jo dynamic layout ke sath clear dikhega
+                        style={{ backgroundColor: "#0971A6" }}
+                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[3rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+                      >
+                        {/* 🌀 FLOATING STEP NUMBER BADGE: Safe cross-platform custom variable line styling */}
+                        <div
+                          style={{ '--hover-color': '#0971A6' }}
+                          className="absolute -top-3 -right-3 w-10 h-10 2xl:w-16 2xl:h-16 rounded-full bg-black/40 border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-base font-bold group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 z-10 shadow-lg"
+                        >
+                          {step.id}
+                        </div>
 
-    <div className="flex flex-col gap-4">
-      {/* Icon & Heading */}
-      <div className="flex items-center gap-4">
-        {/* 🌀 FIXED ICON BOX: Safe style property for type verification */}
-        <div 
-style={{ '--hover-color': '#0971A6' }}
-          className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
-        >
-          {step.icon}
-        </div>
-        
-        <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white tracking-tight">
-          {step.title}
-        </h4>
-      </div>
+                        <div className="flex flex-col gap-4">
+                          {/* Icon & Heading */}
+                          <div className="flex items-center gap-4">
+                            {/* 🌀 FIXED ICON BOX: Safe style property for type verification */}
+                            <div
+                              style={{ '--hover-color': '#0971A6' }}
+                              className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-18 2xl:h-18 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+                            >
+                              {step.icon}
+                            </div>
 
-      {/* Description Below */}
-      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
-        {step.desc}
-      </p>
-    </div>
+                            <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white tracking-tight">
+                              {step.title}
+                            </h4>
+                          </div>
 
-    {/* Bottom Accent Line */}
-    <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-300 group-hover:w-[35%] transition-all duration-700" />
-  </motion.div>
-</div>
+                          {/* Description Below */}
+                          <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-all duration-300">
+                            {step.desc}
+                          </p>
+                        </div>
+
+                        {/* Bottom Accent Line */}
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-cyan-300 group-hover:w-[35%] transition-all duration-700" />
+                      </motion.div>
+                    </div>
 
                     {/* CENTRAL NODE */}
                     <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
@@ -440,195 +440,195 @@ style={{ '--hover-color': '#0971A6' }}
             </p> */}
           </div>
 
-         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
-  {[
-    {
-      step: "01",
-      title: "Amazon",
-      keywords: "Speed Optimized, SEO Ready, Dynamic CMS",
-      desc: "Dominating the world's largest marketplace with expert product listing optimization and high-converting PPC ad campaigns"
-    },
-    {
-      step: "02",
-      title: "eBay",
-      keywords: "E-Commerce Ops, High CRO, Secure Checkout",
-      desc: "Maximizing your sales through strategic multi-channel product listings, store branding, and daily marketplace management"
-    },
-    {
-      step: "03",
-      title: "Shopify",
-      keywords: "Next.js / React, Custom Code, Clean Architecture",
-      desc: "Building and scaling a beautiful, dedicated storefront optimized for seamless customer checkouts and high conversions"
-    },
-    {
-      step: "04",
-      title: "TikTok Shop",
-      keywords: "Drag-and-Drop, Fast Launch, Mobile Responsive",
-      desc: "Driving massive impulse purchases directly through trending, native video content and seamless in-app shopping experiences"
-    }
-  ].map((p, i) => (
-    <motion.div
-      key={i}
-      whileHover={{ y: -10 }} // 🎯 Signature elevation lift
-      // 🎯 FIXED: Solid background #0971A6 completely locked 
-      style={{ backgroundColor: "#0971A6" }}
-      className="group relative p-8 2xl:p-8 rounded-[3rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer"
-    >
-      {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to match the solid background color */}
-      <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
+            {[
+              {
+                step: "01",
+                title: "Amazon",
+                keywords: "Speed Optimized, SEO Ready, Dynamic CMS",
+                desc: "Dominating the world's largest marketplace with expert product listing optimization and high-converting PPC ad campaigns"
+              },
+              {
+                step: "02",
+                title: "eBay",
+                keywords: "E-Commerce Ops, High CRO, Secure Checkout",
+                desc: "Maximizing your sales through strategic multi-channel product listings, store branding, and daily marketplace management"
+              },
+              {
+                step: "03",
+                title: "Shopify",
+                keywords: "Next.js / React, Custom Code, Clean Architecture",
+                desc: "Building and scaling a beautiful, dedicated storefront optimized for seamless customer checkouts and high conversions"
+              },
+              {
+                step: "04",
+                title: "TikTok Shop",
+                keywords: "Drag-and-Drop, Fast Launch, Mobile Responsive",
+                desc: "Driving massive impulse purchases directly through trending, native video content and seamless in-app shopping experiences"
+              }
+            ].map((p, i) => (
+              <motion.div
+                key={i}
+                whileHover={{ y: -10 }} // 🎯 Signature elevation lift
+                // 🎯 FIXED: Solid background #0971A6 completely locked 
+                style={{ backgroundColor: "#0971A6" }}
+                className="group relative p-8 2xl:p-8 rounded-[3rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer"
+              >
+                {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to match the solid background color */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-      {/* 🎯 Header Container Row */}
-      <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10">
+                {/* 🎯 Header Container Row */}
+                <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10">
 
-        {/* Step Number Background Effect */}
-        <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-black/10 group-hover:text-cyan-300/15 select-none pointer-events-none z-0 transition-colors duration-500">
-          {p.step}
-        </span>
+                  {/* Step Number Background Effect */}
+                  <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-black/10 group-hover:text-cyan-300/15 select-none pointer-events-none z-0 transition-colors duration-500">
+                    {p.step}
+                  </span>
 
-        {/* Title Header */}
-        <div className="space-y-2 flex-grow relative z-10 pt-6">
-          <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
-            {p.title}
-          </h3>
-        </div>
+                  {/* Title Header */}
+                  <div className="space-y-2 flex-grow relative z-10 pt-6">
+                    <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
+                      {p.title}
+                    </h3>
+                  </div>
 
-        {/* Chevron Right Icon */}
-        <div className="relative z-10 pt-5 pl-4 shrink-0">
-          <ChevronRight size={16} className="text-white/40 group-hover:text-cyan-300 transition-colors" />
-        </div>
-      </div>
+                  {/* Chevron Right Icon */}
+                  <div className="relative z-10 pt-5 pl-4 shrink-0">
+                    <ChevronRight size={16} className="text-white/40 group-hover:text-cyan-300 transition-colors" />
+                  </div>
+                </div>
 
-      {/* Content Body Block */}
-      <div className="space-y-2 flex-grow relative z-10">
-        {/* Description Paragraph */}
-        <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-          {p.desc}
-        </p>
-      </div>
+                {/* Content Body Block */}
+                <div className="space-y-2 flex-grow relative z-10">
+                  {/* Description Paragraph */}
+                  <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                    {p.desc}
+                  </p>
+                </div>
 
-      {/* Progress Bar Loader */}
-      <div className="mt-4 h-1 w-full bg-black/20 rounded-full overflow-hidden subpixel-antialiased relative z-10">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: "100%" }}
-          transition={{ duration: 1.5, delay: i * 0.2 }}
-          viewport={{ once: true }}
-          className="h-full bg-cyan-300/60"
-        />
-      </div>
+                {/* Progress Bar Loader */}
+                <div className="mt-4 h-1 w-full bg-black/20 rounded-full overflow-hidden subpixel-antialiased relative z-10">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: "100%" }}
+                    transition={{ duration: 1.5, delay: i * 0.2 }}
+                    viewport={{ once: true }}
+                    className="h-full bg-cyan-300/60"
+                  />
+                </div>
 
-      {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
-      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
-    </motion.div>
-  ))}
-</div>
+                {/* 🎯 EFFECTS LAYER 2: Laser Bottom Edge Glow Line (Center Expand Effect) */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
 
-    {/* Why Choose US */}
-<section className="relative py-16 md:py-24 2xl:py-32 bg-[#1E2939] overflow-hidden border-b border-white/5">
+      {/* Why Choose US */}
+      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#1E2939] overflow-hidden border-b border-white/5">
 
-  {/* Background Dots & Glow */}
-  <div
-    className="absolute inset-0 opacity-[0.05] pointer-events-none"
-    style={{ backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }}
-  />
-  <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+        {/* Background Dots & Glow */}
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none"
+          style={{ backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }}
+        />
+        <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-  <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
-    <div className="grid lg:grid-cols-12 gap-12 xl:gap-16 2xl:gap-24 items-center">
+        <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-12 gap-12 xl:gap-16 2xl:gap-24 items-center">
 
-      {/* LEFT SIDE: Content */}
-      <div className="lg:col-span-6 space-y-6 md:space-y-8">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          {/* Heading synced with global font framework */}
-          <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-            Why Choose{" "}
-            <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              eCommerce Marketing Agency?
-            </span>
-          </h3>
+            {/* LEFT SIDE: Content */}
+            <div className="lg:col-span-6 space-y-6 md:space-y-8">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                {/* Heading synced with global font framework */}
+                <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+                  Why Choose{" "}
+                  <span className="block mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    eCommerce Marketing Agency?
+                  </span>
+                </h3>
 
-          {/* Description Panel */}
-          <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
-            {/* Paragraph 1 */}
-            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-              We know that running a successful online storefront requires much more than just a beautiful website. Our agency focuses entirely on the metrics that actually impact your bottom line: lowering your customer acquisition costs, recovering abandoned carts, and increasing your average order value.
-            </p>
+                {/* Description Panel */}
+                <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
+                  {/* Paragraph 1 */}
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    We know that running a successful online storefront requires much more than just a beautiful website. Our agency focuses entirely on the metrics that actually impact your bottom line: lowering your customer acquisition costs, recovering abandoned carts, and increasing your average order value.
+                  </p>
 
-            {/* Paragraph 2 */}
-            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-              Instead of relying on generic marketing tricks, we build custom sales funnels that align perfectly with how your specific audience prefers to shop.
-            </p>
+                  {/* Paragraph 2 */}
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    Instead of relying on generic marketing tricks, we build custom sales funnels that align perfectly with how your specific audience prefers to shop.
+                  </p>
 
-            {/* Paragraph 3 */}
-            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-              From technical product page optimization to laser-targeted advertising, we handle the day-to-day data analysis and optimization.
-            </p>
-            <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-              Partner with us to take the guesswork out of your digital growth and build a scalable retail brand.
-            </p>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* RIGHT SIDE: Cards Grid */}
-      <div className="lg:col-span-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
-
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
-
-          {features.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              style={{ backgroundColor: "#0971A6" }}
-              className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
-              ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
-            >
-              <div className="relative z-10 space-y-4 md:space-y-5">
-
-                {/* Icon & Heading Row */}
-                <div className="flex items-center gap-4">
-
-                  {/* 🌀 FIXED ICON BOX: Saare custom variables aur TypeScript assertions completely clean kar diye hain */}
-                  <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[#0971A6] group-hover:border-transparent transition-all duration-500 shadow-sm">
-                    {item.icon}
-                  </div>
-
-                  {/* Title Text */}
-                  <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
-                    {item.title}
-                  </h4>
+                  {/* Paragraph 3 */}
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    From technical product page optimization to laser-targeted advertising, we handle the day-to-day data analysis and optimization.
+                  </p>
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                    Partner with us to take the guesswork out of your digital growth and build a scalable retail brand.
+                  </p>
                 </div>
+              </motion.div>
+            </div>
 
-                {/* Card Description */}
-                <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                  {item.desc}
-                </p>
-              </div>
+            {/* RIGHT SIDE: Cards Grid */}
+            <div className="lg:col-span-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
 
-              {/* Hover Check Icon */}
-              <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-                <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+
+                {features.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    style={{ backgroundColor: "#0971A6" }}
+                    className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
+              ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
+                  >
+                    <div className="relative z-10 space-y-4 md:space-y-5">
+
+                      {/* Icon & Heading Row */}
+                      <div className="flex items-center gap-4">
+
+                        {/* 🌀 FIXED ICON BOX: Saare custom variables aur TypeScript assertions completely clean kar diye hain */}
+                        <div className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[#0971A6] group-hover:border-transparent transition-all duration-500 shadow-sm">
+                          {item.icon}
+                        </div>
+
+                        {/* Title Text */}
+                        <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
+                          {item.title}
+                        </h4>
+                      </div>
+
+                      {/* Card Description */}
+                      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                        {item.desc}
+                      </p>
+                    </div>
+
+                    {/* Hover Check Icon */}
+                    <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
+                      <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-          ))}
+            </div>
+
+          </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-</section>
+      </section>
 
       <Testimonials />
       {/* Core experties  */}

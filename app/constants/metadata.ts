@@ -68,7 +68,7 @@ export const siteMetadata: MetadataRecord = {
       title: "Custom AI Automation & Workflow Solutions | High Rise Digital",
       description: "Future-proof your business operations. Eliminate manual tasks, integrate smart chatbots, and build automated backend data pipelines seamlessly."
     },
-    ecommerce: {
+    "ecommerce-management": {
       title: "E-Commerce Management & Store Optimization | High Rise Digital",
       description: "Scale your online sales. We build and manage high-converting Shopify and WooCommerce stores, optimize product pipelines, and lower customer acquisition costs."
     }

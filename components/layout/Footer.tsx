@@ -102,7 +102,7 @@ export default function Footer() {
                 { title: "Search Engine Optimization", slug: "seo" },
                 { title: "Social Media Marketing", slug: "social-media-marketing" },
                 { title: "AI Automation", slug: "ai-automation" },
-                { title: "Ecommerce Management", slug: "ecommerce" },
+                { title: "Ecommerce Management", slug: "e-commerce-management" },
               ].map((service, idx) => (
                 <Link
                   key={idx}

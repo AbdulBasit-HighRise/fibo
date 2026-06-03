@@ -142,7 +142,7 @@ export default function Navbar() {
       { name: "Web Development", href: "/services/web-development" },
       { name: "SEO Optimization", href: "/services/seo" },
       { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-      { name: "Ecommerce Management ", href: "/services/ecommerce" },
+      { name: "Ecommerce Management ", href: "/services/e-commerce-management" },
       { name: "AI Automation", href: "/services/ai-automation" },
     ]
   };

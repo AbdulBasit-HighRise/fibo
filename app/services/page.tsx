@@ -18,7 +18,7 @@ const serviceList = [
   { id: "01", title: "Web Development", slug: "web-development", icon: <Zap /> },
   { id: "03", title: "Social Media Marketing", slug: "social-media-marketing", icon: <ShieldCheck /> },
   { id: "04", title: "AI Automation", slug: "ai-automation", icon: <Sparkles /> },
-  { id: "05", title: "Ecommerce Management", slug: "ecommerce", icon: <Sparkles /> },
+  { id: "05", title: "Ecommerce Management", slug: "e-commerce-management", icon: <Sparkles /> },
 ];
 
 export default function ServicesPage() {
