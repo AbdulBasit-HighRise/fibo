@@ -21,7 +21,7 @@ export const projects = [
   },
   {
     slug: "famme-propre",
-    title: " Femmepropre",
+    title: " Femme Propre",
     category: "web",
     image: "/web2.jpg",
     liveUrl: "https://www.femmepropre.co.uk/"
@@ -121,31 +121,31 @@ export const projects = [
     image: "/dr.jpg"
   },
 
-  // --- SOCIAL MEDIA MARKETING PERFORMANCE ---
-  {
-    slug: "australia-real-estate-social",
-    title: "31% INCREASE IN QUALIFIED PROPERTY LEADS VIA HIGH-INTENT SOCIAL FUNNELS",
-    category: "social",
-    image: "/realestate.jpg"
-  },
-  {
-    slug: "fitness-brand-ecommerce",
-    title: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
-    category: "social",
-    image: "/gym.jpg"
-  },
-  {
-    slug: "fashion-brand-ecommerce",
-    title: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
-    category: "social",
-    image: "/brand.jpg"
-  },
-  {
-    slug: "home-living-ecommerce",
-    title: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
-    category: "social",
-    image: "/roas.jpg"
-  }
+ // --- SOCIAL MEDIA MARKETING PERFORMANCE ---
+ {
+   slug: "australia-real-estate-social",
+   title: "31% Increase In Qualified Property Leads Via High-Intent Social Funnels",
+   category: "social",
+   image: "/realestate.jpg"
+ },
+ {
+   slug: "fitness-brand-ecommerce",
+   title: "$598,541 In Sales At 22x ROAS For Private Label Fitness Brand Via High-Converting Funnels",
+   category: "social",
+   image: "/gym.jpg"
+ },
+ {
+   slug: "fashion-brand-ecommerce",
+   title: "1,044 Website Purchases For Fashion Brand In 2 Months At 23.85x ROAS Via Direct-Response Funnels",
+   category: "social",
+   image: "/brand.jpg"
+ },
+ {
+   slug: "home-living-ecommerce",
+   title: "25.10x ROAS For Home & Living Brand Via High-Converting Paid Social Funnels",
+   category: "social",
+   image: "/roas.jpg"
+ }
 ];
 
 const filters = [
@@ -210,25 +210,33 @@ export default function PortfolioPage() {
       </section>
 
      
-      {/* 🎯 FIXED: Invalid 'pt:lg-4' ko hata kar perfect top/bottom desktop aur mobile padding (py-6 md:py-10) set kar di hai */}
-      <section className="w-full px-4 py-6 md:py-6 relative z-30 flex justify-center">
-        <div className="w-full max-w-fit overflow-x-auto no-scrollbar flex bg-zinc-900/60 p-1.5 rounded-xl border border-white/5 backdrop-blur-xl shadow-2xl items-center">
-          <div className="flex gap-1.5 whitespace-nowrap mx-auto">
-            {filters.map((f) => (
-              <button
-                key={f.id}
-                onClick={() => setActive(f.id)}
-                className={`px-4 py-1.5 md:px-5 md:py-2 rounded-lg text-[10px] md:text-xs font-mono uppercase tracking-wider font-bold transition-all duration-300 ${active === f.id
-                    ? "bg-[#0971A6] text-white shadow-lg shadow-blue-600/10"
-                    : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
-                  }`}
-              >
-                {f.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+   {/* 🎯 FIXED: Pure Clean Layout - Desktop par center line aur Mobile par auto wrap into 2 lines */}
+<section className="w-full px-4 py-6 md:py-8 relative z-30 flex justify-center">
+  <div className="w-full max-w-4xl flex justify-center">
+    
+    {/* Main Container: Mobile par grid/wrap layout aur desktop par normal flex container */}
+    <div className="bg-zinc-900/60 p-1.5 rounded-xl border border-white/5 backdrop-blur-xl shadow-2xl flex flex-wrap justify-center gap-1.5 items-center w-full sm:w-auto">
+      
+      {filters.map((f) => (
+        <button
+          key={f.id}
+          onClick={() => setActive(f.id)}
+          className={`px-3 py-2 md:px-5 md:py-2 rounded-lg text-[10px] md:text-xs font-mono uppercase tracking-wider font-bold transition-all duration-300 text-center
+            /* Mobile controls: takay text barabar fit ho 2 lines me */
+            flex-grow sm:flex-grow-0 min-w-[calc(50%-6px)] sm:min-w-0 ${
+            active === f.id
+              ? "bg-[#0971A6] text-white shadow-lg shadow-blue-600/10"
+              : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
+          }`}
+        >
+          {f.label}
+        </button>
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* 🎯 PREMIUM 3-COLUMN LUXURY BENTO GRID (WIDE SCALE) */}
       {/* 🎯 FIXED: Max-width ko 1920px kiya hai taake container bada ho, aur padding horizontal adjust ki hai */}

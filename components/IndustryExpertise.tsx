@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
 import {
   Home, Hammer, ShoppingBag, Building2, Truck, Car,
   Stethoscope, Cpu, Plane, Utensils, Briefcase, Store
@@ -25,11 +25,16 @@ const INDUSTRIES = [
 export default function IndustryExpertise() {
   const dragSliderRef = useRef<HTMLDivElement>(null);
   const [width, setWidth] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
 
-  // 🧠 Dragging limits calculate karne ke liye loop container effect
+  // Duplicate items for infinite marquee loop illusion
+  const duplicatedIndustries = [...INDUSTRIES, ...INDUSTRIES];
+
   useEffect(() => {
     if (dragSliderRef.current) {
-      setWidth(dragSliderRef.current.scrollWidth - dragSliderRef.current.offsetWidth);
+      // Half total width calculated for infinite threshold limits
+      setWidth(dragSliderRef.current.scrollWidth / 2);
     }
   }, []);
 
@@ -52,19 +57,35 @@ export default function IndustryExpertise() {
         </div>
       </div>
 
-      {/* 🎯 DRAG CONTAINER LAYER: No infinite loops, absolute single pass drag layer */}
+      {/* 🎯 DRAG & AUTO-SCROLL WRAPPER LAYER */}
       <div 
         ref={dragSliderRef} 
         className="relative overflow-hidden py-4 select-none cursor-grab active:cursor-grabbing w-full px-6"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => {
+          setIsHovered(false);
+          setIsDragging(false);
+        }}
       >
         <motion.div
           className="flex flex-nowrap gap-3 md:gap-5 py-2 w-max"
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
           dragElastic={0.1}
+          onDragStart={() => setIsDragging(true)}
+          onDragEnd={() => setIsDragging(false)}
+          animate={isHovered || isDragging ? {} : { x: [0, -width] }}
+          transition={{
+            x: {
+              repeat: Infinity,
+              repeatType: "loop",
+              duration: 35, // Is value ko change karke speed slow/fast kar sakte ho
+              ease: "linear",
+            },
+          }}
           whileTap={{ cursor: "grabbing" }}
         >
-          {INDUSTRIES.map((item, index) => {
+          {duplicatedIndustries.map((item, index) => {
             const Icon = item.icon;
             return (
               <div
@@ -72,7 +93,7 @@ export default function IndustryExpertise() {
                 className="flex-shrink-0 w-[140px] h-[150px] md:w-[220px] md:h-[200px] 2xl:w-[320px] 2xl:h-[280px] 
                            rounded-2xl md:rounded-[2rem] border transition-all duration-500 group/card pointer-events-auto
                            bg-gradient-to-br from-blue-900/40 to-black border-blue-500/30
-                           flex flex-col items-center justify-center gap-4  hover:shadow-[0_10px_30px_rgba(9,113,166,0.2)]"
+                           flex flex-col items-center justify-center gap-4 hover:shadow-[0_10px_30px_rgba(9,113,166,0.2)]"
               >
                 {/* 🌀 Icon Wrapper */}
                 <div className="relative overflow-hidden">
@@ -80,7 +101,7 @@ export default function IndustryExpertise() {
                 </div>
 
                 {/* 🖋️ Text Description Element */}
-                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-[16px] font-black tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0  transition-colors duration-300">
+                <p className="text-[11px] md:text-xs lg:text-[13px] 2xl:text-[16px] font-black tracking-[0.15em] md:tracking-[0.2em] text-white px-4 text-center leading-tight m-0 p-0 transition-colors duration-300">
                   {item.title}
                 </p>
               </div>

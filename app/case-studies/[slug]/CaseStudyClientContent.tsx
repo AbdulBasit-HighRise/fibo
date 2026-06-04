@@ -86,7 +86,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
             <div className="order-2 lg:order-1 lg:col-span-7 space-y-6">
               <h2
                 style={{ textTransform: 'none' }}
-                className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tight leading-[1.1] text-white"
+                className="text-[2.0rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.0rem] font-black tracking-tight leading-[1.1] text-white"
               >
                 {project.description}
               </h2>
@@ -116,7 +116,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
           <div className="flex flex-nowrap items-center justify-between gap-4 md:gap-8 pt-10 border-t border-white/[0.06] animate-fadeIn delay-100 w-full overflow-x-auto sm:overflow-visible scrollbar-none">
             {project.metrics.map((metric, i) => (
               <div key={i} className="flex flex-col border-l border-zinc-700 pl-4 md:pl-5 hover:border-zinc-400 transition-colors duration-300 flex-1 min-w-[100px] sm:min-w-0">
-                <span className={`text-3xl sm:text-4xl md:text-4xl lg:text-4xl font-black tracking-tighter leading-none ${metric.highlight ? 'text-blue-500' : 'text-white'
+                <span className={`text-xl sm:text-4xl md:text-4xl lg:text-4xl font-black tracking-tighter leading-none ${metric.highlight ? 'text-blue-500' : 'text-white'
                   }`}>
                   {metric.value}
                 </span>
@@ -138,55 +138,55 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
             </div>
 
             {/* Grid Content */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center text-left">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 items-center text-left">
 
               {/* 1. Dynamic Category */}
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-                  <Tag size={18} />
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="p-2.5 md:p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500 shrink-0">
+                  <Tag size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Category</span>
-                  <span className="text-sm md:text-base font-black text-zinc-200">
+                <div className="min-w-0">
+                  <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Category</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200 block truncate">
                     {project.displayCategory || (project.category === 'seo' ? 'Local SEO' : 'Paid Social')}
                   </span>
                 </div>
               </div>
 
               {/* 2. Dynamic Client Name */}
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-                  <Globe size={18} />
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="p-2.5 md:p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500 shrink-0">
+                  <Globe size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Client</span>
-                  <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[180px] block">
+                <div className="min-w-0">
+                  <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Client</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200 truncate block">
                     {project.clientName || project.title}
                   </span>
                 </div>
               </div>
 
               {/* 3. Dynamic Location */}
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-                  <MapPin size={18} />
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="p-2.5 md:p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500 shrink-0">
+                  <MapPin size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Location</span>
-                  <span className="text-sm md:text-base font-black text-zinc-200">
+                <div className="min-w-0">
+                  <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Location</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200 block truncate">
                     {project.location || 'Australia / Global'}
                   </span>
                 </div>
               </div>
 
               {/* 4. Dynamic Website URL */}
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-                  <Link2 size={18} />
+              <div className="flex items-center gap-3 md:gap-4">
+                <div className="p-2.5 md:p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500 shrink-0">
+                  <Link2 size={16} className="md:w-[18px] md:h-[18px]" />
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Website</span>
-                  <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[150px] block">
+                <div className="min-w-0">
+                  <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Website</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200 truncate block">
                     {project.websiteName || 'Multiple Webstacks'}
                   </span>
                 </div>
@@ -340,53 +340,53 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
       {/* ========================================================
           🌟 ULTIMATE SMART GLASSMORPHISM LIGHTBOX MODAL (POPUP)
           ======================================================== */}
-     {/* ========================================================
+      {/* ========================================================
     🌟 ULTIMATE SMART GLASSMORPHISM LIGHTBOX MODAL (POPUP)
     ======================================================== */}
-<AnimatePresence>
-  {activeImg && (
-    <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center p-4 md:p-6 pointer-events-auto">
-      
-      {/* Backdrop Dark Mask */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={() => setActiveImg(null)}
-        className="absolute inset-0 bg-black/95 backdrop-blur-md cursor-zoom-out"
-      />
+      <AnimatePresence>
+        {activeImg && (
+          <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center p-4 md:p-6 pointer-events-auto">
 
-      {/* Animated Photo Box Content Display */}
-      <motion.div
-        initial={{ scale: 0.96, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.96, opacity: 0 }}
-        transition={{ type: "spring", damping: 28, stiffness: 320 }}
-        className="relative w-full max-w-5xl h-[60vh] md:h-[80vh] flex items-center justify-center z-10 select-none pointer-events-none mt-4 md:mt-0"
-      >
-        <Image
-          src={activeImg}
-          alt="Enlarged Proof Dashboard View"
-          fill
-          priority
-          sizes="(max-width: 1280px) 100vw, 85vw"
-          className="object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.25)]"
-        />
-      </motion.div>
+            {/* Backdrop Dark Mask */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setActiveImg(null)}
+              className="absolute inset-0 bg-black/95 backdrop-blur-md cursor-zoom-out"
+            />
 
-      {/* 🎯 FIXED CLOSE BUTTON: Mobile pr picture k nichy center me, desktop pr top-right pr */}
-      <button
-        onClick={() => setActiveImg(null)}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:translate-x-0 md:top-8 md:right-8 z-[100000] flex items-center gap-2 px-5 py-3 md:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/10 shadow-2xl backdrop-blur-md active:scale-95 transition-all cursor-pointer font-medium text-sm md:text-base"
-        aria-label="Close Preview"
-      >
-        <X size={20} />
-        <span className="block md:hidden tracking-wider uppercase text-[11px] font-bold">Close Preview</span>
-      </button>
+            {/* Animated Photo Box Content Display */}
+            <motion.div
+              initial={{ scale: 0.96, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.96, opacity: 0 }}
+              transition={{ type: "spring", damping: 28, stiffness: 320 }}
+              className="relative w-full max-w-5xl h-[60vh] md:h-[80vh] flex items-center justify-center z-10 select-none pointer-events-none mt-4 md:mt-0"
+            >
+              <Image
+                src={activeImg}
+                alt="Enlarged Proof Dashboard View"
+                fill
+                priority
+                sizes="(max-width: 1280px) 100vw, 85vw"
+                className="object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.25)]"
+              />
+            </motion.div>
 
-    </div>
-  )}
-</AnimatePresence>
+            {/* 🎯 FIXED CLOSE BUTTON: Mobile pr picture k nichy center me, desktop pr top-right pr */}
+            <button
+              onClick={() => setActiveImg(null)}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:translate-x-0 md:top-8 md:right-8 z-[100000] flex items-center gap-2 px-5 py-3 md:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/10 shadow-2xl backdrop-blur-md active:scale-95 transition-all cursor-pointer font-medium text-sm md:text-base"
+              aria-label="Close Preview"
+            >
+              <X size={20} />
+              <span className="block md:hidden tracking-wider uppercase text-[11px] font-bold">Close Preview</span>
+            </button>
+
+          </div>
+        )}
+      </AnimatePresence>
 
     </main>
   );

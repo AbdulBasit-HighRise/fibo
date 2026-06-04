@@ -978,7 +978,7 @@ export const caseStudiesData: CaseStudy[] = [
     category: "social", // 👈 Yeh key handle karegi dynamic layout themes aur colors ko
     isSocial: true,
     title: "Victoria Property Network",
-    description: "31% INCREASE IN QUALIFIED PROPERTY LEADS VIA HIGH-INTENT SOCIAL FUNNELS",
+    description: "31% Increase In Qualified Property Leads Via High-Intent Social Funnels",
     primaryOutcome: "+31% Property Leads",
     image: "/realestate.jpg", // 👈 Top Image Path (Real Estate Banner Asset)
      displayCategory: "Paid Social",
@@ -1121,7 +1121,7 @@ export const caseStudiesData: CaseStudy[] = [
     category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
     isSocial: true,
     title: "Premium Fitness Brand",
-    description: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
+    description: "$598,541 In Sales At 22x ROAS For Private Label Fitness Brand Via High-Converting Funnels",
     primaryOutcome: "22.21x Purchase ROAS",
     image: "/gym.jpg", // 👈 Top Image Path for your Fitness Campaign asset
      displayCategory: "Paid Social",
@@ -1265,7 +1265,7 @@ export const caseStudiesData: CaseStudy[] = [
     category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
     isSocial: true,
     title: "E-Commerce Fashion Brand",
-    description: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
+    description: "1,044 Website Purchases For Fashion Brand In 2 Months At 23.85x ROAS Via Direct-Response Funnels",
     primaryOutcome: "23.85x Purchase ROAS",
     image: "/brand.jpg", // 👈 Top Image Path for your Fashion Campaign asset
      displayCategory: "Paid Social",
@@ -1404,7 +1404,7 @@ export const caseStudiesData: CaseStudy[] = [
     category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
     isSocial: true,
     title: "Premium Home & Living Brand",
-    description: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
+    description: "25.10x ROAS For Home & Living Brand Via High-Converting Paid Social Funnels",
     primaryOutcome: "25.10x Purchase ROAS",
     image: "/roas.jpg", // 👈 Top Image Path for your Home & Living Asset
      displayCategory: "Paid Social",
