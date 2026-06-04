@@ -98,33 +98,33 @@ export default function SEOPage() {
 
   const seoProjects = [
     {
-      id: "01",
-      title: "Rhino Roofing Orlando Scale",
-      image: "/rino-roffers.jpg",
-      slug: "casestudies/rhino-orlando",
-      size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-    },
-    {
-      id: "02",
-      title: "Breez Care",
-      image: "/smile-care.jpg",
-      slug: "casestudies/breez-care",
-      size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
-    },
-    {
-      id: "03",
-      title: "West London Cleaning Company",
-      image: "/cleaning.jpg",
-      slug: "casestudies/west-london-cleaners",
-      size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
-    },
-    {
-      id: "04",
-      title: "Local Restaurant Australia",
-      image: "/burger.jpg",
-      slug: "casestudies/australia-restaurant-seo",
-      size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-    }
+    id: "01",
+    title: "170% Leads Increased For Roofing Company",
+    image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
+    slug: "casestudies/rhino-orlando",
+    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+  },
+  {
+    id: "02",
+    title: "+11% Total Sales Revenue Increased For Oral Care Brand",
+    image: "/smile-care.jpg", // 🎯 Real image path
+    slug: "casestudies/breez-care",
+    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
+  },
+  {
+    id: "03",
+    title: "+28% Organic Traffic Increase For Local Cleaning Company",
+    image: "/cleaning.jpg", // 🎯 Real image path
+    slug: "casestudies/west-london-cleaners",
+    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
+  },
+  {
+    id: "04",
+    title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
+    image: "/burger.jpg", // 🎯 Real image path
+    slug: "casestudies/australia-restaurant-seo",
+    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+  }
   ];
   return (
     <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
@@ -175,7 +175,7 @@ export default function SEOPage() {
 
 
 
-            <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#111827] overflow-hidden">
+      <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#111827] overflow-hidden">
 
 
         {/* Background Glow */}
@@ -212,7 +212,7 @@ export default function SEOPage() {
                   Drive Revenue with {" "}
                   {/* 🎯 FIX: 'block' use kiya aur 'py-2 pr-4' add kiya taake text aur gradient boundaries safe rahein */}
                   <span className=" mt-0 mb-2 py-1  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Our SEO Strategy.
+                    Our SEO Strategy.
                   </span>
                 </h2>
               </div>
@@ -272,7 +272,7 @@ export default function SEOPage() {
         </div>
       </section>
       {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#1E2939]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#1E2939]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
@@ -385,7 +385,7 @@ export default function SEOPage() {
               className="flex items-center shrink-0"
             >
               <Link
-                href="/portfolio"
+                href="/case-studies"
                 className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white-500 hover:text-white transition-all duration-500 group"
               >
                 <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
@@ -436,11 +436,11 @@ export default function SEOPage() {
                       </div>
 
                       {/* Project Title Display */}
-                      {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                  <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
+                      <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                  <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                     {project.title}
                   </span>
-                </div> */}
+                </div>
                     </div>
                   </CardWrapper>
                 </Link>

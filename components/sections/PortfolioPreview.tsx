@@ -8,28 +8,28 @@ import { ArrowUpRight, Cpu, BarChart3 } from "lucide-react";
 const bentoProjects = [
   {
     id: "01",
-    title: "Rhino Roofing Orlando Scale",
+    title: "170% Leads Increased For Roofing Company",
     image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
     slug: "casestudies/rhino-orlando",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "02",
-    title: "Breez Care",
+    title: "+11% Total Sales Revenue Increased For Oral Care Brand",
     image: "/smile-care.jpg", // 🎯 Real image path
     slug: "casestudies/breez-care",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "03",
-    title: "West London Cleaning Company",
+    title: "+28% Organic Traffic Increase For Local Cleaning Company",
     image: "/cleaning.jpg", // 🎯 Real image path
     slug: "casestudies/west-london-cleaners",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "04",
-    title: "Local Restaurant Australia",
+    title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     image: "/burger.jpg", // 🎯 Real image path
     slug: "casestudies/australia-restaurant-seo",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
@@ -123,11 +123,11 @@ export default function PortfolioBento() {
                     </div>
 
                     {/* Project Title Display */}
-                    {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                      <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
+                    <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                      <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                         {project.title}
                       </span>
-                    </div> */}
+                    </div>
                   </div>
                 </CardWrapper>
               </Link>

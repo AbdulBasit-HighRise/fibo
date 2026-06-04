@@ -250,100 +250,104 @@ export default function Navbar() {
       </div>
 
       {/* PROPOSAL MODAL */}
-      <AnimatePresence>
-        {isProposalOpen && (
-          <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 pointer-events-auto">
-            <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => !modalStatus.loading && setIsProposalOpen(false)} className="absolute inset-0 bg-black/85 backdrop-blur-md" />
-            <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative w-full max-w-lg bg-[#070707] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl">
-              <div className="absolute top-0 left-0 w-full h-1 bg-blue-600" />
-              <button onClick={() => setIsOpen(false)} disabled={modalStatus.loading} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors disabled:opacity-30"><X size={24} /></button>
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Book A Strategy Call</h3>
-                <p className="text-zinc-500 text-xs">Let's build your project together.</p>
-              </div>
-              
-              <form className="space-y-4" onSubmit={handleModalSubmit}>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <input 
-                    type="text" 
-                    required
-                    disabled={modalStatus.loading}
-                    placeholder="Name" 
-                    value={modalForm.name}
-                    onChange={(e) => setModalForm({ ...modalForm, name: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
-                  />
-                  <input 
-                    type="email" 
-                    required
-                    disabled={modalStatus.loading}
-                    placeholder="Email" 
-                    value={modalForm.email}
-                    onChange={(e) => setModalForm({ ...modalForm, email: e.target.value })}
-                    className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
-                  />
-                </div>
-                <select 
-                  required
-                  disabled={modalStatus.loading}
-                  value={modalForm.service}
-                  onChange={(e) => setModalForm({ ...modalForm, service: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[10px] xl:text-[11px] font-bold text-white outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all disabled:opacity-40"
-                >
-                  <option value="" disabled className="bg-[#070707] text-zinc-500">Select Service</option>
-                  <option value="Web Development" className="bg-[#070707] text-white">Web Development</option>
-                  <option value="SEO Optimization" className="bg-[#070707] text-white">SEO Optimization</option>  
-                  <option value="Social Media Marketing" className="bg-[#070707] text-white">Social Media Marketing</option>
-                  <option value="AI Automation" className="bg-[#070707] text-white">AI Automation</option>
-                  <option value="Branding" className="bg-[#070707] text-white">Branding</option>
-                  <option value="Google Ads" className="bg-[#070707] text-white">Google Ads</option>
-                  <option value="E-commerce Management" className="bg-[#070707] text-white">E-commerce Management</option>
-                </select>
-                <textarea 
-                  required
-                  disabled={modalStatus.loading}
-                  placeholder="Your Message" 
-                  rows={3} 
-                  value={modalForm.message}
-                  onChange={(e) => setModalForm({ ...modalForm, message: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 resize-none transition-all disabled:opacity-40"
-                ></textarea>
-                
-                {/* 🎯 Real-Time Feedback Alert Messages inside Modal */}
-                <AnimatePresence mode="wait">
-                  {modalStatus.message && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -8 }}
-                      className={`p-3 rounded-xl text-center text-xs font-bold border ${
-                        modalStatus.success 
-                          ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
-                          : "bg-rose-500/10 border-rose-500/20 text-rose-400"
-                      }`}
-                    >
-                      {modalStatus.message}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-                
-                <button 
-                  type="submit" 
-                  disabled={modalStatus.loading}
-                  className="w-full bg-blue-600 py-4 rounded-xl font-bold text-[11px] uppercase tracking-widest text-white shadow-lg shadow-blue-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:scale-100"
-                >
-                  {modalStatus.loading ? (
-                    <>
-                      Submitting Pipeline...
-                      <Loader2 size={12} className="animate-spin" />
-                    </>
-                  ) : "Submit Request"}
-                </button>
-              </form>
-            </motion.div>
+     <AnimatePresence>
+  {isProposalOpen && (
+    <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 pointer-events-auto">
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => !modalStatus.loading && setIsProposalOpen(false)} className="absolute inset-0 bg-black/85 backdrop-blur-md" />
+      <motion.div initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} className="relative w-full max-w-lg bg-[#070707] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl">
+        <div className="" />
+        
+        {/* 🎯 CHANGED: Here setIsOpen(false) changed to setIsProposalOpen(false) */}
+        <button onClick={() => setIsProposalOpen(false)} disabled={modalStatus.loading} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors disabled:opacity-30">
+          <X size={24} />
+        </button>
+        
+        <div className="text-center mb-6">
+          <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Book A Strategy Call</h3>
+          <p className="text-zinc-500 text-xs">Let's build your project together.</p>
+        </div>
+        
+        <form className="space-y-4" onSubmit={handleModalSubmit}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input 
+              type="text" 
+              required
+              disabled={modalStatus.loading}
+              placeholder="Name" 
+              value={modalForm.name}
+              onChange={(e) => setModalForm({ ...modalForm, name: e.target.value })}
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
+            />
+            <input 
+              type="email" 
+              required
+              disabled={modalStatus.loading}
+              placeholder="Email" 
+              value={modalForm.email}
+              onChange={(e) => setModalForm({ ...modalForm, email: e.target.value })}
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
+            />
           </div>
-        )}
-      </AnimatePresence>
+          <select 
+            required
+            disabled={modalStatus.loading}
+            value={modalForm.service}
+            onChange={(e) => setModalForm({ ...modalForm, service: e.target.value })}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[10px] xl:text-[11px] font-bold text-white outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all disabled:opacity-40"
+          >
+            <option value="" disabled className="bg-[#070707] text-zinc-500">Select Service</option>
+            <option value="Web Development" className="bg-[#070707] text-white">Web Development</option>
+            <option value="SEO Optimization" className="bg-[#070707] text-white">SEO Optimization</option>  
+            <option value="Social Media Marketing" className="bg-[#070707] text-white">Social Media Marketing</option>
+            <option value="AI Automation" className="bg-[#070707] text-white">AI Automation</option>
+            <option value="Branding" className="bg-[#070707] text-white">Branding</option>
+            <option value="Google Ads" className="bg-[#070707] text-white">Google Ads</option>
+            <option value="E-commerce Management" className="bg-[#070707] text-white">E-commerce Management</option>
+          </select>
+          <textarea 
+            required
+            disabled={modalStatus.loading}
+            placeholder="Your Message" 
+            rows={3} 
+            value={modalForm.message}
+            onChange={(e) => setModalForm({ ...modalForm, message: e.target.value })}
+            className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none  resize-none transition-all disabled:opacity-40"
+          ></textarea>
+          
+          <AnimatePresence mode="wait">
+            {modalStatus.message && (
+              <motion.div
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                className={`p-3 rounded-xl text-center text-xs font-bold border ${
+                  modalStatus.success 
+                    ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
+                    : "bg-rose-500/10 border-rose-500/20 text-rose-400"
+                }`}
+              >
+                {modalStatus.message}
+              </motion.div>
+            )}
+          </AnimatePresence>
+          
+          <button 
+            type="submit" 
+            disabled={modalStatus.loading}
+            className="w-full bg-blue-600 py-4 rounded-xl font-bold text-[11px] uppercase tracking-widest text-white shadow-lg shadow-blue-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:scale-100"
+          >
+            {modalStatus.loading ? (
+              <>
+                Submitting Pipeline...
+                <Loader2 size={12} className="animate-spin" />
+              </>
+            ) : "Submit Request"}
+          </button>
+        </form>
+      </motion.div>
+    </div>
+  )}
+</AnimatePresence>
     </div>
   );
 }

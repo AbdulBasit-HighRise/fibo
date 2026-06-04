@@ -85,28 +85,28 @@ import { ArrowUpRight, BarChart3 } from "lucide-react";
 const socialProjects = [
     {
         id: "01",
-        title: "Premium Home & Living Brand",
+        title: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
         image: "/roas.jpg", // 🎯 Apni social media graphics/results ka real path yahan dalo
         slug: "casestudies/home-living-ecommerce",
         size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
     },
     {
         id: "02",
-        title: "E-Commerce Fashion Brand",
+        title: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
         image: "/brand.jpg", // 🎯 Real image path
         slug: "casestudies/fashion-brand-ecommerce",
         size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
     },
     {
         id: "03",
-        title: "Premium Fitness Brand",
+        title: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
         image: "/gym.jpg", // 🎯 Real image path
         slug: "casestudies/fitness-brand-ecommerce",
         size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
     },
     {
         id: "04",
-        title: "Victoria Property Network",
+        title: "31% INCREASE IN QUALIFIED PROPERTY LEADS VIA HIGH-INTENT SOCIAL FUNNELS",
         image: "/realestate.jpg", // 🎯 Real image path
         slug: "casestudies/australia-real-estate-social",
         size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
@@ -262,7 +262,7 @@ export default function SocialMediaPage() {
 
 
             {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO & Digital Marketing Hover Architecture) */}
-            <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+            <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
                 <div className="absolute inset-0 z-0">
                     <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
                 </div>
@@ -375,7 +375,7 @@ export default function SocialMediaPage() {
                             className="flex items-center shrink-0"
                         >
                             <Link
-                                href="/casestudies"
+                                href="/case-studies"
                                 className="flex items-center gap-3 md:gap-4 text-[10px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white-500 hover:text-white transition-all duration-500 group"
                             >
                                 <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
@@ -429,11 +429,11 @@ export default function SocialMediaPage() {
                                             </div>
 
                                             {/* Project Title Display */}
-                                            {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                                                <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
+                                            <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                                                <span className="text-2xl 2xl:text-5xl font-bold tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                                                     {project.title}
                                                 </span>
-                                            </div> */}
+                                            </div>
                                         </div>
                                     </CardWrapper>
                                 </Link>
@@ -542,7 +542,7 @@ export default function SocialMediaPage() {
             <IndustryExpertise />
 
             {/* our core experties */}
-            <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#1E2939]">
+            <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#1E2939]">
                 <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px] pointer-events-none" />
 
                 <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
@@ -605,9 +605,9 @@ export default function SocialMediaPage() {
 
                                     {/* Title text floating over step layer */}
                                     <div className="space-y-2 flex-grow relative z-10 pt-6">
-                                        <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 leading-tight">
+                                        <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300 leading-tight">
                                             {p.title}
-                                        </h3>
+                                        </h4>
                                     </div>
 
                                     {/* Icon Alignment */}

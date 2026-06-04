@@ -817,7 +817,7 @@ export const caseStudiesData: CaseStudy[] = [
       subheader: "Live platform snapshots capturing the exact metrics changes and search positioning parameters.",
       images: [
         {
-          src: "/clinic-result.jpg", // 👈 Bottom Image Path
+          src: "/clinic-results.jpg", // 👈 Bottom Image Path
           alt: "Google Search Console dashboard showing organic traffic spikes and lead generation patterns for the aesthetic clinic.",
           caption: "Figure 5.1: Verified performance index showcasing single-digit average position scale and traffic acquisition loops.",
           color: "blue"
@@ -961,7 +961,7 @@ export const caseStudiesData: CaseStudy[] = [
       subheader: "Live platform snapshots capturing the exact metrics changes and search positioning parameters.",
       images: [
         {
-          src: "/dr-result.jpg", // 👈 Bottom Image Path
+          src: "/dr-results.jpg", // 👈 Bottom Image Path
           alt: "Google Search Console performance dashboard tracking metrics expansion and keyword alignment loops for the holistic clinic.",
           caption: "Figure 6.1: Verified performance index showcasing single-digit map pack placement loops and impression spikes across targeted Australian search patterns.",
           color: "blue"

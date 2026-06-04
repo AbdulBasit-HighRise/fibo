@@ -216,9 +216,10 @@ export default function WebDevPage() {
           </div>
         </div>
       </section>
+      <ServiceCTA />
 
       {/* 🎯 CORE STACK - AI Services Section */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
         </div>
@@ -291,8 +292,6 @@ export default function WebDevPage() {
         </div>
       </section>
 
-      <Stats />
-      <ServiceCTA />
 
       {/* 🎯 WORKING PROCESS TIMELINE SECTION */}
       <section className="relative py-16 md:py-24 bg-[#1E2939] overflow-hidden selection:bg-blue-600/30">
@@ -475,6 +474,7 @@ export default function WebDevPage() {
           </div>
         </div>
       </section>
+      <Stats />
 
       <Testimonials />
       <AiFAQ />

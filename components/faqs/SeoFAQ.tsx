@@ -43,9 +43,9 @@ export default function SeoFAQ() {
         
         {/* Heading Section */}
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-white   leading-none">
+          <h3 className="text-4xl md:text-5xl font-black text-white   leading-none">
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">Questions (FAQs)</span>
-          </h2>
+          </h3>
         </div>
 
         {/* Accordion List */}

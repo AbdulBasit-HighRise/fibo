@@ -239,7 +239,7 @@ export default function WebDevPage() {
       </>
 
       {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO & Digital Marketing Hover Architecture) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
         </div>
@@ -312,11 +312,12 @@ export default function WebDevPage() {
           </div>
         </div>
       </section>
-      <Stats />
+      <ServiceCTA />
+
+
 
 
       {/* CTA   */}
-      <ServiceCTA />
 
 
 
@@ -416,7 +417,7 @@ export default function WebDevPage() {
 
 
       {/* Core expertise - Website Design Services (Perfect Hover Sync) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
         <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
@@ -480,9 +481,9 @@ export default function WebDevPage() {
 
                   {/* Title Header */}
                   <div className="space-y-2 flex-grow relative z-10 pt-6">
-                    <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
+                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
                       {p.title}
-                    </h3>
+                    </h4>
                   </div>
 
                   {/* Chevron Right Icon */}
@@ -622,6 +623,7 @@ export default function WebDevPage() {
           </div>
         </div>
       </section>
+      <Stats />
 
       <Testimonials />
       {/* Core experties  */}

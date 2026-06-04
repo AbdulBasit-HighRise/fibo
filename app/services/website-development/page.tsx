@@ -154,7 +154,7 @@ export default function WebDevPage() {
               {/* (If you have a badge code, paste it here) */}
 
               {/* Main Typography Block - 🎯 FIXED: Replicated the exact smooth response scaling and line-height */}
-              <h1 className="text-[3rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
+              <h1 className="text-[2.7rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
                 Website Development{" "}
                 <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Agency.
@@ -301,7 +301,7 @@ export default function WebDevPage() {
       </>
 
       {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO & Digital Marketing Hover Architecture) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
         </div>
@@ -411,7 +411,7 @@ export default function WebDevPage() {
               className="flex items-center shrink-0"
             >
               <Link
-                href="/portfolio"
+                href="/case-studies"
                 className="flex items-center gap-3 md:gap-4 text-[14px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white-500 hover:text-white transition-all duration-500 group"
               >
                 <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
@@ -471,11 +471,11 @@ export default function WebDevPage() {
                       </div>
 
                       {/* Project Title Display */}
-                      {/* <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                  <span className="text-2xl 2xl:text-5xl font-black tracking-tight uppercase block text-white">
+                          <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                  <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
                     {project.title}
                   </span>
-                </div> */}
+                </div>
                     </div>
                   </CardWrapper>
                 </a>
@@ -689,8 +689,7 @@ export default function WebDevPage() {
 
       <Testimonials />
       {/* Core experties  */}
-      {/* Core expertise - Website Design Services (Perfect Hover Sync) */}
-      <section className="relative py-24 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
         <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px]" />
 
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
@@ -754,9 +753,9 @@ export default function WebDevPage() {
 
                   {/* Title Header */}
                   <div className="space-y-2 flex-grow relative z-10 pt-6">
-                    <h3 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
+                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
                       {p.title}
-                    </h3>
+                    </h4>
                   </div>
 
                   {/* Chevron Right Icon */}

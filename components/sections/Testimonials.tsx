@@ -36,12 +36,12 @@ export default function JuicerReviews() {
 
           {/* Left Block: Headings */}
           <div className="max-w-2xl text-center md:text-left">
-            <h2 className="text-[2.2rem] md:text-[2.6rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
+            <h3 className="text-[2.2rem] md:text-[2.6rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
               What Our{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
                 Clients
               </span> Say
-            </h2>
+            </h3>
           </div>
 
           {/* Right Block: Integrated GMB Action Button */}

@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react"; // 👈 State hooks added properly
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion"; // 👈 Framer-motion features properly imported
 import { ArrowLeft, Flame, Globe, Tag, MapPin, Link2, X, Eye } from "lucide-react";
 import { CaseStudy } from "@/lib/caseStudiesData";
 
@@ -84,7 +85,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
             {/* LEFT: Large Punchy Typography & Description */}
             <div className="order-2 lg:order-1 lg:col-span-7 space-y-6">
               <h2
-                style={{ textTransform: 'none' }} // 👈 Yeh inline style har qisam ke uppercase ko tor dega
+                style={{ textTransform: 'none' }}
                 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tight leading-[1.1] text-white"
               >
                 {project.description}
@@ -126,73 +127,73 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
             ))}
           </div>
 
-    {/* 📊 BOTTOM BLOCK: Fully Dynamic Blueprints & Overview Card */}
-<div className="w-full bg-[#111827] border border-white/[0.08] rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-2xl group animate-slideUp">
-  <div className="absolute top-0 left-0 h-1 w-full bg-blue-500" />
+          {/* 📊 BOTTOM BLOCK: Fully Dynamic Blueprints & Overview Card */}
+          <div className="w-full bg-[#111827] border border-white/[0.08] rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-2xl group animate-slideUp">
+            <div className="absolute top-0 left-0 h-1 w-full bg-blue-500" />
 
-  <div className="mb-6 border-b border-white/[0.04] pb-4">
-    <h3 className="text-lg font-black uppercase tracking-wider text-zinc-300">
-      Project Blueprints & Overview
-    </h3>
-  </div>
+            <div className="mb-6 border-b border-white/[0.04] pb-4">
+              <h3 className="text-lg font-black uppercase tracking-wider text-zinc-300">
+                Project Blueprints & Overview
+              </h3>
+            </div>
 
-  {/* Grid Content */}
-  <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center text-left">
+            {/* Grid Content */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 items-center text-left">
 
-    {/* 1. Dynamic Category */}
-    <div className="flex items-center gap-4">
-      <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-        <Tag size={18} />
-      </div>
-      <div>
-        <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Category</span>
-        <span className="text-sm md:text-base font-black text-zinc-200">
-          {project.displayCategory || (project.category === 'seo' ? 'Local SEO' : 'Paid Social')}
-        </span>
-      </div>
-    </div>
+              {/* 1. Dynamic Category */}
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
+                  <Tag size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Category</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200">
+                    {project.displayCategory || (project.category === 'seo' ? 'Local SEO' : 'Paid Social')}
+                  </span>
+                </div>
+              </div>
 
-    {/* 2. Dynamic Client Name */}
-    <div className="flex items-center gap-4">
-      <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-        <Globe size={18} />
-      </div>
-      <div>
-        <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Client</span>
-        <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[180px] block">
-          {project.clientName || project.title}
-        </span>
-      </div>
-    </div>
+              {/* 2. Dynamic Client Name */}
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
+                  <Globe size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Client</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[180px] block">
+                    {project.clientName || project.title}
+                  </span>
+                </div>
+              </div>
 
-    {/* 3. Dynamic Location */}
-    <div className="flex items-center gap-4">
-      <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-        <MapPin size={18} />
-      </div>
-      <div>
-        <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Location</span>
-        <span className="text-sm md:text-base font-black text-zinc-200">
-          {project.location || 'Australia / Global'}
-        </span>
-      </div>
-    </div>
+              {/* 3. Dynamic Location */}
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
+                  <MapPin size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Location</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200">
+                    {project.location || 'Australia / Global'}
+                  </span>
+                </div>
+              </div>
 
-    {/* 4. Dynamic Website URL */}
-    <div className="flex items-center gap-4">
-      <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
-        <Link2 size={18} />
-      </div>
-      <div>
-        <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Website</span>
-        <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[150px] block">
-          {project.websiteName || 'Multiple Webstacks'}
-        </span>
-      </div>
-    </div>
+              {/* 4. Dynamic Website URL */}
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-xl bg-[#1E2939] border border-white/5 text-blue-500">
+                  <Link2 size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-zinc-500 block mb-0.5">Website</span>
+                  <span className="text-sm md:text-base font-black text-zinc-200 truncate max-w-[150px] block">
+                    {project.websiteName || 'Multiple Webstacks'}
+                  </span>
+                </div>
+              </div>
 
-  </div>
-</div>
+            </div>
+          </div>
 
         </div>
       </section>
@@ -247,7 +248,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
       </div>
 
       {/* ========================================================
-          🏆 4. RESULTS & PROOF CANVAS (Alternates to opposite background)
+          🏆 4. RESULTS & PROOF CANVAS 
           ======================================================== */}
       <section className={`w-full py-24 border-b border-white/[0.02] transition-all duration-700 ${project.sections.length % 2 === 0 ? 'bg-[#111827]' : 'bg-[#1E2939]'
         }`}>
@@ -305,7 +306,6 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                   ))}
                 </div>
               </div>
-
             </div>
           )}
 
@@ -335,42 +335,58 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
           )}
 
         </div>
-
-        {/* ========================================================
-            🌟 PREMIUM GLASSMORPHISM LIGHTBOX MODAL (POPUP)
-            ======================================================== */}
-        {typeof activeImg === 'string' && (
-          <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/80 backdrop-blur-xl p-4 md:p-10 animate-fadeIn"
-            onClick={() => setActiveImg(null)}
-          >
-            {/* Top-Right Dedicated Floating Close Button */}
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                setActiveImg(null);
-              }}
-              className="absolute top-6 right-6 z-[10000] p-3 rounded-full bg-white/10 border border-white/10 text-white hover:bg-white hover:text-black transition-all duration-300 shadow-xl cursor-pointer"
-            >
-              <X size={24} />
-            </button>
-
-            {/* Modal Window Container Layout */}
-            <div
-              className="relative w-full max-w-5xl h-[70vh] md:h-[80vh] flex items-center justify-center rounded-2xl overflow-hidden p-2 md:p-6"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Image
-                src={activeImg}
-                alt="Enlarged Proof Dashboard"
-                fill
-                priority
-                className="object-contain drop-shadow-[0_25px_50px_rgba(0,0,0,0.8)] select-none"
-              />
-            </div>
-          </div>
-        )}
       </section>
+
+      {/* ========================================================
+          🌟 ULTIMATE SMART GLASSMORPHISM LIGHTBOX MODAL (POPUP)
+          ======================================================== */}
+     {/* ========================================================
+    🌟 ULTIMATE SMART GLASSMORPHISM LIGHTBOX MODAL (POPUP)
+    ======================================================== */}
+<AnimatePresence>
+  {activeImg && (
+    <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center p-4 md:p-6 pointer-events-auto">
+      
+      {/* Backdrop Dark Mask */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setActiveImg(null)}
+        className="absolute inset-0 bg-black/95 backdrop-blur-md cursor-zoom-out"
+      />
+
+      {/* Animated Photo Box Content Display */}
+      <motion.div
+        initial={{ scale: 0.96, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.96, opacity: 0 }}
+        transition={{ type: "spring", damping: 28, stiffness: 320 }}
+        className="relative w-full max-w-5xl h-[60vh] md:h-[80vh] flex items-center justify-center z-10 select-none pointer-events-none mt-4 md:mt-0"
+      >
+        <Image
+          src={activeImg}
+          alt="Enlarged Proof Dashboard View"
+          fill
+          priority
+          sizes="(max-width: 1280px) 100vw, 85vw"
+          className="object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.25)]"
+        />
+      </motion.div>
+
+      {/* 🎯 FIXED CLOSE BUTTON: Mobile pr picture k nichy center me, desktop pr top-right pr */}
+      <button
+        onClick={() => setActiveImg(null)}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:translate-x-0 md:top-8 md:right-8 z-[100000] flex items-center gap-2 px-5 py-3 md:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/10 shadow-2xl backdrop-blur-md active:scale-95 transition-all cursor-pointer font-medium text-sm md:text-base"
+        aria-label="Close Preview"
+      >
+        <X size={20} />
+        <span className="block md:hidden tracking-wider uppercase text-[11px] font-bold">Close Preview</span>
+      </button>
+
+    </div>
+  )}
+</AnimatePresence>
 
     </main>
   );

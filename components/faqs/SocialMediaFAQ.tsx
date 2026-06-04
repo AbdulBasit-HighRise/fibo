@@ -6,20 +6,32 @@ import { Plus, Minus } from "lucide-react";
 export default function SocialMediaFAQ() {
   const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
-  const faqs = [
-    {
-      q: "How fast will I see follower growth?",
-      a: "Organic growth starts within 2 weeks as the algorithm picks up your content. For instant results, we recommend our targeted ad-boost strategies."
-    },
-    {
-      q: "Do I need to provide the content?",
-      a: "We can handle everything from high-end graphics to reel editing. You just need to approve the monthly content calendar we send you."
-    },
-    {
-      q: "Which platforms do you manage?",
-      a: "We specialize in Instagram, TikTok, LinkedIn, and Meta (Facebook). We tailor the strategy specifically for each platform's unique audience."
-    }
-  ];
+const faqs = [
+  {
+    q: "How fast will I see follower growth?",
+    a: "Organic growth starts within 2 weeks as the algorithm picks up your content. For instant results, we recommend our targeted ad-boost strategies."
+  },
+  {
+    q: "Do I need to provide the content?",
+    a: "We can handle everything from high-end graphics to reel editing. You just need to approve the monthly content calendar we send you."
+  },
+  {
+    q: "Which platforms do you manage?",
+    a: "We specialize in Instagram, TikTok, LinkedIn, and Meta (Facebook). We tailor the strategy specifically for each platform's unique audience."
+  },
+  {
+    q: "Is there a long-term contract requirement?",
+    a: "No, we operate on a flexible month-to-month basis. We believe in retaining our clients through high-yielding performance and transparency rather than locking them into long-term contracts."
+  },
+  {
+    q: "How do you track and report campaign success?",
+    a: "We provide comprehensive monthly analytical dashboards detailing exact reach, conversion percentages, engagement spikes, and net revenue breakthroughs generated from our campaigns."
+  },
+  {
+    q: "How do we get started with your management?",
+    a: "Simply book a discovery call. We will audit your current social channels, outline a technical blueprint tailored to your brand, and jump straight into content ideation upon onboarding."
+  }
+];
 
   return (
 <section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
@@ -28,10 +40,10 @@ export default function SocialMediaFAQ() {
   
   {/* 🎯 FIXED: Max-width upgraded and standardized for fluid scaling on all devices */}
   <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
-          <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl font-black text-white   leading-none">
+     <div className="mb-12">
+          <h3 className="text-4xl md:text-5xl font-black text-white   leading-none">
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">Questions (FAQs)</span>
-          </h2>
+          </h3>
         </div>
 
         <div className="space-y-4">

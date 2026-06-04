@@ -80,7 +80,7 @@ export default function ConsultationCTA() {
   return (
 <section className="w-full bg-[#020617] py-16 md:py-24 px-4 sm:px-8 md:px-12 2xl:px-20 overflow-hidden">
   
-  <div className="w-full mx-auto max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1900px] 3xl:max-w-[1900px] 4xl:max-w-[1900px]">
+  <div className="w-full mx-auto max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1600px] 3xl:max-w-[1900px] 4xl:max-w-[1900px]">
 
     {/* MAIN CARD */}
     <div className="relative overflow-hidden rounded-[32px] md:rounded-[40px] border border-white/10 bg-white/[0.03] backdrop-blur-xl w-full">

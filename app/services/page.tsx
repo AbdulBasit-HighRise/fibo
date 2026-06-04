@@ -138,12 +138,12 @@ export default function ServicesPage() {
               </div>
 
               {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
+              <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
                 Everything You Need to{" "}
                 <span className="mt-4 pt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                   Grow, Market, and Scale Your Brand
                 </span>
-              </h3>
+              </h2>
             </div>
 
             {/* 🎯 FIX: Paragraphs converted to match the exact spacing, font sizes, and white color of previous sections */}

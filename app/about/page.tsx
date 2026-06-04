@@ -147,7 +147,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. VISION & MISSION */}
-      <section className="py-24 bg-[#111827] px-6 relative border-y border-white/[0.03]">
+      <section className="py-16 bg-[#111827] px-6 relative border-y border-white/[0.03]">
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -204,7 +204,7 @@ export default function AboutPage() {
         </div>
       </section>
 {/* 4. WORKING PROCESS */}
-<section className="py-24 px-6 bg-[#1E2939] relative text-white">
+<section className="py-16 px-6 bg-[#1E2939] relative text-white">
   <div className="max-w-7xl mx-auto">
     <div className="mb-20">
       <span className="text-[10px] tracking-[4px] text-blue-400 font-extrabold block mb-4">EXECUTION TRACK</span>
@@ -256,7 +256,7 @@ export default function AboutPage() {
 </section>
 
       {/* 5. 4 REASONS TO WORK WITH US */}
-      <section className="py-24 bg-[#111827] px-6 relative border-t border-white/[0.02]">
+      <section className="py-16 bg-[#111827] px-6 relative border-t border-white/[0.02]">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">

@@ -42,14 +42,13 @@ export default function ContentFAQ() {
   ];
 
   return (
-    <section className="relative py-24 bg-[#020617] overflow-hidden border-y border-white/5">
+    <section className="relative py-24 bg-[#111827] overflow-hidden border-y border-white/5">
       <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="relative z-10 max-w-4xl mx-auto px-6">
-        <div className="mb-12">
-          {/* <p className="text-[10px] uppercase tracking-[6px] text-[#00f2ff] font-black italic mb-2">Word Craft</p> */}
-          <h2 className="text-4xl md:text-5xl font-black text-white   leading-none">
-            E-Commerce <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">FAQ.</span>
-          </h2>
+         <div className="mb-12">
+          <h3 className="text-4xl md:text-5xl font-black text-white   leading-none">
+            Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">Questions (FAQs)</span>
+          </h3>
         </div>
         <div className="space-y-4">
           {faqs.map((faq, idx) => (
