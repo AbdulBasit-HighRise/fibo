@@ -112,14 +112,14 @@ export default function AuditCTA() {
         value={email}
         disabled={status.loading}
         // {/* 🎯 Padding slim ki: p-3.5 2xl:p-5 */}
-        className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-3 2xl:p-4 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
+        className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-3 2xl:p-3.5 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
         [&:-webkit-autofill]:bg-slate-900/0 [&:-webkit-autofill]:text-white [&:-webkit-autofill]:[-webkit-text-fill-color:white] [&:-webkit-autofill]:[transition:background-color_5000s_ease-in-out_0s]"
         onChange={(e) => setEmail(e.target.value)}
       />
     </div>
 
     {/* URL INPUT */}
-    <div className="flex flex-col justify-end w-full space-y-1.5">
+    <div className="flex flex-col justify-end w-full space-y-1.0">
       <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
         Website URL <span className="text-red-500">*</span>
       </label>
@@ -130,7 +130,7 @@ export default function AuditCTA() {
         value={url}
         disabled={status.loading}
         // {/* 🎯 Padding slim ki: p-3.5 2xl:p-5 */}
-        className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-3 2xl:p-4 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
+        className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-3 2xl:p-3.5 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
         [&:-webkit-autofill]:bg-slate-900/0 [&:-webkit-autofill]:text-white [&:-webkit-autofill]:[-webkit-text-fill-color:white] [&:-webkit-autofill]:[transition:background-color_5000s_ease-in-out_0s]"
         onChange={(e) => setUrl(e.target.value)}
       />
@@ -142,7 +142,7 @@ export default function AuditCTA() {
         type="submit"
         disabled={status.loading}
         // {/* 🎯 Height adjusted, tracking streamlined, whitespace-nowrap added */}
-        className="group relative overflow-hidden flex items-center justify-center gap-2 px-4 h-[48px] sm:h-[48px] 2xl:h-[64px] bg-white text-black font-black text-[10px] tracking-[1.5px] uppercase rounded-2xl active:scale-95 transition-all duration-500 w-full shadow-lg shadow-black/10 disabled:opacity-50 disabled:scale-100 whitespace-nowrap"
+        className="group relative overflow-hidden flex items-center justify-center gap-2 px-4 h-[48px] sm:h-[48px] 2xl:h-[48px] bg-white text-black font-black text-[10px] tracking-[1.5px] uppercase rounded-2xl active:scale-95 transition-all duration-500 w-full shadow-lg shadow-black/10 disabled:opacity-50 disabled:scale-100 whitespace-nowrap"
       >
         <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
         <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center justify-center gap-1.5 w-full">
