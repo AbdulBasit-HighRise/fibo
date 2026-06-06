@@ -93,88 +93,93 @@ export default function AuditCTA() {
               </h3>
             </div>
 
-            {/* 📥 RIGHT: FORM BLOCK */}
-            <div className="w-full xl:max-w-[65%] 2xl:max-w-[70%] flex flex-col gap-4 flex-1">
-              <form
-                onSubmit={handleSubmit}
-                className="w-full grid grid-cols-1 sm:grid-cols-[2fr_2fr_1.2fr] items-stretch gap-6 2xl:gap-8"
-              >
-                {/* EMAIL INPUT */}
-                <div className="flex flex-col justify-end w-full space-y-2">
-                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
-                    Business Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    required
-                    placeholder="email@company.com"
-                    value={email}
-                    disabled={status.loading}
-                    className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
+      {/* 📥 RIGHT: FORM BLOCK */}
+<div className="w-full xl:max-w-[65%] 2xl:max-w-[70%] flex flex-col gap-4 flex-1">
+  <form
+    onSubmit={handleSubmit}
+    // {/* 🎯 Button ko extra breath dene ke liye grid ratio smooth kiya (sm:grid-cols-[2fr_2fr_1.4fr]) */}
+    className="w-full grid grid-cols-1 sm:grid-cols-[2fr_2fr_1.4fr] items-stretch gap-5 2xl:gap-6"
+  >
+    {/* EMAIL INPUT */}
+    <div className="flex flex-col justify-end w-full space-y-1.5">
+      <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
+        Business Email <span className="text-red-500">*</span>
+      </label>
+      <input
+        type="email"
+        required
+        placeholder="email@company.com"
+        value={email}
+        disabled={status.loading}
+        // {/* 🎯 Padding slim ki: p-3.5 2xl:p-5 */}
+        className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-3 2xl:p-4 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
         [&:-webkit-autofill]:bg-slate-900/0 [&:-webkit-autofill]:text-white [&:-webkit-autofill]:[-webkit-text-fill-color:white] [&:-webkit-autofill]:[transition:background-color_5000s_ease-in-out_0s]"
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </div>
+        onChange={(e) => setEmail(e.target.value)}
+      />
+    </div>
 
-                {/* URL INPUT */}
-                <div className="flex flex-col justify-end w-full space-y-2">
-                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
-                    Website URL <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="example.com"
-                    value={url}
-                    disabled={status.loading}
-                    className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-4 2xl:p-6 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
+    {/* URL INPUT */}
+    <div className="flex flex-col justify-end w-full space-y-1.5">
+      <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
+        Website URL <span className="text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        required
+        placeholder="example.com"
+        value={url}
+        disabled={status.loading}
+        // {/* 🎯 Padding slim ki: p-3.5 2xl:p-5 */}
+        className="w-full bg-[#020617]/60 border border-white/10 rounded-2xl p-3 2xl:p-4 outline-none focus:border-blue-500 focus:bg-[#020617] transition-all text-white placeholder:text-slate-500 text-sm disabled:opacity-50
         [&:-webkit-autofill]:bg-slate-900/0 [&:-webkit-autofill]:text-white [&:-webkit-autofill]:[-webkit-text-fill-color:white] [&:-webkit-autofill]:[transition:background-color_5000s_ease-in-out_0s]"
-                    onChange={(e) => setUrl(e.target.value)}
-                  />
-                </div>
+        onChange={(e) => setUrl(e.target.value)}
+      />
+    </div>
 
-                {/* ⚡ ANALYZE BUTTON */}
-                <div className="flex flex-col justify-end w-full">
-                  <button
-                    type="submit"
-                    disabled={status.loading}
-                    className="group relative overflow-hidden flex items-center justify-center gap-3 px-6 h-[54px] sm:h-[54px] 2xl:h-[72px] bg-white text-black font-black text-[10px] tracking-[3px] uppercase rounded-2xl active:scale-95 transition-all duration-500 w-full shadow-lg shadow-black/10 disabled:opacity-50 disabled:scale-100"
-                  >
-                    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                    <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center justify-center gap-2 w-full">
-                      {status.loading ? (
-                        <>
-                          Analyzing
-                          <Loader2 size={14} className="animate-spin text-zinc-700 group-hover:text-white shrink-0" />
-                        </>
-                      ) : (
-                        <>
-                          Check Now
-                          <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform duration-300 text-zinc-700 group-hover:text-white shrink-0" />
-                        </>
-                      )}
-                    </span>
-                  </button>
-                </div>
-              </form>
+    {/* ⚡ ANALYZE BUTTON */}
+    <div className="flex flex-col justify-end w-full">
+      <button
+        type="submit"
+        disabled={status.loading}
+        // {/* 🎯 Height adjusted, tracking streamlined, whitespace-nowrap added */}
+        className="group relative overflow-hidden flex items-center justify-center gap-2 px-4 h-[48px] sm:h-[48px] 2xl:h-[64px] bg-white text-black font-black text-[10px] tracking-[1.5px] uppercase rounded-2xl active:scale-95 transition-all duration-500 w-full shadow-lg shadow-black/10 disabled:opacity-50 disabled:scale-100 whitespace-nowrap"
+      >
+        <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
+        <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center justify-center gap-1.5 w-full">
+          {status.loading ? (
+            <>
+              Analyzing
+              <Loader2 size={13} className="animate-spin text-zinc-700 group-hover:text-white shrink-0" />
+            </>
+          ) : (
+            <>
+              Check Now
+              <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-300 text-zinc-700 group-hover:text-white shrink-0" />
+            </>
+          )}
+        </span>
+      </button>
+    </div>
+  </form>
 
-              {/* Real-Time Status Notification Alert */}
-              <AnimatePresence mode="wait">
-                {status.message && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className={`p-4 rounded-xl font-medium text-sm flex items-center gap-3 border ${status.success
-                        ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
-                        : "bg-rose-500/10 border-rose-500/20 text-rose-400"
-                      }`}
-                  >
-                    {status.message}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+  {/* Real-Time Status Notification Alert */}
+  <AnimatePresence mode="wait">
+    {status.message && (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        className={`p-4 rounded-xl font-medium text-sm flex items-center gap-3 border ${
+          status.success
+            ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
+            : "bg-rose-500/10 border-rose-500/20 text-rose-400"
+        }`}
+      >
+        {status.message}
+      </motion.div>
+    )}
+  </AnimatePresence>
+</div>
 
           </div>
         </div>
