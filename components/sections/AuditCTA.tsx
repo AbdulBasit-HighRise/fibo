@@ -142,7 +142,7 @@ export default function AuditCTA() {
         type="submit"
         disabled={status.loading}
         // {/* 🎯 Height adjusted, tracking streamlined, whitespace-nowrap added */}
-        className="group relative overflow-hidden flex items-center justify-center gap-2 px-4 h-[48px] sm:h-[48px] 2xl:h-[48px] bg-white text-black font-black text-[10px] tracking-[1.5px] uppercase rounded-2xl active:scale-95 transition-all duration-500 w-full shadow-lg shadow-black/10 disabled:opacity-50 disabled:scale-100 whitespace-nowrap"
+        className="group relative overflow-hidden flex items-center justify-center gap-2 px-4 h-[48px] sm:h-[48px] 2xl:h-[48px] bg-white text-black font-bold text-[10px] tracking-[1.5px] uppercase rounded-2xl active:scale-95 transition-all duration-500 w-full shadow-lg shadow-black/10 disabled:opacity-50 disabled:scale-100 whitespace-nowrap"
       >
         <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
         <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center justify-center gap-1.5 w-full">
