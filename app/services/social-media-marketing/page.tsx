@@ -687,7 +687,9 @@ export default function SocialMediaPage() {
                                     <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                                         Our team of specialists continuously tests, refines, and optimizes every campaign—across Meta, LinkedIn, YouTube, and TikTok—ensuring your budget works harder to generate high-quality leads and steady conversions.</p>
                                     <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                                        Partner with us to streamline your marketing efforts, outpace your competition, and transform your active social media channels into powerful, predictable revenue engines tailored specifically to your brand’s goals.</p>                                </div>
+                                        <span className="font-bold text-blue-400"> <a href="/">  Partner with </a> </span>
+
+                                        High RIse DIgital to streamline your marketing efforts, outpace your competition, and transform your active social media channels into powerful, predictable revenue engines tailored specifically to your brand’s goals.</p>                                </div>
                             </motion.div>
                         </div>
 

@@ -75,7 +75,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 1. RHINO ROOFING ORLANDO (SEO CASE STUDY)
   // ========================================================
  {
-    slug: "rhino-orlando", // Matches your portfolio list slug
+   slug: "170-leads-increased-for-roofing-company", // Matches your portfolio list slug
     category: "seo",
     isSocial: false,
     title: "Rhino Roofing Orlando Scale",
@@ -248,14 +248,14 @@ export const caseStudiesData: CaseStudy[] = [
 // ========================================================
   // 🔥 SMILECARE (PURE ECOMMERCE & SHOPIFY SEO CASE STUDY)
   // ========================================================
-  {
-    slug: "breez-care",
+ {
+    slug: "11-total-sales-revenue-increased-for-oral-care-brand", // 🔴 Exact match with the list item above
     category: "seo",
     isSocial: false,
     title: "Breez care",
     description: "+11% Total Sales Revenue Increased For Oral Care Brand",
     primaryOutcome: "+28% Sessions",
-    image: "/smile-care.jpg", // 👈 Top Image Path (Yahan apni file ka naam set kar lena)
+    image: "/smile-care.jpg", 
      displayCategory: "Local SEO",
     clientName: "Breez Care",
     location: "USA",
@@ -384,7 +384,7 @@ export const caseStudiesData: CaseStudy[] = [
       subheader: "Live platform snapshots capturing the exact transition loops and metric adjustments.",
       images: [
         {
-          src: "/breez-care-result.jpg", // 👈 Bottom Image Path (Aapki hardcoded review image ya analytics ss)
+          src: "/breez-care-result.jpg", 
           alt: "SmileCare Google Analytics and Shopify Revenue Growth Proof",
           caption: "Figure 3.1: Live metric improvements including +10% orders and +11% total revenue scale.",
           color: "blue"
@@ -396,7 +396,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 WEST LONDON CLEANING COMPANY (WIX LOCAL SEO CASE STUDY)
   // ========================================================
   {
-    slug: "west-london-cleaners",
+slug: "28-organic-traffic-increase-for-local-cleaning-company",
     category: "seo",
     isSocial: false,
     title: "West London Cleaning Company",
@@ -542,7 +542,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 LOCAL RESTAURANT AUSTRALIA (LOCAL SEO CASE STUDY)
   // ========================================================
   {
-    slug: "australia-restaurant-seo",
+    slug: "6.69K-clicks-in-just-3-months-for-local-restaurant",
     category: "seo",
     isSocial: false,
     title: "Local Restaurant Australia",
@@ -685,7 +685,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 AESTHETIC CLINIC USA (MEDICAL CLINICAL SEO CASE STUDY)
   // ========================================================
   {
-    slug: "aesthetic-clinic-seo",
+    slug: "1-76k-leads-for-aesthetic-clinic",
     category: "seo",
     isSocial: false,
     title: "Aesthetic Clinic",
@@ -829,7 +829,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 HOLISTIC DOCTOR CLINIC (INTEGRATIVE HEALTH SEO CASE STUDY)
   // ========================================================
   {
-    slug: "holistic-doctor-clinic",
+    slug: "#1-position-in-serp-for-holistic-doctor-clinic",
     category: "seo",
     isSocial: false,
     title: "Holistic Doctor Clinic",
@@ -974,7 +974,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 REAL ESTATE AUSTRALIA (PAID SOCIAL & LEAD GEN CASE STUDY)
   // ========================================================
   {
-    slug: "australia-real-estate-social",
+   slug: "31-increase-in-qualified-property-leads-via-high-intent-social-funnels",
     category: "social", // 👈 Yeh key handle karegi dynamic layout themes aur colors ko
     isSocial: true,
     title: "Victoria Property Network",
@@ -1117,7 +1117,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 FITNESS BRAND E-COMMERCE (PAID SOCIAL & PERFORMANCE CASE STUDY)
   // ========================================================
   {
-    slug: "fitness-brand-ecommerce",
+    slug: "598541-in-sales-at-22x-roas-for-private-label-fitness-brand",
     category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
     isSocial: true,
     title: "Premium Fitness Brand",
@@ -1261,7 +1261,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 FASHION BRAND E-COMMERCE (PAID SOCIAL & PERFORMANCE CASE STUDY)
   // ========================================================
   {
-    slug: "fashion-brand-ecommerce",
+    slug: "1044-website-purchases-for-fashion-brand",
     category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
     isSocial: true,
     title: "E-Commerce Fashion Brand",
@@ -1400,7 +1400,7 @@ export const caseStudiesData: CaseStudy[] = [
   // 🔥 HOME & LIVING BRAND E-COMMERCE (PAID SOCIAL CASE STUDY)
   // ========================================================
   {
-    slug: "home-living-ecommerce",
+    slug: "25-10x-roas-for-home-living-brand",
     category: "social", // 👈 Controls the aesthetic layouts & dynamic pink accents
     isSocial: true,
     title: "Premium Home & Living Brand",

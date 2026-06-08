@@ -183,7 +183,11 @@ export default function WebDevPage() {
                 </p>
 
                 <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
-                  Think of AI as your ultimate backend engine. It analyzes buying patterns to predict what your customers want next, optimizes your marketing campaigns instantly, and ensures no valuable lead ever slips through the cracks.
+                  Think of AI as your ultimate backend engine. It analyzes buying patterns to predict what your customers want next, optimizes your
+
+                  <span className="font-bold text-blue-400"> <a href="/services/social-media-marketing">  marketing campaigns </a> </span>
+
+                  instantly, and ensures no valuable lead ever slips through the cracks.
                 </p>
               </motion.div>
 
@@ -263,7 +267,7 @@ export default function WebDevPage() {
 
                       {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
                       <div
-                        style={{ '--hover-color': '#0971A6' } }
+                        style={{ '--hover-color': '#0971A6' }}
                         className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
                       >
                         <div className="transition-colors duration-500">
@@ -426,7 +430,10 @@ export default function WebDevPage() {
                   </p>
 
                   <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    Partner with us to cut out the operational noise, optimize your budget, and turn smart automation into your ultimate growth engine.
+                    Partner with
+                    <span className="font-bold text-blue-400"> <a href="/"> High Rise Digital Agency </a> </span>
+
+                    to cut out the operational noise, optimize your budget, and turn smart automation into your ultimate growth engine.
                   </p>
                 </div>
               </motion.div>

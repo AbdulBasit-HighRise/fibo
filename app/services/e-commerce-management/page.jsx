@@ -138,7 +138,7 @@ export default function WebDevPage() {
 
       <>
         {/* 🎯 ABOUT SECTION */}
-            <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#1E2939] overflow-hidden">
+        <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#1E2939] overflow-hidden">
 
           {/* Background Glow */}
           <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
@@ -193,7 +193,11 @@ export default function WebDevPage() {
 
                   {/* Paragraph 2 */}
                   <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                    We look closely at what your buyers want, helping you show up right when they are ready to shop. From setting up clear product pages to launching targeted social media ads, we make buying from your store completely effortless.
+                    We look closely at what your buyers want, helping you show up right when they are ready to shop. From setting up clear product pages to launching targeted
+
+                    <span className="font-bold text-blue-400"> <a href="/services/social-media-marketing"> social media ads, </a> </span>
+
+                    we make buying from your store completely effortless.
                   </p>
 
                   {/* Paragraph 3 */}
@@ -553,7 +557,11 @@ export default function WebDevPage() {
                 <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
                   {/* Paragraph 1 */}
                   <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    We know that running a successful online storefront requires much more than just a beautiful website. Our agency focuses entirely on the metrics that actually impact your bottom line: lowering your customer acquisition costs, recovering abandoned carts, and increasing your average order value.
+                    We know that running a successful online storefront requires much more than just a beautiful website. Our
+
+                    <span className="font-bold text-blue-400"> <a href="/">    digital agency </a> </span>
+
+                    focuses entirely on the metrics that actually impact your bottom line: lowering your customer acquisition costs, recovering abandoned carts, and increasing your average order value.
                   </p>
 
                   {/* Paragraph 2 */}
