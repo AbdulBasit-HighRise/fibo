@@ -153,7 +153,11 @@ export default function ServicesPage() {
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
                 {/* <a href="/"></a>   */}
                 <span className="font-bold text-blue-400"> <a href="/">High Rise Digital Agency</a> </span>
-                  has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
+                has years of experience helping businesses grow worldwide through modern
+                
+                <span className="font-bold text-blue-400"> <a href="/">digital marketing</a> </span>
+
+                strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
               </p>
 
               {/* Paragraph 2 */}

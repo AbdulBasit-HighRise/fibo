@@ -98,33 +98,33 @@ export default function SEOPage() {
 
   const seoProjects = [
     {
-    id: "01",
-    title: "170% Leads Increased For Roofing Company",
-    image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
-    slug: "case-studies/rhino-orlando",
-    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-  },
-  {
-    id: "02",
-    title: "+11% Total Sales Revenue Increased For Oral Care Brand",
-    image: "/smile-care.jpg", // 🎯 Real image path
-    slug: "case-studies/breez-care",
-    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
-  },
-  {
-    id: "03",
-    title: "+28% Organic Traffic Increase For Local Cleaning Company",
-    image: "/cleaning.jpg", // 🎯 Real image path
-    slug: "case-studies/west-london-cleaners",
-    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
-  },
-  {
-    id: "04",
-    title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
-    image: "/burger.jpg", // 🎯 Real image path
-    slug: "case-studies/australia-restaurant-seo",
-    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-  }
+      id: "01",
+      title: "170% Leads Increased For Roofing Company",
+      image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
+      slug: "case-studies/rhino-orlando",
+      size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+    },
+    {
+      id: "02",
+      title: "+11% Total Sales Revenue Increased For Oral Care Brand",
+      image: "/smile-care.jpg", // 🎯 Real image path
+      slug: "case-studies/breez-care",
+      size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
+    },
+    {
+      id: "03",
+      title: "+28% Organic Traffic Increase For Local Cleaning Company",
+      image: "/cleaning.jpg", // 🎯 Real image path
+      slug: "case-studies/west-london-cleaners",
+      size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
+    },
+    {
+      id: "04",
+      title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
+      image: "/burger.jpg", // 🎯 Real image path
+      slug: "case-studies/australia-restaurant-seo",
+      size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+    }
   ];
   return (
     <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
@@ -437,10 +437,10 @@ export default function SEOPage() {
 
                       {/* Project Title Display */}
                       <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                  <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
-                    {project.title}
-                  </span>
-                </div>
+                        <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
+                          {project.title}
+                        </span>
+                      </div>
                     </div>
                   </CardWrapper>
                 </Link>
@@ -576,7 +576,11 @@ export default function SEOPage() {
                 <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
                   {/* Paragraph 1 */}
                   <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    We design high-ranking websites that don't just look great—they actively grow your business online. By blending clean design with advanced SEO strategies, we build fast, mobile-friendly sites that catch Google's attention and turn everyday search traffic into loyal customers.
+                    We design
+                    <span className="font-bold text-blue-400"> <a href="/"> high-ranking websites</a> </span>
+
+
+                    that don't just look great—they actively grow your business online. By blending clean design with advanced SEO strategies, we build fast, mobile-friendly sites that catch Google's attention and turn everyday search traffic into loyal customers.
                   </p>
 
                   {/* Border section left panel */}

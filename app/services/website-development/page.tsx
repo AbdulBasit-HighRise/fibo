@@ -471,11 +471,11 @@ export default function WebDevPage() {
                       </div>
 
                       {/* Project Title Display */}
-                          <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                  <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
-                    {project.title}
-                  </span>
-                </div>
+                      <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
+                        <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
+                          {project.title}
+                        </span>
+                      </div>
                     </div>
                   </CardWrapper>
                 </a>
@@ -625,7 +625,11 @@ export default function WebDevPage() {
 
                   {/* Paragraph 3 */}
                   <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    From planning and development to launch and support, we provide complete website solutions with honest communication, affordable pricing, and reliable service to ensure your project is completed smoothly and successfully.
+                    From planning and development to launch and support, we provide complete
+                    <span className="font-bold text-blue-400"> <a href="/">Digital solutions</a> </span>
+
+
+                    with honest communication, affordable pricing, and reliable service to ensure your project is completed smoothly and successfully.
                   </p>
 
                 </div>
