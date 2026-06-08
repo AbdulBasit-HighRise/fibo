@@ -101,28 +101,28 @@ export default function SEOPage() {
     id: "01",
     title: "170% Leads Increased For Roofing Company",
     image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
-    slug: "casestudies/rhino-orlando",
+    slug: "case-studies/rhino-orlando",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "02",
     title: "+11% Total Sales Revenue Increased For Oral Care Brand",
     image: "/smile-care.jpg", // 🎯 Real image path
-    slug: "casestudies/breez-care",
+    slug: "case-studies/breez-care",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "03",
     title: "+28% Organic Traffic Increase For Local Cleaning Company",
     image: "/cleaning.jpg", // 🎯 Real image path
-    slug: "casestudies/west-london-cleaners",
+    slug: "case-studies/west-london-cleaners",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "04",
     title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     image: "/burger.jpg", // 🎯 Real image path
-    slug: "casestudies/australia-restaurant-seo",
+    slug: "case-studies/australia-restaurant-seo",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   }
   ];

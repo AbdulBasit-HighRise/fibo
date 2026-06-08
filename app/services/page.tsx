@@ -14,40 +14,40 @@ import CTA from "@/components/sections/CTA";
 
 // 1. Service List Data (Content Exactly Same)
 const serviceList = [
-  { 
-    id: "02", 
-    title: "Search Engine Optimization", 
-    slug: "seo", 
-    icon: <BarChart3 />, 
-    desc: "Improving website rankings through strategic SEO techniques, keyword research, and optimization." 
+  {
+    id: "02",
+    title: "Search Engine Optimization",
+    slug: "seo",
+    icon: <BarChart3 />,
+    desc: "Improving website rankings through strategic SEO techniques, keyword research, and optimization."
   },
-  { 
-    id: "01", 
-    title: "Web Development", 
-    slug: "website-development", 
-    icon: <Zap />, 
-    desc: "Creating responsive, user-friendly websites designed to improve performance, engagement, and conversions." 
+  {
+    id: "01",
+    title: "Web Development",
+    slug: "website-development",
+    icon: <Zap />,
+    desc: "Creating responsive, user-friendly websites designed to improve performance, engagement, and conversions."
   },
-  { 
-    id: "03", 
-    title: "Social Media Marketing", 
-    slug: "social-media-marketing", 
-    icon: <ShieldCheck />, 
-    desc: "Growing your brand presence through engaging social media campaigns and targeted strategies." 
+  {
+    id: "03",
+    title: "Social Media Marketing",
+    slug: "social-media-marketing",
+    icon: <ShieldCheck />,
+    desc: "Growing your brand presence through engaging social media campaigns and targeted strategies."
   },
-  { 
-    id: "04", 
-    title: "AI Automation", 
-    slug: "ai-automation", 
-    icon: <Sparkles />, 
-    desc: "Streamlining business operations with smart AI automation solutions for improved productivity." 
+  {
+    id: "04",
+    title: "AI Automation",
+    slug: "ai-automation",
+    icon: <Sparkles />,
+    desc: "Streamlining business operations with smart AI automation solutions for improved productivity."
   },
-  { 
-    id: "05", 
-    title: "Ecommerce Management", 
-    slug: "e-commerce-management", 
-    icon: <Sparkles />, 
-    desc: "Managing online stores efficiently to increase sales, customer experience, and business growth." 
+  {
+    id: "05",
+    title: "Ecommerce Management",
+    slug: "e-commerce-management",
+    icon: <Sparkles />,
+    desc: "Managing online stores efficiently to increase sales, customer experience, and business growth."
   },
 ];
 
@@ -87,8 +87,8 @@ export default function ServicesPage() {
 
               <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
                 We provide SEO, social media marketing, PPC, branding, and web development services to help your business grow and succeed online.
-              </p>            
-              </div>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -151,7 +151,9 @@ export default function ServicesPage() {
 
               {/* Paragraph 1 */}
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed antialiased tracking-wide opacity-90">
-               <a href="/">High Rise Digital Agency</a>    has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
+                {/* <a href="/"></a>   */}
+                <span className="font-bold text-blue-400"> <a href="/">High Rise Digital Agency</a> </span>
+                  has years of experience helping businesses grow worldwide through modern digital marketing strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
               </p>
 
               {/* Paragraph 2 */}
@@ -189,83 +191,83 @@ export default function ServicesPage() {
       </section>
 
       {/* SECTION 3: SERVICE GRID */}
- {/* SECTION 3: SERVICE GRID */}
-{/* 🎯 FIXED: 'bg-[#111827]' ko badal kar 'bg-[#020617]' kar diya hai taake black hissa permanently khatam ho jaye */}
-<section className="py-16 md:py-24 bg-[#020617] 2xl:py-40 px-4 sm:px-8 md:px-12 2xl:px-20 w-full overflow-hidden">
-  
-  {/* ⚡ HEADING: Kept layout safe but removed constrained container */}
-  <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-4 md:pb-6 mb-8 flex flex-wrap md:flex-nowrap items-center gap-4 text-white leading-tight w-full">
-    Our Complete Range of {" "}
-    <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
-      Digital Marketing Services
-    </span>
-    <div className="hidden md:block h-px bg-white/10 flex-grow animate-pulse" />
-  </h3>
+      {/* SECTION 3: SERVICE GRID */}
+      {/* 🎯 FIXED: 'bg-[#111827]' ko badal kar 'bg-[#020617]' kar diya hai taake black hissa permanently khatam ho jaye */}
+      <section className="py-16 md:py-24 bg-[#020617] 2xl:py-40 px-4 sm:px-8 md:px-12 2xl:px-20 w-full overflow-hidden">
 
-  {/* 🎯 FIXED: Grid stretching edge-to-edge across the screen width */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10 w-full">
-    {serviceList.map((service) => (
-      <Link href={`/services/${service.slug}`} key={service.id} className="block h-full">
-        <motion.div
-          whileHover={{ y: -10 }}
-          style={{ backgroundColor: "#0971A6" }}
-          className="p-6 sm:p-8 md:p-10 2xl:p-14 border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] rounded-[2rem] md:rounded-[3rem] cursor-pointer h-full flex flex-col justify-between relative overflow-hidden"
-        >
-          {/* EFFECTS LAYER 1 */}
-          <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+        {/* ⚡ HEADING: Kept layout safe but removed constrained container */}
+        <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-4 md:pb-6 mb-8 flex flex-wrap md:flex-nowrap items-center gap-4 text-white leading-tight w-full">
+          Our Complete Range of {" "}
+          <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+            Digital Marketing Services
+          </span>
+          <div className="hidden md:block h-px bg-white/10 flex-grow animate-pulse" />
+        </h3>
 
-          {/* Foreground content */}
-          <div className="relative z-10 flex flex-col h-full justify-between w-full">
-            <div className="flex flex-col h-full justify-between">
-              
-              {/* TOP ROW: Icon, Title & Arrow */}
-              <div className="flex items-start justify-between gap-4 mb-4 md:mb-6 w-full">
-                
-                {/* Left side: Icon + Title */}
-                <div className="flex items-center gap-4 sm:gap-5 min-w-0">
-                  
-                  {/* 🌀 ICON BOX */}
-                  <div 
-                    style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-                    className="shrink-0 w-11 h-11 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
-                  >
-                    <div className="transition-colors duration-500">
-                      {service.icon}
+        {/* 🎯 FIXED: Grid stretching edge-to-edge across the screen width */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10 w-full">
+          {serviceList.map((service) => (
+            <Link href={`/services/${service.slug}`} key={service.id} className="block h-full">
+              <motion.div
+                whileHover={{ y: -10 }}
+                style={{ backgroundColor: "#0971A6" }}
+                className="p-6 sm:p-8 md:p-10 2xl:p-14 border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] rounded-[2rem] md:rounded-[3rem] cursor-pointer h-full flex flex-col justify-between relative overflow-hidden"
+              >
+                {/* EFFECTS LAYER 1 */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+
+                {/* Foreground content */}
+                <div className="relative z-10 flex flex-col h-full justify-between w-full">
+                  <div className="flex flex-col h-full justify-between">
+
+                    {/* TOP ROW: Icon, Title & Arrow */}
+                    <div className="flex items-start justify-between gap-4 mb-4 md:mb-6 w-full">
+
+                      {/* Left side: Icon + Title */}
+                      <div className="flex items-center gap-4 sm:gap-5 min-w-0">
+
+                        {/* 🌀 ICON BOX */}
+                        <div
+                          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
+                          className="shrink-0 w-11 h-11 sm:w-12 sm:h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
+                        >
+                          <div className="transition-colors duration-500">
+                            {service.icon}
+                          </div>
+                        </div>
+
+                        {/* Title Text */}
+                        <h4 className="font-black text-[1.25rem] sm:text-[1.5rem] lg:text-[1.7rem] 2xl:text-[1.8rem] text-white group-hover:text-cyan-200 transition-colors leading-snug tracking-tight break-words">
+                          {service.title}
+                        </h4>
+                      </div>
+
+                      {/* Right side: Arrow */}
+                      <div className="shrink-0 p-1 md:p-2">
+                        <ArrowUpRight
+                          size={22}
+                          className="text-white/50 group-hover:text-cyan-200 transform transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 ease-out"
+                        />
+                      </div>
                     </div>
+
+                    {/* 🎯 INTEGRATED: Description Section added here dynamically */}
+                    <div className="mt-2 mb-4 flex-grow">
+                      <p className="text-white/80 text-sm md:text-base 2xl:text-lg font-medium leading-relaxed antialiased">
+                        {service.desc}
+                      </p>
+                    </div>
+
                   </div>
-
-                  {/* Title Text */}
-                  <h4 className="font-black text-[1.25rem] sm:text-[1.5rem] lg:text-[1.7rem] 2xl:text-[1.8rem] text-white group-hover:text-cyan-200 transition-colors leading-snug tracking-tight break-words">
-                    {service.title}
-                  </h4>
                 </div>
 
-                {/* Right side: Arrow */}
-                <div className="shrink-0 p-1 md:p-2">
-                  <ArrowUpRight 
-                    size={22} 
-                    className="text-white/50 group-hover:text-cyan-200 transform transition-all duration-500 group-hover:translate-x-1 group-hover:-translate-y-1 ease-out" 
-                  />
-                </div>
-              </div>
-
-              {/* 🎯 INTEGRATED: Description Section added here dynamically */}
-              <div className="mt-2 mb-4 flex-grow">
-                <p className="text-white/80 text-sm md:text-base 2xl:text-lg font-medium leading-relaxed antialiased">
-                  {service.desc}
-                </p>
-              </div>
-
-            </div>
-          </div>
-
-          {/* EFFECTS LAYER 2 */}
-          <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
-        </motion.div>
-      </Link>
-    ))}
-  </div>
-</section>
+                {/* EFFECTS LAYER 2 */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+              </motion.div>
+            </Link>
+          ))}
+        </div>
+      </section>
 
     </main>
   );

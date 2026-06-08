@@ -20,7 +20,7 @@ export const projects = [
     liveUrl: "https://rmcroofingnm.com/"
   },
   {
-    slug: "famme-propre",
+    slug: "femme-propre",
     title: " Femme Propre",
     category: "web",
     image: "/web2.jpg",
@@ -85,37 +85,37 @@ export const projects = [
 
   // --- SEO PERFORMANCE CAMPAIGNS (6 Projects) ---
   {
-    slug: "rhino-orlando",
+    slug: "170% Leads Increased For Roofing Company",
     title: "170% Leads Increased For Roofing Company",
     category: "seo",
     image: "/rino-roffers.jpg"
   },
   {
-    slug: "breez-care",
+    slug: "+11% Total Sales Revenue Increased For Oral Care Brand",
     title: "+11% Total Sales Revenue Increased For Oral Care Brand",
     category: "seo",
     image: "/smile-care.jpg"
   },
   {
-    slug: "west-london-cleaners",
+    slug: "+28% Organic Traffic Increase For Local Cleaning Company",
     title: "+28% Organic Traffic Increase For Local Cleaning Company",
     category: "seo",
     image: "/cleaning.jpg"
   },
   {
-    slug: "australia-restaurant-seo",
+    slug: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     category: "seo",
     image: "/burger.jpg"
   },
   {
-    slug: "aesthetic-clinic-seo",
+    slug: "+1.76K Leads For Aesthetic Clinic",
     title: "+1.76K Leads For Aesthetic Clinic",
     category: "seo",
     image: "/clinic.jpg"
   },
   {
-    slug: "holistic-doctor-clinic",
+    slug: "#1 Position in SERP For Holistic Doctor Clinic",
     title: "#1 Position in SERP For Holistic Doctor Clinic",
     category: "seo",
     image: "/dr.jpg"
@@ -123,25 +123,25 @@ export const projects = [
 
  // --- SOCIAL MEDIA MARKETING PERFORMANCE ---
  {
-   slug: "australia-real-estate-social",
+   slug: "31% Increase In Qualified Property Leads Via High-Intent Social Funnels",
    title: "31% Increase In Qualified Property Leads Via High-Intent Social Funnels",
    category: "social",
    image: "/realestate.jpg"
  },
  {
-   slug: "fitness-brand-ecommerce",
+   slug: "$598,541 In Sales At 22x ROAS For Private Label Fitness Brand",
    title: "$598,541 In Sales At 22x ROAS For Private Label Fitness Brand Via High-Converting Funnels",
    category: "social",
    image: "/gym.jpg"
  },
  {
-   slug: "fashion-brand-ecommerce",
+   slug: "1,044 Website Purchases For Fashion Brand",
    title: "1,044 Website Purchases For Fashion Brand In 2 Months At 23.85x ROAS Via Direct-Response Funnels",
    category: "social",
    image: "/brand.jpg"
  },
  {
-   slug: "home-living-ecommerce",
+   slug: "25.10x ROAS For Home & Living Brand",
    title: "25.10x ROAS For Home & Living Brand Via High-Converting Paid Social Funnels",
    category: "social",
    image: "/roas.jpg"

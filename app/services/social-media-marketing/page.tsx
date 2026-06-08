@@ -87,28 +87,28 @@ const socialProjects = [
         id: "01",
         title: "25.10X ROAS FOR HOME & LIVING BRAND VIA HIGH-CONVERTING PAID SOCIAL FUNNELS",
         image: "/roas.jpg", // 🎯 Apni social media graphics/results ka real path yahan dalo
-        slug: "casestudies/home-living-ecommerce",
+        slug: "case-studies/home-living-ecommerce",
         size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
     },
     {
         id: "02",
         title: "1,044 WEBSITE PURCHASES FOR FASHION BRAND IN 2 MONTHS AT 23.85X ROAS VIA DIRECT-RESPONSE FUNNELS",
         image: "/brand.jpg", // 🎯 Real image path
-        slug: "casestudies/fashion-brand-ecommerce",
+        slug: "case-studies/fashion-brand-ecommerce",
         size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
     },
     {
         id: "03",
         title: "$598,541 IN SALES AT 22X ROAS FOR PRIVATE LABEL FITNESS BRAND VIA HIGH-CONVERTING FUNNELS",
         image: "/gym.jpg", // 🎯 Real image path
-        slug: "casestudies/fitness-brand-ecommerce",
+        slug: "case-studies/fitness-brand-ecommerce",
         size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
     },
     {
         id: "04",
         title: "31% INCREASE IN QUALIFIED PROPERTY LEADS VIA HIGH-INTENT SOCIAL FUNNELS",
         image: "/realestate.jpg", // 🎯 Real image path
-        slug: "casestudies/australia-real-estate-social",
+        slug: "case-studies/australia-real-estate-social",
         size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
     }
 ];
