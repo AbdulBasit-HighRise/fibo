@@ -1,77 +1,55 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import { User, ArrowRight, Flame } from "lucide-react";
 import { createClient } from 'contentful';
 
-// Contentful Client Setup
+// Contentful Client Setup (Ab keys bilkul safe hain aur leaked nahi hongi)
 const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || 'aprr3d93u7vz',
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || 'LXVuIdmXm-IK71j-DfjMMgSZQnAoM_aqxz-KzAlaMdA',
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
   environment: 'master'
 });
 
-export default function BlogPage() {
-  const [active, setActive] = useState("all");
-  const [posts, setPosts] = useState<any[]>([]);
-  const [loading, setLoading] = useState(true);
+// Server-side data fetching (SEO ke liye behtareen tareeqa)
+async function getBlogs() {
+  try {
+    const response = await client.getEntries({
+      content_type: 'blog',
+    });
 
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        const response = await client.getEntries({
-          content_type: 'blog',
-        });
-        
-        const formattedPosts = response.items.map((item: any) => {
-          const fields = item.fields;
-          
-          // 🎯 SAFE IMAGE EXTRACTION: featuredImage check kar raha hai jo standard hai
-          const imageAsset = fields.featuredImage?.fields?.file?.url || fields.image?.fields?.file?.url;
-          
-          // Rich text ko clean excerpt string mein convert karne ke liye default fallback handles
-          let cleanExcerpt = "";
-          if (typeof fields.content === 'string') {
-            cleanExcerpt = fields.content.substring(0, 120) + "...";
-          } else if (fields.content?.content?.[0]?.content?.[0]?.value) {
-            // Agar Contentful Rich Text array hai toh uski inner value nikalega
-            cleanExcerpt = fields.content.content[0].content[0].value.substring(0, 120) + "...";
-          } else {
-            cleanExcerpt = "Read our full engineering framework details inside.";
-          }
-          
-          return {
-            slug: item.sys.id, // Entry ID perfectly mapped as temporary/permanent slug
-            title: fields.title || "No Title",
-            excerpt: cleanExcerpt,
-            author: "High Rise Team",
-            image: imageAsset ? `https:${imageAsset}` : "/placeholder-blog.jpg",
-            category: "all"
-          };
-        });
-
-        setPosts(formattedPosts);
-      } catch (error) {
-        console.error("Contentful data fetch error:", error);
-      } finally {
-        setLoading(false);
+    return response.items.map((item: any) => {
+      const fields = item.fields;
+      const imageAsset = fields.featuredImage?.fields?.file?.url || fields.image?.fields?.file?.url;
+      
+      let cleanExcerpt = "";
+      if (typeof fields.content === 'string') {
+        cleanExcerpt = fields.content.substring(0, 120) + "...";
+      } else if (fields.content?.content?.[0]?.content?.[0]?.value) {
+        cleanExcerpt = fields.content.content[0].content[0].value.substring(0, 120) + "...";
+      } else {
+        cleanExcerpt = "Read our full engineering framework details inside.";
       }
-    }
 
-    fetchBlogs();
-  }, []);
+      return {
+        // 🎯 FIXED: Idhar ab Contentful ka asli slug field use ho raha hai text links ke liye
+        slug: fields.slug || item.sys.id, 
+        title: fields.title || "No Title",
+        excerpt: cleanExcerpt,
+        author: "High Rise Team",
+        image: imageAsset ? `https:${imageAsset}` : "/placeholder-blog.jpg",
+      };
+    });
+  } catch (error) {
+    console.error("Contentful data fetch error:", error);
+    return [];
+  }
+}
 
-  const filtered =
-    active === "all"
-      ? posts
-      : posts.filter((p) => p.category === active);
+export default async function BlogPage() {
+  const posts = await getBlogs();
 
   return (
     <main className="bg-[#111827] text-white min-h-screen selection:bg-blue-600 antialiased overflow-x-hidden">
-
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#030712]">
         <div className="container-wide">
@@ -113,66 +91,52 @@ export default function BlogPage() {
 
       {/* 2. STRATEGY MATRIX FEED */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-16 2xl:py-20">
-        {loading ? (
-          <div className="text-center py-20 text-gray-400 font-medium tracking-widest animate-pulse">LOADING PREMIUM INSIGHTS...</div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <AnimatePresence mode="wait">
-              {filtered.map((post, index) => (
-                <motion.div
-                  key={post.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="col-span-1"
-                >
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="group flex flex-col justify-between relative h-full bg-[#030712] border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-blue-500/20 hover:bg-zinc-950/50 shadow-xl"
-                  >
-                    <div>
-                      <div className="relative w-full h-48 md:h-52 overflow-hidden bg-zinc-900 rounded-t-2xl">
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-60" />
-                      </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {posts.map((post) => (
+            <div key={post.slug} className="col-span-1">
+              <Link
+                href={`/blog/${post.slug}`}
+                className="group flex flex-col justify-between relative h-full bg-[#030712] border border-white/5 rounded-2xl overflow-hidden transition-all duration-500 hover:border-blue-500/20 hover:bg-zinc-950/50 shadow-xl"
+              >
+                <div>
+                  <div className="relative w-full h-48 md:h-52 overflow-hidden bg-zinc-900 rounded-t-2xl">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#030712] to-transparent opacity-60" />
+                  </div>
 
-                      <div className="relative z-10 p-5 md:p-6 pt-4">
-                        <div className="flex items-center gap-2 text-white/40 text-[10px] font-bold tracking-[2px] uppercase mb-4 border-b border-white/5 pb-3">
-                          <User size={12} className="text-blue-500/70" />
-                          <span>{post.author}</span>
-                        </div>
-
-                        <h3 className="text-lg md:text-xl font-bold mb-2 tracking-tight leading-snug text-white group-hover:text-blue-400 transition-colors">
-                          {post.title}
-                        </h3>
-
-                        {/* 🎯 CHANGED TO POST.EXCERPT: Ab cards symmetric rehengy aur design nahi tootega */}
-                        <p className="text-zinc-400 text-sm font-normal leading-relaxed line-clamp-3 antialiased">
-                          {post.excerpt}
-                        </p>
-                      </div>
+                  <div className="relative z-10 p-5 md:p-6 pt-4">
+                    <div className="flex items-center gap-2 text-white/40 text-[10px] font-bold tracking-[2px] uppercase mb-4 border-b border-white/5 pb-3">
+                      <User size={12} className="text-blue-500/70" />
+                      <span>{post.author}</span>
                     </div>
 
-                    <div className="relative z-10 px-5 md:px-6 pb-6 mt-auto">
-                      <div className="pt-4 border-t border-white/5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px] text-blue-400 group-hover:text-blue-300 transition-colors">
-                        <span>READ CASE STUDY</span>
-                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
+                    <h3 className="text-lg md:text-xl font-bold mb-2 tracking-tight leading-snug text-white group-hover:text-blue-400 transition-colors">
+                      {post.title}
+                    </h3>
 
-                    <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:25px_25px] pointer-events-none rounded-2xl" />
-                  </Link>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-        )}
+                    <p className="text-zinc-400 text-sm font-normal leading-relaxed line-clamp-3 antialiased">
+                      {post.excerpt}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative z-10 px-5 md:px-6 pb-6 mt-auto">
+                  <div className="pt-4 border-t border-white/5 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[2px] text-blue-400 group-hover:text-blue-300 transition-colors">
+                    <span>READ INSIGHT</span>
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff01_1px,transparent_1px),linear-gradient(to_bottom,#ffffff01_1px,transparent_1px)] bg-[size:25px_25px] pointer-events-none rounded-2xl" />
+              </Link>
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );
