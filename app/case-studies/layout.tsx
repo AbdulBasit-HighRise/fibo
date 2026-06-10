@@ -1,7 +1,9 @@
 import { siteMetadata } from "@/app/constants/metadata";
 
-export const metadata = siteMetadata.blog;
+// 🔴 1. Spaces khatam kar diye key ke andar se
+export const metadata = siteMetadata["case-studies"];
 
-export default function BlogLayout({ children }: { children: React.ReactNode }) {
+// 🔴 2. Function ka naam 'CaseStudiesLayout' kar diya (Dash hata kar camelCase kiya)
+export default function CaseStudiesLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
