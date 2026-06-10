@@ -1,4 +1,3 @@
-
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -7,6 +6,8 @@ import WhatsAppBtn from "@/components/WhatsAppBtn";
 import ContactSticker from "@/components/ContactSticker";
 import { Instrument_Sans, Inter } from "next/font/google";
 import { siteMetadata } from "@/app/constants/metadata";
+// 🔴 1. Next.js ka Script component import kiya
+import Script from "next/script";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -48,12 +49,27 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`scroll-smooth ${inter.variable} ${instrumentSans.variable}`}
     >
+      <head>
+        {/* 🔴 2. Google Analytics Scripts ko yahan safely head mein add kar diya */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-GC1MBVHBW7"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GC1MBVHBW7');
+          `}
+        </Script>
+      </head>
       <body
         className="bg-[#111827] text-white antialiased overflow-x-hidden selection:bg-blue-600/30"
         suppressHydrationWarning
       >
         <CustomCursor />
-        
+
         {/* 1. Navbar ko fix kiya taake ye container ke mutabiq rahay */}
         <Navbar />
 
@@ -62,9 +78,6 @@ export default function RootLayout({
              Scaling humne globals.css mein handle kar li hai.
         */}
         <main className="relative z-10 min-h-screen w-full max-w-[2560px] mx-auto">
-    {/* {children}
-</main>
-        <main className="relative z-10 min-h-screen w-full flex flex-col items-center flex flex-col items-center w-full bg-[#030303]"> */}
           {/* Har page ka content yahan se guzray ga */}
           <div className="w-full">
             {children}
