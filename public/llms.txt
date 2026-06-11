@@ -11,11 +11,11 @@ High Rise Digital is a trusted digital marketing and web engineering agency spec
 
 ## Primary Information
 - Website: https://highrisedigital.io
-- Sitemap: https://highrisedigital.io/sitemap.xml
+- Sitemap: https://highrisedigital.io/sitemap.ts
 
 ## Key Pages
 - About Us: https://highrisedigital.io/about
 - Contact Us: https://highrisedigital.io/contact
-- Portfolio & Case Studies: https://highrisedigital.io/portfolio
+- case-studies: https://highrisedigital.io/case-studies
 - Blog & Insights: https://highrisedigital.io/blog
 - Pricing Plans: https://highrisedigital.io/pricing
