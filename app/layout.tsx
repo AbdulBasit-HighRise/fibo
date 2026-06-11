@@ -24,6 +24,8 @@ const inter = Inter({
 });
 
 export const metadata = {
+  // 🎯 FIXED: metadataBase add kiya taake deployment strict check pass ho jaye
+  metadataBase: new URL('https://highrisedigital.com'), 
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
   icons: {
@@ -73,10 +75,7 @@ export default function RootLayout({
         {/* 1. Navbar ko fix kiya taake ye container ke mutabiq rahay */}
         <Navbar />
 
-        {/* 2. Main Wrapper:
-             Background ko full screen rakhne ke liye yahan max-width nahi lagayi.
-             Scaling humne globals.css mein handle kar li hai.
-        */}
+        {/* 2. Main Wrapper */}
         <main className="relative z-10 min-h-screen w-full max-w-[2560px] mx-auto">
           {/* Har page ka content yahan se guzray ga */}
           <div className="w-full">
