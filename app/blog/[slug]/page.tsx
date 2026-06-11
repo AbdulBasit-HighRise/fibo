@@ -3,12 +3,15 @@ import { ArrowLeft, ChevronRight, Bookmark, User, Calendar } from "lucide-react"
 import Link from "next/link";
 import Image from "next/image";
 import { createClient } from 'contentful';
-import { Metadata } from "next"; // 🎯 Added for Type Safety
+import { Metadata } from "next"; // 🎯 Type Safety
 
-// Contentful Client Setup
+// 🎯 SAFE TOKENS & FALLBACKS (Hostinger Build Protection)
+const spaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "aprr3d93u7vz";
+const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || "LXVuIdmXm-IK71j-DfjMMgSZQnAoM_aqxz-KzAlaMdA";
+
 const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
+  space: spaceId,
+  accessToken: accessToken,
   environment: 'master'
 });
 
@@ -16,9 +19,17 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-// 🎯 FIX 1: Dynamic SEO Metadata Generator Added
-// Next.js is function ko khud background mein chala kar tab title aur Google ko data bhejega
+// 🛡️ Helper to check token availability
+const hasValidTokens = () => {
+  return !!(process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID && process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN);
+};
+
+// 🎯 SAFE Dynamic SEO Metadata Generator
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  if (!hasValidTokens()) {
+    return { title: "Latest Insight | High Rise Digital" };
+  }
+
   const resolvedParams = await params;
   const { slug } = resolvedParams;
 
@@ -44,8 +55,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 }
 
-// Optimized Dynamic Cache generation with real text slugs for clean URLs
+// 🎯 SAFE Static Cache Generation
 export async function generateStaticParams() {
+  if (!hasValidTokens()) {
+    console.warn("⚠️ Tokens missing in generateStaticParams on build. Returning empty fallback.");
+    return [];
+  }
+
   try {
     const response = await client.getEntries({ content_type: 'blog' });
     return response.items.map((item: any) => ({
@@ -63,6 +79,15 @@ export default async function BlogDetail({ params }: PageProps) {
   let post: any = null;
   let relatedPosts: any[] = [];
 
+  // 🛡️ Safety check for main page render during build
+  if (!hasValidTokens()) {
+    return (
+      <main className="relative bg-[#020617] text-white w-full min-h-screen flex items-center justify-center">
+        <p className="text-zinc-400">Content loading setup is updating...</p>
+      </main>
+    );
+  }
+
   try {
     const response = await client.getEntries({
       content_type: 'blog',
@@ -76,7 +101,6 @@ export default async function BlogDetail({ params }: PageProps) {
     const fields: any = entry.fields;
     const imageAsset = fields.featuredImage?.fields?.file?.url || fields.image?.fields?.file?.url;
 
-    // Rich Text Rich String fallback logic
     let textContent = "";
     if (typeof fields.content === 'string') {
       textContent = fields.content;
@@ -97,7 +121,6 @@ export default async function BlogDetail({ params }: PageProps) {
       image: imageAsset ? `https:${imageAsset}` : "/placeholder-blog.jpg",
     };
 
-    // Related tracks lookup via true custom text slugs matching
     const totalEntries = await client.getEntries({ content_type: 'blog' });
     relatedPosts = totalEntries.items
       .filter((item: any) => (item.fields.slug || item.sys.id) !== slug)
@@ -118,8 +141,6 @@ export default async function BlogDetail({ params }: PageProps) {
 
   return (
     <main className="relative bg-[#020617] text-white w-full min-h-screen selection:bg-blue-600 antialiased overflow-x-hidden flex flex-col items-center">
-
-      {/* Background Wrapper Canvas Grid */}
       <div className="absolute top-0 left-0 right-0 w-full h-[650px] pointer-events-none z-0 opacity-40">
         <Image
           src="/home-hero.jpg"
@@ -131,10 +152,7 @@ export default async function BlogDetail({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020617]/70 to-[#020617]" />
       </div>
 
-      {/* CONTAINER CONTROL */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-32 md:pt-40 pb-32">
-
-        {/* BACK TO INSIGHTS PANEL */}
         <div className="mb-10 clear-both">
           <Link
             href="/blog"
@@ -144,13 +162,10 @@ export default async function BlogDetail({ params }: PageProps) {
               size={14}
               className="text-zinc-500 group-hover:text-blue-400 group-hover:-translate-x-1.5 transition-all duration-300 ease-out"
             />
-            <span className="relative tracking-[3px]">
-              Back to Insights
-            </span>
+            <span className="relative tracking-[3px]">Back to Insights</span>
           </Link>
         </div>
 
-        {/* TOP HEADER */}
         <div className="max-w-4xl mb-12">
           <h1 className="text-[2.2rem] md:text-[3.2rem] lg:text-[4rem] font-black tracking-tighter leading-[1.1] text-white mb-6 uppercase">
             {post.title}
@@ -168,10 +183,7 @@ export default async function BlogDetail({ params }: PageProps) {
           </div>
         </div>
 
-        {/* MODERN SPLIT GRID SYSTEM */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-
-          {/* LEFT CONTENT COLUMN */}
           <div className="lg:col-span-2 space-y-8">
             <div className="relative w-full h-[280px] md:h-[460px] rounded-[2rem] overflow-hidden border border-white/5 bg-zinc-900 shadow-2xl">
               <Image
@@ -192,7 +204,7 @@ export default async function BlogDetail({ params }: PageProps) {
                 </p>
 
                 <div className="text-white text-base leading-relaxed space-y-6 font-normal">
-                  <h2 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tight pt-2 ">
+                  <h2 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tight pt-2">
                     Strategy Overview
                   </h2>
 
@@ -204,10 +216,7 @@ export default async function BlogDetail({ params }: PageProps) {
             </article>
           </div>
 
-          {/* RIGHT STICKY SIDEBAR */}
           <div className="lg:col-span-1 space-y-8 lg:sticky lg:top-28">
-
-            {/* ACTION CTA BOX */}
             <div className="relative py-6 md:py-10 rounded-[2.5rem] bg-[#030207] bg-gradient-to-r from-[#030303] via-[#050a18] to-[#030303] border border-white/5 shadow-2xl overflow-hidden text-left group">
               <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
               <div className="absolute -top-12 -right-12 w-32 h-32 bg-blue-500/10 blur-[40px] pointer-events-none group-hover:bg-blue-500/20 transition-all duration-700" />
@@ -242,7 +251,6 @@ export default async function BlogDetail({ params }: PageProps) {
               </div>
             </div>
 
-            {/* RELATED TRACKS GRID */}
             <div className="p-8 rounded-[2.5rem] bg-[#030712] border border-white/5 shadow-xl space-y-6">
               <h3 className="text-[10px] font-black uppercase tracking-[3px] text-zinc-500 border-b border-white/5 pb-4">
                 Related Insights
@@ -267,10 +275,8 @@ export default async function BlogDetail({ params }: PageProps) {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </main>
   );
