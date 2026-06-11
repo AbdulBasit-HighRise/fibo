@@ -1,9 +1,9 @@
 "use client";
-
+export const revalidate = 3600; // Har 1 ghante (3600 seconds) baad background mein data khud hi refresh ho jayega
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion"; // 👈 Framer-motion features properly imported
+import { motion, AnimatePresence } from "framer-motion"; 
 import { ArrowLeft, Flame, Globe, Tag, MapPin, Link2, X, Eye } from "lucide-react";
 import { CaseStudy } from "@/lib/caseStudiesData";
 
@@ -116,8 +116,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
           <div className="flex flex-nowrap items-center justify-between gap-4 md:gap-8 pt-10 border-t border-white/[0.06] animate-fadeIn delay-100 w-full overflow-x-auto sm:overflow-visible scrollbar-none">
             {project.metrics.map((metric, i) => (
               <div key={i} className="flex flex-col border-l border-zinc-700 pl-4 md:pl-5 hover:border-zinc-400 transition-colors duration-300 flex-1 min-w-[100px] sm:min-w-0">
-                <span className={`text-xl sm:text-4xl md:text-4xl lg:text-4xl font-black tracking-tighter leading-none ${metric.highlight ? 'text-blue-500' : 'text-white'
-                  }`}>
+                <span className={`text-xl sm:text-4xl md:text-4xl lg:text-4xl font-black tracking-tighter leading-none ${metric.highlight ? 'text-blue-500' : 'text-white'}`}>
                   {metric.value}
                 </span>
                 <span className="text-[10px] font-bold uppercase tracking-[2px] text-zinc-400 mt-3 block leading-tight">
@@ -222,7 +221,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                 {/* Right Side Content Canvas */}
                 <div className="lg:col-span-8 space-y-6 animate-fadeIn">
                   {section.paragraphs.map((p, pIdx) => (
-                    <p key={pIdx} className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed">
+                    <p key={pIdx} className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
                       {p}
                     </p>
                   ))}
@@ -232,7 +231,7 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                       {section.features.map((feat, fIdx) => (
                         <div key={fIdx} className="flex items-start gap-3 group py-1.5 border-b border-white/[0.02] hover:border-white/[0.08] transition-colors duration-300">
                           <div className="mt-2 w-1.5 h-1.5 rounded-full shrink-0 bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
-                          <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium group-hover:text-white transition-colors duration-300">
+                          <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium group-hover:text-white transition-colors duration-300">
                             {feat}
                           </p>
                         </div>
@@ -250,15 +249,14 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
       {/* ========================================================
           🏆 4. RESULTS & PROOF CANVAS 
           ======================================================== */}
-      <section className={`w-full py-24 border-b border-white/[0.02] transition-all duration-700 ${project.sections.length % 2 === 0 ? 'bg-[#111827]' : 'bg-[#1E2939]'
-        }`}>
+      <section className={`w-full py-24 border-b border-white/[0.02] transition-all duration-700 ${project.sections.length % 2 === 0 ? 'bg-[#111827]' : 'bg-[#1E2939]'}`}>
         <div className="max-w-5xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-[1500px] mx-auto px-4 sm:px-8 md:px-12 2xl:px-20 space-y-20">
 
           {/* 🎯 PART 1: LIVE PROOF & IMAGES LAYOUT */}
           {project.proof && (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start border-b border-white/[0.04] pb-16">
 
-              {/* 📐 LEFT SIDE: Dynamic Alignment Heading */}
+              {/* 📐 LEFT SIDE: Heading */}
               <div className="lg:col-span-4 lg:sticky lg:top-28 animate-fadeIn space-y-4">
                 <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter text-white">
                   Live Proof & Verification
@@ -268,13 +266,11 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                 </p>
               </div>
 
-              {/* 🖼️ RIGHT SIDE: Compact & Clean Responsive Images */}
+              {/* 🖼️ RIGHT SIDE: Compact Images */}
               <div className="lg:col-span-8 animate-fadeIn">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                   {project.proof.images.map((img, i) => (
                     <div key={i} className="space-y-3 group">
-
-                      {/* Image Container Box (Clickable for Popup) */}
                       <div
                         onClick={() => setActiveImg(img.src)}
                         className="relative w-full h-[220px] md:h-[240px] 2xl:h-[280px] rounded-2xl overflow-hidden border border-white/10 bg-[#111827]/80 shadow-xl transition-all duration-500 hover:border-blue-500/50 hover:scale-[1.02] flex items-center justify-center p-3 cursor-pointer group/card"
@@ -286,22 +282,17 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                           sizes="(max-width: 768px) 100vw, 40vw"
                           className="object-contain transition-transform duration-700 group-hover/card:scale-[1.03]"
                         />
-
-                        {/* Hover Overlay Visual Hint */}
                         <div className="absolute inset-0 bg-blue-900/20 backdrop-blur-sm opacity-0 group-hover/card:opacity-100 transition-all duration-300 flex items-center justify-center z-20">
                           <div className="bg-white/10 border border-white/20 p-3 rounded-full text-white backdrop-blur-md transform translate-y-4 group-hover/card:translate-y-0 transition-all duration-300">
                             <Eye size={20} className="text-white" />
                           </div>
                         </div>
                       </div>
-
-                      {/* Optional Caption text underneath image */}
                       {img.alt && (
                         <span className="text-[11px] font-bold uppercase tracking-[1px] text-zinc-500 block px-1 group-hover:text-zinc-300 transition-colors">
                           {img.alt}
                         </span>
                       )}
-
                     </div>
                   ))}
                 </div>
@@ -321,12 +312,12 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                     {card.value}
                   </h4>
                   <div>
-                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium tracking-[2px] mb-2">
+                    <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium tracking-[2px] mb-2">
                       {card.label}
                     </p>
                     <p
-                      className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed"
-                      dangerouslySetInnerHTML={{ __html: card.desc }}
+                      className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: card.desc || "" }} // 🎯 FIXED: Fallback added to prevent dynamic crash
                     />
                   </div>
                 </div>
@@ -340,14 +331,9 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
       {/* ========================================================
           🌟 ULTIMATE SMART GLASSMORPHISM LIGHTBOX MODAL (POPUP)
           ======================================================== */}
-      {/* ========================================================
-    🌟 ULTIMATE SMART GLASSMORPHISM LIGHTBOX MODAL (POPUP)
-    ======================================================== */}
       <AnimatePresence>
         {activeImg && (
           <div className="fixed inset-0 z-[99999] flex flex-col items-center justify-center p-4 md:p-6 pointer-events-auto">
-
-            {/* Backdrop Dark Mask */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -355,8 +341,6 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
               onClick={() => setActiveImg(null)}
               className="absolute inset-0 bg-black/95 backdrop-blur-md cursor-zoom-out"
             />
-
-            {/* Animated Photo Box Content Display */}
             <motion.div
               initial={{ scale: 0.96, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
@@ -373,8 +357,6 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
                 className="object-contain drop-shadow-[0_0_50px_rgba(59,130,246,0.25)]"
               />
             </motion.div>
-
-            {/* 🎯 FIXED CLOSE BUTTON: Mobile pr picture k nichy center me, desktop pr top-right pr */}
             <button
               onClick={() => setActiveImg(null)}
               className="absolute bottom-8 left-1/2 -translate-x-1/2 md:bottom-auto md:left-auto md:translate-x-0 md:top-8 md:right-8 z-[100000] flex items-center gap-2 px-5 py-3 md:p-3 rounded-full bg-white/10 text-white hover:bg-white/20 border border-white/10 shadow-2xl backdrop-blur-md active:scale-95 transition-all cursor-pointer font-medium text-sm md:text-base"
@@ -383,24 +365,10 @@ export default function CaseStudyClientContent({ project }: CaseStudyProps) {
               <X size={20} />
               <span className="block md:hidden tracking-wider uppercase text-[11px] font-bold">Close Preview</span>
             </button>
-
           </div>
         )}
       </AnimatePresence>
 
     </main>
-  );
-}
-
-// Sub-Component for Clean Detail List
-function DetailItem({ label, value, icon }: { label: string; value: string; icon: React.ReactNode }) {
-  return (
-    <div className="flex items-center justify-between border-b border-white/[0.03] pb-3">
-      <div className="flex items-center gap-3 text-zinc-500">
-        {icon}
-        <span className="text-[11px] font-medium uppercase tracking-wider">{label}:</span>
-      </div>
-      <span className="text-zinc-200 text-xs font-bold">{value}</span>
-    </div>
   );
 }
