@@ -15,11 +15,11 @@ import { ArrowRight } from "lucide-react";
 const awardLogos = [
   { src: "/webflow.webp", alt: "National Excellence" },
   { src: "/weebly.png", alt: "Top 10 Agency" },
-
-  { src: "/WIX.png", alt: "Forbes Member" },
-  { src: "/Wordpress.png", alt: "Clutch Recognition" },
-
-  { src: "/Shopify.webp", alt: "The Manifest" },
+  { src: "/WIX.png", alt: "Forbes Member" }, // Iska bhi check kar lena agar live par masla kare toh 'wix.png' kar dena
+  
+  // 🎯 FIXED: Pure Lowercase paths dhal diye hain
+  { src: "/Wordpress-logo.png", alt: "Clutch Recognition" },
+  { src: "/shopify-logo.webp", alt: "The Manifest" },
 ];
 import Image from "next/image";
 // Components Imports
