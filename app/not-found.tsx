@@ -3,7 +3,8 @@ import { Home, ArrowRight, Compass, ShieldAlert } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <main className="relative bg-[#111827] text-white w-full min-h-screen flex flex-col items-center justify-center selection:bg-blue-600 antialiased overflow-x-hidden px-6 py-12">
+    // 🎯 FIXED: pt-28 (Mobile), md:pt-36 (Desktop), 2xl:pt-48 (Big Screens) lagaya hai aur justify-start kiya hai taake navbar se text na chupe
+    <main className="relative bg-[#111827] text-white w-full min-h-screen flex flex-col items-center justify-start pt-28 md:pt-36 2xl:pt-48 selection:bg-blue-600 antialiased overflow-x-hidden px-6 pb-12">
       
       {/* 🌌 Ultra-Premium Cyber Grid & Ambient Moving Glow */}
       <div className="absolute inset-0 pointer-events-none z-0 opacity-40">
@@ -26,7 +27,7 @@ export default function NotFound() {
           <div className="absolute inset-0 bg-blue-500/10 blur-[50px] rounded-full opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
           
           {/* 404 Text with Sinking/Floating Animation */}
-          <h1 className="text-[9rem] md:text-[14rem] 2xl:text-[22rem] font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-zinc-400 to-zinc-800/40 uppercase animate-[bounce_4s_infinite_ease-in-out] cursor-default drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]">
+          <h1 className="text-[7rem] sm:text-[9rem] md:text-[14rem] 2xl:text-[22rem] font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-b from-white via-zinc-400 to-zinc-800/40 uppercase animate-[bounce_4s_infinite_ease-in-out] cursor-default drop-shadow-[0_35px_35px_rgba(0,0,0,0.6)]">
             404
           </h1>
           
