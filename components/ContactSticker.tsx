@@ -26,13 +26,15 @@ const ContactSticker = () => {
     message: "",
   });
 
-  // 🚀 FIXED: Now hits the backend API route securely
+  // 🚀 FIXED: Securely constructs final endpoint using absolute window origin contexts
   const handleStickerSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus({ loading: true, success: null, message: "" });
 
     try {
-      const response = await fetch("/api/contact", {
+      // 🎯 Safe Window execution pipeline to bypass framework URL resolution bugs
+      const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
+      const response = await fetch(`${baseUrl}/api/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
