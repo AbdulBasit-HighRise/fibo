@@ -1,73 +1,65 @@
 import { NextResponse } from "next/server";
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 export async function POST(req: Request) {
   try {
-    // 🎯 Runtime Check: Har dynamic request par fresh server configurations uthayi jayengi
-    const apiKey = process.env.RESEND_API_KEY;
-
-    if (!apiKey) {
-      return NextResponse.json(
-        { 
-          success: false, 
-          error: "Resend API Key is missing on the server configuration. Please check your Hostinger Environment Variables." 
-        },
-        { status: 500 }
-      );
-    }
-
-    // 🎯 Initialize Resend dynamically on request runtime
-    const resend = new Resend(apiKey);
-      
     const body = await req.json();
-    const { name, email, phone, service, subject, message } = body;
+    const { name, email, phone, service, message, subject } = body;
 
-    // Required fields check
-    if (!name || !email || !phone || !service || !message) {
-      return NextResponse.json(
-        { success: false, error: "Missing mandatory fields inside the payload." },
-        { status: 400 }
-      );
-    }
+    // 🎯 Hostinger SMTP Configuration
+    const transporter = nodemailer.createTransport({
+      host: "smtp.hostinger.com", // Hostinger ka default SMTP server
+      port: 465,                  // Secure SSL port
+      secure: true,               // true for 465
+      auth: {
+        user: "info@highrisedigital.io", 
+        pass: "Highrise@098", // 👈 Apne info@highrisedigital.io ka password yahan likho
+      },
+    });
 
-    // Dispatching email via Resend
-    const emailResponse = await resend.emails.send({
-      from: "High Rise Contact <onboarding@resend.dev>", 
-      to: "info@highrisedigital.io",
-      subject: subject || `New Intake Hook: ${service}`,
+    // 🚀 Email Payload Setup
+    const mailOptions = {
+      from: `"High Rise Contact" <info@highrisedigital.io>`, // Sending address
+      to: "info@highrisedigital.io",                         // Receiving address
+      subject: subject || `Sticky Sticker Inquiry: ${service}`,
       html: `
-        <div style="font-family: sans-serif; background-color: #020617; color: #ffffff; padding: 30px; border-radius: 20px; max-width: 600px; border: 1px solid rgba(255,255,255,0.05)">
-          <h2 style="color: #3b82f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">New Business Proposal Request</h2>
-          <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
+        <div style="font-family: sans-serif; padding: 25px; color: #1c1917; max-width: 600px; margin: 0 auto; border: 1px solid #e4e4e7; border-radius: 16px;">
+          <h2 style="color: #2563eb; font-size: 20px; margin-bottom: 20px; border-b: 1px solid #f4f4f5; padding-bottom: 10px;">🚀 New Lead Captured</h2>
+          <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
             <tr>
-              <td style="padding: 8px 0; color: #64748b; width: 130px; font-weight: bold;">Full Name:</td>
-              <td style="padding: 8px 0; color: #ffffff;">${name}</td>
+              <td style="padding: 6px 0; font-weight: bold; color: #71717a; width: 140px;">Client Name:</td>
+              <td style="padding: 6px 0; color: #09090b;">${name}</td>
             </tr>
             <tr>
-              <td style="padding: 8px 0; color: #64748b; font-weight: bold;">Email Address:</td>
-              <td style="padding: 8px 0; color: #ffffff;"><a href="mailto:${email}" style="color: #00f2ff; text-decoration: none;">${email}</a></td>
+              <td style="padding: 6px 0; font-weight: bold; color: #71717a;">Client Email:</td>
+              <td style="padding: 6px 0; color: #09090b;">${email}</td>
             </tr>
             <tr>
-              <td style="padding: 8px 0; color: #64748b; font-weight: bold;">Phone Number:</td>
-              <td style="padding: 8px 0; color: #ffffff;">${phone}</td>
+              <td style="padding: 6px 0; font-weight: bold; color: #71717a;">Phone Number:</td>
+              <td style="padding: 6px 0; color: #09090b;">${phone}</td>
             </tr>
             <tr>
-              <td style="padding: 8px 0; color: #64748b; font-weight: bold;">Service Needed:</td>
-              <td style="padding: 8px 0; color: #3b82f6; font-weight: bold;">${service}</td>
+              <td style="padding: 6px 0; font-weight: bold; color: #71717a;">Service Interest:</td>
+              <td style="padding: 6px 0; color: #09090b;">${service}</td>
             </tr>
           </table>
-          <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
-            <p style="color: #64748b; font-weight: bold; margin-bottom: 5px; font-size: 14px; text-transform: uppercase;">Project Blueprint & Goals:</p>
-            <p style="color: #cbd5e1; background-color: rgba(255,255,255,0.02); padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); line-height: 1.6; margin: 0; font-size: 14px; white-space: pre-wrap;">${message}</p>
+          <div style="margin-top: 20px;">
+            <p style="font-weight: bold; color: #71717a; margin-bottom: 8px;">Message:</p>
+            <div style="background: #f4f4f5; padding: 15px; border-radius: 12px; color: #27272a; font-size: 14px; line-height: 1.6;">
+              ${message}
+            </div>
           </div>
         </div>
       `,
-    });
+    };
 
-    return NextResponse.json({ success: true, data: emailResponse }, { status: 200 });
+    // Send execution
+    await transporter.sendMail(mailOptions);
+
+    return NextResponse.json({ success: true });
   } catch (error: any) {
     return NextResponse.json(
-      { success: false, error: error.message || "Internal server pipeline collapse." },
+      { success: false, error: error.message || "Internal Server Error" },
       { status: 500 }
     );
   }
