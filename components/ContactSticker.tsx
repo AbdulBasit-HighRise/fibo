@@ -84,9 +84,10 @@ const ContactSticker = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: 50, scale: 0.9 }}
+            initial={{ opacity: 0, x: 30, scale: 0.95 }}
             animate={{ opacity: 1, x: -20, scale: 1 }}
-            exit={{ opacity: 0, x: 50, scale: 0.9 }}
+            exit={{ opacity: 0, x: 30, scale: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
             className="w-[320px] bg-zinc-950/90 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden"
           >
             {/* Form Header */}
@@ -98,7 +99,7 @@ const ContactSticker = () => {
               <button
                 onClick={() => !status.loading && setIsOpen(false)}
                 disabled={status.loading}
-                className="text-zinc-400 hover:text-white p-1 disabled:opacity-30"
+                className="text-zinc-400 hover:text-white p-1 disabled:opacity-30 transition-colors"
               >
                 <X size={18} />
               </button>
@@ -177,6 +178,7 @@ const ContactSticker = () => {
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.15 }}
                     className={`p-2.5 rounded-xl text-center text-[11px] font-bold border ${status.success
                         ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
                         : "bg-rose-500/10 border-rose-500/20 text-rose-400"
@@ -200,7 +202,7 @@ const ContactSticker = () => {
                 ) : (
                   <>
                     Send Message
-                    <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                    <Send size={14} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
                   </>
                 )}
               </button>
@@ -212,13 +214,13 @@ const ContactSticker = () => {
       {/* Sticker Trigger */}
       {!isOpen && (
         <motion.div
-          initial={{ x: 100 }}
-          animate={{ x: 0 }}
-          whileHover={{ x: -4 }}
+          initial={{ x: 60, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           onClick={() => setIsOpen(true)}
-          className="relative flex items-center cursor-pointer group"
+          className="relative flex items-center cursor-pointer group hover:-translate-x-1 transition-transform duration-300 ease-out"
         >
-          <div className="bg-zinc-950/80 backdrop-blur-2xl border border-white/10 p-3 rounded-l-2xl shadow-2xl flex flex-col items-center gap-6 group-hover:border-blue-500/50 transition-all duration-500">
+          <div className="bg-zinc-950/80 backdrop-blur-2xl border border-white/10 p-3 rounded-l-2xl shadow-2xl flex flex-col items-center gap-6 group-hover:border-blue-500/50 transition-colors duration-300">
             <div className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
@@ -230,7 +232,7 @@ const ContactSticker = () => {
               Get In Touch
             </span>
           </div>
-          <div className="absolute -z-10 inset-0 bg-blue-600/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+          <div className="absolute -z-10 inset-0 bg-blue-600/20 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </motion.div>
       )}
     </div>
