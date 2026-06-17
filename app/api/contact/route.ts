@@ -6,21 +6,30 @@ export async function POST(req: Request) {
     const body = await req.json();
     const { name, email, phone, service, message, subject } = body;
 
+    const emailPassword = process.env.EMAIL_PASSWORD;
+
+    if (!emailPassword) {
+      return NextResponse.json(
+        { success: false, error: "SMTP Email Password is missing on the server configuration." },
+        { status: 500 }
+      );
+    }
+
     // 🎯 Hostinger SMTP Configuration
     const transporter = nodemailer.createTransport({
-      host: "smtp.hostinger.com", // Hostinger ka default SMTP server
+      host: "smtp.hostinger.com", 
       port: 465,                  // Secure SSL port
-      secure: true,               // true for 465
+      secure: true,               
       auth: {
         user: "info@highrisedigital.io", 
-        pass: "Highrise@098", // 👈 Apne info@highrisedigital.io ka password yahan likho
+        pass: emailPassword,      // 👈 Environment variable se secure connect ho raha hai
       },
     });
 
     // 🚀 Email Payload Setup
     const mailOptions = {
-      from: `"High Rise Contact" <info@highrisedigital.io>`, // Sending address
-      to: "info@highrisedigital.io",                         // Receiving address
+      from: `"High Rise Contact" <info@highrisedigital.io>`, 
+      to: "info@highrisedigital.io",                         
       subject: subject || `Sticky Sticker Inquiry: ${service}`,
       html: `
         <div style="font-family: sans-serif; padding: 25px; color: #1c1917; max-width: 600px; margin: 0 auto; border: 1px solid #e4e4e7; border-radius: 16px;">
