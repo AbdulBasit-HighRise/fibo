@@ -1,20 +1,24 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-// 🎯 Build crash check: Agar key na mile to dummy text pass hoga taake production build successfully pass ho jaye
-const apiKey = process.env.RESEND_API_KEY;
-const resend = new Resend(apiKey || "re_dummy_key_for_build_validation");
-
 export async function POST(req: Request) {
   try {
-    // 🎯 Runtime check: Agar asli key configuratons mein miss ho to request par crash hone ke bajaye safly respond kare
+    // 🎯 Runtime Check: Har dynamic request par fresh server configurations uthayi jayengi
+    const apiKey = process.env.RESEND_API_KEY;
+
     if (!apiKey) {
       return NextResponse.json(
-        { success: false, error: "Resend API Key is missing on the server configuration. Please add it to Netlify environment variables." },
+        { 
+          success: false, 
+          error: "Resend API Key is missing on the server configuration. Please check your Hostinger Environment Variables." 
+        },
         { status: 500 }
       );
     }
 
+    // 🎯 Initialize Resend dynamically on request runtime
+    const resend = new Resend(apiKey);
+      
     const body = await req.json();
     const { name, email, phone, service, subject, message } = body;
 
@@ -33,7 +37,7 @@ export async function POST(req: Request) {
       subject: subject || `New Intake Hook: ${service}`,
       html: `
         <div style="font-family: sans-serif; background-color: #020617; color: #ffffff; padding: 30px; border-radius: 20px; max-width: 600px; border: 1px solid rgba(255,255,255,0.05)">
-          <h2 style="color: #3b82f6; border-b: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">New Business Proposal Request</h2>
+          <h2 style="color: #3b82f6; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">New Business Proposal Request</h2>
           <table style="width: 100%; border-collapse: collapse; font-size: 15px;">
             <tr>
               <td style="padding: 8px 0; color: #64748b; width: 130px; font-weight: bold;">Full Name:</td>
