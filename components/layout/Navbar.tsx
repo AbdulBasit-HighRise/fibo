@@ -159,19 +159,20 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full pointer-events-none">
-      <div className={`w-full transition-all duration-300 pointer-events-auto ${isScrolled ? "max-w-[1280px] mx-auto pt-1 px-4 md:px-8 lg:px-16 lg:pt-2   " : "max-w-full pt-0 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-80 3xl:px-52"}`}>
+      {/* 🎯 OUTER WRAPPER: Normal Top Padding Layout Fixed */}
+      <div className={`w-full transition-all duration-300 pointer-events-auto px-4 md:px-8 xl:px-10 2xl:px-16 mx-auto max-w-[1200px] 2xl:max-w-[1600px] ${isScrolled ? "pt-3 lg:pt-4" : "pt-4 md:pt-10 lg:pt-10"}`}>
         <motion.nav
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className={`relative flex items-center justify-between transition-all duration-300 mx-auto ${isScrolled ? "rounded-full px-6 md:px-8 py-2 bg-[#111827] backdrop-blur-xl border border-white/10 shadow-2xl w-full max-w-[95%] lg:max-w-[1200px]" : "rounded-none px-0 py-2 md:py-3 bg-transparent border-transparent w-full"}`}
+          className={`relative flex items-center justify-between transition-all duration-300 w-full ${isScrolled ? "rounded-full px-8 py-4 bg-[#111827]/90 backdrop-blur-xl border border-white/10 shadow-2xl" : "rounded-none px-2 py-4 bg-transparent border-transparent"}`}
         >
           <Link href="/" className="flex items-center z-50 shrink-0">
-            <Image src="/HR-logo.png" alt="Logo" width={300} height={80} className={`h-auto transition-all duration-300 object-contain origin-left ${isScrolled ? "w-[120px] lg:w-[140px]" : "w-[160px] lg:w-[210px]"}`} priority />
+            <Image src="/HR-logo.png" alt="Logo" width={300} height={80} className={`h-auto transition-all duration-300 object-contain origin-left ${isScrolled ? "w-[130px] lg:w-[150px]" : "w-[170px] lg:w-[220px]"}`} priority />
           </Link>
 
           {/* 🔗 DESKTOP NAV */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2 xl:gap-4">
             {links.map((link) => {
               const isActive = pathname === link.href;
               if (link.isDropdown) {
@@ -179,15 +180,15 @@ export default function Navbar() {
                   <div key={link.name} className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
                     <Link 
                       href={link.href} 
-                      className={`flex items-center gap-1 px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-white-400 hover:text-white"}`}
+                      className={`flex items-center gap-1.5 px-3.5 py-2.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-zinc-300 hover:text-white"}`}
                     >
                       {link.name} <ChevronDown size={12} className="group-hover:rotate-180 transition-transform duration-300" />
                     </Link>
                     <AnimatePresence>
                       {showServices && (
-                        <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} transition={{ duration: 0.15 }} className="absolute top-full left-0 w-56 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-1">
+                        <motion.div initial={{ opacity: 0, y: 5 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 5 }} transition={{ duration: 0.15 }} className="absolute top-full left-0 w-60 p-2 bg-black border border-white/10 rounded-2xl shadow-2xl mt-2">
                           {link.subLinks?.map((sub: any) => (
-                            <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[13px] font-bold text-white-400 hover:text-white hover:bg-white/5 rounded-lg transition-all">
+                            <Link key={sub.name} href={sub.href} className="block px-4 py-3 text-[13px] font-bold text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">
                               {sub.name}
                             </Link>
                           ))}
@@ -198,7 +199,7 @@ export default function Navbar() {
                 );
               }
               return (
-                <Link key={link.name} href={link.href} className={`relative px-3 py-1.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-white-400 hover:text-white"}`}>
+                <Link key={link.name} href={link.href} className={`relative px-3.5 py-2.5 text-[10px] xl:text-[11px] font-bold uppercase tracking-widest transition-all ${isActive ? "text-white" : "text-zinc-300 hover:text-white"}`}>
                   {link.name}
                 </Link>
               );
@@ -206,7 +207,7 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-4 z-50 shrink-0">
-            <button onClick={() => setIsProposalOpen(true)} className={`group relative overflow-hidden hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest transition-all active:scale-95 ${isScrolled ? "px-5 py-2 text-[9px] xl:text-[10px]" : "px-7 py-3 text-[10px] xl:text-[11px]"}`}>
+            <button onClick={() => setIsProposalOpen(true)} className={`group relative overflow-hidden hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest transition-all active:scale-95 ${isScrolled ? "px-6 py-3 text-[9px] xl:text-[10px]" : "px-8 py-3.5 text-[10px] xl:text-[11px]"}`}>
               <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 ease-out group-hover:w-full" />
               <span className="relative z-10 group-hover:text-white transition-colors duration-300">Get Proposal</span>
             </button>
@@ -218,12 +219,12 @@ export default function Navbar() {
           {/* MOBILE NAV MENU */}
           <AnimatePresence>
             {isOpen && (
-              <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }} className="absolute top-full left-0 right-0 bg-[#070707]/95 backdrop-blur-xl border border-white/10 lg:hidden flex flex-col gap-0 p-4 mt-2 rounded-3xl pointer-events-auto shadow-2xl overflow-hidden">
+              <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.2 }} className="absolute top-full left-0 right-0 bg-[#070707]/95 backdrop-blur-xl border border-white/10 lg:hidden flex flex-col gap-0 p-4 mt-3 rounded-3xl pointer-events-auto shadow-2xl overflow-hidden">
                 {links.map((link) => {
                   if (link.isDropdown) {
                     return (
                       <div key={link.name} className="border-b border-white/5 flex flex-col">
-                        <div className="flex items-center justify-between py-3.5 px-4 active:bg-white/5 transition-colors rounded-xl">
+                        <div className="flex items-center justify-between py-4 px-4 active:bg-white/5 transition-colors rounded-xl">
                           <Link href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 flex-1" onClick={() => setIsOpen(false)}>{link.name}</Link>
                           <button onClick={(e) => { e.preventDefault(); setMobileServicesOpen(!mobileServicesOpen); }} className="p-1 text-zinc-400 hover:text-white transition-colors">
                             {mobileServicesOpen ? <Minus size={14} /> : <Plus size={14} />}
@@ -232,7 +233,7 @@ export default function Navbar() {
                         <motion.div initial={false} animate={{ height: mobileServicesOpen ? "auto" : 0, opacity: mobileServicesOpen ? 1 : 0 }} transition={{ duration: 0.2 }} className="overflow-hidden bg-white/[0.02] rounded-xl mx-2">
                           <div className="flex flex-col py-1 pl-4 border-l border-white/10 my-1 gap-1">
                             {link.subLinks?.map((sub: any) => (
-                              <Link key={sub.name} href={sub.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 hover:text-white py-3.5 px-4 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
+                              <Link key={sub.name} href={sub.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 hover:text-white py-4 px-4 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
                             ))}
                           </div>
                         </motion.div>
@@ -240,7 +241,7 @@ export default function Navbar() {
                     );
                   }
                   return (
-                    <Link key={link.name} href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 py-3.5 px-4 border-b border-white/5 last:border-0" onClick={() => setIsOpen(false)}>{link.name}</Link>
+                    <Link key={link.name} href={link.href} className="text-[11px] font-bold uppercase tracking-widest text-zinc-300 py-4 px-4 border-b border-white/5 last:border-0" onClick={() => setIsOpen(false)}>{link.name}</Link>
                   );
                 })}
               </motion.div>
