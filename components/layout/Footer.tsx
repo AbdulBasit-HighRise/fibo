@@ -40,16 +40,16 @@ export default function Footer() {
 
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
-            <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group">
-              <Image
-                src="/Hr Logo White.svg"
-                alt="High Raise Digital Logo"
-                width={800}
-                height={250}
-                priority
-                className="h-28 md:h-32 lg:h-40 2xl:h-60 w-auto object-contain origin-left select-none ml-[-12px] mt-[-20px] mb-[-15px] 2xl:mb-[-48px] transition-transform duration-500 group-hover:scale-[1.01]"
-              />
-            </Link>
+         <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group shrink-0 select-none">
+  <Image
+    src="/HRD.png"
+    alt="High Raise Digital Logo"
+    width={240}
+    height={64}
+    priority
+    className="h-8 md:h-12 lg:h-10 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
+  />
+</Link>
 
             <p className="text-white text-[16px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2 2xl:mb-[-25px]">
               Let’s discuss your goals and create a powerful strategy to boost your business growth online.
