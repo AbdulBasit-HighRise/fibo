@@ -122,7 +122,7 @@ export default function SEOPage() {
       id: "04",
       title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
       image: "/burger.jpg", // 🎯 Real image path
-      slug: "case-studies/6-69k-clicks-in-just-3-months-for-local-restaurant",
+      slug: "case-studies/6.69K-clicks-in-just-3-months-for-local-restaurant",
       size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
     }
   ];

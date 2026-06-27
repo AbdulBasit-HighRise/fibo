@@ -159,8 +159,8 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 left-0 right-0 z-[100] w-full pointer-events-none">
-      {/* 🎯 OUTER WRAPPER: Fluid Layout with strict responsive padding */}
-      <div className={`w-full transition-all duration-300 pointer-events-auto px-4 sm:px-6 lg:px-8 mx-auto max-w-[1200px] 2xl:max-w-[1690px] ${isScrolled ? "pt-3 lg:pt-4" : "pt-4 md:pt-8 lg:pt-10"}`}>
+      {/* 🎯 OUTER WRAPPER: Padding fixed to normal on all screen sizes */}
+      <div className={`w-full transition-all duration-300 pointer-events-auto px-4 sm:px-6 lg:px-8 mx-auto max-w-[1200px] 2xl:max-w-[1690px] ${isScrolled ? "pt-2" : "pt-2 md:pt-3 lg:pt-4"}`}>
         <motion.nav
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

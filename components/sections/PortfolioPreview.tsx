@@ -10,28 +10,28 @@ const bentoProjects = [
     id: "01",
     title: "170% Leads Increased For Roofing Company",
     image: "/rino-roffers.jpg", // 🎯 Apni SEO result screenshot ka real image path yahan dalo
-    slug: "case-studies/rhino-orlando",
+    slug: "case-studies/170-leads-increased-for-roofing-company",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "02",
     title: "+11% Total Sales Revenue Increased For Oral Care Brand",
     image: "/smile-care.jpg", // 🎯 Real image path
-    slug: "case-studies/breez-care",
+    slug: "case-studies/11-total-sales-revenue-increased-for-oral-care-brand",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "03",
     title: "+28% Organic Traffic Increase For Local Cleaning Company",
     image: "/cleaning.jpg", // 🎯 Real image path
-    slug: "case-studies/west-london-cleaners",
+    slug: "case-studies/28-organic-traffic-increase-for-local-cleaning-company",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
   {
     id: "04",
     title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
     image: "/burger.jpg", // 🎯 Real image path
-    slug: "case-studies/australia-restaurant-seo",
+    slug: "case-studies/6.69K-clicks-in-just-3-months-for-local-restaurant",
     size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
   }
 ];
