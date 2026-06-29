@@ -51,7 +51,7 @@ export default function AboutPage() {
               </div>
 
               {/* Main Typography Block with Tight Line Height */}
-              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 ABOUT {" "}
                 <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   US.
@@ -210,7 +210,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <span className="text-[10px] tracking-[4px] text-blue-400 font-extrabold block mb-4">EXECUTION TRACK</span>
-            <h3 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-none">
+            <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-none">
               Our{" "}
               <span className="mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Working Process.
@@ -262,7 +262,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
             <div className="max-w-2xl">
-              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">4 Reasons {" "}
+              <h3 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">4 Reasons {" "}
                 <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   To Work With Us.
                 </span>

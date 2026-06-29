@@ -88,7 +88,7 @@ export default function AuditCTA() {
 
             {/* 📝 LEFT: HEADING */}
             <div className="text-center xl:text-left flex-initial xl:whitespace-nowrap">
-              <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-[3.5rem] font-black tracking-tight text-white normal-case leading-none">
+              <h3 className="text-[1.8rem] sm:text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-[3.5rem] font-black tracking-tight text-white normal-case leading-none">
                 Get a Free Website Audit
               </h3>
             </div>

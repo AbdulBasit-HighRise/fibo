@@ -110,7 +110,7 @@ export default function ContactPage() {
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Lets Connect</span>
               </div>
 
-              <h1 className="text-[3rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] uppercase font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] uppercase font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
                 CONTACT {" "}
                 <span className="uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   US.

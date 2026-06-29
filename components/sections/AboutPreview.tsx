@@ -42,14 +42,16 @@ export default function AboutPreview() {
 
             {/* RIGHT: Text Content */}
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
-              <div>
-                <h2 className="text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
-                  Leading Digital Marketing
-                  <br />
-                  <span className="block mt-0 mb-2 py-1 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                    Company Working Globally
-                  </span>
-                </h2>
+              <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
+                <div>
+                  <h2 className="text-[1.8rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-white">
+                    Leading Digital Marketing
+                    {" "}
+                    <span className=" sm:inline bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 mt-2 sm:mt-0">
+                      Company Working Globally
+                    </span>
+                  </h2>
+                </div>
               </div>
 
               <div className="space-y-6 md:space-y-8">

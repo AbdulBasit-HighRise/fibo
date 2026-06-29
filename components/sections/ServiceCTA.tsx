@@ -95,9 +95,9 @@ export default function ConsultationCTA() {
         {/* LEFT SIDE: CONTENT & FORM */}
         <div className="relative z-10 p-6 sm:p-10 md:p-12 2xl:p-20 flex flex-col justify-center w-full">
 
-          <h3 className="mt-2 text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl font-black leading-[0.95] tracking-tight text-white max-w-2xl">
+          <h3 className="mt-2 text-[1.8rem] sm:text-5xl md:text-6xl 2xl:text-7xl font-black leading-[0.95] tracking-tight text-white max-w-2xl">
             Let’s Build Your{" "}
-            <span className="inline-block mb-2 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
+            <span className=" mb-2 pb-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
               Next Big Project
             </span>
           </h3>

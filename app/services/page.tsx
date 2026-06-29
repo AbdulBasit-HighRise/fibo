@@ -78,7 +78,7 @@ export default function ServicesPage() {
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Digital Marketing</span>
               </div>
 
-              <h1 className="text-[3rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 Our {" "}
                 <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Services.
@@ -138,7 +138,7 @@ export default function ServicesPage() {
               </div>
 
               {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-              <h2 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
+              <h2 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
                 Everything You Need to{" "}
                 <span className="mt-4 pt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                   Grow, Market, and Scale Your Brand
@@ -154,7 +154,7 @@ export default function ServicesPage() {
                 {/* <a href="/"></a>   */}
                 <span className="font-bold text-blue-400"> <a href="/">High Rise Digital Agency</a> </span>
                 has years of experience helping businesses grow worldwide through modern
-                
+
                 <span className="font-bold text-blue-400"> <a href="/">digital marketing</a> </span>
 
                 strategies. We use advanced AI tools and data-driven technologies to deliver better results and smarter solutions.
@@ -200,12 +200,13 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24 bg-[#020617] 2xl:py-40 px-4 sm:px-8 md:px-12 2xl:px-20 w-full overflow-hidden">
 
         {/* ⚡ HEADING: Kept layout safe but removed constrained container */}
-        <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black pb-4 md:pb-6 mb-8 flex flex-wrap md:flex-nowrap items-center gap-4 text-white leading-tight w-full">
-          Our Complete Range of {" "}
-          <span className="inline-block pb-1 pr-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+        <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black mb-6 md:mb-8 flex flex-wrap md:flex-nowrap items-center gap-x-3 gap-y-1 text-white leading-[1.1] md:leading-tight w-full">
+          <span>Our Complete Range of</span>
+          {" "}
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
             Digital Marketing Services
           </span>
-          <div className="hidden md:block h-px bg-white/10 flex-grow animate-pulse" />
+          <div className="hidden md:block h-px bg-white/10 flex-grow animate-pulse ml-2" />
         </h3>
 
         {/* 🎯 FIXED: Grid stretching edge-to-edge across the screen width */}

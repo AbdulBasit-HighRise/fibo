@@ -45,11 +45,11 @@ export default function ProvenExcellence() {
               transition={{ duration: 0.8 }}
             >
               {/* 🎯 MATCHED EXACT DESIGN SYSTEM FRAMEWORK */}
-              <h3 className="text-[2.3rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
+              <h3 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
 
-                Scale Your Business
+                Scale Your Business{" "}
                 {/* 🎯 MATCHED GRADIENT BLOCK: Corrected context, kept perfect breathing padding */}
-                <span className="block mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                   with Marketing Solutions
                 </span>
               </h3>

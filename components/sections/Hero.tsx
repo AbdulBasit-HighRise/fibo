@@ -36,9 +36,9 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
 
             {/* 🖥️ Heading: Fixed line wrapping for mobile & desktop perfectly */}
-            <h1 className="text-[2.5rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3.8rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white max-w-2xl lg:max-w-none">
+            <h1 className="text-[1.8rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3.8rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white max-w-2xl lg:max-w-none">
               Digital{" "}
-              <span className="inline-block lg:block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+              <span className="lg:block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                 Marketing Agency
               </span>
             </h1>
