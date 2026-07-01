@@ -88,7 +88,7 @@ export default function AuditCTA() {
 
             {/* 📝 LEFT: HEADING */}
             <div className="text-center xl:text-left flex-initial xl:whitespace-nowrap">
-              <h3 className="text-[1.8rem] sm:text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-[3.5rem] font-black tracking-tight text-white normal-case leading-none">
+              <h3 className="text-[2rem] sm:text-3xl md:text-3xl lg:text-4xl 2xl:text-5xl 3xl:text-[3.5rem] font-black tracking-tight text-white normal-case leading-none">
                 Get a Free Website Audit
               </h3>
             </div>
@@ -119,7 +119,7 @@ export default function AuditCTA() {
     </div>
 
     {/* URL INPUT */}
-    <div className="flex flex-col justify-end w-full space-y-1.0">
+    <div className="flex flex-col justify-end w-full space-y-1.5">
       <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
         Website URL <span className="text-red-500">*</span>
       </label>

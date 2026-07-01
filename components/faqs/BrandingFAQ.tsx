@@ -26,7 +26,7 @@ export default function BrandingFAQ() {
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-600/5 blur-[150px] rounded-full pointer-events-none" />
       <div className="relative z-10 max-w-4xl mx-auto px-6">
       <div className="mb-12">
-          <h3 className="text-[1.8rem] md:text-5xl font-black text-white   leading-none">
+          <h3 className="text-[2rem] md:text-5xl font-black text-white   leading-none">
             Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f2ff] to-[#0070ff]">Questions (FAQs)</span>
           </h3>
         </div>

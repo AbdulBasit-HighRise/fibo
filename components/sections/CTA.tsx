@@ -18,7 +18,7 @@ export default function CTA() {
         <div className="text-left space-y-4 flex-[1.4] w-full">
 
           {/* 🎯 ULTRA-PREMIUM 1-LINE HEADING FRAMEWORK */}
-          <h3 className="!text-[1.5rem] sm:!text-4xl md:!text-4xl lg:!text-[2.6rem] xl:!text-[3rem]  font-black tracking-tighter leading-[1.1] lg:leading-none text-white normal-case whitespace-normal lg:whitespace-nowrap">
+          <h3 className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.6rem] xl:!text-[3rem]  font-black tracking-tighter leading-[1.1] lg:leading-none text-white normal-case whitespace-normal lg:whitespace-nowrap">
             Ready To Scale?{" "}
             <span className="  italic py-0.5 pr-1 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               Let's Chat.

@@ -47,7 +47,7 @@ export default function Process() {
 
         {/* 📋 HEADER */}
         <div className="mb-12 md:mb-20 pt-0 text-center">
-          <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+          <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
             Our{" "}
             <span className=" mt-2 py-1 bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
               Working Process

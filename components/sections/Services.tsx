@@ -33,7 +33,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-3 text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
+            className="mt-3 text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white pr-4 py-1"
           >
             Our {" "}
             <span className="  bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">

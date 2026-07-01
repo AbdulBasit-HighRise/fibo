@@ -106,7 +106,7 @@ export default function JuicerReviews() {
         {/* Top Header Grid Section */}
         <div className="mb-8 flex flex-col md:flex-row items-center justify-between text-left gap-6 border-b border-white/[0.03] pb-6 max-w-[1800px] mx-auto">
           <div className="max-w-2xl text-center md:text-left">
-            <h3 className="text-[1.8rem] md:text-[2.6rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
+            <h3 className="text-[2rem] md:text-[2.6rem] lg:text-[3rem] 2xl:text-[3.5rem] font-black tracking-tight text-white bg-gradient-to-r from-white via-zinc-100 to-zinc-400 bg-clip-text text-transparent leading-none">
               What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Clients</span> Say
             </h3>
           </div>

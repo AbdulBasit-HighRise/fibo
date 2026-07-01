@@ -47,7 +47,7 @@ export default function Footer() {
     width={240}
     height={64}
     priority
-    className="h-8 md:h-12 lg:h-10 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
+    className="h-6 md:h-12 lg:h-10 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
   />
 </Link>
 

@@ -45,7 +45,7 @@ export default function ProvenExcellence() {
               transition={{ duration: 0.8 }}
             >
               {/* 🎯 MATCHED EXACT DESIGN SYSTEM FRAMEWORK */}
-              <h3 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
+              <h3 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case mb-6">
 
                 Scale Your Business{" "}
                 {/* 🎯 MATCHED GRADIENT BLOCK: Corrected context, kept perfect breathing padding */}

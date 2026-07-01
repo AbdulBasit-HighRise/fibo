@@ -138,7 +138,7 @@ export default function ServicesPage() {
               </div>
 
               {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-              <h2 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
+              <h2 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] lg:leading-[0.95] text-white">
                 Everything You Need to{" "}
                 <span className="mt-4 pt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                   Grow, Market, and Scale Your Brand
@@ -200,7 +200,7 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24 bg-[#020617] 2xl:py-40 px-4 sm:px-8 md:px-12 2xl:px-20 w-full overflow-hidden">
 
         {/* ⚡ HEADING: Kept layout safe but removed constrained container */}
-        <h3 className="text-[1.8rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black mb-6 md:mb-8 flex flex-wrap md:flex-nowrap items-center gap-x-3 gap-y-1 text-white leading-[1.1] md:leading-tight w-full">
+        <h3 className="text-[2rem] sm:text-[2.3rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black mb-6 md:mb-8 flex flex-wrap md:flex-nowrap items-center gap-x-3 gap-y-1 text-white leading-[1.1] md:leading-tight w-full">
           <span>Our Complete Range of</span>
           {" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
