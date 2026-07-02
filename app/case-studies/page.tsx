@@ -12,13 +12,7 @@ import { ArrowUpRight, Flame, ExternalLink } from "lucide-react";
 // ========================================================
 export const projects = [
   // --- WEBSITE DEVELOPMENT (10 Unique Projects) ---
-  {
-    slug: "rmc-roofing",
-    title: "RMC Roofing",
-    category: "web",
-    image: "/web1.jpg",
-    liveUrl: "https://rmcroofingnm.com/"
-  },
+
   {
     slug: "femme-propre",
     title: " Femme Propre",
@@ -26,41 +20,29 @@ export const projects = [
     image: "/web2.jpg",
     liveUrl: "https://www.femmepropre.co.uk/"
   },
-  {
-    slug: "channel1",
-    title: "Channel1",
-    category: "web",
-    image: "/web3.jpg",
-    liveUrl: "https://channel1.com.au/"
-  },
-  {
-    slug: "doctors-of-osteo",
-    title: "Doctors Of Osteo",
-    category: "web",
-    image: "/web4.jpg",
-    liveUrl: "https://www.doctorsofosteo.com.au/"
-  },
-  {
-    slug: "feeding-fussy-kids",
-    title: "Feeding Fussy Kids",
-    category: "web",
-    image: "/web5.jpg",
-    liveUrl: "https://feedingfussykids.com/"
-  },
-  {
-    slug: "fund-me",
-    title: "Fund Me",
-    category: "web",
-    image: "/web6.jpg",
-    liveUrl: "https://fundme.nz/"
-  },
-  {
-    slug: "mango-credit",
-    title: "Mango Credit",
-    category: "web",
-    image: "/web7.jpg",
-    liveUrl: "https://mangocredit.com.au/"
-  },
+  // {
+  //   slug: "channel1",
+  //   title: "Channel1",
+  //   category: "web",
+  //   image: "/web3.jpg",
+  //   liveUrl: "https://channel1.com.au/"
+  // },
+  // {
+  //   slug: "doctors-of-osteo",
+  //   title: "Doctors Of Osteo",
+  //   category: "web",
+  //   image: "/web4.jpg",
+  //   liveUrl: "https://www.doctorsofosteo.com.au/"
+  // },
+  // {
+  //   slug: "feeding-fussy-kids",
+  //   title: "Feeding Fussy Kids",
+  //   category: "web",
+  //   image: "/web5.jpg",
+  //   liveUrl: "https://feedingfussykids.com/"
+  // },
+
+
   {
     slug: "car-recovery",
     title: "Car Recovery London",
@@ -75,13 +57,7 @@ export const projects = [
     image: "/web9.jpg",
     liveUrl: "https://zaiqahroyale.com/"
   },
-  {
-    slug: "rino-roofing",
-    title: "Rhino Roofing Orlando",
-    category: "web",
-    image: "/web10.jpg",
-    liveUrl: "https://rhinoroofingorlando.com/"
-  },
+
 
   // --- SEO PERFORMANCE CAMPAIGNS (6 Projects) ---
   {
