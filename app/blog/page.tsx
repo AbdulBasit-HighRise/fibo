@@ -1,61 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { User, ArrowRight, Flame } from "lucide-react";
-import { createClient } from 'contentful';
-
-// 🎯 SAFE TOKENS & FALLBACKS (Hostinger Build Protection)
-const spaceId = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || "aprr3d93u7vz";
-const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || "LXVuIdmXm-IK71j-DfjMMgSZQnAoM_aqxz-KzAlaMdA";
-
-// Client setup ab crash nahi karega kyunke use hamesha valid string string milegi
-const client = createClient({
-  space: spaceId,
-  accessToken: accessToken,
-  environment: 'master'
-});
-
-// Server-side data fetching
-async function getBlogs() {
-  // 🛡️ Safety Guard: Agar variables na hon to build pass ho jaye, empty state handle ho
-  if (!process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || !process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN) {
-    console.warn("⚠️ Contentful keys missing at build time. Bypassing crash.");
-    return [];
-  }
-
-  try {
-    const response = await client.getEntries({
-      content_type: 'blog',
-    });
-
-    return response.items.map((item: any) => {
-      const fields = item.fields;
-      const imageAsset = fields.featuredImage?.fields?.file?.url || fields.image?.fields?.file?.url;
-      
-      let cleanExcerpt = "";
-      if (typeof fields.content === 'string') {
-        cleanExcerpt = fields.content.substring(0, 120) + "...";
-      } else if (fields.content?.content?.[0]?.content?.[0]?.value) {
-        cleanExcerpt = fields.content.content[0].content[0].value.substring(0, 120) + "...";
-      } else {
-        cleanExcerpt = "Read our full engineering framework details inside.";
-      }
-
-      return {
-        slug: fields.slug || item.sys.id, 
-        title: fields.title || "No Title",
-        excerpt: cleanExcerpt,
-        author: "High Rise Team",
-        image: imageAsset ? `https:${imageAsset}` : "/placeholder-blog.jpg",
-      };
-    });
-  } catch (error) {
-    console.error("Contentful data fetch error:", error);
-    return [];
-  }
-}
 
 export default async function BlogPage() {
-  const posts = await getBlogs();
+  // 🎯 Contentful ko mukammal remove kar ke empty static array set kar diya hai
+  // Taake aapki design aur empty state logic ("No insights published yet...") bilkul sahi kaam kare
+  const posts: any[] = [];
 
   return (
     <main className="bg-[#111827] text-white min-h-screen selection:bg-blue-600 antialiased overflow-x-hidden">

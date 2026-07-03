@@ -73,24 +73,24 @@ export const projects = [
     category: "seo",
     image: "/cleaning.jpg"
   },
-  {
-    slug: "6.69K-clicks-in-just-3-months-for-local-restaurant",
-    title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
-    category: "seo",
-    image: "/burger.jpg"
-  },
-  {
-    slug: "1-76k-leads-for-aesthetic-clinic",
-    title: "+1.76K Leads For Aesthetic Clinic",
-    category: "seo",
-    image: "/clinic.jpg"
-  },
-  {
-    slug: "#1-position-in-serp-for-holistic-doctor-clinic",
-    title: "#1 Position in SERP For Holistic Doctor Clinic",
-    category: "seo",
-    image: "/dr.jpg"
-  },
+  // {
+  //   slug: "6.69K-clicks-in-just-3-months-for-local-restaurant",
+  //   title: "+6.69K Clicks in Just 3 Months For Local Restaurant",
+  //   category: "seo",
+  //   image: "/burger.jpg"
+  // },
+  // {
+  //   slug: "1-76k-leads-for-aesthetic-clinic",
+  //   title: "+1.76K Leads For Aesthetic Clinic",
+  //   category: "seo",
+  //   image: "/clinic.jpg"
+  // },
+  // {
+  //   slug: "#1-position-in-serp-for-holistic-doctor-clinic",
+  //   title: "#1 Position in SERP For Holistic Doctor Clinic",
+  //   category: "seo",
+  //   image: "/dr.jpg"
+  // },
 
  // --- SOCIAL MEDIA MARKETING PERFORMANCE ---
  {

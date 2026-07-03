@@ -2,17 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // 🎯 Imported successfully
+import { usePathname } from "next/navigation"; 
 import { Menu, X, ChevronDown, Plus, Minus, Loader2 } from "lucide-react"; 
 import Image from "next/image";
-import { createClient } from 'contentful';
-
-// 🎯 Contentful Client Setup
-const client = createClient({
-  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID || 'aprr3d93u7vz',
-  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN || 'LXVuIdmXm-IK71j-DfjMMgSZQnAoM_aqxz-KzAlaMdA',
-  environment: 'master'
-});
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,7 +12,6 @@ export default function Navbar() {
   const [showServices, setShowServices] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [isProposalOpen, setIsProposalOpen] = useState(false);
-  const [dynamicLinks, setDynamicLinks] = useState<any[]>([]); 
   const pathname = usePathname();
 
   const [modalStatus, setModalStatus] = useState<{
@@ -44,26 +35,6 @@ export default function Navbar() {
     setShowServices(false);
     setMobileServicesOpen(false);
   }, [pathname]);
-
-  useEffect(() => {
-    async function fetchNavbarPages() {
-      try {
-        const response = await client.getEntries({
-          content_type: 'page',
-        });
-        
-        const formattedLinks = response.items.map((item: any) => ({
-          name: item.fields.title || "Untitled Page",
-          href: `/${item.fields.slug || ""}`,
-        }));
-        
-        setDynamicLinks(formattedLinks);
-      } catch (error) {
-        console.error("Error fetching navigation pages from Contentful:", error);
-      }
-    }
-    fetchNavbarPages();
-  }, []);
 
   const [modalForm, setModalForm] = useState({
     name: "",
@@ -132,7 +103,7 @@ export default function Navbar() {
       { name: "Web Development", href: "/services/website-development" },
       { name: "SEO Optimization", href: "/services/seo" },
       { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-      { name: "Ecommerce Management ", href: "/services/e-commerce-management" },
+      { name: "Ecommerce Management", href: "/services/e-commerce-management" },
       { name: "AI Automation", href: "/services/ai-automation" },
     ]
   };
@@ -143,7 +114,6 @@ export default function Navbar() {
     servicesDropdown,
     { name: "Case Studies", href: "/case-studies" },
     { name: "Blog", href: "/blog" },
-    ...dynamicLinks,
     { name: "Contact", href: "/contact" },
   ];
 
@@ -164,21 +134,27 @@ export default function Navbar() {
             />
           </Link>
 
+          {/* 🎯 Desktop Navigation (With Mouse Bridge Fix) */}
           <div className="hidden lg:flex items-center justify-center flex-1 mx-2 xl:mx-6 gap-0.5 xl:gap-2 text-nowrap">
-            {links.map((link) => {
+            {links.map((link: any) => {
               const isActive = pathname === link.href;
               if (link.isDropdown) {
                 return (
-                  <div key={link.name} className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
+                  <div 
+                    key={link.name} 
+                    className="relative group py-2" 
+                    onMouseEnter={() => setShowServices(true)} 
+                    onMouseLeave={() => setShowServices(false)}
+                  >
                     <Link 
                       href={link.href} 
-                      className={`flex items-center gap-1 px-2.5 py-2 text-[10px] xl:text-[11px] font-black uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-zinc-400 hover:text-white"}`}
+                      className={`flex items-center gap-1 px-2.5 py-1 text-[10px] xl:text-[11px] font-black uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-zinc-400 hover:text-white"}`}
                     >
                       {link.name} <ChevronDown size={11} className="group-hover:rotate-180 transition-transform duration-300 shrink-0 text-zinc-400" />
                     </Link>
                     
                     {showServices && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 w-60 p-2 bg-[#070707] border border-white/10 rounded-2xl shadow-2xl mt-2 z-[110]">
+                      <div className="absolute top-full left-1/2 -translate-x-1/2 w-60 p-2 bg-[#070707] border border-white/10 rounded-2xl shadow-2xl z-[110] before:absolute before:inset-x-0 before:-top-4 before:h-4 before:content-['']">
                         {link.subLinks?.map((sub: any) => (
                           <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[12px] font-bold text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-wrap">
                             {sub.name}
@@ -207,9 +183,10 @@ export default function Navbar() {
             </button>
           </div>
 
+          {/* 🎯 Mobile Navigation */}
           {isOpen && (
             <div className="absolute top-[calc(100%+0.5rem)] left-0 right-0 bg-[#0d1117] border border-white/10 lg:hidden flex flex-col gap-0 p-3 rounded-3xl pointer-events-auto shadow-2xl max-h-[75vh] overflow-y-auto z-[105]">
-              {links.map((link) => {
+              {links.map((link: any) => {
                 if (link.isDropdown) {
                   return (
                     <div key={link.name} className="border-b border-white/5 flex flex-col">
