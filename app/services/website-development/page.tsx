@@ -59,13 +59,13 @@ const features = [
   },
 ];
 const bentoProjects = [
-  {
-    id: "01",
-    title: "RMC Roofing", // 🎯 Spelling fixed: Roofin -> Roofing
-    image: "/web1.jpg",
-    slug: "https://rhinoroofingorlando.com/",
-    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-  },
+  // {
+  //   id: "01",
+  //   title: "RMC Roofing", // 🎯 Spelling fixed: Roofin -> Roofing
+  //   image: "/web1.jpg",
+  //   slug: "https://rhinoroofingorlando.com/",
+  //   size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+  // },
   {
     id: "02",
     title: "Zaiqah Royale",
@@ -80,13 +80,13 @@ const bentoProjects = [
     slug: "https://carsrecoverylondon.com/",
     size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
   },
-  {
-    id: "04",
-    title: "Channel1",
-    image: "/web3.jpg",
-    slug: "https://channel1.com.au/",
-    size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-  }
+  // {
+  //   id: "04",
+  //   title: "Channel1",
+  //   image: "/web3.jpg",
+  //   slug: "https://channel1.com.au/",
+  //   size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
+  // }
 ];
 import { Search, PenTool, Rocket, ShieldCheck, } from "lucide-react";
 

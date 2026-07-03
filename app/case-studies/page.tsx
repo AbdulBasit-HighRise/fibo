@@ -60,12 +60,12 @@ export const projects = [
 
 
   // --- SEO PERFORMANCE CAMPAIGNS (6 Projects) ---
-  {
- slug: "170-leads-increased-for-roofing-company",
-    title: "170% Leads Increased For Roofing Company",
-    category: "seo",
-    image: "/rino-roffers.jpg"
-  },
+//   {
+//  slug: "170-leads-increased-for-roofing-company",
+//     title: "170% Leads Increased For Roofing Company",
+//     category: "seo",
+//     image: "/rino-roffers.jpg"
+//   },
  
   {
    slug: "28-organic-traffic-increase-for-local-cleaning-company",
