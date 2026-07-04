@@ -75,7 +75,7 @@ export default function ServicesPage() {
             <div className="max-w-5xl">
               <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
                 <Flame size={12} className="text-blue-400 animate-pulse" />
-                <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Digital Marketing</span>
+                <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Digital Marketing Services</span>
               </div>
 
               <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">

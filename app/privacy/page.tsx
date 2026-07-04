@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
             {/* Badge Container (Privacy Framework Style) */}
             <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
               <ShieldCheck size={12} className="text-blue-400 animate-pulse" />
-              <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Privacy Framework</span>
+              <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Privacy Policy</span>
             </div>
 
             {/* Main Large Typography Block - Dynamic Controlled Laptop Sizing */}
