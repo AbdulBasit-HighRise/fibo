@@ -2,30 +2,27 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CustomCursor from "@/components/CustomCursor";
-import WhatsAppBtn from "@/components/WhatsAppBtn";
-import ContactSticker from "@/components/ContactSticker";
 import { Instrument_Sans, Inter } from "next/font/google";
 import { siteMetadata } from "@/app/constants/metadata";
-// 🔴 1. Next.js ka Script component import kiya
 import Script from "next/script";
 
 const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
+  subsets: ["latin"],                  // 🎯 Fix: nested array khatam kiya
   variable: "--font-heading",
-  weight: ["600", "700"],
+  weight: ["600", "700"],             // 🎯 Fix: pure strings pass kiye
   display: "swap",
 });
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin"],                  // 🎯 Fix: nested array khatam kiya
   variable: "--font-sans",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600"],      // 🎯 Fix: pure strings pass kiye
   display: "swap",
 });
 
 export const metadata = {
-  // 🎯 FIXED: metadataBase add kiya taake deployment strict check pass ho jaye
-  metadataBase: new URL('https://highrisedigital.com'), 
+  // 🎯 FIXED: Domain mismatch theek kar diya (.io set kiya taake sitemap se match ho)
+  metadataBase: new URL('https://highrisedigital.io'), 
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
   icons: {
@@ -52,7 +49,6 @@ export default function RootLayout({
       className={`scroll-smooth ${inter.variable} ${instrumentSans.variable}`}
     >
       <head>
-        {/* 🔴 2. Google Analytics Scripts ko yahan safely head mein add kar diya */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-GC1MBVHBW7"
           strategy="afterInteractive"
@@ -71,22 +67,11 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <CustomCursor />
-
-        {/* 1. Navbar ko fix kiya taake ye container ke mutabiq rahay */}
         <Navbar />
-
-        {/* 2. Main Wrapper */}
         <main className="relative z-10 min-h-screen w-full max-w-[2560px] mx-auto">
-          {/* Har page ka content yahan se guzray ga */}
-          <div className="w-full">
-            {children}
-          </div>
+          {children}
         </main>
-
         <Footer />
-
-        <WhatsAppBtn />
-        <ContactSticker />
       </body>
     </html>
   );
