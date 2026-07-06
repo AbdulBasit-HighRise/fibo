@@ -9,7 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 const SERVICES = [
   { id: "01", title: "Web Development", link: "/services/website-development", desc: "Creating responsive, user-friendly websites designed to improve performance, engagement, and conversions.", image: "/web.webp" },
   { id: "02", title: "Search Engine Optimization", link: "/services/seo", desc: "Improving website rankings through strategic SEO techniques, keyword research, and optimization.", image: "/seo.png" },
-  { id: "03", title: "Social Media Marketing", link: "/services/social-media", desc: "Growing your brand presence through engaging social media campaigns and targeted strategies.", image: "/man.webp" },
+  { id: "03", title: "Social Media Marketing", link: "/services/social-media-marketing", desc: "Growing your brand presence through engaging social media campaigns and targeted strategies.", image: "/man.webp" },
   // { id: "04", title: "Branding & Identity", link: "/services/branding", desc: "Building strong brand identities that create trust, recognition, and lasting customer impressions.", image: "/branding.webp" },
   { id: "05", title: "AI Automation", link: "/services/ai-automation", desc: "Streamlining business operations with smart AI automation solutions for improved productivity.", image: "/ai.webp" },
   { id: "06", title: "eCommerce Management", link: "/services/e-commerce-management", desc: "Managing online stores efficiently to increase sales, customer experience, and business growth", image: "/ecommerce.webp" },
