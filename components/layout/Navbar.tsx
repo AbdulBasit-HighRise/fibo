@@ -3,310 +3,70 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; 
-import { Menu, X, ChevronDown, Plus, Minus, Loader2 } from "lucide-react"; 
+import { Menu, X, ChevronDown } from "lucide-react"; 
 import Image from "next/image";
 
 export default function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const [isProposalOpen, setIsProposalOpen] = useState(false);
   const pathname = usePathname();
 
-  const [modalStatus, setModalStatus] = useState<{
-    loading: boolean;
-    success: boolean | null;
-    message: string;
-  }>({
-    loading: false,
-    success: null,
-    message: "",
-  });
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 15);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    setIsOpen(false);
-    setShowServices(false);
-    setMobileServicesOpen(false);
-  }, [pathname]);
-
-  const [modalForm, setModalForm] = useState({
-    name: "",
-    email: "",
-    service: "",
-    message: "",
-  });
-
-  const handleModalSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setModalStatus({ loading: true, success: null, message: "" });
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: modalForm.name,
-          email: modalForm.email,
-          phone: "Not Provided (Modal PopUp Hook)", 
-          service: modalForm.service,
-          subject: `Strategy Call Request: ${modalForm.service}`,
-          message: modalForm.message,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok && data.success) {
-        setModalStatus({
-          loading: false,
-          success: true,
-          message: "Strategy call requested successfully! 🚀",
-        });
-        
-        setModalForm({ name: "", email: "", service: "", message: "" });
-
-        setTimeout(() => {
-          setIsProposalOpen(false);
-          setModalStatus({ loading: false, success: null, message: "" });
-        }, 2500);
-
-      } else {
-        throw new Error(data.error || "Something went wrong inside pipeline.");
-      }
-    } catch (error: any) {
-      setModalStatus({
-        loading: false,
-        success: false,
-        message: error.message || "Network error. Please try again later.",
-      });
-    }
-  };
-
-  const baseLinksLeft = [
-    { name: "Home", href: "/" },
-  ];
-
-  const servicesDropdown = { 
-    name: "Services", 
-    href: "/services", 
-    isDropdown: true,
-    subLinks: [
-      { name: "Web Development", href: "/services/website-development" },
-      { name: "SEO Optimization", href: "/services/seo" },
-      { name: "Social Media Marketing", href: "/services/social-media-marketing" },
-      { name: "Ecommerce Management", href: "/services/e-commerce-management" },
-      { name: "AI Automation", href: "/services/ai-automation" },
-    ]
-  };
-
-  const links = [
-    ...baseLinksLeft,
-    { name: "About", href: "/about" },
-    servicesDropdown,
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "Blog", href: "/blog" },
-    { name: "Contact", href: "/contact" },
-  ];
-
   return (
-    <div className="fixed top-0 left-0 right-0 z-[100] w-full pointer-events-none">
-      <div className={`w-full pointer-events-auto px-4 sm:px-6 lg:px-8 mx-auto max-w-[1200px] 2xl:max-w-[1690px] ${isScrolled ? "pt-2" : "pt-2 md:pt-3 lg:pt-4"}`}>
-        <nav
-          className={`relative flex items-center justify-between w-full ${isScrolled ? "rounded-full px-5 md:px-8 py-3 bg-[#111827]/95 backdrop-blur-xl border border-white/10 shadow-2xl" : "rounded-none px-2 py-4 bg-transparent border-transparent"}`}
-        >
-          <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group shrink-0 select-none">
-            <Image
-              src="/HRD.png"
-              alt="High Raise Digital Logo"
-              width={240}
-              height={64}
-              priority
-              className="h-6 md:h-10 lg:h-10 w-auto object-contain origin-left"
-            />
+    <div className="sticky top-0 z-[100] w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center justify-between w-full h-20">
+          
+          {/* Logo */}
+          <Link href="/" className="shrink-0">
+            <Image src="/fibo-logo.png" alt="Logo" width={180} height={45} className="h-8 md:h-10 w-auto" />
           </Link>
 
-          {/* 🎯 Desktop Navigation (With Mouse Bridge Fix) */}
-          <div className="hidden lg:flex items-center justify-center flex-1 mx-2 xl:mx-6 gap-0.5 xl:gap-2 text-nowrap">
-            {links.map((link: any) => {
-              const isActive = pathname === link.href;
-              if (link.isDropdown) {
-                return (
-                  <div 
-                    key={link.name} 
-                    className="relative group py-2" 
-                    onMouseEnter={() => setShowServices(true)} 
-                    onMouseLeave={() => setShowServices(false)}
-                  >
-                    <Link 
-                      href={link.href} 
-                      className={`flex items-center gap-1 px-2.5 py-1 text-[10px] xl:text-[11px] font-black uppercase tracking-widest transition-all ${isActive || showServices ? "text-white" : "text-zinc-400 hover:text-white"}`}
-                    >
-                      {link.name} <ChevronDown size={11} className="group-hover:rotate-180 transition-transform duration-300 shrink-0 text-zinc-400" />
-                    </Link>
-                    
-                    {showServices && (
-                      <div className="absolute top-full left-1/2 -translate-x-1/2 w-60 p-2 bg-[#070707] border border-white/10 rounded-2xl shadow-2xl z-[110] before:absolute before:inset-x-0 before:-top-4 before:h-4 before:content-['']">
-                        {link.subLinks?.map((sub: any) => (
-                          <Link key={sub.name} href={sub.href} className="block px-4 py-2.5 text-[12px] font-bold text-zinc-300 hover:text-white hover:bg-white/5 rounded-lg transition-all text-wrap">
-                            {sub.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                );
-              }
-              return (
-                <Link key={link.name} href={link.href} className={`relative px-2.5 py-2 text-[10px] xl:text-[11px] font-black uppercase tracking-widest transition-all shrink-0 ${isActive ? "text-white" : "text-zinc-400 hover:text-white"}`}>
-                  {link.name}
-                </Link>
-              );
-            })}
-          </div>
-
-          <div className="flex items-center gap-2 md:gap-4 z-50 shrink-0">
-            <button onClick={() => setIsProposalOpen(true)} className={`group relative overflow-hidden hidden md:block bg-white text-black rounded-full font-black uppercase tracking-widest active:scale-95 shrink-0 ${isScrolled ? "px-5 py-2.5 text-[9px] xl:text-[10px]" : "px-7 py-3 text-[10px] xl:text-[11px]"}`}>
-              <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-300 ease-out group-hover:w-full" />
-              <span className="relative z-10 group-hover:text-white transition-colors duration-300">Get Proposal</span>
-            </button>
-            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-white p-2 hover:bg-white/5 rounded-full transition-colors">
-              {isOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
-
-          {/* 🎯 Mobile Navigation */}
-          {isOpen && (
-            <div className="absolute top-[calc(100%+0.5rem)] left-0 right-0 bg-[#0d1117] border border-white/10 lg:hidden flex flex-col gap-0 p-3 rounded-3xl pointer-events-auto shadow-2xl max-h-[75vh] overflow-y-auto z-[105]">
-              {links.map((link: any) => {
-                if (link.isDropdown) {
-                  return (
-                    <div key={link.name} className="border-b border-white/5 flex flex-col">
-                      <div className="flex items-center justify-between py-3.5 px-3 active:bg-white/5 transition-colors rounded-xl">
-                        <Link href={link.href} className="text-[11px] font-black uppercase tracking-widest text-zinc-300 flex-1" onClick={() => setIsOpen(false)}>{link.name}</Link>
-                        <button onClick={(e) => { e.preventDefault(); setMobileServicesOpen(!mobileServicesOpen); }} className="p-2 text-zinc-400 hover:text-white transition-colors">
-                          {mobileServicesOpen ? <Minus size={14} /> : <Plus size={14} />}
-                        </button>
-                      </div>
-                      
-                      {mobileServicesOpen && (
-                        <div className="overflow-hidden bg-white/[0.02] rounded-xl mx-2">
-                          <div className="flex flex-col py-1 pl-4 border-l border-white/10 my-1 gap-0.5">
-                            {link.subLinks?.map((sub: any) => (
-                              <Link key={sub.name} href={sub.href} className="text-[11px] font-medium uppercase tracking-wider text-zinc-400 hover:text-white py-3 px-3 rounded-lg block transition-colors" onClick={() => setIsOpen(false)}>{sub.name}</Link>
-                            ))}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  );
-                }
-                return (
-                  <Link key={link.name} href={link.href} className="text-[11px] font-black uppercase tracking-widest text-zinc-300 py-3.5 px-3 border-b border-white/5 last:border-0 active:bg-white/5 rounded-xl transition-colors" onClick={() => setIsOpen(false)}>{link.name}</Link>
-                );
-              })}
-            </div>
-          )}
-        </nav>
-      </div>
-
-      {/* PROPOSAL MODAL */}
-      {isProposalOpen && (
-        <div className="fixed inset-0 z-[999] flex items-center justify-center p-4 pointer-events-auto">
-          <div onClick={() => !modalStatus.loading && setIsProposalOpen(false)} className="absolute inset-0 bg-black/85 backdrop-blur-md" />
-          <div className="relative w-full max-w-lg bg-[#070707] border border-white/10 rounded-[2.5rem] p-8 shadow-2xl">
-            <button onClick={() => setIsProposalOpen(false)} disabled={modalStatus.loading} className="absolute top-6 right-6 text-zinc-500 hover:text-white transition-colors disabled:opacity-30">
-              <X size={24} />
-            </button>
-            
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-black text-white uppercase tracking-tighter">Book A Strategy Call</h3>
-              <p className="text-zinc-500 text-xs">Let's build your project together.</p>
-            </div>
-            
-            <form className="space-y-4" onSubmit={handleModalSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input 
-                  type="text" 
-                  required
-                  disabled={modalStatus.loading}
-                  placeholder="Name" 
-                  value={modalForm.name}
-                  onChange={(e) => setModalForm({ ...modalForm, name: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
-                />
-                <input 
-                  type="email" 
-                  required
-                  disabled={modalStatus.loading}
-                  placeholder="Email" 
-                  value={modalForm.email}
-                  onChange={(e) => setModalForm({ ...modalForm, email: e.target.value })}
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none focus:border-blue-500 transition-all disabled:opacity-40" 
-                />
-              </div>
-              <select 
-                required
-                disabled={modalStatus.loading}
-                value={modalForm.service}
-                onChange={(e) => setModalForm({ ...modalForm, service: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[10px] xl:text-[11px] font-bold text-white outline-none appearance-none cursor-pointer hover:bg-white/[0.08] transition-all disabled:opacity-40"
-              >
-                <option value="" disabled className="bg-[#070707] text-zinc-500">Select Service</option>
-                <option value="Web Development" className="bg-[#070707] text-white">Web Development</option>
-                <option value="SEO Optimization" className="bg-[#070707] text-white">SEO Optimization</option>  
-                <option value="Social Media Marketing" className="bg-[#070707] text-white">Social Media Marketing</option>
-                <option value="AI Automation" className="bg-[#070707] text-white">AI Automation</option>
-                <option value="Branding" className="bg-[#070707] text-white">Branding</option>
-                <option value="Google Ads" className="bg-[#070707] text-white">Google Ads</option>
-                <option value="E-commerce Management" className="bg-[#070707] text-white">E-commerce Management</option>
-              </select>
-              <textarea 
-                required
-                disabled={modalStatus.loading}
-                placeholder="Your Message" 
-                rows={3} 
-                value={modalForm.message}
-                onChange={(e) => setModalForm({ ...modalForm, message: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-xs text-white outline-none resize-none transition-all disabled:opacity-40"
-              ></textarea>
-              
-              {modalStatus.message && (
-                <div
-                  className={`p-3 rounded-xl text-center text-xs font-bold border ${
-                    modalStatus.success 
-                      ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
-                      : "bg-rose-500/10 border-rose-500/20 text-rose-400"
-                  }`}
-                >
-                  {modalStatus.message}
-                </div>
-              )}
-              
-              <button 
-                type="submit" 
-                disabled={modalStatus.loading}
-                className="w-full bg-blue-600 py-4 rounded-xl font-bold text-[11px] uppercase tracking-widest text-white shadow-lg shadow-blue-600/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:scale-100"
-              >
-                {modalStatus.loading ? (
-                  <>
-                    Submitting Pipeline...
-                    <Loader2 size={12} className="animate-spin" />
-                  </>
-                ) : "Submit Request"}
-              </button>
-            </form>
+        <div className="hidden lg:flex items-center gap-1">
+  {[
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services", isDropdown: true },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Contact", href: "/contact" }
+  ].map((link) => (
+    <div key={link.name} className="relative group" onMouseEnter={() => setShowServices(true)} onMouseLeave={() => setShowServices(false)}>
+      <Link 
+        href={link.href} 
+        className={`flex items-center gap-1.5 px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-wide transition-all duration-300 rounded-full
+          ${pathname === link.href 
+            ? "text-blue-700 bg-blue-50" 
+            : "text-zinc-800 hover:text-black hover:bg-zinc-100"}`}
+      >
+        {link.name} {link.isDropdown && <ChevronDown size={12} className="stroke-[3]" />}
+      </Link>
+      
+      {/* Dropdown - Mazeed clear design */}
+      {link.isDropdown && showServices && (
+        <div className="absolute top-full left-0 w-64 pt-2 z-[100]">
+          <div className="bg-white border border-zinc-200 shadow-2xl shadow-zinc-200/50 rounded-2xl p-2 animate-in fade-in zoom-in duration-200">
+            {["Web Development", "SEO", "Social Media", "AI Automation"].map((sub) => (
+              <Link key={sub} href="#" className="block px-4 py-3.5 text-[12px] font-bold text-zinc-700 hover:text-blue-700 hover:bg-blue-50/50 rounded-xl transition-all">
+                {sub}
+              </Link>
+            ))}
           </div>
         </div>
       )}
+    </div>
+  ))}
+</div>
+
+          {/* Right Side CTA */}
+          <div className="flex items-center gap-4">
+            <button className="hidden md:block bg-zinc-900 text-white px-6 py-2.5 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-black transition-all active:scale-95">
+              Get Proposal
+            </button>
+            <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2 text-zinc-900">
+              <Menu size={24} />
+            </button>
+          </div>
+        </nav>
+      </div>
     </div>
   );
 }

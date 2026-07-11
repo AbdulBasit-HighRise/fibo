@@ -28,7 +28,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#111827] overflow-hidden border-b border-white/5">
+    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#FFFFFF] overflow-hidden border-b border-white/5">
 
       {/* Background Dots & Glow */}
       <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
@@ -47,12 +47,11 @@ export default function WhyChooseUs() {
               transition={{ duration: 0.8 }}
             >
               {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
-              <h2 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+              <h2 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-black tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
                 Why Choose{" "}
                 {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-                <span className="  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                   High Rise Digital
-                </span>
+             
               </h2>
 
               {/* 🎯 EXACT TEXT FONT SIZE SYSTEM: Locked 18px on small screens and 20px (xl) on large screens */}
@@ -60,7 +59,7 @@ export default function WhyChooseUs() {
               <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
 
                 {/* Paragraph 1 */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                   At High Rise Digital, we focus on helping businesses grow with smart and effective digital marketing solutions. Our team combines creativity, strategy, and industry experience to deliver real results for every client.
                 </p>
 
@@ -68,17 +67,17 @@ export default function WhyChooseUs() {
 
 
                 {/* Paragraph 2 inside Border Block */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                   From website development and SEO to social media marketing and paid advertising, we provide complete services tailored to your business goals. We believe in honest communication, quality work, and long-term partnerships.
                 </p>
 
                 {/* Paragraph 3 inside Border Block */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                   Every project is handled with attention to detail to ensure your brand stands out online. Whether you are a startup or an established company, we work closely with you to increase visibility, attract more customers, and improve business growth.
                 </p>
 
                 {/* Paragraph 4 inside Border Block */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
                   Your success is our priority, and we are committed to delivering reliable digital solutions that make a lasting impact.
                 </p>
 
@@ -100,7 +99,7 @@ export default function WhyChooseUs() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-                  style={{ backgroundColor: "#0971A6" }}
+                  style={{ backgroundColor: "#E5E5E5" }}
                   className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''
                     }`}
                 >
@@ -111,19 +110,19 @@ export default function WhyChooseUs() {
                       {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
                       <div
                         style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-                        className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
+                        className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5  group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
                       >
                         {item.icon}
                       </div>
 
                       {/* Title Text */}
-                      <h4 className="flex-1 font-black text-[1.0rem] sm:text-[1.1rem] lg:text-[1.1rem] 2xl:text-[1.3rem] tracking-[1px] uppercase leading-tight text-white group-hover:text-cyan-200 transition-all duration-500">
+                      <h4 className="flex-1 font-black text-[1.0rem] sm:text-[1.1rem] lg:text-[1.1rem] 2xl:text-[1.3rem] tracking-[1px] uppercase leading-tight text-black group-hover:text-black transition-all duration-500">
                         {item.title}
                       </h4>
                     </div>
 
                     {/* ⚪ Card Description paragraph */}
-                    <p className="text-white text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-black text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300">
                       {item.desc}
                     </p>
                   </div>

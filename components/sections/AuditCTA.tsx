@@ -72,7 +72,7 @@ export default function AuditCTA() {
   return (
     // 🎯 MAIN SECTION: Faltu vertical padding drops completely to make it tight & clean
     <section className="relative w-full 
-    bg-[#111827]
+    bg-[#E5E5E5]
      px-6 sm:px-8 py-6 md:py-8">
 
       {/* 🎯 MAIN WRAPPER: Removed 'pb-12' padding so the bottom area remains compact */}

@@ -17,7 +17,7 @@ export default function AboutPreview() {
   return (
     <>
       {/* 🎯 ABOUT SECTION */}
-      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#1E2939] overflow-hidden">
+      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-8 bg-[#FFFFFF] overflow-hidden">
 
         {/* Background Glow */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
@@ -44,34 +44,32 @@ export default function AboutPreview() {
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
                 <div>
-                  <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-white">
+                  <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-black">
                     Leading Digital Marketing
                     {" "}
-                    <span className=" sm:inline bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 mt-2 sm:mt-0">
                       Company Working Globally
-                    </span>
                   </h2>
                 </div>
               </div>
 
               <div className="space-y-6 md:space-y-8">
                 {/* Paragraph 1 */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
                   As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
                 </p>
 
                 {/* Paragraph 2 */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
                   Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
                 </p>
 
                 {/* Paragraph 3 */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
                   We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
                 </p>
 
                 {/* Paragraph 4 */}
-                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
                   Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
                 </p>
               </div>
@@ -79,9 +77,9 @@ export default function AboutPreview() {
               {/* Buttons Section */}
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <Link href="/contact">
-                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
-                    <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                    <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
+                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-[#F3F4F6] text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
+                    <div className="absolute inset-0 w-0  transition-all duration-500 ease-out group-hover:w-full" />
+                    <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
                       Get Quote <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
                     </span>
                   </button>
@@ -89,7 +87,7 @@ export default function AboutPreview() {
 
                 <Link
                   href="/services"
-                  className="group flex items-center gap-2 text-zinc-400 hover:text-white font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
+                  className="group flex items-center gap-2 text-black hover:text-black font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
                 >
                   View Services
                   <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
@@ -100,35 +98,7 @@ export default function AboutPreview() {
         </div>
       </section>
 
-      {/* 🎯 LOGO SECTION */}
-      <section className="pt-12 pb-12 md:pb-16 2xl:pb-20 bg-[#1E2939]">
-        <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
-
-          {/* LOGOS GRID */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-12 md:gap-8 2xl:gap-20 items-center justify-center justify-items-center w-full max-w-5xl">
-            {awardLogos.map((logo, index) => (
-              <div
-                key={index}
-                className="group relative w-full flex items-center justify-center transition-all duration-500"
-              >
-                {/* Logo Wrapper Container - Safe explicit sizing layout */}
-                <div className="relative flex items-center justify-center p-2">
-                  <Image
-                    src={logo.src}
-                    alt={logo.alt}
-                    width={160}
-                    height={80}
-                    className="object-contain transition-all duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                {/* Premium Active Hover Glow */}
-                <div className="absolute inset-0 bg-blue-500/5 blur-[40px] 2xl:blur-[60px] opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+   
     </>
   );
 }

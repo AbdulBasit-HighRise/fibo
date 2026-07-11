@@ -11,9 +11,9 @@ import HeroSlider from "@/components/sections/HeroSlider";
 import AuditCTA from "@/components/sections/AuditCTA";
 import ProvenExcellence from "@/components/sections/ProvenExcellence";
 import Stats from "@/components/sections/Stats";
-
+import faq from "@/app/faq/page";
 // ⚡ Is page ko cache rakhne ke liye configuration (Ab yeh makkhan chalega)
-export const revalidate = 3600; 
+export const revalidate = 3600;
 
 export default async function Home() {
   return (
@@ -21,22 +21,25 @@ export default async function Home() {
       {/* 🎯 Simple components ki tarah bina kisi fetch load ke chalenge */}
       <Hero />
 
-      <HeroSlider />
+      {/* <HeroSlider /> */}
 
       {/* 🎯 About Preview ab baaki sections ki tarah direct aur simple load hoga */}
       <AboutPreview />
 
-      <PortfolioPreview />
-      <Stats />
+      {/* <PortfolioPreview /> */}
+      {/* <Stats /> */}
       <Services />
       <AuditCTA />
-      <ProvenExcellence />
-      <HowWeWork />
-      <IndustryExpertise />
-      <Testimonials />
+      <ClientTrust />
+
+      {/* <ProvenExcellence /> */}
+      {/* <HowWeWork /> */}
+      {/* <IndustryExpertise /> */}
 
       <WhyChooseUs />
-      <ClientTrust />
+      <Testimonials />
+      {/* < faq /> */}
+
     </main>
   );
 }

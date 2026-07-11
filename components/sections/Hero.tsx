@@ -7,10 +7,10 @@ import { ArrowUpRight, Star } from "lucide-react";
 export default function HeroSection() {
   return (
     <section
-      className="relative min-h-fit lg:min-h-[70vh] 2xl:min-h-[65vh] 3xl:min-h-[60vh] bg-[#030303] overflow-hidden flex items-center selection:bg-blue-600 pb-4 pt-36 md:pt-40 lg:pt-40 lg:pb-18 2xl:pt-56 2xl:pb-32 3xl:pt-64 3xl:pb-36"
+      className="relative min-h-fit lg:min-h-[70vh] 2xl:min-h-[65vh] 3xl:min-h-[60vh] bg-[#FFD36A] overflow-hidden flex items-center selection:bg-blue-600 pb-4 pt-36 md:pt-40 lg:pt-40 lg:pb-18 2xl:pt-56 2xl:pb-32 3xl:pt-64 3xl:pb-36"
     >
       {/* 🖼️ BACKGROUND IMAGE LAYER */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/home-hero.jpg"
           alt="High Rise Digital - Trusted Digital Marketing Agency Background"
@@ -21,7 +21,7 @@ export default function HeroSection() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/80 via-transparent to-[#030303]" />
-      </div>
+      </div> */}
 
       {/* 🌌 AMBIENT LIGHTS (Lag-free static blur) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
@@ -36,11 +36,10 @@ export default function HeroSection() {
           <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
 
             {/* 🖥️ Heading: Fixed line wrapping for mobile & desktop perfectly */}
-            <h1 className="text-[1.9rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3.8rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white max-w-2xl lg:max-w-none">
+            <h1 className="text-[1.9rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3.8rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-black max-w-2xl lg:max-w-none">
               Digital{" "}
-              <span className="lg:block bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                 Marketing Agency
-              </span>
+             
             </h1>
 
             {/* 🖥️ Paragraph: Adjusted for a clean hierarchy */}

@@ -13,21 +13,18 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const offices = [
-    { city: "Pakistan", address: "Suite # 19, Block-M, Wapda Town Phase 2, Multan, Pakistan." },
-    { city: "United States", address: "3564 AVALON PARK EAST BLVD, STE 1 PMB 2002, ORLANDO, FL 32828" },
-    { city: "United Kingdom", address: "Suite 105, Fence House Fence Avenue Macclesfield Cheshire SK10 1LT United Kingdom" }
+    { city: "Pakistan", address: "Emirates Tower, 2nd & 3rd Floor,M-13, F-7 Markaz, Islamabad " },
   ];
 
   const socials = [
     { icon: <FaInstagram size={18} />, href: "https://www.instagram.com/highrisedigitalagency/", label: "Instagram", hoverColor: "hover:text-[#E1306C] hover:border-[#E1306C]/40 hover:shadow-[0_0_20px_rgba(225,48,108,0.3)]" },
     { icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/company/high-rise-digital-agency/", label: "LinkedIn", hoverColor: "hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:shadow-[0_0_20px_rgba(10,102,194,0.3)]" },
     { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/highrisedigital.official/", label: "Facebook", hoverColor: "hover:text-[#1877F2] hover:border-[#1877F2]/40 hover:shadow-[0_0_20px_rgba(24,119,242,0.3)]" },
-    { icon: <Mail size={18} />, href: "mailto:info@highrisedigital.io", label: "Email", hoverColor: "hover:text-blue-400 hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]" },
+    { icon: <Mail size={18} />, href: "mailto: hello@fiboentertainment.com", label: "Email", hoverColor: "hover:text-blue-400 hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]" },
   ];
 
   return (
     <footer className="text-white relative bg-[#111827] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
-      < CTA />
 
       {/* 🌌 Cosmic Glows */}
       <div className="absolute top-0 left-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-blue-600/[0.04] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
@@ -40,16 +37,16 @@ export default function Footer() {
 
           {/* Column 1: Brand & Logo Section */}
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
-         <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group shrink-0 select-none">
-  <Image
-    src="/HRD.png"
-    alt="High Raise Digital Logo"
-    width={240}
-    height={64}
-    priority
-    className="h-6 md:h-12 lg:h-10 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
-  />
-</Link>
+            <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group shrink-0 select-none">
+              <Image
+                src="/HRD.png"
+                alt="High Raise Digital Logo"
+                width={240}
+                height={64}
+                priority
+                className="h-6 md:h-12 lg:h-10 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
+              />
+            </Link>
 
             <p className="text-white text-[16px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2 2xl:mb-[-25px]">
               Let’s discuss your goals and create a powerful strategy to boost your business growth online.
@@ -141,20 +138,28 @@ export default function Footer() {
               Inquiries
             </span>
             <div className="space-y-4 text-[16px] md:text-[16px]">
-              <a href="mailto:info@highrisedigital.io" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
+              <a href="mailto:hello@fiboentertainment.com" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
                 <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
                 <div className="space-y-1">
                   <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Drop an email</p>
-                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors break-all">info@highrisedigital.io</p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors break-all">hello@fiboentertainment.com</p>
                 </div>
               </a>
-              <a href="tel:+923002777587" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
+              <a href="tel:+923394004791" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
                 <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
                 <div className="space-y-1">
                   <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Corporate Support</p>
-                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+92 300 2777587</p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+923394004791</p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+923461536333</p>
                 </div>
               </a>
+              <div  className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
+                <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
+                <div className="space-y-1">
+                  <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Address</p>
+                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">Emirates Tower, 2nd & 3rd Floor,M-13, F-7 Markaz, Islamabad</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -162,26 +167,12 @@ export default function Footer() {
         </div>
 
         {/* 🏢 OFFICES GRID */}
-        <div className="py-12 md:py-16 grid grid-cols-1 sm:grid-cols-3 gap-6 2xl:gap-12 border-b border-white/5">
-          {offices.map((office, idx) => (
-            <div key={idx} className="p-6 md:p-8 rounded-2xl bg-white/[0.01] border border-white/5 space-y-4 hover:border-blue-500/20 transition-all duration-300 group">
-              <div className="space-y-2">
-                {/* 🎯 FIXED SIZE: Compressed from 3xl to a clean, elegant desktop scale */}
-                <span className="block text-sm md:text-base 2xl:text-xl font-black text-white tracking-tight uppercase">
-                  {office.city}
-                </span>
-                <p className="text-[16px] md:text-[14px] 2xl:text-[15px] text-white-400 font-normal leading-relaxed">
-                  {office.address}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+     
 
         {/* 🔒 BOTTOM BAR */}
         <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
-            © {currentYear} High Rise Digital LLC.
+            © {currentYear} Fibo Entertairnment LLC.
           </p>
           <p className="text-[10px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
             Built for growth • Designed for dominance
