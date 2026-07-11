@@ -17,12 +17,12 @@ export default function WhyChooseUs() {
     <section className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
         
-        {/* Heading Section - Solid Black Contrast */}
+        {/* Heading Section - Forced High Contrast */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-black text-black">
+          <h2 className="text-5xl font-black !text-black leading-tight">
             Why <span className="text-[#FFD36A]">Choose Us</span>
           </h2>
-          <p className="text-black mt-6 max-w-lg mx-auto font-bold text-lg leading-relaxed">
+          <p className="!text-black mt-8 max-w-lg mx-auto font-black text-xl leading-relaxed">
             From discovery to deployment, we partner closely with you to deliver outcomes — not just deliverables.
           </p>
         </div>
@@ -37,15 +37,13 @@ export default function WhyChooseUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              {/* Circular Icon Wrapper - Hover Gold */}
               <div className="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center text-black shrink-0 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-300">
                 {item.icon}
               </div>
               
-              {/* Title & Description - Solid Black High Contrast */}
               <div className="pt-2">
-                <h4 className="text-lg font-black text-black">{item.title}</h4>
-                <p className="text-black text-sm mt-2 font-bold leading-relaxed">
+                <h4 className="text-xl font-black !text-black">{item.title}</h4>
+                <p className="!text-black text-base mt-3 font-bold leading-relaxed">
                   {item.desc}
                 </p>
               </div>
