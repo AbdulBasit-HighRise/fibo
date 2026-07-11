@@ -26,7 +26,7 @@ export const metadata = {
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
   icons: {
-    icon: "/icon.svg",
+    icon: "/fibo-fav.png",
   },
 };
 

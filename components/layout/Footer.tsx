@@ -39,12 +39,12 @@ export default function Footer() {
           <div className="lg:col-span-3 flex flex-col items-start justify-start">
             <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group shrink-0 select-none">
               <Image
-                src="/HRD.png"
-                alt="High Raise Digital Logo"
+                src="/fibo-footer-logo.png"
+                alt="Fibo Entertainment Logo"
                 width={240}
                 height={64}
                 priority
-                className="h-6 md:h-12 lg:h-10 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
+                className="h-10 md:h-16 lg:h-16 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
               />
             </Link>
 
