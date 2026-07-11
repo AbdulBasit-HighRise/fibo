@@ -1,141 +1,56 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Zap, TrendingUp, Star, CheckCircle2 } from "lucide-react";
+import { Users, Star, ShieldCheck, Target, TrendingUp, Database } from "lucide-react";
 
 const features = [
-  {
-    icon: <Zap className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Modern Tools",
-    desc: "We leverage industry-leading tech to build high-converting assets.",
-  },
-  {
-    icon: <Star className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Creative Thinking",
-    desc: "Strategies built from the ground up to fit your specific goals.",
-  },
-  {
-    icon: <ShieldCheck className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Proven Methods",
-    desc: "Data-backed execution that ensures meaningful, measurable growth.",
-  },
-  {
-    icon: <TrendingUp className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Meaningful Results",
-    desc: "Focusing on visibility, trust, and real-world brand success.",
-  },
+  { icon: <Users />, title: "Highly Professional Team", desc: "Experts across design, web, apps, and AI/ML." },
+  { icon: <Star />, title: "Customer Focused", desc: "Clear communication and fast iteration." },
+  { icon: <ShieldCheck />, title: "Expert Engineering", desc: "EXF management code and strong engineering practice." },
+  { icon: <Target />, title: "Tailored Solutions", desc: "Solutions aligned to your goals and constraints." },
+  { icon: <TrendingUp />, title: "Proven Track Record", desc: "Launched, scaled, and maintained products." },
+  { icon: <Database />, title: "Modern Stack", desc: "Scalable architecture with the latest industry standards." },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-16 md:py-24 2xl:py-32 bg-[#FFFFFF] overflow-hidden border-b border-white/5">
+    <section className="py-24 bg-white">
+      <div className="max-w-5xl mx-auto px-6">
+        
+        {/* Heading Section - Solid Black Contrast */}
+        <div className="text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-black text-black">
+            Why <span className="text-[#FFD36A]">Choose Us</span>
+          </h2>
+          <p className="text-black mt-6 max-w-lg mx-auto font-bold text-lg leading-relaxed">
+            From discovery to deployment, we partner closely with you to deliver outcomes — not just deliverables.
+          </p>
+        </div>
 
-      {/* Background Dots & Glow */}
-      <div className="absolute inset-0 opacity-[0.05] pointer-events-none"
-        style={{ backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
-      <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
-
-      <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-12 xl:gap-16 2xl:gap-24 items-center">
-
-          {/* LEFT SIDE: Content (Balanced with Sizing Framework) */}
-          <div className="lg:col-span-6 space-y-6 md:space-y-8">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-12">
+          {features.map((item, index) => (
+            <motion.div 
+              key={index} 
+              className="flex items-start gap-6 group"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
             >
-              {/* 🎯 MATCHED DESIGN SYSTEM: Exact consistent sizes, line-height, and tracking to match core framework */}
-              <h2 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-black tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-                Why Choose{" "}
-                {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-                  High Rise Digital
-             
-              </h2>
-
-              {/* 🎯 EXACT TEXT FONT SIZE SYSTEM: Locked 18px on small screens and 20px (xl) on large screens */}
-              {/* 🎯 SYNCED PARENT CONTAINER WITH PREMIUM RESPONSIVE TYPOGRAPHY */}
-              <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
-
-                {/* Paragraph 1 */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                  At High Rise Digital, we focus on helping businesses grow with smart and effective digital marketing solutions. Our team combines creativity, strategy, and industry experience to deliver real results for every client.
+              {/* Circular Icon Wrapper - Hover Gold */}
+              <div className="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center text-black shrink-0 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-300">
+                {item.icon}
+              </div>
+              
+              {/* Title & Description - Solid Black High Contrast */}
+              <div className="pt-2">
+                <h4 className="text-lg font-black text-black">{item.title}</h4>
+                <p className="text-black text-sm mt-2 font-bold leading-relaxed">
+                  {item.desc}
                 </p>
-
-                {/* Border section left panel aligned with font metrics */}
-
-
-                {/* Paragraph 2 inside Border Block */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                  From website development and SEO to social media marketing and paid advertising, we provide complete services tailored to your business goals. We believe in honest communication, quality work, and long-term partnerships.
-                </p>
-
-                {/* Paragraph 3 inside Border Block */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                  Every project is handled with attention to detail to ensure your brand stands out online. Whether you are a startup or an established company, we work closely with you to increase visibility, attract more customers, and improve business growth.
-                </p>
-
-                {/* Paragraph 4 inside Border Block */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                  Your success is our priority, and we are committed to delivering reliable digital solutions that make a lasting impact.
-                </p>
-
               </div>
             </motion.div>
-          </div>
-          {/* RIGHT SIDE: Cards (Enhanced Contrast & Highly Readable Layout) */}
-          <div className="lg:col-span-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
-
-              {/* 🌌 Center Ambient Soft Glow Underlay */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
-
-              {features.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-                  style={{ backgroundColor: "#E5E5E5" }}
-                  className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''
-                    }`}
-                >
-                  <div className="relative z-10 space-y-4 md:space-y-5">
-
-                    {/* 🟢 Icon & Heading Wrapper */}
-                    <div className="flex items-center gap-4">
-                      {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-                      <div
-                        style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-                        className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-14 2xl:h-14 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5  group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
-                      >
-                        {item.icon}
-                      </div>
-
-                      {/* Title Text */}
-                      <h4 className="flex-1 font-black text-[1.0rem] sm:text-[1.1rem] lg:text-[1.1rem] 2xl:text-[1.3rem] tracking-[1px] uppercase leading-tight text-black group-hover:text-black transition-all duration-500">
-                        {item.title}
-                      </h4>
-                    </div>
-
-                    {/* ⚪ Card Description paragraph */}
-                    <p className="text-black text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                      {item.desc}
-                    </p>
-                  </div>
-
-                  {/* Corner Check Icon Indicators */}
-                  <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-                    <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-5 2xl:h-5" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
+          ))}
         </div>
       </div>
     </section>

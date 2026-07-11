@@ -1,184 +1,93 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
-import CTA from "../sections/CTA";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { Mail, Phone, MapPin } from "lucide-react";
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
-  const offices = [
-    { city: "Pakistan", address: "Emirates Tower, 2nd & 3rd Floor,M-13, F-7 Markaz, Islamabad " },
-  ];
 
   const socials = [
     { icon: <FaInstagram size={18} />, href: "https://www.instagram.com/highrisedigitalagency/", label: "Instagram", hoverColor: "hover:text-[#E1306C] hover:border-[#E1306C]/40 hover:shadow-[0_0_20px_rgba(225,48,108,0.3)]" },
     { icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/company/high-rise-digital-agency/", label: "LinkedIn", hoverColor: "hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:shadow-[0_0_20px_rgba(10,102,194,0.3)]" },
     { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/highrisedigital.official/", label: "Facebook", hoverColor: "hover:text-[#1877F2] hover:border-[#1877F2]/40 hover:shadow-[0_0_20px_rgba(24,119,242,0.3)]" },
-    { icon: <Mail size={18} />, href: "mailto: hello@fiboentertainment.com", label: "Email", hoverColor: "hover:text-blue-400 hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]" },
+    { icon: <Mail size={18} />, href: "mailto:hello@fiboentertainment.com", label: "Email", hoverColor: "hover:text-blue-400 hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]" },
   ];
 
   return (
-    <footer className="text-white relative bg-[#111827] border-t border-white/5 overflow-hidden selection:bg-blue-600/30">
-
-      {/* 🌌 Cosmic Glows */}
-      <div className="absolute top-0 left-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-blue-600/[0.04] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[600px] 2xl:w-[1000px] h-[300px] bg-cyan-500/[0.03] blur-[120px] 2xl:blur-[200px] rounded-full pointer-events-none" />
-
-      <div className="relative z-10 max-w-[1600px] 2xl:max-w-[2400px] mx-auto px-6 2xl:px-16">
+    <footer className="text-white relative bg-[#111827] border-t border-white/5 overflow-hidden">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 py-16">
 
         {/* --- MAIN LINKS GRID --- */}
-        <div className="p-3 pt-4 pb-18 md:pt-6 md:pb-16 2xl:pt-8 lg:pt-4 2xl:pb-12 lg:pb-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 2xl:gap-24 border-b border-white/5">
-
-          {/* Column 1: Brand & Logo Section */}
-          <div className="lg:col-span-3 flex flex-col items-start justify-start">
-            <Link href="/" className="inline-block outline-none p-0 m-0 leading-[0] group shrink-0 select-none">
-              <Image
-                src="/fibo-footer-logo.png"
-                alt="Fibo Entertainment Logo"
-                width={240}
-                height={64}
-                priority
-                className="h-10 md:h-16 lg:h-16 mb-[18px] mt-[45px] w-auto object-contain origin-left transition-transform duration-500 group-hover:scale-[1.01]"
-              />
-            </Link>
-
-            <p className="text-white text-[16px] md:text-sm 2xl:text-xl font-medium leading-relaxed max-w-[300px] 2xl:max-w-xl -mt-2 2xl:mb-[-25px]">
-              Let’s discuss your goals and create a powerful strategy to boost your business growth online.
-            </p>
-
-            <div className="flex items-center gap-3 mt-6 2xl:mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/5 pb-16">
+          <div className="lg:col-span-1 space-y-6">
+            <Link href="/"><Image src="/fibo-footer-logo.png" alt="Logo" width={200} height={50} className="h-10 w-auto" /></Link>
+            <p className="text-zinc-400 text-sm leading-relaxed">Let’s discuss your goals and create a powerful strategy to boost your business growth online.</p>
+            <div className="flex items-center gap-3">
               {socials.map((item, i) => (
-                <Link
-                  key={i}
-                  href={item.href}
-                  className={`w-10 h-10 2xl:w-14 2xl:h-14 rounded-xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-zinc-400 transition-all duration-300 ${item.hoverColor}`}
-                >
-                  {/* 🎯 FIX: Scale ko 2xl par exact balance kiya taake spacing/padding har screen par normal dikhe */}
-                  <div className="scale-90 md:scale-100 2xl:scale-[1.35] flex items-center justify-center shrink-0">
-                    {item.icon}
-                  </div>
-                </Link>
+                <Link key={i} href={item.href} className={`w-10 h-10 rounded-xl  border border-white/10 flex items-center justify-center  transition-all ${item.hoverColor}`}>{item.icon}</Link>
               ))}
             </div>
           </div>
 
-          {/* Column 2: Quick Links */}
-          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-              Quick Links
-            </span>
-            <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
-              {[
-                { name: "Home", href: "/" },
-                { name: "About", href: "/about" },
-                { name: "Services", href: "/services" },
-                { name: "Case Studies", href: "/case-studies" },
-                { name: "Blogs", href: "/blog" },
-              ].map((link, idx) => (
-                <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+          {/* Other columns (Quick Links, Expertise, Compliance) */}
+          <div className="space-y-6">
+             <span className="block font-bold text-white tracking-widest uppercase">Quick Links</span>
+             <div className="flex flex-col space-y-3 text-sm text-zinc-400">
+                <Link href="/">Home</Link>
+                <Link href="/about">About</Link>
+                <Link href="/services">Services</Link>
+             </div>
+          </div>
+          
+          <div className="space-y-6">
+             <span className="block font-bold text-white tracking-widest uppercase">Expertise</span>
+             <div className="flex flex-col space-y-3 text-sm text-zinc-400">
+                <Link href="/services/website-development">Web Development</Link>
+                <Link href="/services/seo">SEO</Link>
+                <Link href="/services/ai-automation">AI Automation</Link>
+             </div>
           </div>
 
-          {/* Column 2: Our Services (Expertise) */}
-          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-              Expertise
-            </span>
-            <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
-              {[
-                { title: "Website Development", slug: "website-development" },
-                { title: "Search Engine Optimization", slug: "seo" },
-                { title: "Social Media Marketing", slug: "social-media-marketing" },
-                { title: "AI Automation", slug: "ai-automation" },
-                { title: "Ecommerce Management", slug: "e-commerce-management" },
-              ].map((service, idx) => (
-                <Link
-                  key={idx}
-                  href={`/services/${service.slug}`}
-                  className="text-white-400 hover:text-white transition-all duration-300 w-max"
-                >
-                  {service.title}
-                </Link>
-              ))}
-            </div>
+          <div className="space-y-6">
+             <span className="block font-bold text-white tracking-widest uppercase">Compliance</span>
+             <div className="flex flex-col space-y-3 text-sm text-zinc-400">
+                <Link href="/privacy">Privacy Policy</Link>
+                <Link href="/terms">Terms</Link>
+                <Link href="/faq">FAQs</Link>
+             </div>
           </div>
-
-          {/* Column 3: Compliance */}
-          <div className="lg:col-span-2 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-              Compliance
-            </span>
-            <div className="flex flex-col space-y-3 md:space-y-4 text-[16px] md:text-[16px] font-normal">
-              {[
-                { name: "Privacy Policy", href: "/privacy" },
-                { name: "Terms & Conditions", href: "/terms" },
-                { name: "Global Pricing", href: "/pricing" },
-                { name: "FAQs", href: "/faq" },
-                { name: "Contact US", href: "/contact" }
-              ].map((link, idx) => (
-                <Link key={idx} href={link.href} className="text-white-400 hover:text-white transition-colors w-max">
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Column 4: Inquiries */}
-          <div className="lg:col-span-3 pt-6 lg:pt-10 2xl:pt-16 space-y-6">
-            <span className="block text-[16px] md:text-[18px] font-bold text-white tracking-widest uppercase">
-              Inquiries
-            </span>
-            <div className="space-y-4 text-[16px] md:text-[16px]">
-              <a href="mailto:hello@fiboentertainment.com" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/30 transition-all duration-300 group">
-                <Mail size={18} className="text-blue-400 shrink-0 2xl:w-8 2xl:h-8" />
-                <div className="space-y-1">
-                  <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Drop an email</p>
-                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors break-all">hello@fiboentertainment.com</p>
-                </div>
-              </a>
-              <a href="tel:+923394004791" className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
-                <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
-                <div className="space-y-1">
-                  <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Corporate Support</p>
-                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+923394004791</p>
-                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">+923461536333</p>
-                </div>
-              </a>
-              <div  className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-all duration-300 group">
-                <Phone size={18} className="text-cyan-400 shrink-0 2xl:w-8 2xl:h-8" />
-                <div className="space-y-1">
-                  <p className="text-[16px] 2xl:text-[13px] text-white-500 uppercase font-bold tracking-wider">Address</p>
-                  <p className="text-[16px] md:text-[16px] lg:text-[15px] xl:text-[17px] 2xl:text-xl font-normal text-white-300 group-hover:text-white transition-colors">Emirates Tower, 2nd & 3rd Floor,M-13, F-7 Markaz, Islamabad</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
         </div>
 
-        {/* 🏢 OFFICES GRID */}
-     
-
-        {/* 🔒 BOTTOM BAR */}
-        <div className="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[10px] 2xl:text-lg text-white-500 font-semibold uppercase tracking-wider">
-            © {currentYear} Fibo Entertairnment LLC.
-          </p>
-          <p className="text-[10px] 2xl:text-base tracking-[3px] text-white-600 font-bold uppercase">
-            Built for growth • Designed for dominance
-          </p>
+        {/* --- 3-CARD INQUIRIES SECTION --- */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
+          <a href="mailto:hello@fiboentertainment.com" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/50 transition-all">
+            <Mail className="text-blue-400" />
+            <div>
+              <p className="text-[10px] uppercase font-bold text-zinc-500">Email Us</p>
+              <p className="text-sm">hello@fiboentertainment.com</p>
+            </div>
+          </a>
+          <a href="tel:+923394004791" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/50 transition-all">
+            <Phone className="text-cyan-400" />
+            <div>
+              <p className="text-[10px] uppercase font-bold text-zinc-500">Call Support</p>
+              <p className="text-sm">+92 339 4004791</p>
+            </div>
+          </a>
+          <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-emerald-500/50 transition-all">
+            <MapPin className="text-emerald-400" />
+            <div>
+              <p className="text-[10px] uppercase font-bold text-zinc-500">Visit Us</p>
+              <p className="text-sm">Islamabad, F-7 Markaz</p>
+            </div>
+          </div>
         </div>
 
+        {/* BOTTOM BAR */}
+        <div className="pt-12 text-[10px] text-zinc-500 font-bold uppercase tracking-widest text-center">
+          © {currentYear} Fibo Entertainment LLC. Built for growth • Designed for dominance
+        </div>
       </div>
     </footer>
   );

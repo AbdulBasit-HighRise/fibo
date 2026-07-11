@@ -2,120 +2,67 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Star } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section
-      className="relative min-h-fit lg:min-h-[70vh] 2xl:min-h-[65vh] 3xl:min-h-[60vh] bg-[#FFD36A] overflow-hidden flex items-center selection:bg-blue-600 pb-4 pt-36 md:pt-40 lg:pt-40 lg:pb-18 2xl:pt-56 2xl:pb-32 3xl:pt-64 3xl:pb-36"
-    >
-      {/* 🖼️ BACKGROUND IMAGE LAYER */}
-      {/* <div className="absolute inset-0 z-0">
-        <Image
-          src="/home-hero.jpg"
-          alt="High Rise Digital - Trusted Digital Marketing Agency Background"
-          fill
-          priority
-          quality={90}
-          className="object-cover opacity-15"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#030303]/80 via-transparent to-[#030303]" />
-      </div> */}
+    <section className="relative min-h-[80vh] flex items-center overflow-hidden pt-36 pb-20">
+      {/* 1. Base Gold Layer */}
+      <div className="absolute inset-0 bg-[#FFD36A]" />
 
-      {/* 🌌 AMBIENT LIGHTS (Lag-free static blur) */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <div className="absolute top-0 left-[-10%] w-[300px] sm:w-[600px] 2xl:w-[1000px] h-[300px] sm:h-[600px] 2xl:h-[1000px] bg-blue-600/[0.05] blur-[120px] rounded-full" />
-        <div className="absolute top-[20%] right-[10%] w-72 h-72 2xl:w-[500px] 2xl:h-[500px] rounded-full bg-blue-500/5 blur-[100px] hidden lg:block" />
-      </div>
+      {/* 2. Deep Cinematic Gradient Overlay (Black to transparent) */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/40 to-transparent z-[1]" />
 
-      <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 2xl:gap-16 items-center">
+      {/* 3. Subtle Texture Grain */}
+      <div className="absolute inset-0 opacity-[0.04] z-[2] pointer-events-none" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
 
-          {/* 📝 LEFT CONTENT (Clean performance load) */}
-          <div className="lg:col-span-7 space-y-0 text-center lg:text-left flex flex-col items-center lg:items-start">
+      <div className="relative z-[3] max-w-7xl mx-auto px-6 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
-            {/* 🖥️ Heading: Fixed line wrapping for mobile & desktop perfectly */}
-            <h1 className="text-[1.9rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[3.8rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-black max-w-2xl lg:max-w-none">
-              Digital{" "}
-                Marketing Agency
-             
+          {/* LEFT CONTENT */}
+          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
+            <h1 className="text-[2.5rem] sm:text-[4rem] lg:text-[4.5rem] font-black leading-[1] tracking-tighter text-white">
+              Digital <br /> Marketing Agency
             </h1>
 
-            {/* 🖥️ Paragraph: Adjusted for a clean hierarchy */}
-            <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-2xl mx-auto lg:mx-0 opacity-90">
+            <p className="text-white/90 text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
               We are a results-driven digital marketing agency providing SEO, PPC, social media, and web solutions for businesses across the USA, UK, Australia, UAE, and worldwide markets.
             </p>
 
-            {/* Buttons Container */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 2xl:gap-5 w-full sm:w-auto pt-6 md:pt-8">
-
-              {/* START PROJECT BUTTON */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <Link href="/contact" className="w-full sm:w-auto">
-                <button
-                  className="group relative overflow-hidden w-full sm:min-w-[160px] 2xl:min-w-[200px] h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] tracking-[2px] flex items-center justify-center gap-2 transition-all duration-500 shadow-lg active:scale-95"
-                >
-                  <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                  <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
-                    Start Project
-                    <ArrowUpRight size={14} className="2xl:w-5 2xl:h-5 group-hover:rotate-45 transition-transform duration-300" />
+                <button className="group relative overflow-hidden w-full sm:min-w-[180px] h-[52px] rounded-full bg-white text-black font-black text-[12px] uppercase tracking-[2px] flex items-center justify-center gap-2 transition-all active:scale-95 shadow-xl">
+                  <div className="absolute inset-0 w-0  transition-all duration-500 group-hover:w-full" />
+                  <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors">
+                    Get Quote <ArrowUpRight size={16} />
                   </span>
                 </button>
               </Link>
-
-              {/* VIEW WORK BUTTON */}
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center justify-center w-full sm:min-w-[140px] 2xl:min-w-[180px] h-[48px] 2xl:h-[56px] rounded-full border border-white/20 text-zinc-400 text-[11px] 2xl:text-[13px] font-bold uppercase tracking-[2px] hover:border-white hover:text-white transition-all duration-300"
-              >
+              <Link href="/case-studies" className="text-white text-[12px] font-bold uppercase tracking-[2px] border-b-2 border-white/30 hover:border-white transition-all">
                 View Work
               </Link>
             </div>
-
-            {/* 🎯 FIXED SOCIAL TRUST BLOCK: Error-free responsive handling */}
-            <div className="flex flex-col-reverse md:flex-row items-center gap-3 pt-6 mt-6 border-t border-white/5 w-full max-w-md 2xl:max-w-2xl mx-auto lg:mx-0 text-center md:text-left">
-              <div className="flex items-center gap-1 justify-center md:justify-start">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={10} className="fill-yellow-500 text-yellow-500 2xl:w-4 2xl:h-4" />
-                ))}
-              </div>
-              <p className="text-white/70 font-bold text-[12px] 2xl:text-xs uppercase tracking-widest">
-                Trusted by 150+ rapid-scale founders
-              </p>
-            </div>
           </div>
 
-          {/* 📸 RIGHT IMAGE BLOCK (Only Animates/Spins On Mouse Hover) */}
-          <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="absolute inset-0 bg-blue-600/10 rounded-full blur-[80px] pointer-events-none" />
-
+          {/* RIGHT IMAGE */}
+          <div className="lg:col-span-5 flex justify-center">
             <motion.div
-              whileHover={{ rotate: 360 }}
-              transition={{ ease: "linear", duration: 15, repeat: Infinity }}
-              className="relative w-full max-w-[350px] lg:max-w-[450px] 2xl:max-w-[550px] 3xl:max-w-[650px] cursor-pointer will-change-transform"
+              whileHover={{ rotate: 10, scale: 1.05 }}
+              transition={{ duration: 0.5 }}
+              className="relative w-full max-w-[400px]"
             >
               <Image
                 src="/hero-img.webp"
                 alt="Strategic Digital Marketing"
-                width={700}
-                height={700}
+                width={600}
+                height={600}
                 priority
-                className="relative z-10 w-full h-auto object-contain drop-shadow-2xl"
+                className="w-full h-auto object-contain drop-shadow-2xl"
               />
             </motion.div>
           </div>
-
         </div>
       </div>
-
-      <style jsx global>{`
-        .animate-gradient { animation: gradientMove 6s linear infinite; }
-        @keyframes gradientMove {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
-        }
-      `}</style>
     </section>
   );
 }

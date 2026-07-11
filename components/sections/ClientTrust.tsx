@@ -24,63 +24,50 @@ export default function ClientTrust() {
   const duplicated = [...clientLogos, ...clientLogos];
 
   return (
-    <section className="relative py-4 md:py-6 2xl:py-8 bg-[#111827] overflow-hidden border-y border-white/5">
-      <div className="relative z-10 max-w-full mx-auto px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center gap-2 lg:gap-12">
+   <section className="relative py-12 md:py-16 bg-[#111827] overflow-hidden border-y border-white/5">
+  <div className="max-w-[1600px] mx-auto px-6">
+    
+    {/* HEADING - Centered */}
+    <div className="text-center mb-12">
+      <motion.h3
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-[2rem] sm:text-4xl lg:text-[3rem] font-black tracking-tighter text-white"
+      >
+        Our Clients
+      </motion.h3>
+    </div>
 
-          {/* LEFT SIDE: Heading */}
-          <div className="shrink-0 text-center lg:text-left">
-  <motion.h3
-    initial={{ opacity: 0, x: -20 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    viewport={{ once: true }}
-    /* 🎯 MATCHED DESIGN SYSTEM: Exact consistent fluid sizing scale, tight tracking, and layout line-height */
-    className="!text-[2rem] sm:!text-4xl md:!text-4xl lg:!text-[2.5rem] xl:!text-[3rem]  font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case"
-  >
-    Our{" "}
-    {/* 🎯 MATCHED GRADIENT BLOCK: Set to 'block' with top margin spacing and right padding safety bounds */}
-    <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
-      Clients
-    </span>
-  </motion.h3>
-</div>
-          {/* RIGHT SIDE: Heavy Marquee Track */}
-          <div className="w-full lg:flex-1 relative h-20 md:h-24 2xl:h-32 flex items-center overflow-hidden">
-            <motion.div
-              className="flex gap-6 md:gap-8 2xl:gap-16 w-max items-center" // 🛠️ Gap reduced for tighter slider
-              animate={{ x: ["0%", "-50%"] }}
-              transition={{
-                duration: 40, // Speed slightly adjusted for smoothness
-                repeat: Infinity,
-                ease: "linear",
-              }}
-              whileHover={{ transition: { duration: 80 } }}
-            >
-              {duplicated.map((client, index) => (
-                <div
-                  key={index}
-                  // 🛠️ Reduced min-width to prevent over-stretching
-                  className="relative flex items-center justify-center min-w-[120px] md:min-w-[150px] 2xl:min-w-[180px] group/logo select-none"
-                >
-                  <Image
-                    src={client.src}
-                    alt={client.name}
-                    width={180} // Width thodi kam ki for crispness
-                    height={60}
-                    // 🛠️ Height adjusted: h-10 (Mobile) | h-12 (Tablet) | h-16 (4K)
-                    // object-contain ensures the logo doesn't stretch or pixelate
-                    className="h-10 md:h-12 2xl:h-16 w-auto object-contain transition-all duration-500 opacity-80 group-hover/logo:opacity-100 filter brightness-110"
-                  />
-                  
-                  {/* Subtle hover indicator */}
-                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-8 h-1 bg-blue-500/0 group-hover/logo:bg-blue-500/40 blur-sm transition-all duration-500" />
-                </div>
-              ))}
-            </motion.div>
+    {/* LOGO TRACK - Below Heading */}
+    <div className="w-full relative h-20 md:h-24 flex items-center overflow-hidden">
+      <motion.div
+        className="flex gap-12 md:gap-20 w-max items-center"
+        animate={{ x: ["0%", "-50%"] }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear",
+        }}
+      >
+        {duplicated.map((client, index) => (
+          <div
+            key={index}
+            className="relative flex items-center justify-center min-w-[100px] group/logo select-none"
+          >
+            <Image
+              src={client.src}
+              alt={client.name}
+              width={180}
+              height={60}
+              className="h-10 md:h-12 w-auto object-contain transition-all duration-500  group-hover/logo:opacity-100 brightness-110"
+            />
           </div>
+        ))}
+      </motion.div>
+    </div>
 
-        </div>
-      </div>
-    </section>
+  </div>
+</section>
   );
 }

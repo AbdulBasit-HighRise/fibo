@@ -20,6 +20,8 @@ const SERVICES = [
   { id: "04", title: "AI Automation", icon: Bot, link: "/services/ai-automation", desc: "Streamlining business operations with smart AI automation solutions for improved productivity." },
   { id: "05", title: "eCommerce Management", icon: ShoppingCart, link: "/services/e-commerce-management", desc: "Managing online stores efficiently to increase sales, customer experience, and business growth." },
   { id: "06", title: "Branding & Identity", icon: Palette, link: "/services/branding", desc: "Building strong brand identities that create trust, recognition, and lasting customer impressions." },
+  { id: "06", title: "Branding & Identity", icon: Palette, link: "/services/branding", desc: "Building strong brand identities that create trust, recognition, and lasting customer impressions." },
+  { id: "06", title: "Branding & Identity", icon: Palette, link: "/services/branding", desc: "Building strong brand identities that create trust, recognition, and lasting customer impressions." },
 ];
 
 export default function Services() {
