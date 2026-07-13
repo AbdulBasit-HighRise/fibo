@@ -3,18 +3,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-
+import AuditCTA from "@/components/sections/AuditCTA";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socials = [
-    { icon: <FaInstagram size={18} />, href: "https://www.instagram.com/highrisedigitalagency/", label: "Instagram", hoverColor: "hover:text-[#E1306C] hover:border-[#E1306C]/40 hover:shadow-[0_0_20px_rgba(225,48,108,0.3)]" },
-    { icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/company/high-rise-digital-agency/", label: "LinkedIn", hoverColor: "hover:text-[#0A66C2] hover:border-[#0A66C2]/40 hover:shadow-[0_0_20px_rgba(10,102,194,0.3)]" },
-    { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/highrisedigital.official/", label: "Facebook", hoverColor: "hover:text-[#1877F2] hover:border-[#1877F2]/40 hover:shadow-[0_0_20px_rgba(24,119,242,0.3)]" },
-    { icon: <Mail size={18} />, href: "mailto:hello@fiboentertainment.com", label: "Email", hoverColor: "hover:text-blue-400 hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(59,130,246,0.3)]" },
+    { icon: <FaInstagram size={18} />, href: "https://www.instagram.com/highrisedigitalagency/", label: "Instagram", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
+    { icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/company/high-rise-digital-agency/", label: "LinkedIn", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
+    { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/highrisedigital.official/", label: "Facebook", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
+    { icon: <Mail size={18} />, href: "mailto:hello@fiboentertainment.com", label: "Email", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
   ];
 
   return (
+    <>
+    <AuditCTA />
     <footer className="text-white relative bg-[#111827] border-t border-white/5 overflow-hidden">
       <div className="relative z-10 max-w-[1600px] mx-auto px-6 py-16">
 
@@ -33,12 +35,14 @@ export default function Footer() {
           {/* Other columns (Quick Links, Expertise, Compliance) */}
           <div className="space-y-6">
             <span className="block font-bold text-white tracking-widest uppercase">Quick Links</span>
-            <div className="flex flex-col space-y-3 text-sm text-zinc-400">
-              <Link href="/">Home</Link>
-              <Link href="/about">About</Link>
-              <Link href="/services">Services</Link>
-              <Link href="/Case-Studies">Our Work</Link>
-              <Link href="/contact">Contact</Link>
+            <div className=" flex flex-col space-y-3 text-sm text-zinc-400">
+              <Link className="hover:text-[#FFD36A]" href="/">Home</Link>
+              <Link className="hover:text-[#FFD36A]" href="/about">About</Link>
+              <Link className="hover:text-[#FFD36A]" href="/services">Services</Link>
+              <Link className="hover:text-[#FFD36A]" href="/our-work">Our Work</Link>
+              <Link className="hover:text-[#FFD36A]" href="/contact">Contact</Link>
+              <Link className="hover:text-[#FFD36A]" href="/privacy">Privacy Policy</Link>
+              <Link className="hover:text-[#FFD36A]" href="/terms-conditions">Terms & Condition</Link>
             </div>
           </div>
 
@@ -57,32 +61,24 @@ export default function Footer() {
           </div>
 
           <div className="space-y-6">
-            <span className="block font-bold text-white tracking-widest uppercase">Compliance</span>
-            <div className="flex flex-col space-y-3 text-sm text-zinc-400">
-              <Link href="/privacy">Privacy Policy</Link>
-              <Link href="/terms">Terms</Link>
-              <Link href="/faq">FAQs</Link>
-            </div>
-          </div>
-        </div>
-
-        {/* --- 3-CARD INQUIRIES SECTION --- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
-          <a href="mailto:hello@fiboentertainment.com" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-blue-500/50 transition-all">
+            <span className="block font-bold text-white tracking-widest uppercase">Contact Info</span>
+            <div className="flex flex-col space-y-3 text-sm  text-zinc-400">
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-6 pt-3">
+          <a href="mailto:hello@fiboentertainment.com" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#FFD36A] transition-all">
             <Mail className="text-blue-400" />
             <div>
               <p className="text-[10px] uppercase font-bold text-zinc-500">Email Us</p>
               <p className="text-sm">hello@fiboentertainment.com</p>
             </div>
           </a>
-          <a href="tel:+923394004791" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/50 transition-all">
+          <a href="tel:+923394004791" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#FFD36A] transition-all">
             <Phone className="text-cyan-400" />
             <div>
               <p className="text-[10px] uppercase font-bold text-zinc-500">Call Support</p>
               <p className="text-sm">+92 339 4004791</p>
             </div>
           </a>
-          <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-emerald-500/50 transition-all">
+          <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#FFD36A] transition-all">
             <MapPin className="text-emerald-400" />
             <div>
               <p className="text-[10px] uppercase font-bold text-zinc-500">Visit Us</p>
@@ -90,6 +86,12 @@ export default function Footer() {
             </div>
           </div>
         </div>
+            </div>
+          </div>
+        </div>
+
+        {/* --- 3-CARD INQUIRIES SECTION --- */}
+      
 
         {/* BOTTOM BAR */}
         <div className="pt-12 text-[10px] text-zinc-500 font-bold uppercase tracking-widest text-center">
@@ -97,5 +99,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }

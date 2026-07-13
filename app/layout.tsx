@@ -66,7 +66,7 @@ export default function RootLayout({
         className="bg-[#111827] text-white antialiased overflow-x-hidden selection:bg-blue-600/30"
         suppressHydrationWarning
       >
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         <Navbar />
         <main className="relative z-10 min-h-screen w-full max-w-[2560px] mx-auto">
           {children}

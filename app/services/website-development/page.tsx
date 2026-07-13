@@ -1,132 +1,129 @@
 "use client";
 import React from "react";
+import Link from 'next/link';
+import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { Plus, Minus } from "lucide-react";
+
+
 import {
-  Sparkles, Layout, Flame, Cpu, ShoppingBag,
-  Database, Layers, Zap, Code, Terminal, ChevronRight, Monitor, Building2, RefreshCw, Wrench
+  ArrowUpRight,
+  Cpu,
+  BarChart3,
+  PenTool,
+  Rocket,
+  ShieldCheck,
+  Zap,
+  Search,
+  LayoutGrid,
+  FileText,
+  Globe2,
+  LineChart,
+  Link2,
+  Box,
+  Layers,
+  FileCode2,
+  BarChart4,
+  Flame,
+  ArrowRight,
+  ChevronRight
 } from "lucide-react";
 
-{/* 🎯 FIXED IMPORT ERROR: Added both missing icons safely */ }
-import { ArrowRight } from "lucide-react";
+// Section Components
 
-// Sirf 5 main logos
-const awardLogos = [
-  { src: "/webflow.webp", alt: "National Excellence" },
-  { src: "/weebly.png", alt: "Top 10 Agency" },
-  { src: "/WIX.png", alt: "Forbes Member" }, // Iska bhi check kar lena agar live par masla kare toh 'wix.png' kar dena
-  
-  // 🎯 FIXED: Pure Lowercase paths dhal diye hain
-  { src: "/Wordpress-logo.png", alt: "Clutch Recognition" },
-  { src: "/shopify-logo.webp", alt: "The Manifest" },
-];
-import Image from "next/image";
-// Components Imports
-import Stats from "@/components/sections/Stats";
-import CTA from "@/components/sections/CTA";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import Process from "@/components/sections/HowWeWork";
-import Testimonials from "@/components/sections/Testimonials";
-import Portfolio from "@/components/sections/PortfolioPreview";
-import WebDevFAQ from "@/components/faqs/WebDevFAQ";
-import IndustryExpertise from "@/components/IndustryExpertise";
-import { ArrowUpRight, BarChart3 } from "lucide-react";
+
 import { TrendingUp, Star, CheckCircle2 } from "lucide-react";
-import TrustClient from "@/components/sections/ClientTrust"
-import ServiceCTA from "@/components/sections/ServiceCTA"
 
-const features = [
-  {
-    icon: <Zap className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Custom Design",
-    desc: "We build websites that match your brand, business goals, and customer needs perfectly.",
-  },
-  {
-    icon: <Star className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Mobile-Friendly",
-    desc: "Your website will work smoothly on mobiles, tablets, and desktops for better user experience.",
-  },
-  {
-    icon: <ShieldCheck className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Fast & Secure",
-    desc: "We create fast-loading and secure websites that help improve performance and customer trust online.",
-  },
-  {
-    icon: <TrendingUp className="w-5 h-5 2xl:w-8 2xl:h-8" />,
-    title: "Ongoing Support",
-    desc: "Our team provides reliable support, updates, and maintenance whenever you need help with your website.",
-  },
-];
-const bentoProjects = [
-  // {
-  //   id: "01",
-  //   title: "RMC Roofing", // 🎯 Spelling fixed: Roofin -> Roofing
-  //   image: "/web1.jpg",
-  //   slug: "https://rhinoroofingorlando.com/",
-  //   size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-  // },
-  {
-    id: "02",
-    title: "Zaiqah Royale",
-    image: "/web9.jpg",
-    slug: "https://zaiqahroyale.com/",
-    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
-  },
-  {
-    id: "03",
-    title: "Car Recovery London",
-    image: "/web8.jpg",
-    slug: "https://carsrecoverylondon.com/",
-    size: "lg:col-span-1 h-[400px] 2xl:h-[500px]",
-  },
-  // {
-  //   id: "04",
-  //   title: "Channel1",
-  //   image: "/web3.jpg",
-  //   slug: "https://channel1.com.au/",
-  //   size: "lg:col-span-2 h-[400px] 2xl:h-[500px]",
-  // }
-];
-import { Search, PenTool, Rocket, ShieldCheck, } from "lucide-react";
+export default function GraphicDesignPage() {
+  // 📊 Dynamic Working Process Data Array
+  const faqs = [
+    {
+      q: "What tech stack do you specialize in?",
+      a: "We specialize in modern, high-performance tech stacks: React.js, Next.js, TypeScript, Tailwind CSS for frontend, and Node.js/Express for backend."
+    },
+    {
+      q: "How long does it take to build a website?",
+      a: "It depends on complexity! A custom landing page takes 1-2 weeks, while a full-scale web application usually takes 6-12 weeks."
+    },
+    {
+      q: "Do you offer post-launch maintenance?",
+      a: "Absolutely. We provide ongoing support, including performance updates, security patches, and feature enhancements to keep your site ahead."
+    },
+    {
+      q: "Can you convert my existing design to code?",
+      a: "Yes! We excel at turning Figma, Adobe XD, or Sketch designs into clean, responsive, and functional web code."
+    },
+    {
+      q: "Is my website going to be SEO-friendly?",
+      a: "Yes, we build with SEO in mind—clean semantic HTML, fast loading speeds, and proper metadata structuring for better search engine indexing."
+    },
+    {
+      q: "Will my website be mobile-responsive?",
+      a: "Definitely. All our projects are built with a mobile-first approach, ensuring they look and work perfectly on every device, from phones to desktops."
+    }
+  ];
+  const features = [
+    {
+      icon: <Zap className="w-5 h-5 2xl:w-8 2xl:h-8" />,
+      title: "Full-Stack Development",
+      desc: "End-to-end solutions using React.js, Next.js, and Node.js to build powerful, scalable, and lightning-fast web applications.",
+    },
+    {
+      icon: <Star className="w-5 h-5 2xl:w-8 2xl:h-8" />,
+      title: "Responsive Frontend",
+      desc: "Crafting pixel-perfect, mobile-first interfaces using Tailwind CSS and Framer Motion for a seamless and premium user experience.",
+    },
+    {
+      icon: <ShieldCheck className="w-5 h-5 2xl:w-8 2xl:h-8" />,
+      title: "Performance Optimization",
+      desc: "We focus on Core Web Vitals, image optimization, and clean code to ensure your website loads instantly and ranks higher on Google.",
+    },
+    {
+      icon: <TrendingUp className="w-5 h-5 2xl:w-8 2xl:h-8" />,
+      title: "Custom CMS & Integration",
+      desc: "Building easy-to-manage dynamic websites with Headless CMS or WordPress, integrated with APIs and secure third-party services.",
+    },
+  ];
+  const steps = [
+    {
+      id: "01",
+      title: "Requirements Analysis",
+      desc: "We dive deep into your business logic, defining the features, architecture, and tech stack that best suits your project goals.",
+      icon: <Search className="w-5 h-5 2xl:w-7 2xl:h-7" />
+    },
+    {
+      id: "02",
+      title: "UI/UX Prototyping",
+      desc: "We design wireframes and interactive prototypes so you can visualize the user flow before a single line of code is written.",
+      icon: <LayoutGrid className="w-5 h-5 2xl:w-7 2xl:h-7" />
+    },
+    {
+      id: "03",
+      title: "Agile Development",
+      desc: "We build your application in sprints, focusing on clean, maintainable, and modular code for maximum scalability.",
+      icon: <FileText className="w-5 h-5 2xl:w-7 2xl:h-7" />
+    },
+    {
+      id: "04",
+      title: "QA & Testing",
+      desc: "Rigorous cross-browser testing and performance audits to ensure your application is bug-free and fully responsive.",
+      icon: <Globe2 className="w-5 h-5 2xl:w-7 2xl:h-7" />
+    },
+    {
+      id: "05",
+      title: "Deployment & Support",
+      desc: "We handle the seamless launch to live servers or cloud platforms and provide continuous monitoring and updates.",
+      icon: <LineChart className="w-5 h-5 2xl:w-7 2xl:h-7" />
+    }
+  ];
+  const [activeIdx, setActiveIdx] = useState<number | null>(null);
 
-const steps = [
-  {
-    id: "01",
-    icon: <Search className="w-5 h-5 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />,
-    title: "Understanding Your Business",
-    desc: "We discuss your goals, ideas, target audience, and website requirements to plan the right solution.",
-  },
-  {
-    id: "02",
-    icon: <PenTool className="w-5 h-5 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />,
-    title: "Planning & Design",
-    desc: "Our team creates a clean, modern design layout that matches your brand and business style perfectly.",
-  },
-  {
-    id: "03",
-    icon: <Rocket className="w-5 h-5 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />,
-    title: "Website Development",
-    desc: "We build your website with fast performance, a mobile-friendly design, and all the features you need.",
-  },
-  {
-    id: "04",
-    icon: <ShieldCheck className="w-5 h-5 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />,
-    title: "Testing & Review",
-    desc: "Before launch, we test everything carefully to make sure your website works smoothly on all devices.",
-  },
-  {
-    id: "05",
-    icon: <BarChart3 className="w-5 h-5 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />,
-    title: "Launch & Support",
-    desc: "Once approved, we launch your website and provide ongoing support, updates, and maintenance when needed.",
-  },
-];
-export default function WebDevPage() {
   return (
+
     <main className="bg-[#030712] text-white selection:bg-blue-600 overflow-x-hidden">
 
-      {/* 🎯 SYNCED WEB DEVELOPMENT HERO SECTION: Formatted exactly on top of your verified master framework */}
+      {/* 🎯 SYNCED SEO HERO SECTION: Formatted exactly on top of your verified master framework */}
       <section className="relative w-full overflow-hidden bg-[#1E2939]">
         <div className="container-wide">
 
@@ -146,430 +143,290 @@ export default function WebDevPage() {
           {/* Ambient Blur Dot to lock the signature aesthetic */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
-          {/* Full Sized Padded Content Wrapper - 🎯 FIXED: Aligned perfectly with your AI Automation global structure */}
+          {/* Full Sized Padded Content Wrapper - 🎯 FIXED: Aligned perfectly with your global framework layout */}
           <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
             <div className="max-w-5xl">
 
-              {/* Glassmorphism Badge Container */}
-              {/* (If you have a badge code, paste it here) */}
 
-              {/* Main Typography Block - 🎯 FIXED: Replicated the exact smooth response scaling and line-height */}
+
               <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
-                Website Development{" "}
-                <span className=" mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Agency.
+                SCALABLE WEB {" "}
+                <span className="mt-2 block bg-gradient-to-r from-[#FFD36A] via-[#EAB308] to-[#FFD36A] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                  SOLUTIONS & APPLICATIONS.
                 </span>
               </h1>
 
-              {/* Description Paragraph - Aligned perfectly with global layout standards */}
+              {/* Description Paragraph */}
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full max-w-3xl mx-auto lg:mx-0 opacity-80">
-                Professional website development agency delivering responsive, user-friendly, and high-performing websites that help businesses grow, attract customers, and increase online visibility.
+                We build the digital foundation for your business growth. From lightning-fast frontend interfaces to robust full-stack applications, we leverage modern tech stacks like React and Next.js to deliver high-performance, responsive, and secure web experiences that scale.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <>
-        {/* 🎯 ABOUT SECTION */}
-        <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-0 bg-[#1E2939] overflow-hidden">
 
-          {/* Background Glow */}
-          <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
 
-          <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+      <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#FFFFFF] overflow-hidden">
 
-              {/* LEFT: Image */}
+
+        {/* Background Glow */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+
+            {/* LEFT: Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative flex items-center justify-center lg:justify-start order-2 lg:order-1"
+            >
+              <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
+              <div className="relative z-10 w-full max-w-[320px] md:max-w-[490px] 2xl:max-w-[650px]">
+                <Image
+                  src="/web.webp"
+                  alt="High Rise Digital - Leading Global Agency"
+                  width={700}
+                  height={700}
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  priority
+                />
+              </div>
+            </motion.div>
+
+            {/* RIGHT: Text Content */}
+            <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
+              <div>
+                <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
+                  Build High-Performance Apps with {" "}
+                  <span className="mt-0 mb-2 py-1 text-transparent bg-clip-text bg-gradient-to-r from-[#FFD36A] to-amber-600">
+                    Our Custom Web Development.
+                  </span>
+                </h2>
+              </div>
+
               <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
                 viewport={{ once: true }}
-                className="relative flex items-center justify-center lg:justify-start order-2 lg:order-1"
+                className="space-y-6 md:space-y-8"
               >
-                <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
-                <div className="relative z-10 w-full max-w-[320px] md:max-w-[490px] 2xl:max-w-[650px]">
-                  <Image
-                    src="/web.webp"
-                    alt="High Rise Digital - Leading Global Agency"
-                    width={700}
-                    height={700}
-                    className="w-full h-auto object-contain drop-shadow-2xl"
-                    priority
-                  />
-                </div>
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
+                <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+                  A clean UI is only the beginning; the real goal is to build a robust digital architecture that handles high traffic while maintaining lightning-fast performance. Our development approach focuses on modular code, SEO-readiness, and performance integrity to bring your business vision to life.
+                </p>
+
+                {/* Paragraph 2 */}
+                <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+                  By leveraging modern frameworks like React, Next.js, and Tailwind CSS, we streamline the path from a complex functional concept straight to a fully responsive, secure, and scalable web application that elevates your brand’s digital presence.
+                </p>
+
+                {/* Paragraph 3 */}
+                <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 hidden md:block">
+                  We don’t just write code; we optimize every layer of your application architecture to ensure technical precision, fast loading speeds, and maximum security across all devices and platforms.
+                </p>
               </motion.div>
 
-              {/* RIGHT: Text Content */}
-              <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
-                <div>
-                  <h2 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
-                    Experience  {" "}
-                    {/* 🎯 FIX: 'block' use kiya aur 'py-2 pr-4' add kiya taake text aur gradient boundaries safe rahein */}
-                    <span className=" mt-0 mb-2 py-1  text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                      Web Design & Development Services!
+              {/* Buttons Section */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                viewport={{ once: true }}
+                className="flex flex-wrap items-center gap-6 pt-4"
+              >
+                <Link href="/contact">
+                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-black text-white font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
+                    <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
+                    <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
+                      Get Quote <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </span>
-                  </h2>
-                </div>
+                  </button>
+                </Link>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
-                  viewport={{ once: true }}
-                  className="space-y-6 md:space-y-8"
+                <Link
+                  href="/services"
+                  className="group flex items-center gap-2 text-zinc-400 hover:text-black font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
                 >
-                  {/* Paragraph 1 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                    Our web design and development services help businesses of all sizes build a commanding online presence with modern, intuitive, and easy-to-use websites. We engineer digital assets that look stunningly professional, load instantly, and perform smoothly across all device metrics.
-                  </p>
-
-                  {/* Paragraph 2 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                    Our core team focuses heavily on understanding your strategic business goals, deploying customized structural frameworks that actively attract high-intent customers and fuel online scaling. From creative high-end designs to user-friendly UI layouts, every ecosystem is engineered to maximize visitor experience.
-                  </p>
-
-                  {/* Paragraph 3 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
-                    Whether you own a high-growth small business or a large-scale enterprise, we provide simple, reliable, and high-performance web solutions designed to anchor your long-term market success.
-                  </p>
-
-                  {/* Paragraph 4 */}
-
-                </motion.div>
-
-                {/* Buttons Section */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
-                  viewport={{ once: true }}
-                  className="flex flex-wrap items-center gap-6 pt-4"
-                >
-                  <Link href="/contact">
-                    <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
-                      <div className="absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out group-hover:w-full" />
-                      <span className="relative z-10 flex items-center gap-2 group-hover:text-white transition-colors duration-500">
-                        Get Quote <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                      </span>
-                    </button>
-                  </Link>
-
-                  <Link
-                    href="/services"
-                    className="group flex items-center gap-2 text-zinc-400 hover:text-white font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
-                  >
-                    View Services
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </motion.div>
-              </div>
+                  View Services
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </motion.div>
             </div>
           </div>
-        </section>
-
-        {/* 🎯 LOGO SECTION */}
-        <section className="pt-12 pb-12 md:pb-16 2xl:pb-20 bg-[#1E2939]">
-          <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 flex justify-center items-center">
-
-            {/* LOGOS GRID (🎯 FIXED: 1 COLUMN WITH BIGGER GAPS ON MOBILE) */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 md:gap-0 2xl:gap-20 lg:gap-20 items-center justify-center justify-items-center w-full max-w-5xl">
-              {awardLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="group relative w-full max-w-[180px] md:max-w-[200px] 2xl:max-w-[240px] flex items-center justify-center transition-all duration-500"
-                >
-                  {/* Logo Wrapper Container */}
-                  <div className="h-28 md:h-36 2xl:h-40 w-full relative flex items-center justify-center">
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      fill
-                      className="object-contain transition-all duration-500 group-hover:opacity-100 group-hover:grayscale-0 group-hover:scale-105"
-                      sizes="(max-width: 768px) 180px, (max-width: 1920px) 220px, 300px"
-                    />
-                  </div>
-
-                  {/* Premium Active Hover Glow */}
-                  <div className="absolute inset-0 bg-blue-500/5 blur-[40px] 2xl:blur-[60px] opacity-0 group-hover:opacity-100 transition-all duration-700 pointer-events-none" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </>
-
-      {/* 2. CORE STACK - Web Solutions (Synced perfectly with SEO & Digital Marketing Hover Architecture) */}
-      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
+        </div>
+      </section>
+      {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#E5E5E5]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
         </div>
 
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
-            <div>
-              <h3 className="text-[1.8rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
-                All Kinds of {" "}
-                <span className=" pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Web Solutions We Offer.
+            <div className="max-w-4xl">
+              <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-black">
+                Our{" "}
+                <span className="bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
+                  Specialized Web Development Services.
                 </span>
               </h3>
             </div>
           </div>
 
-          {/* 🎯 Grid Wrapper mapped with the 6 requested core services */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
             {[
-              { title: "Custom Website", desc: "Bespoke digital architecture built from scratch. High performance solutions tailored precisely to your functional scale.", icon: <Monitor size={24} /> },
-              { title: "eCommerce Store", desc: "High-converting WooCommerce, Shopify, and specialized headless commerce systems built for heavy transaction volume.", icon: <ShoppingBag size={24} /> },
-              { title: "Corporate Website", desc: "Enterprise-grade elite digital platforms designed to command market authority, speed, and seamless credibility.", icon: <Building2 size={24} /> },
-              { title: "CMS Websites", desc: "Scalable content systems giving you complete modular control without compromising speed, layout, or structural security.", icon: <Database size={24} /> },
-              { title: "Website Redesign", desc: "Transform legacy architectures into modern, ultra-fast interfaces optimized for maximum UX conversions and core web vitals.", icon: <RefreshCw size={24} /> },
-              { title: "Maintenance & Support", desc: "Proactive server monitoring, dependency updates, and database tuning to keep your systems operational 24/7.", icon: <Wrench size={24} /> }
+              {
+                title: "Custom Web Applications",
+                desc: "Building dynamic, scalable applications using React and Next.js, tailored to handle your specific business logic and user requirements.",
+                icon: <Box size={24} />
+              },
+              {
+                title: "Frontend Development",
+                desc: "Crafting beautiful, pixel-perfect, and highly responsive user interfaces using Tailwind CSS and Framer Motion for premium experiences.",
+                icon: <Zap size={24} />
+              },
+              {
+                title: "Backend & API Integration",
+                desc: "Developing secure server-side logic and robust API architectures to connect your application with powerful data services.",
+                icon: <Layers size={24} />
+              },
+              {
+                title: "Performance & SEO",
+                desc: "Optimizing your codebase, images, and structure to ensure lightning-fast loading speeds and top-tier search engine rankings.",
+                icon: <Cpu size={24} />
+              },
+              {
+                title: "Headless CMS Solutions",
+                desc: "Implementing flexible Headless CMS platforms that empower you to manage content seamlessly while keeping your site blazing fast.",
+                icon: <Flame size={24} />
+              },
+              {
+                title: "Support & Maintenance",
+                desc: "Continuous technical support, bug fixing, and performance updates to ensure your web infrastructure stays modern and secure.",
+                icon: <PenTool size={24} />
+              }
             ].map((s, i) => (
               <motion.div
                 key={i}
                 whileHover={{ y: -10 }}
-                // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-                style={{ backgroundColor: "#0971A6" }}
-                className="group relative p-10 2xl:p-16 rounded-[2.5rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 cursor-pointer h-full flex flex-col justify-between overflow-hidden"
+                // Background White kar diya hai
+                className="group relative p-10 2xl:p-16 rounded-[2.5rem] bg-white border border-zinc-200 hover:border-[#FFD36A] hover:shadow-[0_20px_50px_rgba(255,211,106,0.2)] transition-all duration-500 text-left cursor-pointer h-full flex flex-col justify-between overflow-hidden"
               >
-                {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
+                {/* Hover Effect Layer (Golden transition) */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#FFD36A]/10 via-transparent to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
 
-                {/* Foreground content inside relative z-10 for perfect layering */}
                 <div className="relative z-10 flex flex-col h-full justify-between w-full">
                   <div>
-                    {/* Icon aur Title Row Layout */}
+                    {/* Icon aur Title Row */}
                     <div className="flex items-center gap-5 mb-8">
-
-                      {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-                      <div
-                        style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-                        className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm flex items-center justify-center"
-                      >
-                        <div className="transition-colors duration-500">
-                          {s.icon}
-                        </div>
+                      {/* Icon Box: White bg, Gold icon hover */}
+                      <div className="shrink-0 w-12 h-12 2xl:w-16 2xl:h-16 rounded-xl bg-zinc-100 text-[#FFD36A] border border-zinc-200 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500 shadow-sm flex items-center justify-center scale-100 group-hover:scale-110">
+                        {s.icon}
                       </div>
 
-                      {/* Title Text (Kept original sizes, added text-white and hover states) */}
-                      <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight tracking-tight">
+                      {/* Title: Black text, hover par Golden */}
+                      <h4 className="font-black text-[1.2rem] sm:text-[1.3rem] lg:text-[1.4rem] 2xl:text-[1.6rem] tracking-tight text-black group-hover:text-[#FFD36A] transition-colors leading-tight">
                         {s.title}
                       </h4>
                     </div>
 
-                    {/* Description Paragraph synced with global text sizing */}
-                    <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 group-hover:opacity-100 transition-opacity duration-300 antialiased !max-w-none">
+                    {/* Description */}
+                    <p className="text-zinc-600 text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed antialiased tracking-wide opacity-90 group-hover:text-black transition-opacity duration-300">
                       {s.desc}
                     </p>
                   </div>
                 </div>
 
-                {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
+                {/* Bottom Indicator Line: Gold color */}
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#FFD36A] shadow-[0_0_15px_#FFD36A] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
               </motion.div>
             ))}
           </div>
         </div>
       </section>
-      <Stats />
-      {/* //portfolio section */}
-      <section className="relative py-16 md:py-20 2xl:py-32 bg-[#1E2939] text-white overflow-hidden select-none border-t border-white/5">
-        {/* Background Glows */}
-        <div className="absolute top-1/3 left-1/4 w-[600px] 2xl:w-[1000px] h-[600px] bg-blue-600/[0.02] blur-[150px] pointer-events-none" />
+      {/* <AuditCTA /> */}
 
-        <div className="relative z-10 max-w-7xl 2xl:max-w-[110rem] mx-auto px-6">
-
-          {/* HEADER BLOCK */}
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6 md:mb-10 2xl:mb-16 border-b border-white/5 pb-4 pt-0">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-left"
-            >
-              <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-none text-white">
-                Featured{" "}
-                <span className=" bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Website Design Projects
-                </span>
-              </h3>
-              <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed opacity-80 w-full mx-auto lg:mx-0">
-                We love helping businesses grow with websites that get results. Browse our recent projects to see how we can bring your ideas to life.
-              </p>
-            </motion.div>
-
-            {/* VIEW ALL LINK */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex items-center shrink-0"
-            >
-              <Link
-                href="/case-studies"
-                className="flex items-center gap-3 md:gap-4 text-[14px] md:text-xs 2xl:text-[13px] uppercase tracking-[0.25em] font-black text-white-500 hover:text-white transition-all duration-500 group"
-              >
-                <span className="relative pb-1 transition-colors duration-500 group-hover:text-white">
-                  View All Projects
-                  <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 group-hover:w-full" />
-                </span>
-                <div className="w-10 h-10 md:w-11 md:h-11 2xl:w-14 2xl:h-14 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center relative overflow-hidden group-hover:border-blue-500/50 group-hover:shadow-[0_0_20px_rgba(59,130,246,0.1)] transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <ArrowUpRight
-                    size={16}
-                    className="text-zinc-500 group-hover:text-white group-hover:rotate-45 group-hover:scale-110 transform transition-all duration-500 2xl:w-5 2xl:h-5"
-                  />
-                </div>
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* BENTO GRID */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 2xl:gap-8 relative z-10">
-            {bentoProjects.map((project, i) => {
-              const CardWrapper = motion.div;
-
-              return (
-                // 🎯 FIXED: Converted to standard anchor <a> tag with target="_blank" for flawless external routing
-                <a
-                  href={project.slug}
-                  key={project.id}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${project.size} block`}
-                >
-                  <CardWrapper
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="w-full h-full group relative rounded-[2rem] 2xl:rounded-[4rem] border border-white/5 bg-gradient-to-b from-white/[0.02] to-transparent backdrop-blur-md flex flex-col justify-between overflow-hidden hover:border-blue-500/30 transition-all duration-500 cursor-pointer"
-                  >
-                    <div className="absolute inset-0 w-full h-full">
-                      {/* Next.js Image Element */}
-                      <div className="absolute inset-0 w-full h-full transition-all duration-500">
-                        <Image
-                          src={project.image || "/placeholder.png"}
-                          alt={project.title}
-                          fill
-                          sizes="(max-width: 1024px) 100vw, 50vw"
-                          className="object-cover group-hover:scale-105 transition-transform duration-700"
-                          priority={i < 2}
-                        />
-                      </div>
-
-                      {/* Project ID Tag */}
-                      <div className="absolute top-8 left-8 z-20">
-                        <span className="px-3 py-1 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] 2xl:text-base font-bold text-gray-300 uppercase tracking-widest">
-                          {project.id}
-                        </span>
-                      </div>
-
-                      {/* Project Title Display */}
-                      <div className="absolute bottom-8 left-8 right-8 z-20 space-y-2">
-                        <span className="text-2xl 2xl:text-5xl font-black tracking-tight  block text-white bg-black/30 backdrop-blur-sm px-4 py-2 rounded-xl w-fit">
-                          {project.title}
-                        </span>
-                      </div>
-                    </div>
-                  </CardWrapper>
-                </a>
-              );
-            })}
-          </div>
-
-        </div>
-      </section>
-
-      <ServiceCTA />
-
-      {/* process section  */}
-      <section className="relative py-16 md:py-24 bg-[#111827] overflow-hidden selection:bg-blue-600/30">
-
-        {/* 🌌 Luxury Background Elements */}
-        <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
+      {/* 🚀 WORKING PROCESS MATRIX SECTION */}
+      <section className="relative py-16 md:py-24 bg-white overflow-hidden selection:bg-[#FFD36A]/30">
+        {/* Luxury subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#FFD36A_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
-
-          {/* 📋 HEADER */}
+          {/* 📋 HEADER - Font sizing synced with reference file */}
           <div className="mb-12 md:mb-16 pt-0 text-center">
-            <h3 className="text-[1.8rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+            <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-black normal-case">
               Our{" "}
-              <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Website Development Process
+              <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-clip-text text-transparent">
+                Website Development Process.
               </span>
             </h3>
           </div>
 
           {/* 🧠 TIMELINE MATRIX */}
           <div className="relative">
-
             {/* Central Progress Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/30 via-white/10 to-transparent -translate-x-1/2 hidden md:block" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-zinc-200 via-zinc-300 to-transparent -translate-x-1/2 hidden md:block" />
 
-            {/* Cards Container */}
             <div className="flex flex-col gap-3 md:gap-6">
               {steps.map((step, index) => {
                 const isEven = index % 2 === 0;
-
                 return (
                   <div
                     key={step.id}
-                    className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"
-                      }`}
+                    className={`relative flex flex-col md:flex-row items-start md:items-center justify-between w-full group ${isEven ? "md:flex-row" : "md:flex-row-reverse"}`}
                   >
-                    {/* CARD CONTAINER */}
                     <div className="w-full md:w-[45%] pl-8 md:pl-0">
                       <motion.div
                         initial={{ opacity: 0, x: isEven ? -30 : 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        // 🎯 FIXED: Style tag lagakar background color #0971A6 ko completely lock kar diya hai
-                        style={{ backgroundColor: "#0971A6" }}
-                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] border border-white/10 transition-all duration-500 shadow-xl"
+                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-[#E5E5E5] border border-zinc-200 shadow-xl hover:border-[#FFD36A] transition-all duration-500"
                       >
                         {/* Floating Step Number */}
-                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center text-white font-mono text-[11px] 2xl:text-sm font-bold group-hover:border-cyan-400/50 group-hover:text-cyan-400 transition-colors z-10 shadow-xl">
+                        <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-black text-[#FFD36A] flex items-center justify-center font-black text-[11px] 2xl:text-sm shadow-xl z-10">
                           {step.id}
                         </div>
 
                         <div className="flex flex-col gap-4">
-                          {/* Icon & Heading Line */}
                           <div className="flex items-center gap-4">
-                            {/* 🌀 Icon Wrapper: Background transparent black tint taake blue background par pop kare */}
-                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-14 2xl:h-14 rounded-xl bg-black/20 text-cyan-300 flex items-center justify-center group-hover:bg-white group-hover:text-[#0971A6] transition-all duration-500 shadow-md">
+                            {/* Icon Container */}
+                            <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 2xl:w-14 2xl:h-14 rounded-xl bg-zinc-100 text-[#FFD36A] flex items-center justify-center group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500 shadow-sm">
                               {step.icon}
                             </div>
-                            <h4 className="font-black text-[1.1rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.4rem] text-white tracking-tight transition-colors duration-300">
+                            <h4 className="font-black text-[1.1rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.4rem] text-black tracking-tight transition-colors duration-300">
                               {step.title}
                             </h4>
                           </div>
 
-                          {/* Description Paragraph */}
-                          <p className="text-white/90 text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl group-hover:opacity-100 transition-all duration-300">
+                          <p className="text-zinc-600 text-[14px] md:text-[15px] font-medium leading-relaxed max-w-xl">
                             {step.desc}
                           </p>
                         </div>
 
-                        {/* 🎯 Running Laser Accent */}
-                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-white to-cyan-300 group-hover:w-[40%] transition-all duration-700 ease-out rounded-bl-full" />
+                        {/* Bottom Indicator Line */}
+                        <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FFD36A] group-hover:w-[40%] transition-all duration-700 ease-out rounded-bl-full" />
                       </motion.div>
                     </div>
 
-                    {/* 🎯 REFINED: CENTRAL INTERACTIVE NODE */}
+                    {/* Central Node */}
                     <div className="absolute left-4 md:left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:block">
-                      <div className="w-6 h-6 rounded-full bg-[#030303] border border-white/10 flex items-center justify-center group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_#22d3ee] transition-all duration-500 group-hover:scale-125">
-                        <div className="w-2 h-2 bg-white/40 rounded-full group-hover:bg-cyan-400 transition-all duration-300" />
-                      </div>
+                      <div className="w-6 h-6 rounded-full bg-white border-4 border-zinc-200 group-hover:border-[#FFD36A] transition-all duration-500 shadow-sm" />
                     </div>
 
-                    {/* Spacer */}
                     <div className="hidden md:block md:w-[45%]" />
                   </div>
                 );
@@ -578,16 +435,13 @@ export default function WebDevPage() {
           </div>
         </div>
       </section>
-      <IndustryExpertise />
-      {/* Why Choose US  */}
-      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#1E2939] overflow-hidden border-b border-white/5">
 
-        {/* Background Dots & Glow */}
-        <div
-          className="absolute inset-0 opacity-[0.05] pointer-events-none"
-          style={{ backgroundImage: `radial-gradient(#fff 1px, transparent 1px)`, backgroundSize: '40px 40px' }}
-        />
-        <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+
+
+      {/* Why Chose ue */}
+      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#E5E5E5] overflow-hidden border-b border-zinc-200">
+        {/* Subtle Background Glow */}
+        <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-[#FFD36A]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-7xl 2xl:max-w-[110rem] mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-12 gap-12 xl:gap-16 2xl:gap-24 items-center">
@@ -600,48 +454,41 @@ export default function WebDevPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                {/* Heading synced with global font framework */}
-                <h3 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-                  Why Hire Us For {" "}
-
-                  <span className=" mt-2 py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Your Next Website Project?
+                <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-black">
+                  Why Choose Our <span className="block mt-2 bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-clip-text text-transparent">
+                    Website Development Team?
                   </span>
                 </h3>
 
-                {/* Description Panel */}
-                <div className="space-y-4 max-w-xl 2xl:max-w-3xl">
-                  {/* Paragraph 1 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    We create websites that not only look great but also help your business grow online. Our team focuses on clean design, fast performance, mobile responsiveness, and user-friendly experiences.
-                  </p>
-
-                  {/* Border Block Panels */}
-
-                  {/* Paragraph 2 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    We work closely with every client to understand their goals and deliver websites that match their brand perfectly.
-                  </p>
-
-                  {/* Paragraph 3 */}
-                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed mx-auto lg:mx-0 opacity-90">
-                    From planning and development to launch and support, we provide complete
-                    <span className="font-bold text-blue-400"> <a href="/">Digital solutions</a> </span>
-
-
-                    with honest communication, affordable pricing, and reliable service to ensure your project is completed smoothly and successfully.
-                  </p>
-
+                <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
+                  <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
+                    <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
+                      <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
+                        <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                          We don't just build websites; we architect <span className="font-black text-black">high-performance digital ecosystems</span> that engage, convert, and scale your business. By blending clean code with modern design, we deliver seamless, future-proof applications that stand the test of time.
+                        </p>
+                        <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                          Our team works closely with you to map your unique business goals, ensuring every component, state management flow, and API integration is optimized for your project's performance and user impact.
+                        </p>
+                        <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                          From complex database architecture to precise frontend animations, we provide end-to-end development solutions backed by rigorous testing and industry-standard production best practices.
+                        </p>
+                        <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                          We combine industry-leading tech stacks like React, Next.js, and Node.js with a deep understanding of performance optimization to ensure your application is flawless, giving your business a distinct competitive advantage.
+                        </p>
+                        <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                          Our development process operates with a code-quality-first philosophy, ensuring transparent communication and iterative feedback loops so that your final product is not just a website, but a high-impact digital asset that drives your business forward.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
 
             {/* RIGHT SIDE: Cards Grid */}
             <div className="lg:col-span-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10 relative">
-
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
-
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 2xl:gap-10">
                 {features.map((item, index) => (
                   <motion.div
                     key={index}
@@ -649,39 +496,20 @@ export default function WebDevPage() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-                    style={{ backgroundColor: "#0971A6" }}
-                    className={`relative p-6 md:p-8 2xl:p-12 rounded-3xl border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between
-        ${index % 2 !== 0 ? 'sm:translate-y-8 md:translate-y-10 2xl:translate-y-16' : ''}`}
+                    className={`relative p-8 md:p-10 rounded-[2rem] bg-white border border-zinc-200 hover:border-[#FFD36A] hover:shadow-[0_20px_40px_rgba(255,211,106,0.15)] transition-all duration-500 flex flex-col justify-between group ${index % 2 !== 0 ? 'sm:translate-y-10' : ''}`}
                   >
-                    <div className="relative z-10 space-y-4 md:space-y-5">
-
-                      {/* Icon & Heading Row */}
+                    <div className="relative z-10 space-y-4">
                       <div className="flex items-center gap-4">
-
-                        {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-                        <div
-                          style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-                          className="shrink-0 w-10 h-10 md:w-12 md:h-12 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
-                        >
+                        <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 text-[#FFD36A] group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500 shadow-sm">
                           {item.icon}
                         </div>
-
-                        {/* Title Text (Removed gradient to match premium contrast on solid background) */}
-                        <h4 className="flex-1 font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] leading-tight text-white group-hover:text-cyan-200 transition-colors duration-500">
+                        <h4 className="font-black text-[1.2rem] text-black leading-tight group-hover:text-[#FFD36A] transition-colors">
                           {item.title}
                         </h4>
                       </div>
-
-                      {/* Card Description */}
-                      <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-zinc-600 text-[15px] leading-relaxed group-hover:text-black transition-colors">
                         {item.desc}
                       </p>
-                    </div>
-
-                    {/* Hover Check Icon */}
-                    <div className="absolute top-4 right-4 opacity-0 scale-75 group-hover:opacity-100 group-hover:scale-100 transition-all duration-300">
-                      <CheckCircle2 className="text-cyan-300 w-4 h-4 2xl:w-6 2xl:h-6" />
                     </div>
                   </motion.div>
                 ))}
@@ -691,112 +519,65 @@ export default function WebDevPage() {
         </div>
       </section>
 
-      <Testimonials />
-      {/* Core experties  */}
-      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
-        <div className="absolute inset-0 z-0 opacity-[0.02] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:40px_40px]" />
 
-        <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
-          <div className="text-center mb-20">
-            <h3 className="text-[1.8rem] !case-normal md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.2] tracking-tighter text-white">
-              Our Expertise In{" "}
-              <span className=" pb-1 pr-4 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                Website Design.
-              </span>
+      {/* <SeoFAQ /> */}
+      <section className="relative py-24 bg-white overflow-hidden border-b border-zinc-100">
+        {/* Background Glow */}
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#FFD36A]/10 blur-[120px] rounded-full pointer-events-none" />
+
+        <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
+          {/* Header Title Section */}
+          <div className="mb-16 text-center">
+            <h3 className="text-[2rem] md:text-5xl font-black text-black leading-none mb-6">
+              Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD36A] to-amber-600">Questions (FAQs)</span>
             </h3>
-
-            <p className="mt-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-tight max-w-3xl 2xl:max-w-5xl mx-auto antialiased tracking-wide">
-              We build websites that look great and actually work for your business. Our team focuses on clean layouts, easy navigation, and designs that match your brand to help you connect with customers.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 2xl:gap-8">
-            {[
-              {
-                step: "01",
-                title: "WordPress Website",
-                keywords: "Speed Optimized, SEO Ready, Dynamic CMS",
-                desc: "We build easy-to-manage WordPress sites that load fast and rank well on Google, helping customers find your business online."
-              },
-              {
-                step: "02",
-                title: "Shopify Website",
-                keywords: "E-Commerce Ops, High CRO, Secure Checkout",
-                desc: "We design high-converting Shopify stores that look great, simplify checkout, and turn everyday website visitors into paying customers."
-              },
-              {
-                step: "03",
-                title: "Custom Website",
-                keywords: "Next.js / React, Custom Code, Clean Architecture",
-                desc: "We code unique websites from scratch, giving you tailored features, faster speeds, and complete freedom from standard templates."
-              },
-              {
-                step: "04",
-                title: "Wix Website",
-                keywords: "Drag-and-Drop, Fast Launch, Mobile Responsive",
-                desc: "We create beautiful, fast-to-launch Wix sites with clean layouts, mobile-friendly designs, and simple tools you can update yourself."
-              }
-            ].map((p, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ y: -10 }} // 🎯 Signature elevation lift
-                // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-                style={{ backgroundColor: "#0971A6" }}
-                className="group relative p-8 2xl:p-8 rounded-[3rem] border border-white/10 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] transition-all duration-500 flex flex-col h-full overflow-hidden cursor-pointer"
+          {/* FAQ Accordion List */}
+          <div className="space-y-4">
+            {faqs.map((faq, idx) => (
+              <div
+                key={idx}
+                className={`rounded-[1.5rem] border transition-all duration-500 ${activeIdx === idx
+                  ? "bg-zinc-50 border-[#FFD36A]/50 shadow-md"
+                  : "bg-white border-zinc-200 hover:border-[#FFD36A]/30"
+                  }`}
               >
-                {/* 🎯 EFFECTS LAYER 1: Tuned to soft white overlay to perfectly match the solid background color */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white/5 via-white/[0.01] to-transparent translate-y-full group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out z-0 pointer-events-none" />
-
-                {/* 🎯 Header Container Row */}
-                <div className="relative w-full mb-2 min-h-[70px] flex items-start justify-between z-10">
-
-                  {/* 🌀 FIXED STEP NUMBER WATERMARK: Made more readable on the blue surface, turns into glowing tint on hover */}
-                  <span className="absolute left-0 -top-6 text-6xl 2xl:text-8xl font-black text-black/15 group-hover:text-black/30 select-none pointer-events-none z-0 transition-colors duration-500">
-                    {p.step}
+                <button
+                  onClick={() => setActiveIdx(activeIdx === idx ? null : idx)}
+                  className="w-full flex items-center justify-between p-6 text-left outline-none group"
+                >
+                  <span className={`text-lg font-bold transition-colors duration-300 ${activeIdx === idx ? "text-[#FFD36A]" : "text-black group-hover:text-zinc-600"
+                    }`}>
+                    {faq.q}
                   </span>
 
-                  {/* Title Header */}
-                  <div className="space-y-2 flex-grow relative z-10 pt-6">
-                    <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.3rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors leading-tight">
-                      {p.title}
-                    </h4>
+                  <div className={`p-2 rounded-full shrink-0 ml-4 transition-colors duration-300 ${activeIdx === idx ? "bg-[#FFD36A] text-black" : "bg-zinc-100 text-zinc-500 group-hover:bg-zinc-200"
+                    }`}>
+                    {activeIdx === idx ? <Minus size={18} /> : <Plus size={18} />}
                   </div>
+                </button>
 
-                  {/* Chevron Right Icon */}
-                  <div className="relative z-10 pt-5 pl-4 shrink-0">
-                    <ChevronRight size={16} className="text-white/60 group-hover:text-cyan-200 transition-colors transform group-hover:translate-x-1 duration-300" />
-                  </div>
-                </div>
-
-                {/* Content Body Block */}
-                <div className="space-y-2 flex-grow relative z-10">
-                  {/* Description Paragraph */}
-                  <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl antialiased opacity-90 group-hover:opacity-100 transition-opacity duration-300">
-                    {p.desc}
-                  </p>
-                </div>
-
-                {/* 🌀 PROGRESS BAR LOADER: Switched to track background opacity and a glowing cyan loader fill */}
-                <div className="mt-4 h-1 w-full bg-black/20 rounded-full overflow-hidden subpixel-antialiased relative z-10">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: "100%" }}
-                    transition={{ duration: 1.5, delay: i * 0.2 }}
-                    viewport={{ once: true }}
-                    className="h-full bg-cyan-300 shadow-[0_0_8px_#67e8f9]"
-                  />
-                </div>
-
-                {/* 🎯 EFFECTS LAYER 2: Cyan matching line indicator */}
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-cyan-300 shadow-[0_0_15px_#67e8f9] scale-x-0 group-hover:scale-x-100 origin-center transition-transform duration-500 ease-out z-20" />
-              </motion.div>
+                <AnimatePresence>
+                  {activeIdx === idx && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 pb-8 text-zinc-600 border-t border-zinc-100 pt-4 leading-relaxed antialiased font-medium">
+                        {faq.a}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
           </div>
         </div>
       </section>
-
-      <WebDevFAQ />
-      <TrustClient />
 
     </main>
   );

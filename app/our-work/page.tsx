@@ -132,7 +132,7 @@ export default function PortfolioPage() {
   const filtered = active === "all" ? projects : projects.filter(p => p.category === active);
 
   return (
-    <main className="bg-[#111827] text-zinc-100 selection:bg-blue-600 overflow-x-hidden min-h-screen antialiased pb-24">
+    <main className="bg-[#FFFFFF] text-zinc-100 selection:bg-blue-600 overflow-x-hidden min-h-screen antialiased pb-24">
 
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#030712]">
@@ -178,14 +178,7 @@ export default function PortfolioPage() {
 
      
    {/* 🎯 FIXED: Pure Clean Layout - Desktop par center line aur Mobile par auto wrap into 2 lines */}
-<section className="w-full px-4 py-6 md:py-8 relative z-30 flex justify-center">
-  <div className="w-full max-w-4xl flex justify-center">
-    
-    {/* Main Container: Mobile par grid/wrap layout aur desktop par normal flex container */}
-   
 
-  </div>
-</section>
 
       {/* 🎯 PREMIUM 3-COLUMN LUXURY BENTO GRID (WIDE SCALE) */}
       {/* 🎯 FIXED: Max-width ko 1920px kiya hai taake container bada ho, aur padding horizontal adjust ki hai */}
@@ -237,7 +230,7 @@ export default function PortfolioPage() {
                     <div className="px-3 w-full pb-3">
                       <div className="flex items-start justify-between gap-4">
                         {/* 🎯 FIXED: Text size ko 2xl aur 3xl screens par bada kiya hai (2xl:text-2xl 3xl:text-3xl) taake bade card me text chota na lage */}
-                        <h3 className="text-[18px] sm:text-xl 2xl:text-2xl 3xl:text-3xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors duration-300 leading-snug">
+                        <h3 className="text-[18px] sm:text-xl 2xl:text-2xl 3xl:text-3xl font-black tracking-tight text-black group-hover:text-cyan-400 transition-colors duration-300 leading-snug">
                           {item.title}
                         </h3>
 

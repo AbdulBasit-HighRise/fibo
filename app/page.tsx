@@ -29,7 +29,7 @@ export default async function Home() {
       {/* <PortfolioPreview /> */}
       {/* <Stats /> */}
       <Services />
-      <AuditCTA />
+      {/* <AuditCTA /> */}
       <ClientTrust />
 
       {/* <ProvenExcellence /> */}

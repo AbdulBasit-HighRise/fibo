@@ -150,15 +150,15 @@ export default function GraphicDesignPage() {
 
 
               <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
-                VISUAL IDENTITY & {" "}
+                CINEMATIC VFX & {" "}
                 <span className="mt-2 block bg-gradient-to-r from-[#FFD36A] via-[#EAB308] to-[#FFD36A] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  CREATIVE DESIGN.
+                  IMMERSTIVE ANIMATION.
                 </span>
               </h1>
 
               {/* Description Paragraph */}
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed w-full max-w-3xl mx-auto lg:mx-0 opacity-80">
-                We craft stunning visuals that tell your brand's unique story. From memorable logos and cohesive brand identities to high-impact marketing assets, we bring your vision to life with professional design excellence that stands out in any market.
+                We push the boundaries of reality to bring your imagination to the screen. From seamless compositing and high-fidelity 3D environments to dynamic motion graphics, we provide cinematic-grade visual effects that elevate your project to the next level.
               </p>
             </div>
           </div>
@@ -201,9 +201,9 @@ export default function GraphicDesignPage() {
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div>
                 <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
-                  Elevate Your Brand Identity with {" "}
+                  Bring Your Vision to Life with {" "}
                   <span className="mt-0 mb-2 py-1 text-transparent bg-clip-text bg-gradient-to-r from-[#FFD36A] to-amber-600">
-                    Our Creative Design Services.
+                    Our Cinematic VFX Services.
                   </span>
                 </h2>
               </div>
@@ -221,18 +221,19 @@ export default function GraphicDesignPage() {
                 {/* Paragraph 1 */}
                 {/* Paragraph 1 */}
                 {/* Paragraph 1 */}
+                {/* Paragraph 1 */}
                 <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
-                  A great logo is only the beginning; the real goal is to build a visual language that captures your audience's attention and tells your brand's unique story. Our design approach focuses on aesthetic balance and creative strategy to bring your brand identity to life.
+                  A single frame is only the beginning; the real goal is to create immersive visual experiences that captivate your audience and tell your story with cinematic grandeur. Our VFX approach focuses on realism, lighting integrity, and technical precision to bring your imagination to life.
                 </p>
 
                 {/* Paragraph 2 */}
                 <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
-                  By leveraging modern design principles, cohesive typography, and high-impact visual layouts, we streamline the path from a basic concept straight to a polished, professional brand presence that elevates your identity in a crowded market.
+                  By leveraging advanced compositing, 3D simulation, and expert match-moving, we streamline the path from a complex production concept straight to a seamless, high-fidelity final shot that stands out on the big screen.
                 </p>
 
                 {/* Paragraph 3 */}
                 <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 hidden md:block">
-                  We don’t just create graphics; we refine every pixel of your visual journey to ensure technical precision, creative depth, and maximum engagement across all your digital and print platforms.
+                  We don’t just add effects; we refine every element of your footage to ensure technical perfection, creative depth, and absolute realism across all your cinematic and digital projects.
                 </p>
               </motion.div>
 
@@ -278,7 +279,7 @@ export default function GraphicDesignPage() {
               <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-black">
                 Our{" "}
                 <span className="bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Specialized Graphic Design Services.
+                  Specialized VFX Services.
                 </span>
               </h3>
             </div>
@@ -287,33 +288,33 @@ export default function GraphicDesignPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 2xl:gap-10">
             {[
               {
-                title: "Search Engine Optimization (SEO)",
-                desc: "We boost your search engine rankings with strategic keyword research, technical site audits, and high-quality content optimization to drive organic traffic.",
+                title: "Cinematic Compositing",
+                desc: "Seamlessly blending live-action footage with CGI, ensuring perfect integration, realistic lighting, and cinematic color matching.",
                 icon: <Box size={24} />
               },
               {
-                title: "Performance Marketing (PPC)",
-                desc: "Maximize your ROI with high-converting ad campaigns on Google, Meta, and LinkedIn, precisely tailored to reach your ideal target audience.",
+                title: "3D Modeling & Animation",
+                desc: "High-fidelity 3D asset creation, character animation, and digital environments designed to bring your wildest creative concepts to life.",
                 icon: <Zap size={24} />
               },
               {
-                title: "Social Media Strategy",
-                desc: "Building a powerful brand presence through engaging content, community management, and trend-focused strategies that foster real customer loyalty.",
+                title: "Motion Graphics",
+                desc: "Dynamic, eye-catching motion design that enhances your storytelling, perfect for high-impact commercials and digital content.",
                 icon: <Layers size={24} />
               },
               {
-                title: "Conversion Rate Optimization",
-                desc: "We analyze user behavior and refine your landing pages to ensure that every visitor has a higher chance of turning into a paying customer.",
+                title: "Visual Cleanup & Restoration",
+                desc: "Expert removal of unwanted objects, wire removal, and frame-by-frame cleanup to deliver pristine, broadcast-quality footage.",
                 icon: <Cpu size={24} />
               },
               {
-                title: "Content Marketing",
-                desc: "Creating high-impact, value-driven content that establishes your brand as an industry authority and keeps your audience engaged.",
+                title: "Simulations & FX",
+                desc: "Advanced physical simulations including fire, smoke, fluids, and particles that add depth, energy, and realism to your shots.",
                 icon: <Flame size={24} />
               },
               {
-                title: "Digital Analytics & Strategy",
-                desc: "Expert roadmap planning and performance tracking to ensure your marketing budget is spent effectively, scaling your business growth.",
+                title: "Match-moving & Tracking",
+                desc: "Precision camera tracking and match-moving to ensure your digital elements sit perfectly within the perspective of your live-action plates.",
                 icon: <PenTool size={24} />
               }
             ].map((s, i) => (
@@ -368,7 +369,7 @@ export default function GraphicDesignPage() {
             <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-black normal-case">
               Our{" "}
               <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-clip-text text-transparent">
-                Creative Design Workflow.
+                VFX Workflow.
               </span>
             </h3>
           </div>
@@ -454,27 +455,29 @@ export default function GraphicDesignPage() {
               >
                 <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-black">
                   Why Choose Our <span className="block mt-2 bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-clip-text text-transparent">
-                    Graphic Design Studio?
+                    VFX Studio?
                   </span>
                 </h3>
 
                 <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
                   <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
-                    <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
-                      We don't just design graphics; we architect <span className="font-black text-black">visual identities</span> that define your market presence. By blending aesthetic balance with core brand strategy, we deliver designs that capture attention and build lasting recognition.
-                    </p>
-                    <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
-                      Our team works closely with you to map your unique brand vision, ensuring every color, font, and layout is optimized for your brand's personality and long-term business success.
-                    </p>
-                    <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
-                      From comprehensive brand identity development to high-impact digital assets, we provide end-to-end design solutions backed by technical precision and creative depth.
-                    </p>
-                    <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
-                      We combine industry-leading design software with consumer-focused psychology to ensure every visual element communicates your value, giving your brand a distinct competitive advantage.
-                    </p>
-                    <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
-                      Our studio operates with a quality-first philosophy, ensuring transparent communication and iterative feedback loops so that your final product is not just a graphic, but a high-impact asset that drives your brand forward.
-                    </p>
+                    <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
+                      <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                        We don't just add effects; we architect <span className="font-black text-black">cinematic experiences</span> that redefine visual storytelling. By blending technical mastery with artistic vision, we deliver seamless, high-fidelity VFX that stand the test of time.
+                      </p>
+                      <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                        Our team works closely with you to map your unique creative goals, ensuring every frame, lighting adjustment, and composited element is optimized for your project's narrative and visual impact.
+                      </p>
+                      <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                        From complex 3D environments to precise match-moving, we provide end-to-end visual effect solutions backed by rigorous testing and broadcast-quality production standards.
+                      </p>
+                      <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                        We combine industry-leading VFX pipelines with a deep understanding of realism to ensure every shot is flawless, giving your film or content a distinct competitive advantage in the modern media landscape.
+                      </p>
+                      <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                        Our studio operates with a quality-first philosophy, ensuring transparent communication and iterative feedback loops so that your final output is not just a video, but a high-impact cinematic asset that captivates your audience.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>

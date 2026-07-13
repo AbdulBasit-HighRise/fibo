@@ -213,21 +213,7 @@ export default function ServicesPage() {
               );
             })}
           </div>
-          {/* CTA BUTTON */}
-          <div className="mt-12 flex justify-center">
-            <Link href="/services">
-              <button className="group relative overflow-hidden h-[48px] px-8 rounded-full bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-500 active:scale-95 shadow-lg">
-                {/* Gold Hover Background */}
-                <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
-
-                {/* Button Content */}
-                <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
-                  Explore All Services
-                  <ArrowUpRight size={14} />
-                </span>
-              </button>
-            </Link>
-          </div>
+        
         </div>
       </section>
     </main>
