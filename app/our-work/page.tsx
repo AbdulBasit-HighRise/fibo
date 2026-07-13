@@ -157,23 +157,19 @@ export default function PortfolioPage() {
           <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-40 lg:pb-16 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pl-80">
             <div className="max-w-5xl">
               {/* Glassmorphism Badge Container */}
-              <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto lg:mx-0">
-                <Flame size={12} className="text-blue-400 animate-pulse" />
-                <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Our Work</span>
-              </div>
+            
 
               {/* Main Typography Block */}
               <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-none text-white mb-8">
-                CASE{" "}
+                Our{" "}
                 <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  STUDIES.
+                  Work.
                 </span>
               </h1>
 
               {/* Description Paragraph */}
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
-                Explore expert insights, digital marketing tips, and strategies to grow your business with our latest
-                blogs and industry updates.
+                Explore our portfolio of successful projects and see how we've helped businesses achieve their goals.
               </p>
             </div>
           </div>
@@ -186,25 +182,7 @@ export default function PortfolioPage() {
   <div className="w-full max-w-4xl flex justify-center">
     
     {/* Main Container: Mobile par grid/wrap layout aur desktop par normal flex container */}
-    <div className="bg-zinc-900/60 p-1.5 rounded-xl border border-white/5 backdrop-blur-xl shadow-2xl flex flex-wrap justify-center gap-1.5 items-center w-full sm:w-auto">
-      
-      {filters.map((f) => (
-        <button
-          key={f.id}
-          onClick={() => setActive(f.id)}
-          className={`px-3 py-2 md:px-5 md:py-2 rounded-lg text-[10px] md:text-xs font-mono uppercase tracking-wider font-bold transition-all duration-300 text-center
-            /* Mobile controls: takay text barabar fit ho 2 lines me */
-            flex-grow sm:flex-grow-0 min-w-[calc(50%-6px)] sm:min-w-0 ${
-            active === f.id
-              ? "bg-[#0971A6] text-white shadow-lg shadow-blue-600/10"
-              : "text-zinc-400 hover:text-zinc-200 hover:bg-white/[0.02]"
-          }`}
-        >
-          {f.label}
-        </button>
-      ))}
-
-    </div>
+   
 
   </div>
 </section>

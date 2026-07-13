@@ -53,7 +53,7 @@
 
 /* 🎯 PARAGRAPH READABILITY: Mobile base size boosted for ultra-clean readability */
 p {
-  @apply text-white font-normal opacity-90;
+  /* @apply text-white; <-- Isay yahan se hata dein */
   font-size: clamp(1.2rem, 1.2vw + 0.8rem, 1.6rem);
   line-height: 1.65;
   max-width: 70ch;
@@ -61,10 +61,11 @@ p {
 }
 @layer utilities {
   .text-sm {
-    font-size: 16px !important;    /* Size ko 16px kiya */
-    color: #ffffff !important;     /* Color ko permanently white kiya */
-    line-height: 1.5;              /* Spacing ko adjust kiya */
+    font-size: 16px !important;
+    line-height: 1.5;
+    /* color: #ffffff !important; <-- Ye line DELETE kar dein */
   }
+
 }
 @layer components {
   .container-main {

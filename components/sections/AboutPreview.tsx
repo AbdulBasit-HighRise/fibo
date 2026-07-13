@@ -76,14 +76,16 @@ export default function AboutPreview() {
 
               {/* Buttons Section */}
               <div className="flex flex-wrap items-center gap-6 pt-4">
-                <Link href="/contact">
-                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-[#F3F4F6] text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
-                    <div className="absolute inset-0 w-0  transition-all duration-500 ease-out group-hover:w-full" />
-                    <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
-                      Get Quote <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
-                    </span>
-                  </button>
-                </Link>
+              <Link href="/contact">
+  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-[#F3F4F6] text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
+    {/* Gold Hover Background */}
+    <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
+    
+    <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
+      Get Quote <span className="group-hover:translate-x-1 transition-transform duration-300">→</span>
+    </span>
+  </button>
+</Link>
 
                 <Link
                   href="/services"

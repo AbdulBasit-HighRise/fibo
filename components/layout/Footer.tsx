@@ -32,30 +32,37 @@ export default function Footer() {
 
           {/* Other columns (Quick Links, Expertise, Compliance) */}
           <div className="space-y-6">
-             <span className="block font-bold text-white tracking-widest uppercase">Quick Links</span>
-             <div className="flex flex-col space-y-3 text-sm text-zinc-400">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/services">Services</Link>
-             </div>
-          </div>
-          
-          <div className="space-y-6">
-             <span className="block font-bold text-white tracking-widest uppercase">Expertise</span>
-             <div className="flex flex-col space-y-3 text-sm text-zinc-400">
-                <Link href="/services/website-development">Web Development</Link>
-                <Link href="/services/seo">SEO</Link>
-                <Link href="/services/ai-automation">AI Automation</Link>
-             </div>
+            <span className="block font-bold text-white tracking-widest uppercase">Quick Links</span>
+            <div className="flex flex-col space-y-3 text-sm text-zinc-400">
+              <Link href="/">Home</Link>
+              <Link href="/about">About</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/Case-Studies">Our Work</Link>
+              <Link href="/contact">Contact</Link>
+            </div>
           </div>
 
           <div className="space-y-6">
-             <span className="block font-bold text-white tracking-widest uppercase">Compliance</span>
-             <div className="flex flex-col space-y-3 text-sm text-zinc-400">
-                <Link href="/privacy">Privacy Policy</Link>
-                <Link href="/terms">Terms</Link>
-                <Link href="/faq">FAQs</Link>
-             </div>
+            <span className="block font-bold text-white tracking-widest uppercase">Expertise</span>
+            <div className="flex flex-col space-y-3 text-sm text-zinc-400">
+              <Link href="/services/website-development" className="hover:text-[#FFD36A] transition-colors">Web Development</Link>
+              <Link href="/services/app-development" className="hover:text-[#FFD36A] transition-colors">App Development</Link>
+              <Link href="/services/3d-video-production" className="hover:text-[#FFD36A] transition-colors">3D Video Production</Link>
+              <Link href="/services/vfx" className="hover:text-[#FFD36A] transition-colors">VFX</Link>
+              <Link href="/services/graphic-design" className="hover:text-[#FFD36A] transition-colors">Graphic Design</Link>
+              <Link href="/services/digital-marketing" className="hover:text-[#FFD36A] transition-colors">Digital Marketing</Link>
+              <Link href="/services/blockchain-development" className="hover:text-[#FFD36A] transition-colors">Blockchain</Link>
+              <Link href="/services/ai-ml-solutions" className="hover:text-[#FFD36A] transition-colors">AI/ML Solutions</Link>
+            </div>
+          </div>
+
+          <div className="space-y-6">
+            <span className="block font-bold text-white tracking-widest uppercase">Compliance</span>
+            <div className="flex flex-col space-y-3 text-sm text-zinc-400">
+              <Link href="/privacy">Privacy Policy</Link>
+              <Link href="/terms">Terms</Link>
+              <Link href="/faq">FAQs</Link>
+            </div>
           </div>
         </div>
 

@@ -20,7 +20,7 @@ export default function AboutPage() {
     <main className="bg-[#020617] text-white overflow-hidden selection:bg-blue-600 ">
 
       {/* 1. HERO SECTION (Optimized) */}
-      <section className="relative w-full overflow-hidden bg-[#030712]">
+      <section className="relative w-full overflow-hidden bg-[#FFFFFF]">
         <div className="container-wide">
 
           {/* Background Image Container with Exact Matching Premium CSS */}
@@ -31,7 +31,7 @@ export default function AboutPage() {
               fill
               sizes="100vw"
               priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top opacity-35"
+              className="object-cover object-top opacity-50"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
           </div>
@@ -45,10 +45,10 @@ export default function AboutPage() {
             <div className="max-w-5xl">
 
               {/* Glassmorphism Badge Container */}
-              <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
+              {/* <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
                 <Flame size={12} className="text-blue-400 animate-pulse" />
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">ABOUT HIGH RISE</span>
-              </div>
+              </div> */}
 
               {/* Main Typography Block with Tight Line Height */}
               <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
@@ -60,8 +60,7 @@ export default function AboutPage() {
 
               {/* Description Paragraph */}
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 ">
-                We create powerful digital experiences through innovative marketing, creative design, and strategic solutions that help brands grow and succeed.
-              </p>
+                We blend cinematic storytelling with cutting-edge production to craft visual experiences that define your brand and capture your audience.              </p>
             </div>
           </div>
         </div>
@@ -69,7 +68,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. OUR IDENTITY (CLS Fix) */}
-      <section className="py-20 px-6 bg-[#1E2939] relative z-10 border-t border-white/5">
+      <section className="py-20 px-6 bg-[#FFFFFF] relative z-10 border-t border-white/5">
         <div className="container-wide">
           <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-blue-500/[0.04] blur-[140px] pointer-events-none" />
 
@@ -105,43 +104,39 @@ export default function AboutPage() {
               className="space-y-8"
             >
               <div className="space-y-4">
-                <span className="text-[10px] tracking-[4px] text-blue-400 font-extrabold block">OUR IDENTITY</span>
+                {/* Label ko bhi Golden touch diya */}
+                <span className="text-[10px] tracking-[4px] text-[#FFD36A] font-extrabold block">OUR VISION</span>
 
-                {/* 🎯 FIX: Heading optimized in 'rem' for Mobile, Laptop, and 2K screens */}
-                <h2 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem]  font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-                  Who We{" "}
-
-                  {/* 🎯 FIXED OVERFLOW & BREAKING: Changed to 'block' with precise margins and safety right padding */}
-                  <span className="  py-1 pr-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                    Are
+                <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-black tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+                  Crafting{" "}
+                  <span className="py-1 pr-4 bg-gradient-to-r from-[#FFD36A] to-[#EAB308] bg-clip-text text-transparent">
+                    Visual Excellence
                   </span>
                 </h2>
               </div>
 
-              {/* Main Lead Paragraph */}
-              <p className="text-white text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-normal leading-relaxed antialiased tracking-wide opacity-90">
-               
-                <span className="font-bold text-blue-400"> <a href="/">High Rise Digital</a> </span>  was founded in 2019. We are a growing 
-            AI-enabled digital solutions company powered by 12+ skilled professionals.
+              {/* Main Lead Paragraph - Agency Focused */}
+              <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-normal leading-relaxed opacity-90">
+                <span className="font-bold text-[#FFD36A]">Fibo Production</span> is a premier production & media agency.
+                We blend cinematic storytelling with cutting-edge technology to craft digital experiences that define brands.
               </p>
 
-              <div className="space-y-4 lg:space-y-4 text-white font-medium leading-relaxed w-full mt-6">
-
+              <div className="space-y-4 lg:space-y-4 text-black font-medium leading-relaxed w-full mt-6">
                 {/* Paragraph 1 */}
-                <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
-                  Over the years, we have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries, helping businesses strengthen their online presence.
+                <p className="pl-4 border-l-2 border-[#FFD36A] text-[16px] md:text-base lg:text-[17px] 2xl:text-xl max-w-3xl opacity-90">
+                  We specialize in high-end 3D video production, immersive VFX, and creative media solutions. Over the years, we have helped global brands turn complex ideas into stunning visual realities.
                 </p>
 
                 {/* Paragraph 2 */}
-                <p className="  pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
-                  With experience across multiple industries, we have completed <span className="text-blue-400 font-black">700+ projects</span>, delivering creative designs, SEO, and effective marketing strategies.
+                <p className="pl-4 border-l-2 border-[#FFD36A] text-[16px] md:text-base lg:text-[17px] 2xl:text-xl max-w-3xl opacity-90">
+                  With a passion for innovation, we have successfully delivered <span className="text-[#FFD36A] font-black">700+ projects</span>,
+                  from interactive 3D environments to high-impact post-production for films and commercials.
                 </p>
 
                 {/* Paragraph 3 */}
-                <p className=" pl-4 text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl max-w-xl lg:max-w-2xl 2xl:max-w-3xl 3xl:max-w-4xl mx-auto lg:mx-0 antialiased tracking-wide opacity-90">
-                  Our focus is simple — providing quality work, building long-term relationships, and helping brands grow with confidence.
+                <p className="pl-4 border-l-2 border-[#FFD36A] text-[16px] md:text-base lg:text-[17px] 2xl:text-xl max-w-3xl opacity-90">
+                  Our mission is simple: to push the boundaries of creativity and production quality, ensuring your project doesn't just reach an audience—it captures them.
                 </p>
-
               </div>
             </motion.div>
           </div>
@@ -149,8 +144,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. VISION & MISSION */}
-      <section className="py-16 bg-[#111827] px-6 relative border-y border-white/[0.03]">
-
+      <section className="py-20 bg-[#E5E5E5] px-6 relative border-y border-zinc-200">
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -158,18 +152,32 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto mb-20 space-y-4"
           >
-            <div className="w-12 h-12 rounded-2xl bg-zinc-900 border border-white/10 flex items-center justify-center mx-auto text-blue-400 shadow-2xl">
+            <div className="w-12 h-12 rounded-2xl bg-black flex items-center justify-center mx-auto text-[#FFD36A] shadow-2xl">
               <Sparkles size={22} />
             </div>
-            <span className="text-[10px]  tracking-[4px] text-blue-500 font-extrabold block">Our Purpose</span>
-            <h3 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">Vision & Mission</h3>
+            <span className="text-[10px] tracking-[4px] text-black/60 font-extrabold block uppercase">Our Core Purpose</span>
+            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
+              Vision & <span className="text-[#FFD36A]">Mission</span>
+            </h3>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Our Vision", icon: <Globe size={26} />, desc: "To become a globally trusted digital agency that empowers businesses with innovative strategies, creativity, and long-term digital growth solutions." },
-              { title: "Our Mission", icon: <Target size={26} />, desc: "To deliver high-quality digital marketing, branding, and web solutions that help businesses grow, connect, and succeed online." },
-              { title: "Our Goal", icon: <Rocket size={26} />, desc: "To build lasting client relationships by providing reliable services, measurable results, and creative solutions tailored to every business need." },
+              {
+                title: "Our Vision",
+                icon: <Globe size={26} />,
+                desc: "To redefine visual storytelling by creating immersive 3D and cinematic experiences that set new global standards in the media and production industry."
+              },
+              {
+                title: "Our Mission",
+                icon: <Target size={26} />,
+                desc: "To empower brands through high-end VFX, 3D innovation, and professional post-production that turns creative concepts into breathtaking digital realities."
+              },
+              {
+                title: "Our Goal",
+                icon: <Rocket size={26} />,
+                desc: "To consistently deliver cutting-edge media solutions that drive engagement, elevate brand identity, and create a lasting impact in a digital-first world."
+              },
             ].map((val, i) => (
               <motion.div
                 key={i}
@@ -177,27 +185,16 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                style={{ backgroundColor: "#0971A6" }}
-                className="p-10 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+                className="p-10 rounded-[2.5rem] bg-white border border-zinc-200 shadow-xl group transition-all duration-500 hover:border-[#FFD36A] hover:shadow-[0_20px_50px_rgba(255,211,106,0.15)]"
               >
-                {/* Icon aur Heading wrapper */}
                 <div className="flex items-center gap-4 mb-6">
-                  {/* 🌀 FIXED ICON BOX & ICON: Hover par custom text color override structural system */}
-                  <div className="shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:border-transparent transition-all duration-500 shadow-sm">
-                    {/* 🎯 FIXED: Icon ko wrapper element diya hai jo group-hover par text color badal kar icon ko perfect blue kardega */}
-                    <div className="group-hover:text-[#0971A6] transition-colors duration-500 flex items-center justify-center">
-                      {val.icon}
-                    </div>
+                  <div className="shrink-0 w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-100 text-[#FFD36A] group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500 shadow-sm">
+                    {val.icon}
                   </div>
-
-                  {/* Heading text */}
-                  <h4 className="text-[20px] font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors duration-300">
-                    {val.title}
-                  </h4>
+                  <h4 className="text-[20px] font-black text-black tracking-tight">{val.title}</h4>
                 </div>
 
-                {/* Description Panel */}
-                <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-zinc-600 text-[15px] font-medium leading-relaxed opacity-90 group-hover:text-black transition-colors duration-300">
                   {val.desc}
                 </p>
               </motion.div>
@@ -206,25 +203,22 @@ export default function AboutPage() {
         </div>
       </section>
       {/* 4. WORKING PROCESS */}
-      <section className="py-16 px-6 bg-[#1E2939] relative text-white">
+      <section className="py-20 bg-[#FFFFFF] px-6 relative border-y border-white/[#FFFFFF]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <span className="text-[10px] tracking-[4px] text-blue-400 font-extrabold block mb-4">EXECUTION TRACK</span>
-            <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-none">
-              Our{" "}
-              <span className="mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Working Process.
-              </span>
+            <span className="text-[10px] tracking-[4px] text-[#FFD36A] font-extrabold block mb-4 uppercase">Production Roadmap</span>
+            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
+              Our <span className="text-[#FFD36A]">Creative Workflow</span>
             </h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { step: "01", title: "Understanding", desc: "Learning about your business and goals." },
-              { step: "02", title: "Research", desc: "Detailed market research and planning." },
-              { step: "03", title: "Creative", desc: "Engaging designs and digital solutions." },
-              { step: "04", title: "Launch", desc: "Optimization and performance marketing." },
-              { step: "05", title: "Growth", desc: "Monitoring and long-term support." }
+              { step: "01", title: "Discovery", desc: "Understanding your vision and creative requirements." },
+              { step: "02", title: "Strategy", desc: "Planning the production roadmap and technical approach." },
+              { step: "03", title: "Production", desc: "Executing 3D modeling, VFX, and cinematography." },
+              { step: "04", title: "Refinement", desc: "Iterative editing and high-end color grading." },
+              { step: "05", title: "Delivery", desc: "Final render delivery in premium quality formats." }
             ].map((proc, idx) => (
               <motion.div
                 key={idx}
@@ -232,22 +226,21 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                style={{ backgroundColor: "#0971A6" }}
-                className="p-8 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)] flex flex-col justify-between"
+                className="p-8 rounded-[2rem] bg-[#E5E5E5] border border-zinc-200 hover:border-[#FFD36A] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(255,211,106,0.15)] flex flex-col justify-between group"
               >
                 <div>
-                  <div className="flex flex-col gap-4 mb-6">
-                    <div className="shrink-0 w-12 h-12 flex items-center justify-center rounded-2xl bg-black/20 text-cyan-300 border border-white/5 font-black text-sm group-hover:text-white group-hover:border-cyan-300/50 transition-all duration-500 shadow-sm">
-                      {proc.step}
-                    </div>
-
-                    <h3 className="text-[20px] font-bold text-white tracking-tight group-hover:text-cyan-200 transition-colors duration-300">
-                      {proc.title}
-                    </h3>
+                  {/* Icon Box: Light grey background with Gold text, hover par Gold fill */}
+                  <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 text-[#FFD36A] border border-zinc-200 font-black text-sm mb-6 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500">
+                    {proc.step}
                   </div>
 
-                  {/* 🎯 FIXED: Swapped 'val.desc' to 'proc.desc' */}
-                  <p className="text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Heading: Black text, hover par Golden */}
+                  <h3 className="text-[20px] font-black text-black mb-4 group-hover:text-[#FFD36A] transition-colors duration-300">
+                    {proc.title}
+                  </h3>
+
+                  {/* Description: Dark grey text */}
+                  <p className="text-zinc-600 text-[14px] leading-relaxed group-hover:text-black transition-colors duration-300">
                     {proc.desc}
                   </p>
                 </div>
@@ -257,51 +250,45 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 5. 4 REASONS TO WORK WITH US */}
-      <section className="py-16 bg-[#111827] px-6 relative border-t border-white/[0.02]">
+      <section className="py-20 bg-[#E5E5E5] px-6 relative border-y border-white/[0.05]">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-            <div className="max-w-2xl">
-              <h3 className="text-[2rem]  md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter  leading-tight">4 Reasons {" "}
-                <span className=" mt-0 py-1 pr-4 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  To Work With Us.
-                </span>
-
-              </h3>
-            </div>
+          <div className="mb-20">
+            <span className="text-[10px] tracking-[4px] text-[#FFD36A] font-extrabold block mb-4 uppercase">Production Roadmap</span>
+            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
+              Our <span className="text-[#FFD36A]">Creative Workflow</span>
+            </h3>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { icon: <Users size={24} />, title: "Experienced Team", desc: "Our skilled professionals bring creativity, expertise, and industry knowledge to deliver high-quality digital solutions." },
-              { icon: <Globe size={24} />, title: "Global Client Network", desc: "We have successfully worked with clients from the USA, UK, Australia, UAE, and many other countries worldwide." },
-              { icon: <Award size={24} />, title: "Proven Track Record", desc: "With 700+ completed projects across multiple industries, we deliver reliable results that help businesses grow online." },
-              { icon: <CheckCircle2 size={24} />, title: "Client-Focused Approach", desc: "We prioritize clear communication, personalized strategies, and long-term partnerships to ensure success." }
-            ].map((reason, i) => (
+              { step: "01", title: "Discovery", desc: "Understanding your vision and creative requirements." },
+              { step: "02", title: "Strategy", desc: "Planning the production roadmap and technical approach." },
+              { step: "03", title: "Production", desc: "Executing 3D modeling, VFX, and cinematography." },
+              { step: "04", title: "Refinement", desc: "Iterative editing and high-end color grading." },
+              { step: "05", title: "Delivery", desc: "Final render delivery in premium quality formats." }
+            ].map((proc, idx) => (
               <motion.div
-                key={i}
-                whileHover={{ x: 10 }}
-                // 🎯 FIXED: Style tag lagakar background color #0971A6 ko solid completely lock kar diya hai
-                style={{ backgroundColor: "#0971A6" }}
-                className="flex gap-6 p-8 rounded-[2.5rem] border border-white/10 group transition-all duration-500 hover:border-cyan-300/40 hover:shadow-[0_20px_50px_rgba(9,113,166,0.3)]"
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="p-8 rounded-[2rem] bg-white border border-zinc-200 hover:border-[#FFD36A] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(255,211,106,0.2)] flex flex-col justify-between group"
               >
-                {/* 🌀 FIXED ICON BOX: Hover se pehle subtle dark tint, hover ke baad clean white surface with 0971A6 text */}
-                <div
-                  style={{ '--hover-color': '#0971A6' } as React.CSSProperties}
-                  className="shrink-0 w-12 h-12 flex items-center justify-center rounded-xl bg-black/20 text-cyan-300 border border-white/5 group-hover:bg-white group-hover:text-[var(--hover-color)] group-hover:border-transparent transition-all duration-500 shadow-sm"
-                >
-                  {reason.icon}
-                </div>
-
                 <div>
-                  {/* Title Text (Kept original sizes, added text-white) */}
-                  <h4 className="font-block text-[1.0rem] sm:text-[1.2rem] lg:text-[1.2rem] 2xl:text-[1.5rem] text-white group-hover:text-cyan-200 transition-colors duration-300">
-                    {reason.title}
-                  </h4>
+                  {/* Icon Box: White background par Gold text */}
+                  <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 text-[#FFD36A] border border-zinc-200 font-black text-sm mb-6 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500">
+                    {proc.step}
+                  </div>
 
-                  {/* Description Paragraph (Kept original sizes & padding) */}
-                  <p className="mb-2 mt-2 text-white text-[15px] md:text-base lg:text-[15px] 2xl:text-[15px] font-medium leading-relaxed max-w-xl 2xl:max-w-2xl opacity-90 antialiased group-hover:opacity-100 transition-opacity duration-300">
-                    {reason.desc}
+                  {/* Heading: Black color */}
+                  <h3 className="text-[20px] font-black text-black mb-4 group-hover:text-[#FFD36A] transition-colors duration-300">
+                    {proc.title}
+                  </h3>
+
+                  {/* Description: Grey color */}
+                  <p className="text-zinc-600 text-[14px] leading-relaxed group-hover:text-black transition-colors duration-300">
+                    {proc.desc}
                   </p>
                 </div>
               </motion.div>

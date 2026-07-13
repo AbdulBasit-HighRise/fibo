@@ -105,10 +105,7 @@ export default function ContactPage() {
           <div className="relative z-10 w-full mx-auto text-center lg:text-left px-6 pt-32 pb-16 md:pt-20 md:pb-24 lg:max-w-full lg:pt-60 lg:pb-28 lg:pl-40 2xl:mx-0 2xl:max-w-[1500px] 2xl:pt-48 2xl:pb-36 2xl:pl-80 3xl:mx-0 3xl:max-w-[1800px] 3xl:pt-60 3xl:pb-44 3xl:pl-72">
             <div className="max-w-5xl">
               
-              <div className="flex items-center gap-2.5 mb-8 w-fit px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md mx-auto md:mx-0">
-                <Flame size={12} className="text-blue-400 animate-pulse" />
-                <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Lets Connect</span>
-              </div>
+          
 
               <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] uppercase font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
                 CONTACT {" "}
@@ -118,7 +115,7 @@ export default function ContactPage() {
               </h1>
 
               <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                Connect with our digital experts today for innovative solutions, creative strategies, and personalized support to grow your business successfully online.
+                Have questions or want to learn more about our services? Fill out the form and we'll get back to you as soon as possible.
               </p>
             </div>
           </div>
@@ -187,10 +184,13 @@ export default function ContactPage() {
                     >
                       <option value="" disabled className="bg-[#0a0a0a]">Select a service</option>
                       <option value="Website Development" className="bg-[#0a0a0a]">Website Development</option>
-                      <option value="SEO" className="bg-[#0a0a0a]">SEO</option>
-                      <option value="Social Media Marketing" className="bg-[#0a0a0a]">Social Media Marketing</option>
-                      <option value="AI Automation" className="bg-[#0a0a0a]">AI Automation</option>
-                      <option value="Ecommerce Management" className="bg-[#0a0a0a]">Ecommerce Management</option>
+                      <option value="App Development" className="bg-[#0a0a0a]">App Development</option>
+                      <option value="Social Media Marketing" className="bg-[#0a0a0a]">Digital Marketing</option>
+                      <option value="AI Automation" className="bg-[#0a0a0a]">AI/ML Solutions</option>
+                      <option value="Ecommerce Management" className="bg-[#0a0a0a]">3D Video Production</option>
+                      <option value="VFX" className="bg-[#0a0a0a]">VFX</option>
+                      <option value="Block Chain Development" className="bg-[#0a0a0a]">Block Chain Development</option>
+                      <option value="Graphic Design" className="bg-[#0a0a0a]">Graphic Design</option>
                     </select>
                     <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500 transition-all">
                       <ChevronDown size={18} strokeWidth={2.5} />
@@ -280,7 +280,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-[16px] 2xl:text-xs uppercase text-zinc-500 font-bold tracking-wider">Email</p>
-                    <p className="text-base 2xl:text-xl font-bold text-white">info@highrisedigital.io</p>
+                    <p className="text-base 2xl:text-xl font-bold text-white">hello@fiboentertainment.com</p>
                   </div>
                 </div>
                 <div className="flex gap-4 2xl:gap-6 items-center">
@@ -292,7 +292,7 @@ export default function ContactPage() {
                       WhatsApp
                     </p>
                     <p className="text-base md:text-lg lg:text-[19px] 2xl:text-xl 3xl:text-2xl font-black text-white tracking-tight leading-normal">
-                      +92 300 2777587
+                      +92 339 4004791
                     </p>
                   </div>
                 </div>
@@ -320,9 +320,7 @@ export default function ContactPage() {
               <h3 className="text-sm 2xl:text-base font-bold tracking-[3px] text-blue-400 mb-8">Locations</h3>
               <div className="space-y-8">
                 {[
-                  { city: "Multan, Pakistan", address: "Suite # 19, Block-M, Wapda Town Phase 2, Multan." },
-                  { city: "United States", address: "3564 Avalon Park East Blvd, Orlando, FL 32828" },
-                  { city: "United Kingdom", address: "Suite 105, Fence House, Macclesfield, Cheshire SK10 1LT" }
+                  { city: " Pakistan", address: "Islamabad, F-7 Markaz" },
                 ].map((loc, i) => (
                   <div key={i} className="flex items-start gap-4 group">
                     <div className="mt-1 p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-blue-500/50 transition-colors">

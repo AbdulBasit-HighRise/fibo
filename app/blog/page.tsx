@@ -14,7 +14,7 @@ export default async function BlogPage() {
         <div className="container-wide">
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
-              src="/home-hero.jpg"
+              src="/all-page-hero-img.jpg" // "?v=2" add kar diya
               alt="Mesh Grid"
               fill
               sizes="100vw"
