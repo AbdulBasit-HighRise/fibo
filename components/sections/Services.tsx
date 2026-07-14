@@ -22,7 +22,7 @@ const SERVICES = [
   { id: "04", title: "VFX", icon: Sparkles, link: "/services/vfx", desc: "Creating stunning visual effects for films, commercials, and other media." },
   { id: "05", title: "Graphic Design", icon: PenTool, link: "/services/graphic-design", desc: "Designing compelling visuals for brands and marketing materials." },
   { id: "06", title: "Digital Marketing", icon: Megaphone, link: "/services/digital-marketing", desc: "Driving growth through data-driven digital marketing strategies." },
-  { id: "07", title: "Blockchain Development", icon: Cpu, link: "/services/blockchain-development", desc: "Building decentralized applications and smart contracts for innovative solutions." },
+  { id: "07", title: "Blockchain", icon: Cpu, link: "/services/blockchain-development", desc: "Building decentralized applications and smart contracts for innovative solutions." },
   { id: "08", title: "AI/ML Solutions", icon: BrainCircuit, link: "/services/ai-ml-solutions", desc: "Leveraging artificial intelligence and machine learning to drive innovation and efficiency." },
 ];
 export default function Services() {
@@ -55,7 +55,7 @@ export default function Services() {
       <Icon size={24} />
     </div>
 
-    <h4 className="text-xl font-black text-black mt-6 leading-tight uppercase tracking-tight">
+    <h4 className="text-xl font-black text-black mt-6 leading-tight  tracking-tight">
       {item.title}
     </h4>
 

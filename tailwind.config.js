@@ -6,8 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // Yahan hum font-sans ko explicitly Inter par set kar rahe hain
+      fontFamily: {
+        sans: ['var(--font-sans)', 'sans-serif'],
+      },
       animation: {
-        // 25s speed hai, agar tez chalana ho toh number kam kar dena (e.g., 20s)
         marquee: 'marquee 25s linear infinite',
       },
       keyframes: {

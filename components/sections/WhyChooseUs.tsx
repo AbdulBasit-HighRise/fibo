@@ -14,24 +14,25 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
-        
+    <section className="pt-12 md:pt-20 2xl:pt-32 pb-12 md:pb-20 2xl:pb-32 bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+
         {/* Heading Section - Forced High Contrast */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-black !text-black leading-tight">
+          <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-black">
             Why Choose Us
           </h2>
-          <p className="!text-black mt-3 max-w-lg mx-auto font-normal text-xl leading-relaxed">
-            From discovery to deployment, we partner closely with you to deliver outcomes — not just deliverables.
+
+          <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto text-center">
+            From discovery to deployment, we partner closely with you to deliver outcomes not just deliverables.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 gap-x-12 gap-y-12">
           {features.map((item, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="flex items-start gap-6 group"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +41,7 @@ export default function WhyChooseUs() {
               <div className="w-16 h-16 rounded-full bg-zinc-100 flex items-center justify-center text-black shrink-0 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-300">
                 {item.icon}
               </div>
-              
+
               <div className="pt-2">
                 <h4 className="text-xl font-black !text-black">{item.title}</h4>
                 <p className="!text-black text-base mt-3 font-normal leading-relaxed">

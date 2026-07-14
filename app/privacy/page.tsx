@@ -12,17 +12,14 @@ export default function PrivacyPolicy() {
       <section className="relative w-full overflow-hidden">
 
         {/* Background Image Container with Exact Matching Premium CSS */}
-        <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-          <Image
-            src="/home-hero.png"
-            alt="Mesh Grid"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top " // Depth consistency locked
-          />
-          <div className="absolute inset-0" />
-        </div>
+         <Image
+                     src="/home-hero.png"
+                     alt="Mesh Grid"
+                     fill
+                     sizes="100vw"
+                     priority
+                     className="object-cover object-center"
+                   />
 
         {/* Ambient Blur Dot to lock the signature aesthetic */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />

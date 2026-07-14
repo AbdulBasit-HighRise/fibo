@@ -44,10 +44,10 @@ export default function AboutPreview() {
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
                 <div>
-                  <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-black">
-                    Leading Digital Marketing
+                  <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-normal leading-[1.1] md:leading-[1] text-black">
+                    Global Media Production &
                     {" "}
-                    Company Working Globally
+                    Advanced Tech Solutions
                   </h2>
                 </div>
               </div>
@@ -66,8 +66,7 @@ export default function AboutPreview() {
 
                 {/* Paragraph 3: Global Reach & Reliability */}
                 <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                  From cinematic post-production to scalable web and AI solutions, we partner with clients across the USA, UK, Australia, and beyond to deliver reliable, world-class production standards.
-                </p>
+                  We transform complex visions into high-impact digital realities, bridging the gap between cinematic media and robust technology for global brands.                </p>
               </div>
 
               {/* Buttons Section */}

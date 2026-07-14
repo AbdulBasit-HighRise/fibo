@@ -1,26 +1,20 @@
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { Instrument_Sans, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import { siteMetadata } from "@/app/constants/metadata";
 import Script from "next/script";
 
-const instrumentSans = Instrument_Sans({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  weight: ["600", "700"],
-  display: "swap",
-});
-
+// Sirf Inter ko initialize kiya
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata = {
-  metadataBase: new URL('https://highrisedigital.io'), 
+  metadataBase: new URL('https://highrisedigital.io'),
   title: siteMetadata.home.title,
   description: siteMetadata.home.description,
   icons: { icon: "/fibo-fav.png" },
@@ -35,7 +29,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${instrumentSans.variable}`}
+      className={inter.variable}
     >
       <head>
         <Script
@@ -51,11 +45,10 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="font-sans bg-[#030303] text-white antialiased overflow-x-hidden"
-      suppressHydrationWarning={true}
-      
+      <body
+        className="font-sans bg-[#030303] text-white antialiased overflow-x-hidden"
+        suppressHydrationWarning={true}
       >
-        
         <Navbar />
         <main className="relative z-10 min-h-screen w-full max-w-[2560px] mx-auto">
           {children}

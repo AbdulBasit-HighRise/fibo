@@ -20,8 +20,8 @@ export default function HeroSection() {
 
           {/* LEFT CONTENT */}
           <div className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
-            <h1 className="text-[1.9rem] sm:text-[3.5rem] !text-normalcase md:text-[3rem] lg:text-[3.5rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.05] tracking-tighter text-white max-w-2xl lg:max-w-none">
-              Redefining Cinematic Visual Storytelling.
+            <h1 className="text-[1.9rem] sm:text-[3.5rem] md:text-[3rem] lg:text-[3.5rem] 2xl:text-[5.5rem] font-black leading-[1.1] lg:leading-[1.02] tracking-normal md:tracking-normal text-white max-w-2xl lg:max-w-none !normal-case">
+              Redefining cinematic visual storytelling.
             </h1>
 
             <div className="mt-6 space-y-4">

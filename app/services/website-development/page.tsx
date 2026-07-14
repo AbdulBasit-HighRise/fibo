@@ -128,17 +128,24 @@ export default function GraphicDesignPage() {
         <div className="container-wide">
 
           {/* Background Image Container with Exact Matching Premium CSS */}
-          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-            <Image
-              src="/home-hero.png"
-              alt="Mesh Grid"
-              fill
-              sizes="100vw"
-              priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top "
-            />
-            <div className="absolute inset-0" />
-          </div>
+         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                    {/* Image */}
+                    <Image
+                      src="/home-hero.png"
+                      alt="Mesh Grid"
+                      fill
+                      sizes="100vw"
+                      priority
+                      className="object-cover object-center"
+                    />
+        
+                    {/* Dark Overlay - Yahan shade control karo */}
+                    {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
+                    <div className="absolute inset-0 bg-black/60" />
+        
+                    {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
+                    {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
+                  </div>
 
           {/* Ambient Blur Dot to lock the signature aesthetic */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
@@ -149,9 +156,9 @@ export default function GraphicDesignPage() {
 
 
 
-              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
-                SCALABLE WEB SOLUTIONS & APPLICATIONS.
-               
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black  tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
+              Web Solutions & Applications.
+
               </h1>
 
               {/* Description Paragraph */}
@@ -200,7 +207,7 @@ export default function GraphicDesignPage() {
               <div>
                 <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
                   Build High-Performance Apps with {" "}Our Custom Web Development.
-              
+
                 </h2>
               </div>
 
@@ -211,7 +218,7 @@ export default function GraphicDesignPage() {
                 viewport={{ once: true }}
                 className="space-y-6 md:space-y-8"
               >
-            
+
                 <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
                   A clean UI is only the beginning; the real goal is to build a robust digital architecture that handles high traffic while maintaining lightning-fast performance. Our development approach focuses on modular code, SEO-readiness, and performance integrity to bring your business vision to life.
                 </p>
@@ -244,7 +251,7 @@ export default function GraphicDesignPage() {
                   </button>
                 </Link>
 
-             
+
               </motion.div>
             </div>
           </div>
@@ -262,7 +269,7 @@ export default function GraphicDesignPage() {
             <div className="max-w-4xl">
               <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-black">
                 Our{" "}Specialized Web Development Services.
-               
+
               </h3>
             </div>
           </div>
@@ -350,7 +357,7 @@ export default function GraphicDesignPage() {
           <div className="mb-12 md:mb-16 pt-0 text-center">
             <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-black normal-case">
               Our{" "} Website Development Process.
-             
+
             </h3>
           </div>
 
@@ -505,7 +512,7 @@ export default function GraphicDesignPage() {
         <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
           {/* Header Title Section */}
           <div className="mb-16 text-center">
-          <h3 className="text-[2rem] md:text-5xl font-black text-black leading-none mb-6">
+            <h3 className="text-[2rem] md:text-5xl font-black text-black leading-none mb-6">
               Frequently Asked Questions (FAQs)
             </h3>
           </div>

@@ -43,17 +43,24 @@ export default function ServicesPage() {
       {/* 1. HERO SECTION (Optimized) */}
       <section className="relative w-full overflow-hidden">
         <div className="container-wide">
-          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-            <Image
-              src="/home-hero.png"
-              alt="Mesh Grid"
-              fill
-              sizes="100vw"
-              priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top "
-            />
-            <div className="absolute inset-0 " />
-          </div>
+           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+                      {/* Image */}
+                      <Image
+                        src="/home-hero.png"
+                        alt="Mesh Grid"
+                        fill
+                        sizes="100vw"
+                        priority
+                        className="object-cover object-center"
+                      />
+          
+                      {/* Dark Overlay - Yahan shade control karo */}
+                      {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
+                      <div className="absolute inset-0 bg-black/60" />
+          
+                      {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
+                      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
+                    </div>
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
