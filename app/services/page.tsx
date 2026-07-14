@@ -45,14 +45,14 @@ export default function ServicesPage() {
         <div className="container-wide">
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
-              src="/home-hero.jpg"
+              src="/home-hero.png"
               alt="Mesh Grid"
               fill
               sizes="100vw"
               priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top opacity-35"
+              className="object-cover object-top "
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+            <div className="absolute inset-0 " />
           </div>
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
@@ -65,10 +65,8 @@ export default function ServicesPage() {
               </div> */}
 
               <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
-                Our {" "}
-                <span className="inline-block mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Services.
-                </span>
+                Our {" "} Services.
+             
               </h1>
 
               <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
@@ -120,10 +118,8 @@ export default function ServicesPage() {
 
 
               <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
-                Elevate Your Vision with{" "}
-                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-[#FFD36A] to-amber-600">
-                  Premium Production & VFX
-                </span>
+                Elevate Your Vision with Premium Production & VFX
+                 
               </h2>
             </div>
 
@@ -146,10 +142,10 @@ export default function ServicesPage() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative h-[50px] px-10 rounded-full bg-black overflow-hidden shadow-xl w-full sm:w-auto flex items-center justify-center gap-3 border border-black"
+                  className="group relative h-[50px] text-black px-10 rounded-full bg-white overflow-hidden shadow-xl w-full sm:w-auto flex items-center justify-center gap-3 "
                 >
                   <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
-                  <span className="relative z-10 flex items-center gap-3 text-white font-black text-[11px] uppercase tracking-[2px] group-hover:text-black transition-colors duration-500">
+                  <span className="relative z-10 flex items-center gap-3 text-black font-black text-[11px] uppercase tracking-[2px] group-hover:text-black transition-colors duration-500">
                     Start Your Project
                     <ArrowRight className="w-4 h-4" />
                   </span>
@@ -162,7 +158,7 @@ export default function ServicesPage() {
 
       {/* SECTION 3: SERVICE GRID */}
 
-      <section className="relative bg-[#E5E5E5] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
+      <section className="relative bg-[#f4f4f4] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
 
           {/* HEADER */}

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --bg-dark: #111827;
+    --bg: #FFFFFF;
     --accent-blue: #3b82f6;
     --text-primary: #ffffff;
     --text-secondary: #a1a1aa;
@@ -115,6 +115,6 @@ p {
 }
 /* --- CUSTOM SCROLLBAR --- */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #111827; }
-::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+::-webkit-scrollbar-track { background: #FFFFFF; }
+::-webkit-scrollbar-thumb { background: #FFFFFF; border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: #3b82f6; }

@@ -3,10 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, ChevronDown, Code, Smartphone, Video, Sparkles, PenTool, Megaphone, Cpu, BrainCircuit } from "lucide-react";
+import { Menu, X, ChevronDown, Plus, Code, Smartphone, Video, Sparkles, PenTool, Megaphone, Cpu, BrainCircuit } from "lucide-react";
 import Image from "next/image";
 
-// 1. SERVICES Array define kiya taake Error na aye
 const SERVICES = [
   { id: "01", title: "Web Development", icon: Code, link: "/services/website-development" },
   { id: "02", title: "App Development", icon: Smartphone, link: "/services/app-development" },
@@ -21,6 +20,7 @@ const SERVICES = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [mobileServices, setMobileServices] = useState(false); // Mobile Services ke liye toggle
   const pathname = usePathname();
 
   return (
@@ -28,13 +28,15 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between w-full h-20">
 
-          {/* Logo */}
           <Link href="/" className="shrink-0">
-            <Image src="/fibo-footer-logo.png" alt="Logo" width={180} height={45} className="h-8 md:h-14 w-auto" />
+            <Image src="/fibo-footer-logo.png" alt="Logo" width={180} height={45} className="h-10 md:h-14 w-auto" />
           </Link>
 
-          {/* Nav Links */}
-          <div className="hidden lg:flex items-center gap-1">
+          <button className="lg:hidden p-2" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X className="text-[#FFD36A]" size={24} /> : <Menu className="text-[#FFD36A]" size={24} />}
+          </button>
+
+          <div className={`${isOpen ? "flex" : "hidden"} lg:flex absolute lg:static top-20 left-0 w-full lg:w-auto bg-white lg:bg-transparent flex-col lg:flex-row items-center gap-1 p-6 lg:p-0 shadow-xl lg:shadow-none`}>
             {[
               { name: "Home", href: "/" },
               { name: "About", href: "/about" },
@@ -42,54 +44,59 @@ export default function Navbar() {
               { name: "Our Work", href: "/our-work" },
               { name: "Contact", href: "/contact" }
             ].map((link) => (
-              <div
-                key={link.name}
-                className="relative group"
-                onMouseEnter={() => link.isDropdown && setShowServices(true)}
-                onMouseLeave={() => link.isDropdown && setShowServices(false)}
-              >
-                <Link
-                  href={link.href}
-                  className={`flex items-center gap-1.5 px-5 py-2.5 text-[12px] font-extrabold uppercase tracking-wide transition-all duration-300 rounded-full
-                    ${pathname === link.href
-                      ? "text-black bg-zinc-100"
-                      : "text-zinc-700 hover:text-black hover:bg-zinc-100"}`}
-                >
-                  {link.name} {link.isDropdown && <ChevronDown size={12} className="stroke-[3]" />}
-                </Link>
+              <div key={link.name} className="relative group w-full lg:w-auto">
+                <div className="flex items-center justify-center lg:justify-start w-full">
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center gap-1.5 px-5 py-2.5 text-[12px] font-extrabold uppercase transition-all duration-300 rounded-full ${pathname === link.href ? "text-black bg-zinc-100" : "text-zinc-700 hover:text-black hover:bg-zinc-100"}`}
+                  >
+                    {link.name}
+                  </Link>
+                  {link.isDropdown && (
+                    <button onClick={() => setMobileServices(!mobileServices)} className="lg:hidden p-2 text-zinc-700">
+                      <Plus size={16} />
+                    </button>
+                  )}
+                </div>
 
-                {/* Dynamic Dropdown - 2 Column Grid */}
-                {link.isDropdown && showServices && (
-                  <div className="absolute top-full left-0 pt-2 z-[100] w-[450px]">
-                    <div className="bg-white border border-zinc-200 shadow-2xl shadow-zinc-200/50 rounded-3xl p-3 animate-in fade-in zoom-in duration-200 grid grid-cols-2 gap-1">
+                {/* Desktop Dropdown */}
+                {link.isDropdown && (
+                  <div className="hidden lg:block absolute top-full left-0 pt-2 z-[100] w-[450px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+                    <div className="bg-white border border-zinc-200 shadow-2xl rounded-3xl p-3 grid grid-cols-2 gap-1">
                       {SERVICES.map((item) => (
-                        <Link
-                          key={item.id}
-                          href={item.link}
-                          className="flex items-center gap-3 px-4 py-3 text-[12px] font-bold text-zinc-700 hover:text-black hover:bg-[#FFD36A]/20 rounded-2xl transition-all"
-                        >
-                          <item.icon size={16} className="text-[#FFD36A]" />
-                          {item.title}
+                        <Link key={item.id} href={item.link} className="flex items-center gap-3 px-4 py-3 text-[12px] font-bold text-zinc-700 hover:text-black hover:bg-[#FFD36A]/20 rounded-2xl">
+                          <item.icon size={16} className="text-[#FFD36A]" /> {item.title}
                         </Link>
                       ))}
                     </div>
                   </div>
                 )}
+
+                {/* Mobile Dropdown List */}
+                {link.isDropdown && mobileServices && (
+                  <div className="lg:hidden grid grid-cols-1 gap-1 px-4 py-2">
+                    {SERVICES.map((item) => (
+                      <Link key={item.id} href={item.link} onClick={() => setIsOpen(false)} className="px-4 py-3 text-[12px] font-bold text-zinc-600 border-b border-zinc-50">
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
+            
+            {/* Mobile CTA Button */}
+            <Link href="/contact" className="lg:hidden w-full mt-4">
+              <button className="w-full bg-black text-white py-4 rounded-full text-[11px] font-black uppercase tracking-widest">Get Quote</button>
+            </Link>
           </div>
 
-          {/* Right Side CTA */}
-          <div className="flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4">
             <Link href="/contact">
-              <button className="group relative hidden md:block overflow-hidden bg-white text-black px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-500 active:scale-95 shadow-md">
-                {/* Gold Hover Background */}
-                <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
-
-                {/* Button Text */}
-                <span className="relative z-10 group-hover:text-black transition-colors duration-500">
-                  Get Quote
-                </span>
+              <button className="group relative overflow-hidden bg-white text-black px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-500 shadow-md border border-zinc-200">
+                <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 group-hover:w-full" />
+                <span className="relative z-10 group-hover:text-black transition-colors duration-500">Get Quote</span>
               </button>
             </Link>
           </div>

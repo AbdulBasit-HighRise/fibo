@@ -63,7 +63,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className="bg-[#111827] text-white antialiased overflow-x-hidden selection:bg-blue-600/30"
+        className="bg-[#FFFFFF] text-white antialiased overflow-x-hidden selection:bg-blue-600/30"
         suppressHydrationWarning
       >
         {/* <CustomCursor /> */}

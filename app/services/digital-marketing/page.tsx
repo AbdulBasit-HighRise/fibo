@@ -130,14 +130,14 @@ export default function SEOPage() {
           {/* Background Image Container with Exact Matching Premium CSS */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
-              src="/home-hero.jpg"
+              src="/home-hero.png"
               alt="Mesh Grid"
               fill
               sizes="100vw"
               priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top opacity-35"
+              className="object-cover object-top "
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+            <div className="absolute inset-0 " />
           </div>
 
           {/* Ambient Blur Dot to lock the signature aesthetic */}
@@ -150,10 +150,8 @@ export default function SEOPage() {
 
 
               <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
-                DATA-DRIVEN DIGITAL {" "}
-                <span className="mt-2 block bg-gradient-to-r from-[#FFD36A] via-[#EAB308] to-[#FFD36A] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  GROWTH & MARKETING.
-                </span>
+                DATA-DRIVEN DIGITAL {" "} GROWTH & MARKETING.
+            
               </h1>
 
               {/* Description Paragraph */}
@@ -187,7 +185,7 @@ export default function SEOPage() {
               <div className="absolute w-[50%] h-[50%] bg-blue-600/[0.05] blur-[80px] rounded-full" />
               <div className="relative z-10 w-full max-w-[320px] md:max-w-[490px] 2xl:max-w-[650px]">
                 <Image
-                  src="/web.webp"
+                  src="/digital-marketing.png"
                   alt="High Rise Digital - Leading Global Agency"
                   width={700}
                   height={700}
@@ -201,10 +199,8 @@ export default function SEOPage() {
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div>
                 <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
-                  Maximize Your ROI with {" "}
-                  <span className="mt-0 mb-2 py-1 text-transparent bg-clip-text bg-gradient-to-r from-[#FFD36A] to-amber-600">
-                    Our Marketing Strategy.
-                  </span>
+                  Maximize Your ROI with {" "}Our Marketing Strategy.
+            
                 </h2>
               </div>
 
@@ -243,8 +239,8 @@ export default function SEOPage() {
                 viewport={{ once: true }}
                 className="flex flex-wrap items-center gap-6 pt-4"
               >
-                <Link href="/contact">
-                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-black text-white font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
+            <Link href="/contact">
+                  <button className="group relative overflow-hidden px-8 2xl:px-10 h-[48px] 2xl:h-[56px] rounded-full bg-white text-black font-black text-[11px] 2xl:text-[13px] uppercase tracking-widest transition-all duration-500 flex items-center gap-2 active:scale-95 shadow-lg">
                     <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
                     <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
                       Get Quote <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -252,20 +248,14 @@ export default function SEOPage() {
                   </button>
                 </Link>
 
-                <Link
-                  href="/services"
-                  className="group flex items-center gap-2 text-zinc-400 hover:text-black font-bold text-[11px] 2xl:text-[13px] uppercase tracking-[2px] transition-colors duration-300"
-                >
-                  View Services
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </Link>
+              
               </motion.div>
             </div>
           </div>
         </div>
       </section>
       {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
-      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#E5E5E5]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#f4f4f4]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
@@ -275,10 +265,8 @@ export default function SEOPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
             <div className="max-w-4xl">
               <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-black">
-                Our{" "}
-                <span className="bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Specialized Digital Marketing Services.
-                </span>
+                Our{" "} Specialized Digital Marketing Services.
+               
               </h3>
             </div>
           </div>
@@ -365,10 +353,8 @@ export default function SEOPage() {
           {/* 📋 HEADER - Font sizing synced with reference file */}
           <div className="mb-12 md:mb-16 pt-0 text-center">
             <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-black normal-case">
-              Our{" "}
-              <span className="mt-2 py-1 pr-4 bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-clip-text text-transparent">
-                Digital Marketing Workflow.
-              </span>
+              Our{" "} Digital Marketing Workflow.
+             
             </h3>
           </div>
 
@@ -391,7 +377,7 @@ export default function SEOPage() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-[#E5E5E5] border border-zinc-200 shadow-xl hover:border-[#FFD36A] transition-all duration-500"
+                        className="relative p-6 md:p-8 2xl:p-12 rounded-[1.8rem] 2xl:rounded-[2.5rem] bg-[#f4f4f4] border border-zinc-200 shadow-xl hover:border-[#FFD36A] transition-all duration-500"
                       >
                         {/* Floating Step Number */}
                         <div className="absolute -top-3 -right-3 w-10 h-10 2xl:w-14 2xl:h-14 rounded-full bg-black text-[#FFD36A] flex items-center justify-center font-black text-[11px] 2xl:text-sm shadow-xl z-10">
@@ -436,7 +422,7 @@ export default function SEOPage() {
 
 
       {/* Why Chose ue */}
-      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#E5E5E5] overflow-hidden border-b border-zinc-200">
+      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#f4f4f4] overflow-hidden border-b border-zinc-200">
         {/* Subtle Background Glow */}
         <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-[#FFD36A]/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -452,9 +438,8 @@ export default function SEOPage() {
                 transition={{ duration: 0.8 }}
               >
                 <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-black">
-                  Why Choose Our <span className="block mt-2 bg-gradient-to-r from-[#FFD36A] to-amber-600 bg-clip-text text-transparent">
-                    Marketing Strategy?
-                  </span>
+                  Why Choose Our  Marketing Strategy?
+              
                 </h3>
 
                 <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
@@ -520,7 +505,8 @@ export default function SEOPage() {
           {/* Header Title Section */}
           <div className="mb-16 text-center">
             <h3 className="text-[2rem] md:text-5xl font-black text-black leading-none mb-6">
-              Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FFD36A] to-amber-600">Questions (FAQs)</span>
+              Frequently Asked  Questions (FAQs)
+        
             </h3>
           </div>
 

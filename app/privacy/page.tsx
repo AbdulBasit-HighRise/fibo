@@ -14,14 +14,14 @@ export default function PrivacyPolicy() {
         {/* Background Image Container with Exact Matching Premium CSS */}
         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
           <Image
-            src="/home-hero.jpg"
+            src="/home-hero.png"
             alt="Mesh Grid"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top opacity-35" // Depth consistency locked
+            className="object-cover object-top " // Depth consistency locked
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#111827]/40 to-[#111827]" />
+          <div className="absolute inset-0" />
         </div>
 
         {/* Ambient Blur Dot to lock the signature aesthetic */}
@@ -40,10 +40,7 @@ export default function PrivacyPolicy() {
 
             {/* Main Large Typography Block - Dynamic Controlled Laptop Sizing */}
             <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-              PRIVACY {" "}
-              <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#FFD36A] via-[#EAB308] to-[#FFD36A] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                Policy.
-              </span>
+              PRIVACY {" "} Policy.
             </h1>
 
             <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
@@ -53,48 +50,63 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      {/* --- ARTICLE CONTENT SECTION (Optimized Width & Perfectly Balanced Layout) --- */}
-      <section className="bg-white py-16 md:py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-6xl mx-auto space-y-12">
+      <section className="bg-white py-20 md:py-32 px-6 md:px-12 lg:px-24">
+        <div className="max-w-6xl mx-auto space-y-16">
 
-          {/* Section 1 */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">1. Information We Collect</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              We collect information that you voluntarily provide to us when you inquire about our services, such as your name, email address, and project requirements. Additionally, we may collect technical data through cookies to enhance your browsing experience and improve our website's functionality.
-            </p>
+          {/* Header */}
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-5xl font-black text-black tracking-tighter">Privacy Policy</h1>
+            <p className="text-zinc-500 font-medium">Last Updated: July 2026</p>
           </div>
 
-          {/* Section 2 */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">2. How We Use Your Data</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              Your data is used solely to respond to your inquiries, deliver our design and development services, and improve our platform's performance. We are committed to your privacy and do not sell, rent, or share your personal information with third parties for marketing purposes.
-            </p>
-          </div>
+          {/* Content Sections */}
+          <div className="space-y-12">
 
-          {/* Section 3 */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">3. Data Security</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              We implement industry-standard security measures to protect your data from unauthorized access, alteration, or disclosure. While we strive to maintain the highest level of security, please be aware that no method of transmission over the internet or electronic storage is entirely invulnerable.
-            </p>
-          </div>
+            <div>
+              <h3 className="text-2xl font-black text-black mb-4">1. Data Collection</h3>
+              <p className="text-zinc-600 text-lg leading-relaxed">
+                We collect information you provide directly to us when you fill out our contact form, request a proposal, or collaborate on a project. This includes your name, email address, phone number, and project-related details necessary to provide you with tailored digital and production solutions.
+              </p>
+            </div>
 
-          {/* Section 4 */}
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">4. Your Rights</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              You have the right to request access to the information we hold about you, ask for necessary corrections, or request that we delete your personal data from our records at any time.
-            </p>
-          </div>
+            <div>
+              <h3 className="text-2xl font-black text-black mb-4">2. Use of Information</h3>
+              <p className="text-zinc-600 text-lg leading-relaxed">
+                The information we collect is strictly used to communicate regarding your project, provide customer support, and deliver the services you have requested. We do not sell, rent, or trade your personal information with third parties for marketing purposes.
+              </p>
+            </div>
 
-          {/* Contact Line */}
-          <div className="pt-8 border-t border-zinc-200">
-            <p className="text-zinc-600 text-base font-medium">
-              If you have any questions regarding this policy, please reach out to us at
-              <span className="font-bold text-amber-600 ml-2">hello@fiboentertainment.com</span>
-            </p>
+            <div>
+              <h3 className="text-2xl font-black text-black mb-4">3. Data Security</h3>
+              <p className="text-zinc-600 text-lg leading-relaxed">
+                Protecting your digital assets and personal details is our priority. We implement industry-standard security measures to prevent unauthorized access, disclosure, or alteration of the data you share with us during our partnership.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-black text-black mb-4">4. Cookies & Analytics</h3>
+              <p className="text-zinc-600 text-lg leading-relaxed">
+                We may use browser cookies and analytical tools to understand how our website is used. This data helps us improve your user experience and ensure our portfolio displays correctly across all devices. You can choose to disable cookies through your browser settings if preferred.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-black text-black mb-4">5. Third-Party Links</h3>
+              <p className="text-zinc-600 text-lg leading-relaxed">
+                Our website may contain links to third-party platforms (like LinkedIn or Upwork). We are not responsible for the privacy practices of those sites and encourage you to review their respective privacy policies before sharing any information.
+              </p>
+            </div>
+
+            {/* Contact Section */}
+            <div className="p-8 md:p-10 bg-[#f4f4f4] rounded-[2rem] border border-black/5">
+              <h4 className="text-xl font-black text-black mb-2">Questions about your data?</h4>
+              <p className="text-zinc-600 text-lg">
+                If you have concerns or requests regarding how your data is handled, feel free to contact us at
+                <span className="font-bold text-black block mt-2 hover:text-amber-600 transition-colors">
+                  <a href="mailto:hello@fiboentertainment.com">hello@fiboentertainment.com</a>
+                </span>
+              </p>
+            </div>
           </div>
 
         </div>

@@ -1,14 +1,9 @@
 import { siteMetadata } from "@/app/constants/metadata";
 
-// Safely cast meta object to access nested properties safely
-const serviceMeta = siteMetadata.services as any;
+// 🔴 1. Spaces khatam kar diye key ke andar se
+export const metadata = siteMetadata["website-development"];
 
-export const metadata = {
-  // 🎯 FIXED: "webDev" ki jagah original key "website-development" use ki hai aur optional chaining lagayi hai
-  title: serviceMeta?.["website-development"]?.title || "Website Development Agency",
-  description: serviceMeta?.["website-development"]?.description || "Build a powerful online presence with our website development agency.",
-};
-
-export default function WebDevLayout({ children }: { children: React.ReactNode }) {
+// 🔴 2. Function ka naam 'WebsiteDevelopmentLayout' kar diya (Dash hata kar camelCase kiya)
+export default function WebsiteDevelopmentLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

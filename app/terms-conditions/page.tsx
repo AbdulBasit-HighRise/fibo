@@ -18,14 +18,14 @@ export default function TermsAndConditions() {
           {/* Background Image Container with Exact Matching Premium CSS */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
-              src="/home-hero.jpg"
+              src="/home-hero.png"
               alt="Mesh Grid"
               fill
               priority
               sizes="100vw"
-              className="object-cover object-top opacity-35" // Standardized opacity for depth consistency
+              className="object-cover object-top " // Standardized opacity for depth consistency
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+            <div className="absolute inset-0 " />
           </div>
 
           {/* Ambient Blur Dot to lock the signature aesthetic */}
@@ -44,10 +44,7 @@ export default function TermsAndConditions() {
 
               {/* Main Large Typography Block with Tight Line Height */}
               <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-                TERMS & {" "}
-                <span className="mt-2 block md:inline-block uppercase bg-gradient-to-r from-[#FFD36A] via-[#EAB308] to-[#FFD36A] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  Conditions.
-                </span>
+                TERMS & {" "}Conditions.
               </h1>
 
               <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
@@ -58,46 +55,74 @@ export default function TermsAndConditions() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-6xl mx-auto space-y-12">
+    <section className="bg-white  py-20 md:py-32 px-6 md:px-12 lg:px-24">
+  <div className="max-w-6xl mx-auto space-y-16">
+    
+    {/* Header */}
+    <div className="space-y-4">
+      <h1 className="text-4xl md:text-5xl font-black text-black tracking-tighter">Terms of Service</h1>
+      <p className="text-zinc-500 font-medium">Last Updated: July 2026</p>
+    </div>
 
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">1. Scope of Services</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              We provide professional web development, VFX, and digital solutions. By engaging with us, you acknowledge that all project timelines and deliverables are based on the initial project scope and are subject to change based on mutual agreement.
-            </p>
-          </div>
+    {/* Sections */}
+    <div className="space-y-12">
+      
+      <div>
+        <h3 className="text-2xl font-black text-black mb-4">1. Scope of Services</h3>
+        <p className="text-zinc-600 text-lg leading-relaxed">
+          We specialize in high-end web development, immersive VFX, and digital production. By engaging our services, you agree that the project scope is defined during our initial consultation. Any additional features, revisions, or technical requirements beyond the agreed-upon scope may result in adjustments to timelines and project fees.
+        </p>
+      </div>
 
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">2. Intellectual Property</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              All designs, code, VFX assets, and content created during your project remain the property of the client upon full payment. We reserve the right to showcase completed projects in our professional portfolio for demonstration purposes.
-            </p>
-          </div>
+      <div>
+        <h3 className="text-2xl font-black text-black mb-4">2. Client Obligations</h3>
+        <p className="text-zinc-600 text-lg leading-relaxed">
+          To ensure timely delivery, the client agrees to provide necessary assets (images, branding, content, etc.) and feedback in a prompt manner. Delays in providing required materials may impact the final project launch date.
+        </p>
+      </div>
 
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">3. Payment Terms</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              All services require a project deposit as specified in your invoice before work commences. Final delivery of files or project deployment is provided only upon receipt of the final payment.
-            </p>
-          </div>
+      <div>
+        <h3 className="text-2xl font-black text-black mb-4">3. Intellectual Property & Portfolio</h3>
+        <p className="text-zinc-600 text-lg leading-relaxed">
+          Upon full receipt of payment, all final deliverables created specifically for your project become your intellectual property. However, we retain the right to utilize the project assets—including screenshots, videos, and live links—within our professional portfolio, case studies, and marketing channels to showcase our expertise.
+        </p>
+      </div>
 
-          <div>
-            <h3 className="text-2xl md:text-3xl font-black text-black mb-4">4. Limitation of Liability</h3>
-            <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-              We strive for excellence in all deployments; however, we are not liable for any incidental or consequential damages arising from the use of our digital products or updates related to third-party platforms.
-            </p>
-          </div>
+      <div>
+        <h3 className="text-2xl font-black text-black mb-4">4. Payment Terms</h3>
+        <p className="text-zinc-600 text-lg leading-relaxed">
+          A non-refundable deposit (as defined in your invoice) is required to secure your project slot and initiate development. Final project handovers, source files, or deployment will only be released once the balance is settled in full.
+        </p>
+      </div>
 
-          <div className="pt-8 border-t border-zinc-200">
-            <p className="text-zinc-600 text-base font-medium">
-              For any inquiries regarding our Terms of Service, feel free to contact us at
-              <span className="font-bold text-amber-600 ml-2">hello@fiboentertainment.com</span>
-            </p>
-          </div>
+      <div>
+        <h3 className="text-2xl font-black text-black mb-4">5. Revisions & Support</h3>
+        <p className="text-zinc-600 text-lg leading-relaxed">
+          Every project includes a defined set of revision rounds to ensure your vision is realized. Post-launch support or further development beyond the initial contract period will be subject to a separate maintenance agreement or hourly rate.
+        </p>
+      </div>
 
-        </div>
-      </section>
+      <div>
+        <h3 className="text-2xl font-black text-black mb-4">6. Limitation of Liability</h3>
+        <p className="text-zinc-600 text-lg leading-relaxed">
+          While we maintain the highest standards of code and production quality, we are not liable for any downtime, data loss, or issues related to third-party hosting, CMS updates, or external plugin failures that occur after the project handover.
+        </p>
+      </div>
+
+      {/* Contact Section */}
+      <div className="p-8 md:p-10 bg-[#f4f4f4] rounded-[2rem] border border-black/5">
+        <h4 className="text-xl font-black text-black mb-2">Have questions about these terms?</h4>
+        <p className="text-zinc-600 text-lg">
+          We believe in transparent communication. If anything is unclear, please reach out directly at 
+          <span className="font-bold text-black block mt-2 hover:text-amber-600 transition-colors">
+            <a href="mailto:hello@fiboentertainment.com">hello@fiboentertainment.com</a>
+          </span>
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</section>
 
     </main>
   );
