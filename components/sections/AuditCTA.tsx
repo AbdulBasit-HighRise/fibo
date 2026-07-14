@@ -8,7 +8,7 @@ export default function AuditCTA() {
     <section className="relative w-full bg-white py-12 md:py-20 lg:py-24 px-4 md:px-8 selection:bg-black">
       
       {/* CTA Card Container: 'mx-auto' aur 'max-w' card ko balance karega */}
-      <div className="relative z-[3] max-w-6xl mx-auto py-16 md:py-24 rounded-[3rem] overflow-hidden bg-[#FFD36A] border border-black/5 shadow-2xl">
+      <div className="relative z-[3] max-w-7xl mx-auto py-16 md:py-24 rounded-[3rem] overflow-hidden bg-[#FFD36A] border border-black/5 shadow-2xl">
         
         {/* Cinematic Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/30 to-transparent z-[1]" />
@@ -18,7 +18,7 @@ export default function AuditCTA() {
 
         {/* Content Area */}
         <div className="relative z-[3] text-center px-6 mx-auto">
-          <h3 className="text-[2rem] sm:text-[3.5rem] lg:text-[4rem] font-black text-white tracking-tighter leading-[1.1] mb-6">
+          <h3 className="text-[2rem] sm:text-[3.5rem] lg:text-[4rem] font-black text-white  leading-[1.2] mb-6">
             Ready to Start Your Project?
           </h3>
           

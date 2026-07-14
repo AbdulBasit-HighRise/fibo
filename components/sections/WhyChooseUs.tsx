@@ -22,7 +22,7 @@ export default function WhyChooseUs() {
           <h2 className="text-5xl font-black !text-black leading-tight">
             Why Choose Us
           </h2>
-          <p className="!text-black mt-8 max-w-lg mx-auto font-black text-xl leading-relaxed">
+          <p className="!text-black mt-3 max-w-lg mx-auto font-normal text-xl leading-relaxed">
             From discovery to deployment, we partner closely with you to deliver outcomes — not just deliverables.
           </p>
         </div>
@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
               
               <div className="pt-2">
                 <h4 className="text-xl font-black !text-black">{item.title}</h4>
-                <p className="!text-black text-base mt-3 font-bold leading-relaxed">
+                <p className="!text-black text-base mt-3 font-normal leading-relaxed">
                   {item.desc}
                 </p>
               </div>

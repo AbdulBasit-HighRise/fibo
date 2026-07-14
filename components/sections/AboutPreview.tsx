@@ -54,23 +54,19 @@ export default function AboutPreview() {
 
               <div className="space-y-6 md:space-y-8">
                 {/* Paragraph 1 */}
+                {/* Paragraph 1: Brand Positioning */}
                 <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                  As a leading digital marketing company working globally, we help businesses grow with smart, creative, and results-focused digital solutions.
+                  Fibo Entertainment is a global media production and tech agency, dedicated to blending cinematic storytelling with cutting-edge digital technology to bring your vision to life.
                 </p>
 
-                {/* Paragraph 2 */}
+                {/* Paragraph 2: Core Expertise */}
                 <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                  Our experienced team works closely with clients to understand their goals and create strategies that improve online visibility, generate quality leads, and increase business growth.
+                  Our expert team specializes in high-end VFX, 3D video production, and custom software development, creating immersive experiences that elevate your brand and captivate your audience.
                 </p>
 
-                {/* Paragraph 3 */}
-                {/* <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90 hidden md:block">
-                  We provide professional services including SEO, social media marketing, PPC advertising, branding, and website development for businesses of all sizes.
-                </p> */}
-
-                {/* Paragraph 4 */}
+                {/* Paragraph 3: Global Reach & Reliability */}
                 <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
-                  Serving clients across the USA, UK, Australia, UAE, and many other countries, we focus on delivering reliable support and measurable results.
+                  From cinematic post-production to scalable web and AI solutions, we partner with clients across the USA, UK, Australia, and beyond to deliver reliable, world-class production standards.
                 </p>
               </div>
 

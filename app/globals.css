@@ -4,81 +4,37 @@
 
 @layer base {
   :root {
-    --bg: #FFFFFF;
-    --accent-blue: #3b82f6;
+    --bg: #030303;
     --text-primary: #ffffff;
     --text-secondary: #a1a1aa;
   }
 
-  /* 🎯 MOBILE READABILITY BOOST: Mobile par initial font-size badha di taake sab easily parha jaye */
-  html {
-    scroll-behavior: smooth;
-    font-size: 16px; 
-  }
-
-  @media (min-width: 768px) { html { font-size: 14px; } }
-  @media (min-width: 1920px) { html { font-size: 15px; } }
-  @media (min-width: 2500px) { html { font-size: 16px; } }
+  html { scroll-behavior: smooth; font-size: 16px; }
 
   body {
-    font-family: 'Montserrat', sans-serif !important;
-    @apply bg-[#030303] text-white antialiased overflow-x-hidden;
+    @apply bg-[var(--bg)] text-[var(--text-primary)] antialiased overflow-x-hidden;
     margin: 0; padding: 0;
   }
 
-  /* --- TYPOGRAPHY UPDATED FOR LAPTOP & 4K BALANCE --- */
-  /* 🛠️ FIXED: Removed !important from line-height and font-style so inline styles can work */
+  /* Headings use Instrument Sans via variable */
   h1, h2, h3, h4 {
+    font-family: var(--font-heading);
     @apply font-bold tracking-tighter;
     line-height: 1.05;
-    font-style: normal;
   }
 
-  /* 🛠️ FIXED: Removed !important from font-size to allow inline overrides */
-  h1 { 
-    font-size: clamp(2.5rem, 4.5vw, 68px); 
-    @apply uppercase font-black; 
-    margin-bottom: 0.5em; 
-  }
+  h1 { font-size: clamp(2.5rem, 4.5vw, 68px); @apply uppercase font-black; margin-bottom: 0.5em; }
+  h2 { font-size: clamp(2.0rem, 3.8vw, 52px); margin-bottom: 0.4em; @apply font-black; }
+  h3 { font-size: clamp(1.3rem, 2.0vw, 26px); }
 
-  h2 { 
-    font-size: clamp(2.0rem, 3.8vw, 52px); 
-    margin-bottom: 0.4em; 
-    @apply font-black;
+  p {
+    font-size: clamp(1.1rem, 1vw + 0.5rem, 1.25rem);
+    line-height: 1.65;
+    max-width: 70ch;
   }
-  
-  h3 { 
-    font-size: clamp(1.3rem, 2.0vw, 26px); 
-  }
-
-/* 🎯 PARAGRAPH READABILITY: Mobile base size boosted for ultra-clean readability */
-p {
-  /* @apply text-white; <-- Isay yahan se hata dein */
-  font-size: clamp(1.2rem, 1.2vw + 0.8rem, 1.6rem);
-  line-height: 1.65;
-  max-width: 70ch;
 }
-}
-@layer utilities {
-  .text-sm {
-    font-size: 16px !important;
-    line-height: 1.5;
-    /* color: #ffffff !important; <-- Ye line DELETE kar dein */
-  }
 
-}
 @layer components {
-  .container-main {
-    @apply w-full mx-auto px-6 md:px-12;
-    max-width: 1400px; 
-  }
-
-  section {
-    padding-top: clamp(4rem, 8vh, 8rem);
-    padding-bottom: clamp(4rem, 8vh, 8rem);
-  }
-
-  /* --- GLOBAL GRADIENT FILL BUTTON STYLE --- */
   .btn-premium {
     @apply relative overflow-hidden inline-flex items-center justify-center bg-white text-black rounded-full font-black uppercase tracking-[2px] transition-all duration-500 active:scale-95 shadow-xl;
     padding: clamp(0.8rem, 1.5vh, 1.2rem) clamp(1.5rem, 3vw, 2.5rem);
@@ -90,31 +46,17 @@ p {
     @apply absolute inset-0 w-0 bg-gradient-to-r from-blue-500 to-cyan-400 transition-all duration-500 ease-out -z-10;
   }
 
-  .btn-premium:hover::before {
-    @apply w-full;
-  }
-
-  .btn-premium:hover {
-    @apply text-white border-transparent;
-  }
+  .btn-premium:hover::before { @apply w-full; }
+  .btn-premium:hover { @apply text-white border-transparent; }
 }
 
 .gradient-text {
   @apply bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent;
 }
-@layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-}
-/* --- CUSTOM SCROLLBAR --- */
+
+/* Scrollbar Styling */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #FFFFFF; }
-::-webkit-scrollbar-thumb { background: #FFFFFF; border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: #3b82f6; }
+::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }

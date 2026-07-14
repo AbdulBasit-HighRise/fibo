@@ -25,15 +25,22 @@ export default function AboutPage() {
 
           {/* Background Image Container with Exact Matching Premium CSS */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            {/* Image */}
             <Image
               src="/home-hero.png"
               alt="Mesh Grid"
               fill
               sizes="100vw"
-              priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top"
+              priority
+              className="object-cover object-center"
             />
-            <div className="absolute inset-0" />
+
+            {/* Dark Overlay - Yahan shade control karo */}
+            {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
+            <div className="absolute inset-0 bg-black/60" />
+
+            {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
           </div>
 
           {/* Ambient Blur Dot to lock the signature aesthetic */}
@@ -53,8 +60,8 @@ export default function AboutPage() {
               {/* Main Typography Block with Tight Line Height */}
               <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 ABOUT  US.
-                 
-              
+
+
               </h1>
 
               {/* Description Paragraph */}
@@ -108,7 +115,7 @@ export default function AboutPage() {
 
                 <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-black tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
                   Crafting{" "}Visual Excellence
-                
+
                 </h2>
               </div>
 
