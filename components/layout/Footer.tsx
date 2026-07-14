@@ -23,7 +23,7 @@ export default function Footer() {
         {/* --- MAIN LINKS GRID --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/5 pb-16">
           <div className="lg:col-span-1 space-y-6">
-            <Link href="/"><Image src="/fibo-footer-logo.png" alt="Logo" width={200} height={50} className="h-8 md:h-14 w-auto" /></Link>
+            <Link href="/"><Image src="/fibo-footer-logo.png" alt="Logo" width={200} height={50} className="h-10 md:h-14 w-auto" /></Link>
             <p className="text-zinc-400 text-sm leading-relaxed">Are you looking to package your existing web development and VFX services into a more cohesive "all-in-one" digital agency offering?</p>
             <div className="flex items-center gap-3">
               {socials.map((item, i) => (
