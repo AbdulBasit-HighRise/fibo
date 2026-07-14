@@ -4,14 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Sirf 5 main logos
-const awardLogos = [
-  { src: "/baj2.png", alt: "National Excellence" },
-  { src: "/baj4.png", alt: "Top 10 Agency" },
-  { src: "/baj3.png", alt: "Forbes Member" },
-  { src: "/baj1.png", alt: "Clutch Recognition" },
-  { src: "/baj5.png", alt: "The Manifest" },
-  { src: "/hubspot.png", alt: "The hubspot" },
-];
+
+
 
 export default function AboutPreview() {
   return (
