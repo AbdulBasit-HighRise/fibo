@@ -41,10 +41,10 @@ export default function JuicerReviews() {
   }, []);
 
   return (
-    <div className="w-full bg-[#E5E5E5] py-20 overflow-hidden">
+    <div className="w-full bg-[#f4f4f4] py-20 overflow-hidden">
       <div className="text-center mb-16">
         <h3 className="text-[2rem] md:text-[2.5rem] font-black text-black uppercase tracking-tighter">
-          Client <span className="text-[#FFD36A]">Success</span> Stories
+          Client Success Stories
         </h3>
       </div>
 

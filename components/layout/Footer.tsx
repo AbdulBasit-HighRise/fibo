@@ -8,9 +8,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socials = [
-    { icon: <FaInstagram size={18} />, href: "https://www.instagram.com/highrisedigitalagency/", label: "Instagram", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
-    { icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/company/high-rise-digital-agency/", label: "LinkedIn", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
-    { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/highrisedigital.official/", label: "Facebook", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
+    { icon: <FaInstagram size={18} />, href: "https://www.instagram.com", label: "Instagram", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
+    { icon: <FaLinkedinIn size={18} />, href: "https://www.linkedin.com/", label: "LinkedIn", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
+    { icon: <FaFacebook size={18} />, href: "https://www.facebook.com/", label: "Facebook", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
     { icon: <Mail size={18} />, href: "mailto:hello@fiboentertainment.com", label: "Email", hoverColor: "hover:text-[#FFD36A] hover:border-[#FFD36A]/40 hover:shadow-[0_0_20px_rgba(255,211,106,0.3)]" },
   ];
 
@@ -23,8 +23,8 @@ export default function Footer() {
         {/* --- MAIN LINKS GRID --- */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/5 pb-16">
           <div className="lg:col-span-1 space-y-6">
-            <Link href="/"><Image src="/fibo-footer-logo.png" alt="Logo" width={200} height={50} className="h-10 w-auto" /></Link>
-            <p className="text-zinc-400 text-sm leading-relaxed">Let’s discuss your goals and create a powerful strategy to boost your business growth online.</p>
+            <Link href="/"><Image src="/fibo-footer-logo.png" alt="Logo" width={200} height={50} className="h-8 md:h-14 w-auto" /></Link>
+            <p className="text-zinc-400 text-sm leading-relaxed">Are you looking to package your existing web development and VFX services into a more cohesive "all-in-one" digital agency offering?</p>
             <div className="flex items-center gap-3">
               {socials.map((item, i) => (
                 <Link key={i} href={item.href} className={`w-10 h-10 rounded-xl  border border-white/10 flex items-center justify-center  transition-all ${item.hoverColor}`}>{item.icon}</Link>
@@ -65,21 +65,21 @@ export default function Footer() {
             <div className="flex flex-col space-y-3 text-sm  text-zinc-400">
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-6 pt-3">
           <a href="mailto:hello@fiboentertainment.com" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#FFD36A] transition-all">
-            <Mail className="text-blue-400" />
+            <Mail className="text-[#FFD36A]" />
             <div>
               <p className="text-[10px] uppercase font-bold text-zinc-500">Email Us</p>
               <p className="text-sm">hello@fiboentertainment.com</p>
             </div>
           </a>
           <a href="tel:+923394004791" className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#FFD36A] transition-all">
-            <Phone className="text-cyan-400" />
+            <Phone className="text-[#FFD36A]" />
             <div>
               <p className="text-[10px] uppercase font-bold text-zinc-500">Call Support</p>
               <p className="text-sm">+92 339 4004791</p>
             </div>
           </a>
           <div className="flex items-center gap-4 p-5 rounded-2xl bg-white/[0.02] border border-white/5 hover:border-[#FFD36A] transition-all">
-            <MapPin className="text-emerald-400" />
+            <MapPin className="text-[#FFD36A]" />
             <div>
               <p className="text-[10px] uppercase font-bold text-zinc-500">Visit Us</p>
               <p className="text-sm">Islamabad, F-7 Markaz</p>
@@ -95,7 +95,7 @@ export default function Footer() {
 
         {/* BOTTOM BAR */}
         <div className="pt-12 text-[10px] text-zinc-500 font-bold uppercase tracking-widest text-center">
-          © {currentYear} Fibo Entertainment LLC. Built for growth • Designed for dominance
+          © {currentYear} Fibo Entertainment PTV LTD. All Rights Reserved. 
         </div>
       </div>
     </footer>

@@ -26,14 +26,14 @@ export default function AboutPage() {
           {/* Background Image Container with Exact Matching Premium CSS */}
           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
             <Image
-              src="/home-hero.jpg"
+              src="/home-hero.png"
               alt="Mesh Grid"
               fill
               sizes="100vw"
               priority // 🔥 PageSpeed boost: Hero image jaldi load hogi
-              className="object-cover object-top opacity-50"
+              className="object-cover object-top"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/40 to-[#030712]" />
+            <div className="absolute inset-0" />
           </div>
 
           {/* Ambient Blur Dot to lock the signature aesthetic */}
@@ -52,10 +52,9 @@ export default function AboutPage() {
 
               {/* Main Typography Block with Tight Line Height */}
               <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
-                ABOUT {" "}
-                <span className="bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
-                  US.
-                </span>
+                ABOUT  US.
+                 
+              
               </h1>
 
               {/* Description Paragraph */}
@@ -83,16 +82,16 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-blue-500/15 blur-3xl pointer-events-none rounded-[3rem] opacity-50 group-hover:opacity-80 transition-opacity duration-700" />
 
               <div className="relative rounded-[2.5rem] overflow-hidden aspect-square bg-slate-950/40 border border-white/10 flex items-center justify-center group transition-all duration-500 hover:border-blue-500/30">
-                <div className="relative w-full h-full p-4 md:p-8">
+                <div className="relative w-full h-full">
                   <Image
-                    src="/About High Rise Digital Agency.jpg"
+                    src="/About.png"
                     alt="High Rise Digital Identity"
                     width={600}
                     height={600}
                     className="w-full h-full object-cover rounded-[1.5rem] transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-105 h-auto"
                   />
                 </div>
-                <div className="absolute inset-0 rounded-[2.5rem] bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
+                <div className="absolute inset-0  bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
               </div>
             </motion.div>
 
@@ -105,19 +104,17 @@ export default function AboutPage() {
             >
               <div className="space-y-4">
                 {/* Label ko bhi Golden touch diya */}
-                <span className="text-[10px] tracking-[4px] text-[#FFD36A] font-extrabold block">OUR VISION</span>
+                <span className="text-[10px] tracking-[4px] text-black font-extrabold block">OUR VISION</span>
 
                 <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-black tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
-                  Crafting{" "}
-                  <span className="py-1 pr-4 bg-gradient-to-r from-[#FFD36A] to-[#EAB308] bg-clip-text text-transparent">
-                    Visual Excellence
-                  </span>
+                  Crafting{" "}Visual Excellence
+                
                 </h2>
               </div>
 
               {/* Main Lead Paragraph - Agency Focused */}
               <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-normal leading-relaxed opacity-90">
-                <span className="font-bold text-[#FFD36A]">Fibo Production</span> is a premier production & media agency.
+                <span className="font-bold text-black">Fibo Production</span> is a premier production & media agency.
                 We blend cinematic storytelling with cutting-edge technology to craft digital experiences that define brands.
               </p>
 
@@ -129,7 +126,7 @@ export default function AboutPage() {
 
                 {/* Paragraph 2 */}
                 <p className="pl-4 border-l-2 border-[#FFD36A] text-[16px] md:text-base lg:text-[17px] 2xl:text-xl max-w-3xl opacity-90">
-                  With a passion for innovation, we have successfully delivered <span className="text-[#FFD36A] font-black">700+ projects</span>,
+                  With a passion for innovation, we have successfully delivered <span className="text-black font-black">700+ projects</span>,
                   from interactive 3D environments to high-impact post-production for films and commercials.
                 </p>
 
@@ -144,7 +141,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. VISION & MISSION */}
-      <section className="py-20 bg-[#E5E5E5] px-6 relative border-y border-zinc-200">
+      <section className="py-20 bg-[#f4f4f4] px-6 relative border-y border-zinc-200">
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -155,9 +152,9 @@ export default function AboutPage() {
             <div className="w-12 h-12 rounded-2xl bg-black flex items-center justify-center mx-auto text-[#FFD36A] shadow-2xl">
               <Sparkles size={22} />
             </div>
-            <span className="text-[10px] tracking-[4px] text-black/60 font-extrabold block uppercase">Our Core Purpose</span>
+            <span className="text-[10px] tracking-[4px] text-black font-extrabold block uppercase">Our Core Purpose</span>
             <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
-              Vision & <span className="text-[#FFD36A]">Mission</span>
+              Vision & Mission
             </h3>
           </motion.div>
 
@@ -206,9 +203,9 @@ export default function AboutPage() {
       <section className="py-20 bg-[#FFFFFF] px-6 relative border-y border-white/[#FFFFFF]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <span className="text-[10px] tracking-[4px] text-[#FFD36A] font-extrabold block mb-4 uppercase">Production Roadmap</span>
+            <span className="text-[10px] tracking-[4px] text-black font-extrabold block mb-4 uppercase">Production Roadmap</span>
             <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
-              Our <span className="text-[#FFD36A]">Creative Workflow</span>
+              Our Creative Workflow
             </h3>
           </div>
 
@@ -226,7 +223,7 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[2rem] bg-[#E5E5E5] border border-zinc-200 hover:border-[#FFD36A] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(255,211,106,0.15)] flex flex-col justify-between group"
+                className="p-8 rounded-[2rem] bg-[#f4f4f4] border border-zinc-200 hover:border-[#FFD36A] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(255,211,106,0.15)] flex flex-col justify-between group"
               >
                 <div>
                   {/* Icon Box: Light grey background with Gold text, hover par Gold fill */}
@@ -249,56 +246,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <section className="py-20 bg-[#E5E5E5] px-6 relative border-y border-white/[0.05]">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-20">
-            <span className="text-[10px] tracking-[4px] text-[#FFD36A] font-extrabold block mb-4 uppercase">Production Roadmap</span>
-            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
-              Our <span className="text-[#FFD36A]">Creative Workflow</span>
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-            {[
-              { step: "01", title: "Discovery", desc: "Understanding your vision and creative requirements." },
-              { step: "02", title: "Strategy", desc: "Planning the production roadmap and technical approach." },
-              { step: "03", title: "Production", desc: "Executing 3D modeling, VFX, and cinematography." },
-              { step: "04", title: "Refinement", desc: "Iterative editing and high-end color grading." },
-              { step: "05", title: "Delivery", desc: "Final render delivery in premium quality formats." }
-            ].map((proc, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-[2rem] bg-white border border-zinc-200 hover:border-[#FFD36A] transition-all duration-500 hover:shadow-[0_20px_40px_rgba(255,211,106,0.2)] flex flex-col justify-between group"
-              >
-                <div>
-                  {/* Icon Box: White background par Gold text */}
-                  <div className="w-12 h-12 flex items-center justify-center rounded-2xl bg-zinc-100 text-[#FFD36A] border border-zinc-200 font-black text-sm mb-6 group-hover:bg-[#FFD36A] group-hover:text-black transition-all duration-500">
-                    {proc.step}
-                  </div>
-
-                  {/* Heading: Black color */}
-                  <h3 className="text-[20px] font-black text-black mb-4 group-hover:text-[#FFD36A] transition-colors duration-300">
-                    {proc.title}
-                  </h3>
-
-                  {/* Description: Grey color */}
-                  <p className="text-zinc-600 text-[14px] leading-relaxed group-hover:text-black transition-colors duration-300">
-                    {proc.desc}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
     </main>
   );
 }

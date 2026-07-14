@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
         {/* Heading Section - Forced High Contrast */}
         <div className="text-center mb-20">
           <h2 className="text-5xl font-black !text-black leading-tight">
-            Why <span className="text-[#FFD36A]">Choose Us</span>
+            Why Choose Us
           </h2>
           <p className="!text-black mt-8 max-w-lg mx-auto font-black text-xl leading-relaxed">
             From discovery to deployment, we partner closely with you to deliver outcomes — not just deliverables.

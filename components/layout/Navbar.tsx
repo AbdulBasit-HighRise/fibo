@@ -24,7 +24,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <div className="sticky top-0 z-[100] w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
+    <div className="sticky top-0 z-[100] w-full bg-white backdrop-blur-sm border-b border-zinc-100 shadow-[0_2px_10px_rgba(0,0,0,0.03)]">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between w-full h-20">
 
