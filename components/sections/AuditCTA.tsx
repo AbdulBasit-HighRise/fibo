@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function AuditCTA() {
   return (
     // Section ki padding barha di taake yeh screen ke sath chipka na lage
-    <section className="relative w-full bg-white py-12 md:py-20 lg:py-24 px-4 md:px-8 selection:bg-black">
+    <section className="relative w-full bg-[#222630] py-12 md:py-20 lg:py-24 px-4 md:px-8 selection:bg-black">
       
       {/* CTA Card Container: 'mx-auto' aur 'max-w' card ko balance karega */}
       <div className="relative z-[3] max-w-7xl mx-auto py-16 md:py-24 rounded-[3rem] overflow-hidden bg-[#FFD36A] border border-black/5 shadow-2xl">

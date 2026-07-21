@@ -82,30 +82,30 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FFFFFF] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
+    <main className="min-h-screen bg-[#111827] text-white overflow-x-hidden selection:bg-blue-600 -mt-24 md:-mt-28 lg:-mt-32">
 
       {/* 🖼️ HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#020617]">
         <div className="container-wide">
 
-         <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-                    {/* Image */}
-                    <Image
-                      src="/home-hero.png"
-                      alt="Mesh Grid"
-                      fill
-                      sizes="100vw"
-                      priority
-                      className="object-cover object-center"
-                    />
-        
-                    {/* Dark Overlay - Yahan shade control karo */}
-                    {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
-                    <div className="absolute inset-0 bg-black/60" />
-        
-                    {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
-                    {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
-                  </div>
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            {/* Image */}
+            <Image
+              src="/home-hero.png"
+              alt="Mesh Grid"
+              fill
+              sizes="100vw"
+              priority
+              className="object-cover object-center"
+            />
+
+            {/* Dark Overlay - Yahan shade control karo */}
+            {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
+            <div className="absolute inset-0 bg-black/60" />
+
+            {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
+          </div>
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
@@ -131,12 +131,12 @@ export default function ContactPage() {
         <div className="flex flex-col lg:flex-row gap-8 2xl:gap-12 items-stretch">
 
           {/* --- LEFT: CLIENT INTAKE FORM --- */}
-          <div className="flex-[1.8] bg-[#f4f4f4] border border-black/5 rounded-[2.5rem] p-8 md:p-12 2xl:p-16 shadow-lg relative">
+          <div className="flex-[1.8] bg-[#222630] border border-black/5 rounded-[2.5rem] p-8 md:p-12 2xl:p-16 shadow-lg relative">
             <form onSubmit={handleSubmit} className="space-y-6 2xl:space-y-8">
 
               <div className="grid md:grid-cols-2 gap-6 2xl:gap-8">
                 <div className="space-y-2">
-                  <label className="text-[11px] 2xl:text-xs font-bold tracking-widest text-zinc-600 ml-1">
+                  <label className="text-[11px] 2xl:text-xs font-bold tracking-widest text-white ml-1">
                     Full Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -148,7 +148,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-zinc-600 ml-1">
+                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
                     Email Address <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -163,7 +163,7 @@ export default function ContactPage() {
 
               <div className="grid md:grid-cols-2 gap-6 2xl:gap-8">
                 <div className="space-y-2">
-                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-zinc-600 ml-1">
+                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
                     Phone Number <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div className="group space-y-2 relative">
-                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-[2px] text-zinc-600 ml-1">
+                  <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-[2px] text-white ml-1">
                     Service Required <span className="text-red-500">*</span>
                   </label>
                   <div className="relative">
@@ -204,7 +204,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-zinc-600 ml-1">
+                <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
                   Subject <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -217,7 +217,7 @@ export default function ContactPage() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-zinc-600 ml-1">
+                <label className="text-[11px] 2xl:text-xs font-bold uppercase tracking-widest text-white ml-1">
                   Message <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -270,7 +270,7 @@ export default function ContactPage() {
           <div className="flex-1 space-y-6 flex flex-col">
 
             {/* Contact Info Card */}
-            <div className="p-8 2xl:p-12 bg-white rounded-[2.5rem] shadow-sm border border-black/5 flex-1">
+            <div className="p-8 2xl:p-12 bg-[#222630] rounded-[2.5rem] shadow-sm border border-black/5 flex-1">
               <div className="space-y-8">
                 {/* Email */}
                 <div className="flex gap-6 items-center">
@@ -279,7 +279,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">Email</p>
-                    <p className="text-lg font-bold text-black">hello@fiboentertainment.com</p>
+                    <p className="text-lg font-bold text-white">hello@fiboentertainment.com</p>
                   </div>
                 </div>
 
@@ -290,7 +290,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">WhatsApp</p>
-                    <p className="text-lg font-bold text-black">+92 339 4004791</p>
+                    <p className="text-lg font-bold text-white">+92 339 4004791</p>
                   </div>
                 </div>
               </div>
@@ -314,14 +314,14 @@ export default function ContactPage() {
             </div>
 
             {/* Location Card */}
-            <div className="p-8 2xl:p-12 bg-white rounded-[2.5rem] shadow-sm border border-black/5 flex-none">
+            <div className="p-8 2xl:p-12 bg-[#222630] rounded-[2.5rem] shadow-sm border border-black/5 flex-none">
               <h3 className="text-xs font-bold tracking-[3px] text-zinc-400 mb-8 uppercase">Location</h3>
               <div className="flex items-start gap-4">
                 <div className="mt-1 p-3 rounded-xl bg-[#f4f4f4] text-blue-600">
                   <MapPin className=" text-[#FFD36A]" size={20} />
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-black">Pakistan</p>
+                  <p className="text-lg font-bold text-white">Pakistan</p>
                   <p className="text-sm text-zinc-500 leading-relaxed">Islamabad, F-7 Markaz</p>
                 </div>
               </div>

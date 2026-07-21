@@ -27,7 +27,7 @@ const SERVICES = [
 ];
 export default function Services() {
   return (
-    <section className="relative bg-[#f4f4f4] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
+    <section className="relative bg-[#222630] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
         
         {/* HEADER */}
@@ -36,7 +36,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-black"
+            className="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-white"
           >
             Our Services
           </motion.h3>

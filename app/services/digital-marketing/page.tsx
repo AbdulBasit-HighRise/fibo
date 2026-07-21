@@ -172,7 +172,7 @@ export default function SEOPage() {
 
 
 
-      <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#FFFFFF] overflow-hidden">
+      <section className="relative pt-16 pb-16 sm:pt-16 sm:pb-16 md:pt-16 md:pb-16 lg:pt-16 lg:pb-16 2xl:pt-16 2xl:pb-16 bg-[#222630] overflow-hidden">
 
 
         {/* Background Glow */}
@@ -205,7 +205,7 @@ export default function SEOPage() {
             {/* RIGHT: Text Content */}
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div>
-                <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
+                <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
                   Maximize Your ROI with {" "}Our Marketing Strategy.
             
                 </h2>
@@ -223,17 +223,17 @@ export default function SEOPage() {
                 {/* Paragraph 1 */}
                 {/* Paragraph 1 */}
                 {/* Paragraph 1 */}
-                <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
                   A great campaign is only the beginning; the real goal is to build a brand presence that captures attention and drives consistent results. Our marketing approach focuses on data-backed insights and creative precision to bring your business goals to life.
                 </p>
 
                 {/* Paragraph 2 */}
-                <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0">
                   By leveraging advanced analytics, multi-channel strategy, and hyper-targeted advertising, we streamline the path from a complex market challenge straight to a high-converting digital ecosystem that elevates your brand identity.
                 </p>
 
                 {/* Paragraph 3 */}
-                <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 hidden md:block">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 hidden md:block">
                   We don’t just run ads; we optimize every touchpoint of your digital journey to ensure maximum ROI, creative depth, and sustained user engagement across all your marketing channels.
                 </p>
               </motion.div>
@@ -262,7 +262,7 @@ export default function SEOPage() {
         </div>
       </section>
       {/* STRATEGIC FOUNDATION (Services Matrix Grid) */}
-      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#f4f4f4]">
+      <section className="relative py-16 2xl:py-40 px-6 overflow-hidden bg-[#111827]">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:32px_32px]" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.07)_0%,transparent_70%)]" />
@@ -271,7 +271,7 @@ export default function SEOPage() {
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
             <div className="max-w-4xl">
-              <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-black">
+              <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
                 Our{" "} Specialized Digital Marketing Services.
                
               </h3>
@@ -352,14 +352,14 @@ export default function SEOPage() {
       {/* <AuditCTA /> */}
 
       {/* 🚀 WORKING PROCESS MATRIX SECTION */}
-      <section className="relative py-16 md:py-24 bg-white overflow-hidden selection:bg-[#FFD36A]/30">
+      <section className="relative py-16 md:py-24 bg-[#222630] overflow-hidden selection:bg-[#FFD36A]/30">
         {/* Luxury subtle background pattern */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#FFD36A_1px,transparent_1px)] [background-size:30px_30px] pointer-events-none" />
 
         <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
           {/* 📋 HEADER - Font sizing synced with reference file */}
           <div className="mb-12 md:mb-16 pt-0 text-center">
-            <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-black normal-case">
+            <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
               Our{" "} Digital Marketing Workflow.
              
             </h3>
@@ -429,7 +429,7 @@ export default function SEOPage() {
 
 
       {/* Why Chose ue */}
-      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#f4f4f4] overflow-hidden border-b border-zinc-200">
+      <section className="relative py-16 md:py-24 2xl:py-32 bg-[#111827] overflow-hidden border-b border-zinc-200">
         {/* Subtle Background Glow */}
         <div className="absolute top-1/4 -right-20 w-[400px] 2xl:w-[800px] h-[400px] bg-[#FFD36A]/10 blur-[120px] rounded-full pointer-events-none" />
 
@@ -444,25 +444,25 @@ export default function SEOPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-black">
+                <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-white">
                   Why Choose Our  Marketing Strategy?
               
                 </h3>
 
                 <div className="space-y-6 max-w-xl 2xl:max-w-3xl">
-                  <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
-                    We don't just run ads; we architect <span className="font-black text-black">growth ecosystems</span> that scale your revenue. By blending data-driven insights with creative precision, we deliver campaigns that capture attention and convert visitors into loyal customers.
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                    We don't just run ads; we architect <span className="font-black text-white">growth ecosystems</span> that scale your revenue. By blending data-driven insights with creative precision, we deliver campaigns that capture attention and convert visitors into loyal customers.
                   </p>
-                  <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
                     Our team works closely with you to map your unique business goals, ensuring every marketing channel is optimized for your brand's growth trajectory and long-term success.
                   </p>
-                  <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
                     From comprehensive SEO audits to high-converting performance marketing, we provide end-to-end digital solutions backed by rigorous analytics and strategic precision.
                   </p>
-                  <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
                     We combine industry-leading marketing tools with conversion-focused content to ensure every dollar of your budget works harder, giving your brand a distinct competitive advantage in the digital market.
                   </p>
-                  <p className="text-zinc-600 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
+                  <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-medium leading-relaxed">
                     Our studio operates with a result-first philosophy, ensuring transparent reporting and iterative optimization so that your marketing investment becomes a high-impact asset that drives your business forward.
                   </p>
                 </div>
@@ -504,14 +504,14 @@ export default function SEOPage() {
 
 
       {/* <SeoFAQ /> */}
-      <section className="relative py-24 bg-white overflow-hidden border-b border-zinc-100">
+      <section className="relative py-24 bg-[#222630] overflow-hidden border-b border-zinc-100">
         {/* Background Glow */}
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#FFD36A]/10 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
           {/* Header Title Section */}
           <div className="mb-16 text-center">
-            <h3 className="text-[2rem] md:text-5xl font-black text-black leading-none mb-6">
+            <h3 className="text-[2rem] md:text-5xl font-black text-white leading-none mb-6">
               Frequently Asked  Questions (FAQs)
         
             </h3>

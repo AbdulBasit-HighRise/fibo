@@ -11,7 +11,7 @@ export default function AboutPreview() {
   return (
     <>
       {/* 🎯 ABOUT SECTION */}
-      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-12 md:pb-20 2xl:pb-32 bg-[#FFFFFF] overflow-hidden">
+      <section className="relative pt-12 md:pt-20 2xl:pt-32 pb-12 md:pb-20 2xl:pb-32 bg-[#111827] overflow-hidden">
 
         {/* Background Glow */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[600px] h-[200px] bg-blue-600/[0.04] blur-[120px] pointer-events-none" />
@@ -38,7 +38,7 @@ export default function AboutPreview() {
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
                 <div>
-                  <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-normal leading-[1.1] md:leading-[1] text-black">
+                  <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-normal leading-[1.1] md:leading-[1] text-white">
                     Global Media Production &
                     {" "}
                     Advanced Tech Solutions
@@ -49,17 +49,17 @@ export default function AboutPreview() {
               <div className="space-y-6 md:space-y-8">
                 {/* Paragraph 1 */}
                 {/* Paragraph 1: Brand Positioning */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
                   Fibo Entertainment is a global media production and tech agency, dedicated to blending cinematic storytelling with cutting-edge digital technology to bring your vision to life.
                 </p>
 
                 {/* Paragraph 2: Core Expertise */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
                   Our expert team specializes in high-end VFX, 3D video production, and custom software development, creating immersive experiences that elevate your brand and captivate your audience.
                 </p>
 
                 {/* Paragraph 3: Global Reach & Reliability */}
-                <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
+                <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-90">
                   We transform complex visions into high-impact digital realities, bridging the gap between cinematic media and robust technology for global brands.                </p>
               </div>
 

@@ -43,24 +43,24 @@ export default function ServicesPage() {
       {/* 1. HERO SECTION (Optimized) */}
       <section className="relative w-full overflow-hidden">
         <div className="container-wide">
-           <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
-                      {/* Image */}
-                      <Image
-                        src="/home-hero.png"
-                        alt="Mesh Grid"
-                        fill
-                        sizes="100vw"
-                        priority
-                        className="object-cover object-center"
-                      />
-          
-                      {/* Dark Overlay - Yahan shade control karo */}
-                      {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
-                      <div className="absolute inset-0 bg-black/60" />
-          
-                      {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
-                      {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
-                    </div>
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-0">
+            {/* Image */}
+            <Image
+              src="/home-hero.png"
+              alt="Mesh Grid"
+              fill
+              sizes="100vw"
+              priority
+              className="object-cover object-center"
+            />
+
+            {/* Dark Overlay - Yahan shade control karo */}
+            {/* bg-black/60 ka matlab hai 60% opacity wala black shade */}
+            <div className="absolute inset-0 bg-black/60" />
+
+            {/* Agar tum gradient chahte ho taake neeche se upar dark ho, toh ye use karo: */}
+            {/* <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" /> */}
+          </div>
 
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-600/[0.05] blur-[120px] pointer-events-none" />
 
@@ -73,7 +73,7 @@ export default function ServicesPage() {
 
               <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
                 Our {" "} Services.
-             
+
               </h1>
 
               <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
@@ -88,7 +88,7 @@ export default function ServicesPage() {
 
 
       {/* SECTION 2: AGENCY INSIGHT */}
-      <section className="relative py-24 2xl:py-40 bg-white overflow-hidden border-y border-zinc-100">
+      <section className="relative py-24 2xl:py-40 bg-[#222630] overflow-hidden border-y border-zinc-100">
         {/* Soft ambient backgrounds */}
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FFD36A]/5 blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-zinc-200/20 blur-[120px] pointer-events-none" />
@@ -124,22 +124,22 @@ export default function ServicesPage() {
             <div className="space-y-6">
 
 
-              <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-black">
+              <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
                 Elevate Your Vision with Premium Production & VFX
-                 
+
               </h2>
             </div>
 
-            <div className="space-y-6 text-zinc-600 font-medium leading-relaxed">
+            <div className="space-y-6 text-white font-normal leading-relaxed">
               <p className="text-[16px] md:text-base lg:text-[17px] 2xl:text-xl antialiased tracking-wide">
-                <span className="font-black text-black">Fibo Production</span> brings your ideas to life through high-end 3D production, immersive VFX, and cinematic storytelling. We bridge the gap between imagination and reality with industry-leading technology.
+                <span className="font-black text-white">Fibo Production</span> brings your ideas to life through high-end 3D production, immersive VFX, and cinematic storytelling. We bridge the gap between imagination and reality with industry-leading technology.
               </p>
 
               <p className="text-[16px] md:text-base lg:text-[17px] 2xl:text-xl antialiased tracking-wide">
                 From motion graphics and 3D environment design to professional post-production and branding, our creative solutions are crafted to captivate audiences and set your brand apart in the digital landscape.
               </p>
 
-              <p className="text-[16px] md:text-base lg:text-[17px] 2xl:text-xl antialiased tracking-wide font-black text-black">
+              <p className="text-[16px] md:text-base lg:text-[17px] 2xl:text-xl antialiased tracking-wide font-black text-white">
                 Our goal is simple: to deliver breathtaking visual experiences that leave a lasting impact.
               </p>
             </div>
@@ -165,7 +165,7 @@ export default function ServicesPage() {
 
       {/* SECTION 3: SERVICE GRID */}
 
-      <section className="relative bg-[#f4f4f4] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
+      <section className="relative bg-[#111827] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
         <div className="max-w-[1400px] mx-auto px-6 relative z-10">
 
           {/* HEADER */}
@@ -174,7 +174,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-black"
+              className="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-white"
             >
               Our Digital Marketing Services
             </motion.h3>
@@ -216,7 +216,7 @@ export default function ServicesPage() {
               );
             })}
           </div>
-        
+
         </div>
       </section>
     </main>

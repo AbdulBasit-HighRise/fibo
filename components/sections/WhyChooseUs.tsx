@@ -14,16 +14,16 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="pt-12 md:pt-20 2xl:pt-32 pb-12 md:pb-20 2xl:pb-32 bg-white">
+    <section className="pt-12 md:pt-20 2xl:pt-32 pb-12 md:pb-20 2xl:pb-32 bg-[#222630]">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading Section - Forced High Contrast */}
         <div className="text-center mb-20">
-          <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-black">
+          <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-white">
             Why Choose Us
           </h2>
 
-          <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto text-center">
+          <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto text-center">
             From discovery to deployment, we partner closely with you to deliver outcomes not just deliverables.
           </p>
         </div>
@@ -43,8 +43,8 @@ export default function WhyChooseUs() {
               </div>
 
               <div className="pt-2">
-                <h4 className="text-xl font-black !text-black">{item.title}</h4>
-                <p className="!text-black text-base mt-3 font-normal leading-relaxed">
+                <h4 className="text-xl font-black !text-white">{item.title}</h4>
+                <p className="!text-white text-base mt-3 font-normal leading-relaxed">
                   {item.desc}
                 </p>
               </div>

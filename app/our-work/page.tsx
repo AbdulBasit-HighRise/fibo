@@ -126,7 +126,7 @@ export default function PortfolioPage() {
 
 
   return (
-    <main className="bg-[#FFFFFF] text-zinc-100 selection:bg-blue-600 overflow-x-hidden min-h-screen antialiased pb-24">
+    <main className="bg-[#111827] text-zinc-100 selection:bg-blue-600 overflow-x-hidden min-h-screen antialiased pb-24">
 
       {/* 1. HERO SECTION */}
       <section className="relative w-full overflow-hidden bg-[#030712]">

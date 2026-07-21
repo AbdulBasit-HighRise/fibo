@@ -47,7 +47,7 @@ export default function HeroSection() {
                   </span>
                 </button>
               </Link>
-              <Link href="/case-studies" className="inline-flex items-center justify-center w-full sm:min-w-[140px] 2xl:min-w-[180px] h-[48px] 2xl:h-[56px] rounded-full border border-white/40 text-white text-[11px] 2xl:text-[13px] font-bold uppercase tracking-[2px] hover:bg-white/10 transition-all">
+              <Link href="/our-work" className="inline-flex items-center justify-center w-full sm:min-w-[140px] 2xl:min-w-[180px] h-[48px] 2xl:h-[56px] rounded-full border border-white/40 text-white text-[11px] 2xl:text-[13px] font-bold uppercase tracking-[2px] hover:bg-white/10 transition-all">
                 View Work
               </Link>
             </div>

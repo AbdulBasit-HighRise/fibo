@@ -20,7 +20,7 @@ export default function AboutPage() {
     <main className="bg-[#020617] text-white overflow-hidden selection:bg-blue-600 ">
 
       {/* 1. HERO SECTION (Optimized) */}
-      <section className="relative w-full overflow-hidden bg-[#FFFFFF]">
+      <section className="relative w-full overflow-hidden bg-[#222630]">
         <div className="container-wide">
 
           {/* Background Image Container with Exact Matching Premium CSS */}
@@ -65,7 +65,7 @@ export default function AboutPage() {
               </h1>
 
               {/* Description Paragraph */}
-              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 ">
+              <p className="text- text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 ">
                 We blend cinematic storytelling with cutting-edge production to craft visual experiences that define your brand and capture your audience.              </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function AboutPage() {
       </section>
 
       {/* 2. OUR IDENTITY (CLS Fix) */}
-      <section className="py-20 px-6 bg-[#FFFFFF] relative z-10 border-t border-white/5">
+      <section className="py-20 px-6 bg-[#222630] relative z-10 border-t border-white/5">
         <div className="container-wide">
           <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-blue-500/[0.04] blur-[140px] pointer-events-none" />
 
@@ -111,21 +111,21 @@ export default function AboutPage() {
             >
               <div className="space-y-4">
                 {/* Label ko bhi Golden touch diya */}
-                <span className="text-[10px] tracking-[4px] text-black font-extrabold block">OUR VISION</span>
+                <span className="text-[10px] tracking-[4px] text-white font-extrabold block">OUR VISION</span>
 
-                <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-black tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+                <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
                   Crafting{" "}Visual Excellence
 
                 </h2>
               </div>
 
               {/* Main Lead Paragraph - Agency Focused */}
-              <p className="text-black text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-normal leading-relaxed opacity-90">
-                <span className="font-bold text-black">Fibo Production</span> is a premier production & media agency.
+              <p className="text-white text-[16px] md:text-base lg:text-[17px] 2xl:text-xl font-normal leading-relaxed opacity-90">
+                <span className="font-bold text-white">Fibo Production</span> is a premier production & media agency.
                 We blend cinematic storytelling with cutting-edge technology to craft digital experiences that define brands.
               </p>
 
-              <div className="space-y-4 lg:space-y-4 text-black font-medium leading-relaxed w-full mt-6">
+              <div className="space-y-4 lg:space-y-4 text-white font-medium leading-relaxed w-full mt-6">
                 {/* Paragraph 1 */}
                 <p className="pl-4 border-l-2 border-[#FFD36A] text-[16px] md:text-base lg:text-[17px] 2xl:text-xl max-w-3xl opacity-90">
                   We specialize in high-end 3D video production, immersive VFX, and creative media solutions. Over the years, we have helped global brands turn complex ideas into stunning visual realities.
@@ -133,7 +133,7 @@ export default function AboutPage() {
 
                 {/* Paragraph 2 */}
                 <p className="pl-4 border-l-2 border-[#FFD36A] text-[16px] md:text-base lg:text-[17px] 2xl:text-xl max-w-3xl opacity-90">
-                  With a passion for innovation, we have successfully delivered <span className="text-black font-black">700+ projects</span>,
+                  With a passion for innovation, we have successfully delivered <span className="text-white font-black">700+ projects</span>,
                   from interactive 3D environments to high-impact post-production for films and commercials.
                 </p>
 
@@ -148,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* 3. VISION & MISSION */}
-      <section className="py-20 bg-[#f4f4f4] px-6 relative border-y border-zinc-200">
+      <section className="py-20 bg-[#111827] px-6 relative border-y border-zinc-200">
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -159,8 +159,8 @@ export default function AboutPage() {
             <div className="w-12 h-12 rounded-2xl bg-black flex items-center justify-center mx-auto text-[#FFD36A] shadow-2xl">
               <Sparkles size={22} />
             </div>
-            <span className="text-[10px] tracking-[4px] text-black font-extrabold block uppercase">Our Core Purpose</span>
-            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
+            <span className="text-[10px] tracking-[4px] text-white font-extrabold block uppercase">Our Core Purpose</span>
+            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-white tracking-tighter leading-none">
               Vision & Mission
             </h3>
           </motion.div>
@@ -207,11 +207,11 @@ export default function AboutPage() {
         </div>
       </section>
       {/* 4. WORKING PROCESS */}
-      <section className="py-20 bg-[#FFFFFF] px-6 relative border-y border-white/[#FFFFFF]">
+      <section className="py-20 bg-[#222630] px-6 relative border-y border-white/[#FFFFFF]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
-            <span className="text-[10px] tracking-[4px] text-black font-extrabold block mb-4 uppercase">Production Roadmap</span>
-            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-black tracking-tighter leading-none">
+            <span className="text-[10px] tracking-[4px] text-white font-extrabold block mb-4 uppercase">Production Roadmap</span>
+            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-white tracking-tighter leading-none">
               Our Creative Workflow
             </h3>
           </div>
