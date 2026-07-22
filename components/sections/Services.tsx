@@ -3,14 +3,14 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { 
+import {
   Code,          // Web Dev
   Smartphone,    // App Dev
   Video,         // 3D Video
   Sparkles,      // VFX
   PenTool,       // Graphic Design
   Megaphone,     // Digital Marketing
-  Cpu, 
+  Cpu,
   ArrowUpRight,          // Blockchain
   BrainCircuit   // AI/ML
 } from "lucide-react";
@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <section className="relative bg-[#222630] py-12 md:py-20 2xl:py-32 pt-10 overflow-hidden border-t border-white/5">
       <div className="max-w-[1400px] mx-auto px-6 relative z-10">
-        
+
         {/* HEADER */}
         <div className="mb-12 md:mb-16 text-center">
           <motion.h3
@@ -42,55 +42,40 @@ export default function Services() {
           </motion.h3>
         </div>
 
- <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-  {SERVICES.map((item) => {
-    const Icon = item.icon;
-    return (
-      <Link href={item.link || "#"} key={item.id} className="block group">
-      <div className="bg-white border border-zinc-200 p-6 rounded-3xl transition-all duration-500 hover:border-[#FFD36A] hover:shadow-[0_20px_40px_rgba(255,211,106,0.2)] flex flex-col gap-6">
-  
-  {/* Top Section */}
-  <div className="flex-1">
-    <div className="w-14 h-14 rounded-2xl bg-zinc-100 border border-zinc-200 flex items-center justify-center text-black group-hover:bg-[#FFD36A] transition-all duration-500">
-      <Icon size={24} />
-    </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {SERVICES.map((item) => {
+            const Icon = item.icon;
+            return (
+              <Link href={item.link || "#"} key={item.id} className="block group">
+                <div className="bg-white border border-zinc-200 p-6 rounded-3xl transition-all duration-500 hover:border-[#FFD36A] hover:shadow-[0_20px_40px_rgba(255,211,106,0.2)] flex flex-col gap-6">
 
-    <h4 className="text-xl font-black text-black mt-6 leading-tight  tracking-tight">
-      {item.title}
-    </h4>
+                  {/* Top Section */}
+                  <div className="flex-1">
+                    <div className="w-14 h-14 rounded-2xl bg-zinc-100 border border-zinc-200 flex items-center justify-center text-black group-hover:bg-[#FFD36A] transition-all duration-500">
+                      <Icon size={24} />
+                    </div>
 
-    <p className="text-sm mt-3 leading-relaxed text-black/70 font-medium">
-      {item.desc}
-    </p>
-  </div>
+                    <h4 className="text-xl font-black text-black mt-6 leading-tight  tracking-tight">
+                      {item.title}
+                    </h4>
 
-  {/* Footer Arrow - Fixed at bottom */}
-  <div className="flex justify-end pt-2">
-    <div className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-black group-hover:bg-black group-hover:text-[#FFD36A] transition-all duration-500">
-      <ArrowUpRight size={18} />
-    </div>
-  </div>
-  
-</div>
-      </Link>
-    );
-  })}
-</div>
-        {/* CTA BUTTON */}
-        {/* <div className="mt-12 flex justify-center">
-       <Link href="/services">
-  <button className="group relative overflow-hidden h-[48px] px-8 rounded-full bg-white text-black font-black text-[11px] uppercase tracking-[0.2em] transition-all duration-500 active:scale-95 shadow-lg">
-   
-    <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 ease-out group-hover:w-full" />
-    
+                    <p className="text-sm mt-3 leading-relaxed text-black/70 font-medium">
+                      {item.desc}
+                    </p>
+                  </div>
 
-    <span className="relative z-10 flex items-center gap-2 group-hover:text-black transition-colors duration-500">
-      Explore All Services
-      <ArrowUpRight size={14} />
-    </span>
-  </button>
-</Link>
-        </div> */}
+                  {/* Footer Arrow - Fixed at bottom */}
+                  <div className="flex justify-end pt-2">
+                    <div className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-black group-hover:bg-black group-hover:text-[#FFD36A] transition-all duration-500">
+                      <ArrowUpRight size={18} />
+                    </div>
+                  </div>
+
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
