@@ -43,7 +43,7 @@ export default function JuicerReviews() {
   return (
     <div className="w-full bg-[#111827] pt-12 md:pt-20 2xl:pt-32 pb-12 md:pb-20 2xl:pb-32 overflow-hidden">
       <div className="text-center mb-16">
-        <h3 className="text-[2rem] md:text-[2.5rem] font-black text-white  tracking-tighter">
+        <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium text-white  tracking-tighter">
           Client Success Stories
         </h3>
       </div>

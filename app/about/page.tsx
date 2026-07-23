@@ -58,7 +58,7 @@ export default function AboutPage() {
               </div> */}
 
               {/* Main Typography Block with Tight Line Height */}
-              <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium tracking-tighter leading-[0.8] text-white mb-8">
                 ABOUT  US.
 
 
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 {/* Label ko bhi Golden touch diya */}
                 <span className="text-[10px] tracking-[4px] text-white font-extrabold block">OUR VISION</span>
 
-                <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
+                <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium text-white tracking-tighter leading-[1.1] lg:leading-[1] mb-6">
                   Crafting{" "}Visual Excellence
 
                 </h2>
@@ -160,7 +160,7 @@ export default function AboutPage() {
               <Sparkles size={22} />
             </div>
             <span className="text-[10px] tracking-[4px] text-white font-extrabold block uppercase">Our Core Purpose</span>
-            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-white tracking-tighter leading-none">
+            <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium text-white tracking-tighter leading-none">
               Vision & Mission
             </h3>
           </motion.div>
@@ -211,7 +211,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-20">
             <span className="text-[10px] tracking-[4px] text-white font-extrabold block mb-4 uppercase">Production Roadmap</span>
-            <h3 className="text-[2rem] md:text-[3.5rem] font-black text-white tracking-tighter leading-none">
+            <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium text-white tracking-tighter leading-none">
               Our Creative Workflow
             </h3>
           </div>

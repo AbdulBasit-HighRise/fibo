@@ -50,9 +50,9 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <Navbar />
-        <main className="relative z-10 min-h-screen w-full max-w-[2560px] mx-auto">
-          {children}
-        </main>
+      <main className="min-h-screen w-full max-w-[2560px] mx-auto">
+  {children}
+</main>
         <Footer />
       </body>
     </html>

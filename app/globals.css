@@ -22,10 +22,10 @@
     padding: 0;
   }
 
-  /* Headings ka extra/unwanted bold khatam kar diya hai */
+  /* Headings ka extra/unwanted bold khatam kar diya hai - Ab ye semi-bold rahengi */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sans), sans-serif !important;
-    @apply tracking-normal leading-[1.1] font-bold;
+    @apply tracking-normal leading-[1.1] ;
   }
 
   p {

@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
 
         {/* Heading Section - Forced High Contrast */}
         <div className="text-center mb-20">
-          <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] md:leading-[1] text-white">
+          <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter leading-[1.1] md:leading-[1.5] text-white">
             Why Choose Us
           </h2>
 

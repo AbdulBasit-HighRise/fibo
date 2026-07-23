@@ -114,7 +114,7 @@ export default function ContactPage() {
 
 
 
-              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] uppercase font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] uppercase font-medium tracking-tighter leading-[0.8] text-white mb-8 normal-case">
                 CONTACT US
               </h1>
 

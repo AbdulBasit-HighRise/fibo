@@ -77,7 +77,7 @@ export default function PricingPage() {
               </div>
 
               {/* Main Large Typography Block */}
-              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium tracking-tighter leading-[0.8] text-white mb-8 normal-case">
                 OUR {" "}
                 <span className="inline-block mt-2 uppercase bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Pricing Plans.
@@ -120,12 +120,12 @@ export default function PricingPage() {
           {plan.icon}
         </div>
 
-        <h3 className="text-2xl 2xl:text-4xl font-black mb-2 text-white">{plan.name}</h3>
+        <h3 className="text-2xl 2xl:text-4xl font-medium mb-2 text-white">{plan.name}</h3>
         {/* 🎯 FIXED: 'text-white-500' fallback class changed to 'text-zinc-100' for better contrast over blue background */}
         <p className="text-zinc-100 text-[16px] 2xl:text-xl mb-8 leading-relaxed opacity-90">{plan.desc}</p>
 
         <div className="flex items-baseline gap-1 mb-10">
-          <span className="text-5xl 2xl:text-7xl font-black text-white">{plan.price}</span>
+          <span className="text-5xl 2xl:text-7xl font-medium text-white">{plan.price}</span>
           {/* 🎯 FIXED: 'text-black-500' changed to 'text-zinc-200' so the text is perfectly visible over the dark blue */}
           <span className="text-zinc-200 text-sm 2xl:text-lg">{plan.billing}</span>
         </div>
@@ -142,7 +142,7 @@ export default function PricingPage() {
 
         {/* PRICING CARD BUTTON */}
         <Link href={plan.link} passHref className="w-full">
-          <button className="group relative overflow-hidden flex items-center justify-center gap-3 px-8 py-4 w-full bg-white text-black font-black text-[10px] 2xl:text-sm tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 shadow-lg shadow-black/10">
+          <button className="group relative overflow-hidden flex items-center justify-center gap-3 px-8 py-4 w-full bg-white text-medium font-medium text-[10px] 2xl:text-sm tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 shadow-lg shadow-black/10">
             <div className="absolute inset-0 w-0 bg-gradient-to-r from-cyan-500 to-blue-600 transition-all duration-500 ease-out group-hover:w-full" />
             <span className="relative z-10 group-hover:text-white transition-colors duration-500 flex items-center gap-2">
               Get Started
@@ -170,7 +170,7 @@ export default function PricingPage() {
          <div className="p-3 2xl:p-5 rounded-xl bg-white/10 text-white">
             <Flame size={24} className="2xl:w-10 2xl:h-10" />
          </div>
-         <h3 className="text-3xl 2xl:text-5xl font-black italic text-white">Enterprise Plan</h3>
+         <h3 className="text-3xl 2xl:text-5xl font-mediummedium italic text-white">Enterprise Plan</h3>
       </div>
       <p className="text-zinc-100 text-[16px] md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-4xl opacity-90 antialiased">
         For large-scale business growth. Custom Marketing Strategy, Full Funnel Optimization, Advanced PPC + Retargeting, and 24/7 Priority Support.
@@ -178,7 +178,7 @@ export default function PricingPage() {
     </div>
 
     <div className="text-center md:text-right space-y-4 min-w-[200px]">
-      <div className="text-4xl 2xl:text-6xl font-black text-white">Custom Pricing</div>
+      <div className="text-4xl 2xl:text-6xl font-medium text-white">Custom Pricing</div>
       
       <Link href="/contact" passHref>
         <button className="group relative overflow-hidden inline-flex items-center justify-center gap-3 px-8 py-4 mt-4 md:px-10 md:py-5 bg-white text-black font-black text-[10px] 2xl:text-xs tracking-[3px] uppercase rounded-full active:scale-95 transition-all duration-500 w-full sm:w-auto shadow-lg shadow-black/10">

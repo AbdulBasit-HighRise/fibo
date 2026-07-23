@@ -18,7 +18,7 @@ export default function AuditCTA() {
 
         {/* Content Area */}
         <div className="relative z-[3] text-center px-6 mx-auto">
-          <h3 className="text-[2rem] sm:text-[3.5rem] lg:text-[4rem] font-black text-white  leading-[1.2] mb-6">
+          <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.8rem] lg:text-[2.8rem] 2xl:text-[3.8rem] font-medium text-white  leading-[1.2] mb-6">
             Ready to Start Your Project?
           </h3>
           

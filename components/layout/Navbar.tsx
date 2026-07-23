@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ChevronDown, Plus, Code, Smartphone, Video, Sparkles, PenTool, Megaphone, Cpu, BrainCircuit } from "lucide-react";
+import { Menu, X, Plus, Code, Smartphone, Video, Sparkles, PenTool, Megaphone, Cpu, BrainCircuit } from "lucide-react";
 import Image from "next/image";
 
 const SERVICES = [
@@ -19,89 +19,88 @@ const SERVICES = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showServices, setShowServices] = useState(false);
-  const [mobileServices, setMobileServices] = useState(false); // Mobile Services ke liye toggle
+  const [mobileServices, setMobileServices] = useState(false);
   const pathname = usePathname();
 
   return (
- <div className="sticky top-0 z-[100] w-full bg-[#222630]/80 backdrop-blur-md border-b border-white/10">
-  <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-    <nav className="flex items-center justify-between w-full h-20">
+    <header className="sticky top-0 z-[100] w-full bg-[#222630]/90 backdrop-blur-md border-b border-white/10 shadow-md">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        <nav className="flex items-center justify-between w-full h-20">
 
-      <Link href="/" className="shrink-0">
-        <Image src="/fibo-footer-logo.png" alt="Logo" width={180} height={45} className="h-10 md:h-14 w-auto" />
-      </Link>
+          <Link href="/" className="shrink-0">
+            <Image src="/fibo-footer-logo.png" alt="Logo" width={180} height={45} className="h-10 md:h-14 w-auto" />
+          </Link>
 
-      <button className="lg:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <X className="text-white" size={24} /> : <Menu className="text-white" size={24} />}
-      </button>
-
-      <div className={`${isOpen ? "flex" : "hidden"} lg:flex absolute lg:static top-20 left-0 w-full lg:w-auto bg-[#222630]/95 lg:bg-transparent backdrop-blur-xl lg:backdrop-blur-none flex-col lg:flex-row items-center gap-1 p-6 lg:p-0 shadow-2xl lg:shadow-none`}>
-        {[
-          { name: "Home", href: "/" },
-          { name: "About", href: "/about" },
-          { name: "Services", href: "/services", isDropdown: true },
-          { name: "Our Work", href: "/our-work" },
-          { name: "Contact", href: "/contact" }
-        ].map((link) => (
-          <div key={link.name} className="relative group w-full lg:w-auto">
-            <div className="flex items-center justify-between lg:justify-start w-full">
-              <Link
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className={`flex items-center gap-1.5 px-5 py-2.5 text-[12px] font-extrabold uppercase transition-all duration-300 rounded-full w-full lg:w-auto ${pathname === link.href ? "text-black bg-white" : "text-white hover:text-black hover:bg-white"}`}
-              >
-                {link.name}
-              </Link>
-              {link.isDropdown && (
-                <button onClick={() => setMobileServices(!mobileServices)} className="lg:hidden p-2 text-white">
-                  <Plus size={16} />
-                </button>
-              )}
-            </div>
-
-            {/* Desktop Dropdown */}
-            {link.isDropdown && (
-              <div className="hidden lg:block absolute top-full left-0 pt-2 z-[100] w-[450px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
-                <div className="bg-[#222630] border border-white/10 shadow-2xl rounded-3xl p-3 grid grid-cols-2 gap-1">
-                  {SERVICES.map((item) => (
-                    <Link key={item.id} href={item.link} className="flex items-center gap-3 px-4 py-3 text-[12px] font-bold text-white hover:text-black hover:bg-[#FFD36A] rounded-2xl transition-colors">
-                      <item.icon size={16} className="text-white group-hover:text-black" /> {item.title}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Mobile Dropdown List */}
-            {link.isDropdown && mobileServices && (
-              <div className="lg:hidden grid grid-cols-1 gap-1 px-4 py-2 bg-black/40 rounded-2xl my-1 w-full">
-                {SERVICES.map((item) => (
-                  <Link key={item.id} href={item.link} onClick={() => setIsOpen(false)} className="px-4 py-3 text-[12px] font-bold text-white border-b border-white/10 last:border-none">
-                    {item.title}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-        
-        {/* Mobile CTA Button */}
-        <Link href="/contact" className="lg:hidden w-full mt-4">
-          <button className="w-full bg-[#FFD36A] text-black py-4 rounded-full text-[11px] font-black uppercase tracking-widest">Get Quote</button>
-        </Link>
-      </div>
-
-      <div className="hidden md:flex items-center gap-4">
-        <Link href="/contact">
-          <button className="group relative overflow-hidden bg-white text-black px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-500 shadow-md border border-white/20">
-            <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 group-hover:w-full" />
-            <span className="relative z-10 group-hover:text-black transition-colors duration-500">Get Quote</span>
+          <button className="lg:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X className="text-white" size={24} /> : <Menu className="text-white" size={24} />}
           </button>
+
+          <div className={`${isOpen ? "flex" : "hidden"} lg:flex absolute lg:static top-20 left-0 w-full lg:w-auto bg-[#222630]/98 lg:bg-transparent backdrop-blur-xl lg:backdrop-blur-none flex-col lg:flex-row items-center gap-1 p-6 lg:p-0 shadow-2xl lg:shadow-none border-b border-white/10 lg:border-none`}>
+            {[
+              { name: "Home", href: "/" },
+              { name: "About", href: "/about" },
+              { name: "Services", href: "/services", isDropdown: true },
+              { name: "Our Work", href: "/our-work" },
+              { name: "Contact", href: "/contact" }
+            ].map((link) => (
+              <div key={link.name} className="relative group w-full lg:w-auto">
+                <div className="flex items-center justify-between lg:justify-start w-full">
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={`flex items-center gap-1.5 px-5 py-2.5 text-[12px] font-extrabold uppercase transition-all duration-300 rounded-full w-full lg:w-auto ${pathname === link.href ? "text-black bg-[#FFD36A]" : "text-white hover:text-black hover:bg-[#FFD36A]"}`}
+                  >
+                    {link.name}
+                  </Link>
+                  {link.isDropdown && (
+                    <button onClick={() => setMobileServices(!mobileServices)} className="lg:hidden p-2 text-white hover:text-[#FFD36A] transition-colors">
+                      <Plus size={16} className="text-white" />
+                    </button>
+                  )}
+                </div>
+
+                {/* Desktop Dropdown */}
+               {/* Desktop Dropdown */}
+{link.isDropdown && (
+  <div className="hidden lg:block absolute top-full left-0 pt-2 z-[100] w-[450px] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+    <div className="bg-[#222630] border border-white/15 shadow-2xl rounded-3xl p-3 grid grid-cols-2 gap-1 backdrop-blur-xl">
+      {SERVICES.map((item) => (
+        <Link key={item.id} href={item.link} className="flex items-center gap-3 px-4 py-3 text-[12px] font-bold text-white hover:text-black hover:bg-[#FFD36A] rounded-2xl transition-colors group/item">
+          <item.icon size={16} className="text-white group-hover/item:text-black transition-colors" /> {item.title}
         </Link>
-      </div>
-    </nav>
+      ))}
+    </div>
   </div>
-</div>
+)}
+                {/* Mobile Dropdown List */}
+                {link.isDropdown && mobileServices && (
+                  <div className="lg:hidden grid grid-cols-1 gap-1 px-4 py-2 bg-black/40 rounded-2xl my-1 w-full">
+                    {SERVICES.map((item) => (
+                      <Link key={item.id} href={item.link} onClick={() => setIsOpen(false)} className="px-4 py-3 text-[12px] font-bold text-white border-b border-white/10 last:border-none hover:text-[#FFD36A]">
+                        {item.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+
+            {/* Mobile CTA Button */}
+            <Link href="/contact" className="lg:hidden w-full mt-4">
+              <button className="w-full bg-[#FFD36A] text-black py-4 rounded-full text-[11px] font-black uppercase tracking-widest">Get Quote</button>
+            </Link>
+          </div>
+
+          <div className="hidden md:flex items-center gap-4">
+            <Link href="/contact">
+              <button className="group relative overflow-hidden bg-transparent text-white border border-white/20 px-6 py-2.5 rounded-full text-[11px] font-black uppercase tracking-widest transition-all duration-500 shadow-md">
+                <div className="absolute inset-0 w-0 bg-[#FFD36A] transition-all duration-500 group-hover:w-full" />
+                <span className="relative z-10 group-hover:text-black transition-colors duration-500">Get Quote</span>
+              </button>
+            </Link>
+          </div>
+        </nav>
+      </div>
+    </header>
   );
 }

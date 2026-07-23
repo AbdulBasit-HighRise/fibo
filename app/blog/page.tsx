@@ -33,7 +33,7 @@ export default async function BlogPage() {
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 uppercase">Blog & Resources</span>
               </div>
 
-              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium tracking-tighter leading-[0.8] text-white mb-8 normal-case">
                 OUR {" "}
                 <span className="uppercase  mt-2 bg-gradient-to-r from-[#00f2ff] via-[#0070ff] to-[#00f2ff] bg-[length:200%_auto] animate-gradient text-transparent bg-clip-text">
                   Insights.

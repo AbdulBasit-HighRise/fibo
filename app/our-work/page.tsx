@@ -160,7 +160,7 @@ export default function PortfolioPage() {
 
 
               {/* Main Typography Block */}
-              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-none text-white mb-8">
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium tracking-tighter leading-none text-white mb-8">
                 Our Work.
               </h1>
 

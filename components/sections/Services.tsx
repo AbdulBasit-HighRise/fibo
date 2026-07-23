@@ -36,7 +36,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-white"
+            className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter text-white"
           >
             Our Services
           </motion.h3>

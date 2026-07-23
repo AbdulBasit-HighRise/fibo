@@ -36,8 +36,8 @@ export default function PrivacyPolicy() {
 
 
             {/* Main Large Typography Block - Dynamic Controlled Laptop Sizing */}
-            <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8 normal-case">
-              PRIVACY {" "} Policy.
+            <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium tracking-tighter leading-[0.8] text-white mb-8 normal-case">
+              Privacy {" "} Policy.
             </h1>
 
             <p className="text-white text-sm md:text-base lg:text-[17px] 2xl:text-xl 3xl:text-2xl font-medium leading-relaxed max-w-xl 2xl:max-w-3xl mx-auto lg:mx-0 opacity-80">
@@ -52,7 +52,7 @@ export default function PrivacyPolicy() {
 
           {/* Header */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl font-black text-white tracking-tighter">Privacy Policy</h1>
+            <h1 className="text-4xl md:text-5xl font-medium text-white tracking-tighter">Privacy Policy</h1>
             <p className="text-white font-medium">Last Updated: July 2026</p>
           </div>
 
@@ -60,43 +60,43 @@ export default function PrivacyPolicy() {
           <div className="space-y-12">
 
             <div>
-              <h3 className="text-2xl font-black text-white mb-4">1. Data Collection</h3>
+              <h3 className="text-2xl font-medium text-white mb-4">1. Data Collection</h3>
               <p className="text-white text-lg leading-relaxed">
                 We collect information you provide directly to us when you fill out our contact form, request a proposal, or collaborate on a project. This includes your name, email address, phone number, and project-related details necessary to provide you with tailored digital and production solutions.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-black text-white mb-4">2. Use of Information</h3>
+              <h3 className="text-2xl font-medium text-white mb-4">2. Use of Information</h3>
               <p className="text-white text-lg leading-relaxed">
                 The information we collect is strictly used to communicate regarding your project, provide customer support, and deliver the services you have requested. We do not sell, rent, or trade your personal information with third parties for marketing purposes.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-black text-white mb-4">3. Data Security</h3>
+              <h3 className="text-2xl font-medium text-white mb-4">3. Data Security</h3>
               <p className="text-white text-lg leading-relaxed">
                 Protecting your digital assets and personal details is our priority. We implement industry-standard security measures to prevent unauthorized access, disclosure, or alteration of the data you share with us during our partnership.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-black text-white mb-4">4. Cookies & Analytics</h3>
+              <h3 className="text-2xl font-medium text-white mb-4">4. Cookies & Analytics</h3>
               <p className="text-white text-lg leading-relaxed">
                 We may use browser cookies and analytical tools to understand how our website is used. This data helps us improve your user experience and ensure our portfolio displays correctly across all devices. You can choose to disable cookies through your browser settings if preferred.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-black text-white mb-4">5. Third-Party Links</h3>
+              <h3 className="text-2xl font-medium text-white mb-4">5. Third-Party Links</h3>
               <p className="text-white text-lg leading-relaxed">
                 Our website may contain links to third-party platforms (like LinkedIn or Upwork). We are not responsible for the privacy practices of those sites and encourage you to review their respective privacy policies before sharing any information.
               </p>
             </div>
 
             {/* Contact Section */}
-            <div className="p-8 md:p-10 bg-[#111827] rounded-[2rem] border border-black/5">
-              <h4 className="text-xl font-black text-white mb-2">Questions about your data?</h4>
+            <div className="p-8 md:p-10 bg-[#111827] rounded-[2rem] border border-medium/5">
+              <h4 className="text-xl font-medium text-white mb-2">Questions about your data?</h4>
               <p className="text-white text-lg">
                 If you have concerns or requests regarding how your data is handled, feel free to contact us at
                 <span className="font-bold text-white block mt-2 hover:text-amber-600 transition-colors">

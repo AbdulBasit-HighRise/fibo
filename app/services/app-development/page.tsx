@@ -156,7 +156,7 @@ export default function SEOPage() {
 
 
 
-              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
+              <h1 className="text-[2rem] md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium uppercase tracking-tighter leading-[1.1] lg:leading-[1.0] text-white mb-8">
                 SCALABLE MOBILE {" "}APPS & SOLUTIONS.
 
               </h1>
@@ -204,7 +204,7 @@ export default function SEOPage() {
             {/* RIGHT: Text Content */}
             <div className="space-y-6 md:space-y-6 order-1 lg:order-2">
               <div>
-                <h2 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
+                <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter leading-[1] text-white">
                   High-Performance Apps with {" "} Our Development Services.
 
                 </h2>
@@ -268,7 +268,7 @@ export default function SEOPage() {
         <div className="max-w-7xl 2xl:max-w-[1600px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-6 border-b border-white/5 pb-10">
             <div className="max-w-4xl">
-              <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
+              <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium leading-[1.1] md:leading-[1.05] tracking-tighter text-white">
                 Our{" "} Professional App Development Services.
 
               </h3>
@@ -356,7 +356,7 @@ export default function SEOPage() {
         <div className="relative z-10 max-w-6xl 2xl:max-w-[85rem] mx-auto px-6">
           {/* 📋 HEADER - Font sizing synced with reference file */}
           <div className="mb-12 md:mb-16 pt-0 text-center">
-            <h3 className="text-[1.8rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
+            <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter leading-[1.1] lg:leading-[1] text-white normal-case">
               Our{" "} Development Workflow.
 
             </h3>
@@ -441,7 +441,7 @@ export default function SEOPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
               >
-                <h3 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-white">
+                <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter leading-[1.1] lg:leading-[1] mb-2 text-white">
                   Why Choose Our AI & ML Solutions?
 
                 </h3>
@@ -508,7 +508,7 @@ export default function SEOPage() {
         <div className="relative z-10 w-full mx-auto px-6 max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl">
           {/* Header Title Section */}
           <div className="mb-16 text-center">
-            <h3 className="text-[2rem] md:text-5xl font-black text-white leading-none mb-6">
+            <h3 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium text-white leading-none mb-6">
               Frequently Asked  Questions (FAQs)
 
             </h3>

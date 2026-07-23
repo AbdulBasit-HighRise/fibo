@@ -71,7 +71,7 @@ export default function ServicesPage() {
                 <span className="text-[10px] font-black tracking-[4px] text-blue-300 ">Digital Marketing Services</span>
               </div> */}
 
-              <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-black tracking-tighter leading-[0.8] text-white mb-8">
+              <h1 className="text-[2rem]  md:text-[3.2rem] lg:text-[3.8rem] 2xl:text-[5rem] font-medium tracking-tighter leading-[0.8] text-white mb-8">
                 Our {" "} Services.
 
               </h1>
@@ -124,7 +124,7 @@ export default function ServicesPage() {
             <div className="space-y-6">
 
 
-              <h2 className="text-[2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-black tracking-tighter leading-[1] text-white">
+              <h2 className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter leading-[1] text-white">
                 Elevate Your Vision with Premium Production & VFX
 
               </h2>
@@ -174,9 +174,9 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[2rem] md:text-[2.5rem] font-black tracking-tighter text-white"
+              className="text-[2rem] sm:text-[2.2rem] md:text-[2.5rem] lg:text-[2.5rem] 2xl:text-[3.2rem] font-medium tracking-tighter text-white"
             >
-              Our Digital Marketing Services
+              Our Services
             </motion.h3>
           </div>
 
